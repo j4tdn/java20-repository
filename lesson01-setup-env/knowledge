@@ -1,0 +1,12 @@
+1 khái niệ
+ JDK ->
++ JRE -->môi trường thực thi
++ JVM: máy ảo của java
+
+2. quy trình thực thi 1 đoạn mã java
+.java --> .class --> machine code --> result
+
+3. vì sao phải dùng editor -- eclipse
+
+4. cấu trúc khi tạo dự án java
+workspace --> project --> packege --> .java(class)
