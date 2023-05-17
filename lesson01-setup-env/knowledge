@@ -1,0 +1,27 @@
+-----------------------------
+
+Path: Biến môi trường của hệ điều hành window, khi cài 1 chương trình làm sao để HDH hiểu CT -> path
+
+Java Home 
+Biến môi trường: Là biến trong môi trường hệ điều hành, lưu các đường dẫn để phần mềm có thể dễ dàng sử dụng, và người dùng có thể tùy chỉnh các biến
+
+Bytecode: Là một dạng mã trung gian (intermediate code) được tạo ra bởi trình biên dịch của NNLT Java or C# được thiết kế để chạy trên máy ảo, không chạy trực tiếp trên phần cứng
+
+Native code là gì? 
+Trong lập trình native code là code được viết để chạy trên một bộ xử lý (processor) cụ thể. Để chạy code trên một bộ xử lý khác, một trình giả lập (emulator) phải được sử dụng để đánh lừa chương trình nghĩ rằng nó có một bộ xử lý khác. Nếu sử dụng trình giả lập, phần mềm thường hoạt động chậm hơn so với trong môi trường gốc của nó.
+
+1. Khái niệm JDK --> JRE và JVM
+
+JDK là bộ công cụ phát triển và thực thi các ứng dụng Java, bao gồm trình biên dịch, các thư viện, máy ảo để thực thi chương trình Java. 
+
+JRE (Java runtime environment): Là công cụ giúp thực thi chương trình Java nhờ máy ảo JVM được tích hợp trong nó, ngoài ra còn có thêm các libraries giúp cho việc lập trình được dễ dàng hơn
+
+JVM: Là máy ảo có nhiệm vụ chuyển bytecode sang machine code, giúp Java có thể chạy trên mọi hệ điều hành chỉ với 1 bộ source code
+
+2. Quy trình thực thi 1 đoạn mã Java
+.java --> .class --> machine code --> result
+
+3. Vì sao phải dùng editor -- Eclipse 
+
+4. Cấu trúc khi tạo dự án JAVA
+workspace --> project --> package --> .java(class)
