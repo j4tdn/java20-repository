@@ -1,0 +1,14 @@
+1. Khái niệm
+JDK(Java Develpoment Kit) --> Bộ công cụ để phát triển JAVA
+	+ JRE(Java Runtime Environment - Môi trường thực thi Java)
+	--> Biên dịch từ java ra bytecode
+	+ JVM: 
+	--> Biên dịch từ bytecode ra machine code
+2. Quy trình thực thi 1 đoạn mã JAVA
+
+.java --> .class --> machine code -->result
+
+3. Vì sao phải dùng editor -- Eclipse
+
+4. Cấu trúc khi tạo dự án JAVA
+workspace --> project --> package --> .java(class)
