@@ -1,0 +1,17 @@
+Compiler : Biên dịch ra mã máy
+
+1. khái niệm 
+
+JDK --> 
+	+JRE : môi trường thực thi
+	+JVM: Máy ảo 
+
+2. Quy trình thực thi 1 đoạn mã Java 
+
+	.java -- > .class --> machine code --> result
+
+3. Vì sao phải dùng  editor -- eclipse 
+
+4. Cấu trúc khi tạo dự án Java 
+
+	Workspace --> projects --> package --> .java(class)
