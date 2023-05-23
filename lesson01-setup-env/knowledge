@@ -1,0 +1,7 @@
+1. Khái niệm
+JDK -->
+	+ JRE -->
+	+ JVM -->
+2. Quy trình thực thi 1 đoạn mã Java
+
+.java --> .class --> machine code --> result
