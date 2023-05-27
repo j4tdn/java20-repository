@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.object.custom;
 
 public class Ex01ObjectDemo {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Ex01ObjectDemo {
 		// debug --> f11 --> dùng dể dừng lại ctr tại 1 thời điểm bki để xem kq ở đó
 		// 				 --> dùng breakpoint để dùng code tại đó
 		// 				 --> step over --> nhảy qua dòng code mới
-		//				 --> step into --> nhày vào bên trong hàm
+		//				 --> step into --> nhảy vào bên trong hàm
 		
 		// mặc định 
 		// khi in biến dkl primitive --> lấy ô nhớ biến trỏ stack in ra

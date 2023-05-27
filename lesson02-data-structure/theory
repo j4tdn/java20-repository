@@ -1,0 +1,14 @@
+KDL nguyên thủy - primitive type
+--> dùng những KDLNT có sẵn của java
+vd:int, double, char, ...
+   không thể tự tạo ra KDLNT
+
+
+KDL đối tượng - object type
+--> dùng những KDLDT có sẵn của java
+vd:
+
+
+--> tạo ra những KDLDT của bài toán
+vd: Item(id, name, salesPrice)
+	Student(id, name, age)
