@@ -1,4 +1,4 @@
-package datasstructure.object;
+package datastructure.object.custom;
 /**
  * Khai báo, khởi tạo ra kiểu dữ liệu đối tượng mặt hàng
  * 

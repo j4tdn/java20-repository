@@ -1,0 +1,9 @@
+Kiểu dữ liệu nguyên thủy - primitive type
+--> Dùng những KDLNT có sẵn của JAVA
+VD: int, double, char, boolean
+  : không thể tự tạo ra KDLNT
+
+Kiểu dữ liệu đối tượng - Object type
+--> Dùng những KDLDT có sẵn của JAVA
+
+--> tạo ra những KDLDT  

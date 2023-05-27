@@ -1,0 +1,13 @@
+ lệnh javac dùng để kiểm tra cú pháp JAVA của mình đã chính xác chưa
+   --> đúng --> tạo ra file .class
+   --> sai --> báo lỗi bắt buộc phải fix
+   
+1. JDK = JRE + JVM
+   
+2. Quy trình thực thi 1 đoạn mã JAVA
+	.java --> .class --> machine code --> result
+	
+3. Vì sao dùng editor -- Eclipse
+
+4. Cấu trúc khi tạo dự án JAVA
+	workspace --> project --> package --> class
