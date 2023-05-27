@@ -1,0 +1,13 @@
+Kiểu dữ liệu nguyên thủy - primitive type
+--> Dùng những KDLNT có sẵn của JAVA
+VD: int, double, char, boolean
+  : không thể tự tạo ra KDLNT
+
+
+Kiểu dữ liệu đổi tượng - object type
+--> Dùng những KDLDT có sẵn của JAVA
+VD: 
+
+--> Tạo ra những KDLDT của bài toán
+VD: Item(id, name, salesPrice)
+    Student(id, name, age)
