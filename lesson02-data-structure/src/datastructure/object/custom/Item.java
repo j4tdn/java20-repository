@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.object.custom;
 /**
  * Khai bao, khoi tao ra kieu du lieu doi tuong --> Item 
  *
