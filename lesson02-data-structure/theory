@@ -1,0 +1,12 @@
+Kiểu dữ liệu nguyên thủy - Primitive type
+--> Dùng những KDL có sẵn của JAVA
+VD: int, double, boolean, char
+	: Không thể tạo ra KDL nguyên thủy
+
+Kiểu dữ liệu đối tượng - Object type
+--> Dùng những KDL đối tượng có sẵn của JAVA
+VD: 
+
+--> Tạo ra những KDL đối tượng của bài toán
+VD: Item(id,name,salesPrice)
+	Student(id,name,age)
