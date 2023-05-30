@@ -1,6 +1,6 @@
 package demomain;
 
-import datastructure.object.Item;
+import datastructure.object.custom.Item;
 
 public class Ex02ExternalClass {
 	public static void main(String[] args) {
