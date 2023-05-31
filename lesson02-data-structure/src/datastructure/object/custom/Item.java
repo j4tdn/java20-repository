@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.object.custom;
 /**
  * 
  * Khai báo , khởi tạo ra 1 kiểu dữ liệu đối tượng Mặt Hàng -->Item

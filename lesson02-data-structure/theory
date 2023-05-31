@@ -1,0 +1,11 @@
+Kiểu dữ liệu nguyên thủy  - primary type
+-->Dùng những KDLNT có sẵn của JAVA
+VD: int , double, char , boolen
+VD: không thể tạo ra kiểu dữ liệu NT
+
+
+Kiểu đối tượng - oject type
+--> Dùng những KDLDT của bài toán
+---> Tạo ra những KDLDT của bài toán
+VD: Item(id,name,salePrice)
+	
