@@ -1,0 +1,11 @@
+
+theory : lý thuyết
+
+Kiểu dữ liệu nguyên thủy - primitive type
+--> dùng những KDL có sắn của JAVA
+VD int,double, char, boolean
+	: Không thế tự tạo ra KDLNT
+Kiểu dữ liệu đối tượng - object type
+--> Dùng tạo ra những KDLDT của bài toán
+VD : Item(id,name, age)
+	Student(
