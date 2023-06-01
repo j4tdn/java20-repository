@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.object.custom;
 
 /**
  * Khai báo, khởi tạo ra kdl đối tượng Item Thông tin cần lưu trữ: mã mặt hàng,
