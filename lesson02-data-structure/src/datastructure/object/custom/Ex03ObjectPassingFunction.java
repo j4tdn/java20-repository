@@ -8,7 +8,7 @@ public class Ex03ObjectPassingFunction {
 		System.out.println("itX address --> " +System.identityHashCode(itX));
 		System.out.println("itX --> " + itX);
 		
-		System.out.println("\n----------Update values-------------");
+		System.out.println("\n---------- Update values -------------");
 		modify(itX);
 		System.out.println("itX address --> " +System.identityHashCode(itX));
 		System.out.println("itX address --> " +System.identityHashCode(itX));
