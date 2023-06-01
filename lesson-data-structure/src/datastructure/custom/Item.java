@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.custom;
 /*
  * khai bao, khoi tao ta du lieu doi tuong mat hang
  * 

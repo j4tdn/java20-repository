@@ -1,0 +1,11 @@
+Kiểu dữ liệu nguyên thủy - primitive type
+--> dùng KDLNT có sẵn của JAVA
+VD: int, double, chả , boolean
+  : không thể tự tạo ra KDLNT
+  
+  
+Kiểu dữ liệu đối tươngh=j - object type
+--> dùng những KDLDT có sẵn của JAVA
+--> Tạo ra những KDLDT của bài toán 
+VD : Item(id,name,SALESpRICE)
+   
