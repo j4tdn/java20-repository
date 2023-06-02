@@ -22,7 +22,6 @@ public class Ex10Random5Numbers {
 				return true;
 			}
 		}
-
 		return false;
 	}
 }
