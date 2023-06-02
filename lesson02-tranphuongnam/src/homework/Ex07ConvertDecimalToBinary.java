@@ -23,10 +23,10 @@ public class Ex07ConvertDecimalToBinary {
 	
 	private static String convertFromDedicalToBinary(int n) {
 		String binaryText = "";
-		while(n != 0) {
+		do {
 			binaryText = (n % 2) + binaryText;
 			n /= 2;
-		}
+		} while(n != 0);
 		return binaryText;
 	}
 }
