@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.object.custom;
 
 //Mọi class có sẵn/ tự thêm đều mặc định là class con của class 'Object'
 //Class ở 'Object' chứa 1 số hàm: hashcode --> hasing địa chỉ ở vùng nhớ HEAP
