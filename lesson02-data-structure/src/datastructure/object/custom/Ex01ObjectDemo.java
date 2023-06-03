@@ -1,7 +1,7 @@
-package datastructure.object;
+package datastructure.object.custom;
 
 public class Ex01ObjectDemo {
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// Thực thi
 		// Run    --> Ctrl F11 --> Chạy toàn bộ chương trình và chạy xong dừng lại
 		// Debug  --> F11 --> Dùng để dừng lại chương trình tại 1 thời điểm bất kỳ để xem KQ tại đó
@@ -87,5 +87,5 @@ public class Ex01ObjectDemo {
 		// i4.salesPrice = 44d;
 		System.out.println("item i4 --> " + i4);
 		}
-	
+
 }
