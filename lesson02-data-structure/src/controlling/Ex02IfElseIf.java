@@ -34,5 +34,15 @@ public class Ex02IfElseIf {
 		} else if (avg < 8) {
 			System.out.println("học lực khá");
 		} else System.out.println("học lực giỏi");
+		
+		String result = avg < 5 ? "học lực yếu"
+								: avg < 6.5 ? "học lực trung bình"
+								: avg < 8.0 ? "học lực khá"
+								: "học lực giỏi";
+		
+		System.out.println("ternary operator: " + result);
 	}
+	
+	// tổng kết: khi nào gặp biểu thức 1 hoặc nhiều điều kiện 
+	// kiểm tra đúng sai --> if else .. else.. if
 }
