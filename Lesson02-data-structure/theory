@@ -1,0 +1,18 @@
+KDL nguyên thủy - primitive type
+--> dũng những kiểu DL có sẵn của JAVA
+VD: int, double, char, boolean
+  : ko thể tự tạo ra KDLNT
+
+
+KDL đối tượng - object type
+--> dùng những kiểu DL có sẵn của JAVA
+VD: 
+
+
+
+--> Tạo ra những KDL của bài toán 
+VD: Item(id, name, price)
+	Student(id, name, age)
+	
+Break thoát khỏi vòng lặp HIỆN TẠI
+Continue bỏ qua phần chưa thực thi của lần lặp hiện tại
