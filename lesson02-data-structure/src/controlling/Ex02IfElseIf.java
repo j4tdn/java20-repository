@@ -42,5 +42,11 @@ public class Ex02IfElseIf {
 		} else {
 			System.out.println("Học lực giỏi");
 		}
+		
+		String result = avg < 5 ? "Học lực yếu"
+							: avg < 6.5 ? "Học lực trung bình"
+							: avg < 8.0 ? "Học lực khá"
+							: "Học lực giỏi";
+		System.out.println("Ternary: " + result);
 	}
 }
