@@ -2,53 +2,96 @@ package controlling;
 
 import java.util.Random;
 
+/**
+ * Dựa vào thông tin lỗi để in ra mô tả của nó
+ * 500: internal error
+ * 400: bad request
+ * 404: not found
+ * 200: success
+ * #  : unknown
+ */
 public class Ex03SwitchCase {
 	public static void main(String[] args) {
+		// length = 6;
+		// index = [0, 6)
 		Random rd = new Random();
-		int month = 1 + rd.nextInt(12);
+		
+		int[] errorCodes = {500, 400, 404, 200, 999, 888};
+		
+		int pos = rd.nextInt(errorCodes.length);
+		int element = errorCodes[1];
+		
+		System.out.println("element: " + element);
+		
+		System.out.println("\n====== if else ========\n");
+		
+		String errorDesc = "";
+		if (element == 500) {
+			errorDesc = "internal error";
+		} else if (element == 400) {
+			errorDesc = "bad request";
+		} else if (element == 404) {
+			errorDesc = "not found";
+		} else if (element == 200) {
+			errorDesc = "success";
+		} else {
+			errorDesc = "unknown";
+		}
+		System.out.println("error description 1: " + errorDesc);
+		
+		System.out.println("\n====== switch case ========\n");
+		
+		errorDesc = "";
+		
+		switch(element) {
+			case 500:
+				errorDesc = "internal error";
+				break;
+			case 400:
+				errorDesc = "bad request";
+				break;
+			case 404:
+				errorDesc = "not found";
+				break;
+			case 200:
+				errorDesc = "success";
+				break;
+			default:
+				errorDesc = "unknown";
+		}
+		System.out.println("error description 2: " + errorDesc);
+		
+		// switch case non-break
+		// switch case break
+		
+		System.out.println("\n====== switch case non break ========\n");
+		int month = 1 + rd.nextInt(13);  // rd.nextInt(1, 13); //  [1-12]
+		int daysInMonth = -1;
+		System.out.println("month: " + month);
+		
+		// compile: lúc đang gõ, lưu --> javac File.java
+		// java compiler: version x
+		// JDK, JRE --> yêu cầu = version nhau
+		// JDK(compiler 11): trình biên dịch cho Eclipse hỗ trợ đến JAVA 11
+		// JRE(runtime 11): trình thực thi chạy ra bytecode, show ra màn hình đến 11
+		
+		// VD: compiler hỗ trợ thư viện code đến JAVA17
+		// nhưng khi chạy xuống máy chỉ hỗ trợ đến 15 --> ko hiểu code của 17 --> lỗi
+		// đôi lúc Eclipse hỗ trợ virtual JDK 17 để chạy được
+		
+		// runtime: lúc thực thi, chạy --> java File
 		switch (month) {
-		case 1: {
-			System.out.println("Tháng " + month + " có 31 ngày ");
+		case 1, 3, 5, 7, 8, 10, 12:
+			daysInMonth = 31;
+			break;
+		case 4, 6, 9, 11:
+			daysInMonth = 30;
+			break;
+		case 2:
+			daysInMonth = 28;
 			break;
 		}
-		case 2: {
-			System.out.println("Tháng " + month + " có 29 ngày "); break;
-		}
-		case 3: {
-			System.out.println("Tháng " + month + " có 31 ngày "); break;
-		}
-		case 4: { 
-			System.out.println("Tháng " + month + " có 3 ngày "); break;
-		}
-		case 5: {
-			System.out.println("Tháng " + month + " có 31 ngày "); break;
-		} 
-		case 6: {
-			System.out.println("Tháng " + month + " có 30 ngày "); break;
-		}
-		case 7: {
-			System.out.println("Tháng " + month + " có 31 ngày "); break;
-		}
-		case 8: {
-			System.out.println("Tháng " + month + " có 31 ngày "); break;
-		}
-		case 9: {
-			System.out.println("Tháng " + month + " có 30 ngày "); break;
-		}
-		case 10: {
-			System.out.println("Tháng " + month + " có 31 ngày "); break;
-		}
-		case 11: {
-			System.out.println("Tháng " + month + " có 30 ngày "); break;
-		}
-		case 12: {
-			System.out.println("Tháng " + month + " có 31 ngày "); break;
-		}
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + month); 
-		}
-
-		System.out.println("Finish...");
-
+		System.out.println("days in month: " + daysInMonth);
+		
 	}
 }

@@ -39,6 +39,14 @@ public class Ex02IfElseIf {
 			System.out.println("Học lực giỏi");
 		}
 		
+		//Ternary operator
+		String result = avgV < 5 ? "Học lực yếu" 
+						: avgV < 6.5 ? "Học lực trung bình"
+						: avgV < 8.0 ? "Học lực khá"
+						: "Học lực giỏi";
+		System.out.println("Ternary operator: " + result);
+		
+		
 		//	Cấu trúc điều kiện: If / else if / else 
 		//	Cấu trúc vòng lặp: for / while / dowhile
 		//	Cấu trúc dữ liệu: mảng
