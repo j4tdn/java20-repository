@@ -5,9 +5,9 @@ package datastructure.object.custom;
  * tên mặt hàng, giá bán Item: id, name, salesPrice
  */
 public class Item {
-	int id;
-	char name;
-	double salesPrice;
+	public int id;
+	public char name;
+	public double salesPrice;
 
 	public Item() {
 	}
