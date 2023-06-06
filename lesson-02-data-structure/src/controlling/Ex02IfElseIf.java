@@ -31,6 +31,8 @@ public class Ex02IfElseIf {
 		} else {
 			System.out.println("Hoc luc gioi");
 		}
-
+		
+		String result = avg < 5 ? "Hoc luc yeu" : avg < 6.5 ? "Hoc luc trung binh" : avg < 8.0 ? "Hoc luc kha" : "Hoc luc gioi";
+		System.out.println(result);
 	}
 }
