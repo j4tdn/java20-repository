@@ -15,9 +15,9 @@ public class Item {
 	//thuộc tính --> attributes
 	//khi tạo và gán giá trị cho biến kiểu Item --> giá trị của biến đó
 	//sẽ bao gồm 3 thông tin id, name, salesPrice
-	int id;
-	char name;
-	double salesPrice;
+	public int id;
+	public char name;
+	public double salesPrice;
 	
 	//default constructor --> hàm khởi tạo mặc định
 	//không có từ khoá static, không có kiểu dữ liệu trả về KDL của classs chứa nó)
