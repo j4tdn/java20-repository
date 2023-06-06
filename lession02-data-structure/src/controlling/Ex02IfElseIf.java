@@ -38,8 +38,14 @@ public class Ex02IfElseIf {
 		} else {
 			System.out.println("Học lực giỏi");
 		}
+	
+		String result = avg < 5 ? "Học lực yếu"
+								: avg < 6.5 ? "Học lực trung bình"
+								: avg < 8.0 ? "Học lực khá" 
+								: "Học lực giỏi";
+		System.out.println("ternary operator: " + result);
 		
-		// Cấu trúc điều kiện: if else if ?: switch case
-		// Cấu trúc vòng lặp: 
+		// Tổng kết: khi nào gặp biểu thức 1 hoặc nhiều điều kiện
+		// kiểm tra đúng sai --> if else...else...if
 	}
 }
