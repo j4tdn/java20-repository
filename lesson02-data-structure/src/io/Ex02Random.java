@@ -7,7 +7,6 @@ public class Ex02Random {
 		Random rd = new Random();
 		//1.Tạo ra 1 số nguyên ngẫu nhiên
 		int inValueWithoutRestriction = rd.nextInt();
-		
 		//2.Tạo ra 1 số nguyên ngẫu nhiên [0 < n) =20
 		//inclusive, exclusive
 		int upperBourndValue = rd.nextInt(20);

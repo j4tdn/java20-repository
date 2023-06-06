@@ -10,9 +10,9 @@ public class Item {
 	//thuộc tính -->attributes
 	//khi khởi tạo và gán giá trị cho 1 biến kiểu Item --> Giá trị của biến đó
 	//sẽ gồm 3 thông tin id,name,salePrice
-	int id;
-	char name;
-	double salePrice;
+	 public int id;
+	public char name;
+	public double salePrice;
 	
 	public Item(int id , char name, double salePrice) {
 		this.id=id;

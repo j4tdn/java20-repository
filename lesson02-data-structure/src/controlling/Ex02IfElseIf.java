@@ -50,5 +50,10 @@ public class Ex02IfElseIf {
 		//Cấu trúc điều kiện : if else if ?: switch case
 		//Cấu trúc vòng lặp : for,while,dowhile
 		//Cấu trúc dữ liệu : mảng
+		String result =avg < 5 ? "Hoc luc yeu":
+						avg <6.5? "Hoc luc TB":
+						avg<8.0 ? "Hoc luc kha":
+								  "Hoc luc gioi";
+		System.out.println("Ket quua la: "+ result);
 	}
 }
