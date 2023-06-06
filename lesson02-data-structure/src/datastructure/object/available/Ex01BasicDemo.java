@@ -24,7 +24,6 @@ public class Ex01BasicDemo {
 		
 		System.out.println("\n-------------------------\n");
 		
-		
 		//Giá trị lưu trữ ở vùng nhớ HEAP (constant pool)
 		//Tạo ra biến mới chứa giá trị được gán (55) -> gán lại địa chỉ cho biến
 		//Nếu chưa có --> tạo ra ô nhớ mới lưu trữ giá trị 55 -> gán lại địa chỉ cho biến

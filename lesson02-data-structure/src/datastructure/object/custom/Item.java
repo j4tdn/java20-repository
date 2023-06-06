@@ -13,9 +13,9 @@ public class Item {
 	// Thuộc tính --> Attributes
 	// Khi tạo và gán giá trị cho biến kiểu Item --> giá trị của biến đó
 	// Sẽ gồm 3 thông tin id,name ,salesPrice
-	int id;
-	char name;
-	double salesPrice;
+	public int id;
+	public char name;
+	public double salesPrice;
 
 	// Không có kdl trả về(mặc định trả về kdl của class chứa nó)
 

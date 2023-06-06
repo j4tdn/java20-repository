@@ -1,5 +1,6 @@
 package datastructure.object.custom;
 
+
 public class Ex02ObjectUpdatingValue {
 	public static void main(String[] args) {
 		// Primitive type
@@ -7,7 +8,6 @@ public class Ex02ObjectUpdatingValue {
 		int b = 10;
 		a = b;
 		a = 15;
-		
 		System.out.println("a --> " + a);
 		System.out.println("b --> " + b);		
 		
