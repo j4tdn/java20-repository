@@ -10,9 +10,9 @@ public class Item {
 	//biến toàn cục --> globar variables
 	//thuộc tính --> attributes
 	//khi tạo và gán giá trị chi biến kiểu Item --> giá trị của biến đó sẽ gồm 3 thông tin id, name, salesPrice
-	int id;
-	char name;
-	double salesPrice;
+	public int id;
+	public char name;
+	public double salesPrice;
 	//default constructor --> hàm khởi tạo mặc định
 	//không có từ khóa static, không có KDL trả về(mặc định trả về KDL của class chứa nó)
 	//têm hàm trùng với tên của class
