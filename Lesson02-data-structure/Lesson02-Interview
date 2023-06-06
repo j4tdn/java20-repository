@@ -1,0 +1,36 @@
+INTERVIEW:
+1. trong java có bao nhiêu KDL ?
+
+
+2. giá trị của KDL nguyên thủy, đối tượng lưu ở đâu ?
+
+
+3. Trong JAVA có những từ khóa nào đại diện cho access modifier ?
+		+ Public 
+		+ private
+		+...
+		+ protected
+		--> phân biệt cho ví dụ 
+		
+4. Mục đích của từ khóa final;
+
+
+5. có thể tạo mới KDL nguyên thủy, đối tượng được không?
+	nếu được thì bằng cách nào 
+	
+	+ KDL Nguyên thủy: Không
+	+ KDL đối tượng : Có
+		--> Xác định xem KDL đối tượng đó muốn lưu những thuộc tính nào ?
+		--> tạo ra 1 class, class name đó chính là KDL
+		--> trong class tạo ra các thuộc tính, hàm khởi tạo rỗng và đẩy đủ tham số
+		
+		--> khi khai báo biến có KDL đối tượng thì 
+			giá trị của nó sẽ là 1 ô nhớ ở HEAP chứa đầy đủ thông tin của các tt
+			dùng từ kháo new
+6. muốn lưu 1 kiểu số nguyên dùng int hay Integer ?
+	int : require, mandatory
+	Integer: optional
+	
+7. khi khai báo và khởi tạo một biến KDL String 
+	--> có mấy cách
+	--> nên dùng cách nào 
