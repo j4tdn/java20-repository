@@ -1,0 +1,34 @@
+1. Trong JAVA có bao nhiêu kiểu dữ liệu?
+
+2. Giá trị của KDL nguyên thủy, đối tượng lưu ở đâu?
+
+3. Trong JAVA có những từ khóa nào đại diện cho access modifier?
+	+ public
+	+ private
+	+ ...
+	- protected
+	--> phân biệt cho ví dụ
+	
+4. Mục đích của từ khóa final
+
+5. Có thể tạo mới KDL nguyên thủy, đối tượng được không?
+	Nếu được thì bằng cách nào
+	
+	+ KDL nguyên thủy: KHÔNG
+	+ KDL đối tượng: CÓ
+		--> Xác định xem KDL đối tượng đó muốn lưu thông tin(thuộc tính) nào
+		--> Tạo ra 1 class, class_name chính là kiểu dữ liệu
+		--> Trong class tạo ra các thuộc tính, hàm khỏi tạo rỗng và đầy đủ tham số
+		
+		--> Khi khai báo biến có KDL đối tương thì
+			Giá trị của nó sẽ là 1 ô nhớ ở HEAP chứa đầy đủ thông tin của các tt
+			Dùng từ khóa new
+			
+6. Muốn lưu 1 kiểu số nguyên dùng int hay Integer?
+	int: required, madatory
+	Integer: optional
+	
+7. Phân biệt khi mình khai báo và khởi tạo 1 biến KDL String
+	--> Có mấy cách : 2 cách (gán trực tiếp || new String())
+	--> nên dùng cách nào : nên dùng gán trực tiếp vì các gtrị trùng sẽ không tạo thêm ô nhớ
+	
