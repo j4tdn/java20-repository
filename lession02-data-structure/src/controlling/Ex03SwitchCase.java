@@ -68,6 +68,19 @@ public class Ex03SwitchCase {
 		int month = rd.nextInt(1, 13); // [1,12]
 		int daysInMonth = -1;
 		
+		// compile: lúc đang gõ, save --> javac File.java
+		// java compile: version x
+		// JDK, JRE --> yêu cầu = version nhau
+		// JDK(compiler 11): trình biên dịch cho Eclipse hỗ trợ đến JAVA 11
+		// JRE(runtime 11): trình thực thi chạy ra bytecode, show ra màn hình đến 11
+
+		// VD: compiler hỗ trợ thư viện code đến JAVA17
+		// nhưng khi chạy xuống máy chỉ hỗ trợ đến 15 --> ko hiểu code của 17 --> lỗi
+		// đôi lúc Eclipse hỗ trợ virtual JDK 17 để chạy được
+				
+		
+		// runtime: lúc thực thi, chạy --> java File
+
 		switch (month) {
 		case 1:
 		case 3:
@@ -90,13 +103,5 @@ public class Ex03SwitchCase {
 		}
 		
 		System.out.println("days in month: " + daysInMonth);
-		// JDK, JRE --> yêu cầu = version nhau
-		// JDK(compiler 11): trình biên dịch cho Eclipse hỗ trợ đến JAVA 11
-		// JRE(runtime 11): trình thực thi chạy ra bytecode, show ra màn hình đến
-
-		// VD: compiler hỗ trợ thư viện code đến JAVA17
-		// nhưng khi chạy xuống máy chỉ hỗ trợ đến 15 --> ko hiểu của 17
-		// đôi lúc Eclipse hỗ trợ virtual JDK 17 để chạy được
-		
 	}
 }
