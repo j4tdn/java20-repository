@@ -1,4 +1,4 @@
-package datastructure.object;
+package datastructure.object.custom;
 
 /**
  * Khai báo, khởi tạo ra kiểu dữ liệu đối tượng --> Item.
@@ -8,7 +8,7 @@ package datastructure.object;
  * --> Item: id, name, salesPrice;
  */
 public class Item {
-	// Bien toan dcuc --> global variables
+	// Bien toan cuc --> global variables
 	// thuoc tinhs --> attributes
 	// khi tạo và gán giá trị cho biến kiểu Item --> giá trị của biến đó 
 	// sẽ gồm 3 thông tin id, name, price.

@@ -71,7 +71,7 @@ public class Ex01DemoMainMethod {
 	
 	// Để gọi hàm static
 	// ClassOwner.StaticMethodName(...)
-	static void printStarTriangle() {
+	public static void printStarTriangle() {
 		System.out.println("*");
 		System.out.println("* *");
 		System.out.println("* * *");
