@@ -28,12 +28,19 @@ public class Ex02IfElseIf {
 		
 		if(avg < 5)
 			System.out.println("Hoc luc yeu!");
-		else if(avg < 6.5)
+		else if(avg < 6.5) 
 				System.out.println("Hoc luc trung binh!");
 			else if(avg < 8)
 					System.out.println("Hoc luc kha!");
 				else
 					System.out.println("Hoc luc gioi!");
+		
+		//Hạn chế sử dụng toán tử 3 ngôi cồng kềnh
+		String result = avg<5 ? "Hoc luc yeu"
+							  : avg < 6.5 ? "Hoc luc trung binh"
+							  : avg < 8 ? "Hoc luc kha"
+							  : "Hoc luc gioi";
+		System.out.println("ternary operator: " + result);
 		
 	}
 }
