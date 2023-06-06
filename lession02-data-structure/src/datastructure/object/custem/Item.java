@@ -13,9 +13,9 @@ public class Item {
 	// thuộc tính --> attributes
 	// kho khởi tạo và gán giá trị cho biến kiểu Item --> giá trị biến đó sẽ gốm
 	// 3 thông tin id,name,price
-	int id;
-	char name;
-	double salesPrice;
+	public int id;
+	public char name;
+	public double salesPrice;
 
 //public Item(int id, char name, double salesPrice) : giá trị truyền vào(tên biến nhận tham số)
 	public Item(int id, char name, double salesPrice) {

@@ -50,5 +50,11 @@ public class Ex02IfElseIf {
 		{
 			System.out.println("Học lục Giỏi");
 		}
+		String result  = avg <5 ? "Học lực yếu"
+				: avg<6.5 ? "Học lực trung bình"
+				: avg <8.5 ? "HỌc lực khá"
+				: "Học lực giỏi";
+		System.out.println(result);
 	}
+	
 }
