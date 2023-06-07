@@ -1,0 +1,21 @@
+1. trong java có bao nhiêu kiểu dữ liệu?
+giá trị của kiểu dữ liệu lưu ở đâu, đối tượng ?
+trong java có những từ khóa nào đại diện cho access modifier5.
++ pubblic
++private
++...
+protected..
+--> phân biệt cho ví dụ
+4. mục đích từ khóa final
+5. có thể tạo mới KDL nguyên thủy, đối tượng được không. Bằng cách nào
++nguyên thủy: không
++đối tượng: có. bằng cách tạo ra một class, xác định xem kiểu dữ liệu có thuộc tính nào.sau đó tạo ra class
+trong class tạo ra các thuộc tính, hàm khởi tạo rỗng, hàm đầy đủ tham số.
+khi mình khai báo biến có kiểu dữ liệu đốitượng , giá trị ở HEAP chứa đầy đủ thông tin của các đối tượng
+6. muốn lưu 1 kiểu số nguyên thì lưu int hay Integer ?
+int luôn luôn có giá trị:
+Integer: optional
+7. khi mình khai báo và khởi tạo biến KDL String
+--> có mấy cách ?
+--> nên dùng cách nào ?
+có 2 cách dùng gán trực tiếp hoặc dùng từ khóa new
