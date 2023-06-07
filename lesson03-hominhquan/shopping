@@ -1,0 +1,29 @@
+1. Class
+	1.1 Customer: id, name, ,phone, address
+	1.2 Item: id, model, color, price
+	
+	1.3 ItemDetail : Item, quantity 
+	1.4 Order: Customer, ItemDetail[], quantity, date
+	
+	
+2.object
+	Customer ctm2 ("Top", "Sorm", 345, "Ha noi");
+	Customer ctm1 ("Jung2", "Levi", 123, "Ha noi");
+	Customer ctm3 ("Mid", "Optimus", 235, "Sai gon");
+	Customer ctm4 ("AD", "Slayder", 234, "Sai gon");
+	Customer ctm5 ("Sup", "Platte", 482, "Ha noi");
+	
+	
+	Item it1 ("D", "Dell", "Black", 1200 );
+	Item it2 ("A", "asus", "white", 1000 );
+	Item it3 ("T", "ThingkingPad", "Black", 2000 );
+	
+	
+	
+	order o1 (ctm1, ItemDetail{(it1,1), (it2, 2)), date_time);
+	order o2 (ctm1, ItemDetail{(it2,1), (it2, 1)), date_time);
+	order o3 (ctm1, ItemDetail{(it3,1), (it2, 2)),(it3,1), date_time);
+	
+	
+
+	

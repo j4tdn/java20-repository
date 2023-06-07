@@ -1,0 +1,18 @@
+1.Class
+	1.1 Customer: id, name, phone
+	1.2 Vehicle: id, model, capacity, price
+	1.3 VehicleDetail: Vehicle[], quantity
+	1.4 Order: Customer, Vehicle
+
+
+2.Object
+	Customer: ctm1 ("123", "Nguyen Thi Loan", 759)
+	Customer: ctm2 ("234", "Le Minh Tinh", 068)
+	Customer: ctm3 ("456", "Nguyen Minh Triet", 756)
+	
+	
+	Vehicle vh1 ("F", "Future Neo", "100", "3500000")
+	Vehicle vh2 ("M", "Mazda", "3000", "25000000")
+	Vehicle vh3 ("L", "Lanscape", "1500", "10000000")
+
+3.Function
