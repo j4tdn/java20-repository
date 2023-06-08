@@ -1,0 +1,7 @@
+class:
+customer: id, name, phone, address
+Vehicle: type, capacity, cost
+Vehicledetail: vehicale, quanity
+order : customer, Vehicle, Localdate
+orderutils: 
+
