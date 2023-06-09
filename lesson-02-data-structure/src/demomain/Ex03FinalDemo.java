@@ -10,6 +10,12 @@ public class Ex03FinalDemo {
 		
 		N = 44;
 		
+		Item i1 = new Item(1, 'A', 20f);
+		Item i2 = new Item(2, 'B', 20f);
+		
+		i1 = i2;
+		
+		i1.salesPrice = 88;
 		
 
 	}

@@ -1,0 +1,18 @@
+1. Trong JAVA có bao nhiêu kiểu dữ liệu?
+
+2. Giá trị của KDL nguyên thuỷ, lưu ở đâu, đối tượng lưu ở đâu?
+
+3. Trong JAVA có những từa khoá noà đại diện cho access modifier?
+	+ public
+	+ private
+	+ ...
+	- protected
+	--> phân biệt cho ví dụ
+	
+4. Mục đích của từ khoá final
+
+5. Có thể tạo mới kiểu dữ liệu nguyên thuỷ, đối tượng được không?
+	Nếu được thì bằng cách nào?
+	
+	+ KDL nguyên thuỷ: Không
+	+ KDL đối tượng: Có

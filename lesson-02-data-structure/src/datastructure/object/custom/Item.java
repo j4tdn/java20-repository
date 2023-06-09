@@ -9,7 +9,7 @@ package datastructure.object.custom;
  *
  */
 
-public class Item {
+	public class Item {
 	
 	//biến toàn cục --> global variables
 	//thuộc tính --> attributes
