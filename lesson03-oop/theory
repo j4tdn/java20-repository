@@ -1,0 +1,33 @@
+FOP: Functional Oriented Programming
+OOP: Object     Oriented Programming
+
+VD: Bài toán quản lý sinh viên ở trường A
+					QLSV
+	 QLSV_Khoa_A  QLSV_Khoa_B QLSV_Khoa_C
+	       SVK11 SVK12 SVK13 SVK14
+	       
+	        .......................
+	        
+	        SinhVien
+	        SinhVien_Khoa_A: dữ liệu, chức năng
+	        SinhVien_Khoa_B: dữ liệu, chức năng
+	        SinhVien_Khoa_C: dữ liệu, chức năng
+	
+
+--> Khái niệm, cách thức để lập trình viên giải quyết một bài toán
+
+--> Thiết kế ra ngôn ngữ lập trình, định hướng ngôn ngữ đó đi sâu theo
+hướng FOP, OOP
+
++ FOP: chia bài toán thành những chức năng(hàm)
+     : các hàm sẽ có các level khác nhau
+     : C1 --> truyền tham số qua hàm 
+     			 --> phức tạp
+     : C2 --> sử dụng chung dữ liệu(biến toàn cục)
+                 --> share chung dữ liệu
+                 --> nguy hiểm, ko quản lý được phạm vi truy cập của dữ liệu
+
+VD: JAVA: OOP
+        : Sử dụng những khái niệm của OOP
+        : Đảm bảo các tính chất của OOP
+        : Kết hợp với FOP

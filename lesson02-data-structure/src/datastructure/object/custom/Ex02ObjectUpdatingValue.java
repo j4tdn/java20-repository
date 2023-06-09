@@ -2,6 +2,27 @@ package datastructure.object.custom;
 
 public class Ex02ObjectUpdatingValue {
 	public static void main(String[] args) {
+		// deprecated
+		
+		// JAVA 1.0 --> multiply(a, b), divide(a, b)
+		// JAVA 2.0 --> multiply(a, b, scale),  divide(a, b, scale)
+		//              abs(a), pow(a, b)
+				
+		// Cách 1: xóa đi multiply(a, b), divide(a, b)
+		// incompatible version
+				
+		// Cách 2: đánh dấu depracated(loại bỏ), đã được thay thế bởi hàm khác
+		// compatible version
+				
+				
+		// todo-app --> sử dụng JAVA 2.0
+		// main() --> multiple(2, 4), divide(7, 3) --> lỗi biên dịch N chỗ --> sửa
+				
+		// shop-app --> sử dụng JAVA 2.0
+		// main() --> multiple(2, 4), divide(7, 3) --> lỗi biên dịch N chỗ --> sửa
+		
+		
+		
 		// primitive type --> STACK
 		int a = 5;
 		int b = 10;
