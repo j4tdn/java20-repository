@@ -1,13 +1,17 @@
 package demomain;
 
 public class Ex01DemoMainMethod {
-	//Ham main tieu chuan trong Java
-	// \n --> break line xuong hang
+	
+	// Standard main function in JAVA 
 	public static void main(String[] args) {
-		System.out.println("1.Java Class"); //In KQ ra man hinh console va xuong hang
-		System.out.println("2.Main Method");
+		System.out.println("1. Java Class"); // In kết quả ra màn hình Console và xuống hàng
+		System.out.print("2. Main Method");  // In kết quả ra màn hình Console và không xuống hàng
 		
+		//Để gọi hàm static : ClassOwner.staticMethodName(...)
+		Ex01DemoMainMethod.printNumberTriangle();
+		Ex01DemoMainMethod.printStarTriangle();
 	}
+	
 	static void printStarTriangle() {
 		System.out.println("*");
 		System.out.println("* *");
@@ -15,6 +19,7 @@ public class Ex01DemoMainMethod {
 		System.out.println("* * * *");
 		System.out.println("* * * * *");
 	}
+	
 	public static void printNumberTriangle() {
 		System.out.println("1");
 		System.out.println("1 2");

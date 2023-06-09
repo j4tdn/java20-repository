@@ -2,24 +2,35 @@ package datastructure.primitive;
 
 public class Ex02PrimitiveValueModification {
 	public static void main(String[] args) {
-		//a,b thuoc pham vi su dung trong ham main
-		int a =7;
-		int b=5;
-		int val=99;
 		
-		// Cap nhap , gan lai gia tri cho bien, o nho
-		// Dung toan tu = --> luon luon gan/copy gia tri tai vung nho STACK
-		// VT = VP
-		// Thuc thi VP truoc, duoc gia tri gan cho VT
-		a= val;
-		// Swap/ hoan vi gia tri cua hai phan tu a,b
-		int tmp=a; //teamp(99)
-		a=b; // a(5) b(5)
-		b=tmp; // b(99)
+		// a , b thuộc phạm vi sử dụng trong hàm main
+		int a = 7;
+		int b = 5;
+		int value = 99;
+		
 		System.out.println(
-				"a --> " +a +
-				"\nb --> " +b +
-				"\nval -->" +val
-				);
+				"a --> " + a
+			+ "\nb --> " + b
+			+ "\nvalue --> " + value
+		);
+		
+		a = value;
+		System.out.println("--------------------------------");
+		System.out.println(
+				"a --> " + a
+			+ "\nb --> " + b
+			+ "\nvalue --> " + value
+		);
+		
+		//Swap hoán vị giá trị của 2 phần tử a và b
+		int tmp = a;
+		a = b;
+		b = tmp;
+		System.out.println("--------------------------------");
+		System.out.println(
+				"a --> " + a
+			+ "\nb --> " + b
+			+ "\nvalue --> " + value
+		);
 	}
 }

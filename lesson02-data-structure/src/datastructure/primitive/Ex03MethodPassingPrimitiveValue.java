@@ -1,29 +1,29 @@
 package datastructure.primitive;
 
 public class Ex03MethodPassingPrimitiveValue {
-		public static void main(String[] args) {
-			//block scope
-			int a=7;
-			int b=5;
-			modify(a);
-			modify(b);
-			//a -->7
-			//b -->5
-			swap(a,b);
-			System.out.println(
-					);
-			
-		}
-		/* Khi truyen tham so qua ham --> truyen tham tri || tham chieu
-		 * pass by value ||
-		 * 
-		 */
-		private static void modify(int a) {
-			a=9999;
-		}
-		private static void swap(int a,int b) {
-			int tmp=a;
-			a=b;
-			b=tmp;
-		}
+	public static void main(String[] args) {
+		//JAVA pass(es) by value [AT STACK]
+		int a = 5;
+		int b = 7;
+		
+		modify(a);
+		modify(b);
+		
+		swap(a, b);
+		System.out.println(
+			  "a --> " + a
+			+ "\nb --> " + b
+		);
+		
+	}
+	
+	private static void modify(int a) {
+		a = 9999;
+	}
+	
+	private static void swap(int a, int b) {
+		int temp = a;
+		a = b;
+		b = temp;
+	}
 }
