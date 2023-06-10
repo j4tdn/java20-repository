@@ -28,6 +28,6 @@
    int: require, mandatory
    Integer: optional
 
-7. Khi khai báo và khởi tạo biến KDL String 
+7. Khi khai báo và khởi tạo biến KDL String tương tự Integer
    --> có mấy cách
    --> nên dùng cách nào   	   

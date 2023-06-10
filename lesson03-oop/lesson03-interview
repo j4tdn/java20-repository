@@ -1,0 +1,27 @@
+1. Class là gì , Object là gì ?
+--> phân biệt
+
+2. Tại sao phải khai báo phạm vi truy cập là private cho các attributes của class?
+
+--> rồi sau đó dùng hàm setter, getter để truy cập thuộc tính ?
+
+3. Phân biệt constructor và setter
+--> constructor tạo new object  còn setter có object rồi
+
+4. Khi nào sẽ khai báo static cho thuộc tính, hàm ?
+
+5. Có thể/nên khai báo private constructor được không ?
+   Vì sao ? ví dụ.
+   
+   + với 1 class bình thường --> dùng public constructor bth để khởi tạo
+   + Cũng có trường hợp dùng private constructor
+   	--> khi k muốn class đó cho phép tạo ra đối tượng nào cả
+   	
+   	ví dụ: Utility class --> Util Class --> chứa những util methods
+	MathUtil 
+		private MathUtil(){}
+		static sum(a, b)
+		static sub(a, b) 
+		static abs(a)
+		static mul(a, b)
+	   	 

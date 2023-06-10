@@ -10,7 +10,7 @@ public class Ex02PrimitiveValueModification {
 		
 		System.out.println("a --> " + a + "\nb --> " + b + "\nvalue --> " + val);
 		System.out.println("==============");
-		// cập nhật, gán lại gía trị dùng = --> luôn luôn gán/copy giá trị tại STACK
+		// cập nhật, gán lại giá trị dùng = --> luôn luôn gán/copy giá trị tại STACK
 		// VT = VP ==> thực thi VP trước sau đó gán cho VT
 		a = val;
 		

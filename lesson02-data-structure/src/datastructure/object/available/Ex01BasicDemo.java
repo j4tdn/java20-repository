@@ -29,7 +29,7 @@ public class Ex01BasicDemo {
 		System.out.println("iA --> " + iA);
 		System.out.println("iB --> " + iB); // H1
 		System.out.println("iC address --> " + System.identityHashCode(iC)); // H2
-		System.out.println("iC address --> " + System.identityHashCode(iE)); // H22
+		System.out.println("iE address --> " + System.identityHashCode(iE)); // H22
 		System.out.println("iD --> " + iD); // H3
 		
 		System.out.println("\n-----------------------\n");

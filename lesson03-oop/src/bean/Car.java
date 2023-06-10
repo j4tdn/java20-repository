@@ -41,7 +41,7 @@ public class Car {
 	// phương thức cho phép bên ngoài truy cập giá trị của các thuộc tính private
 	// vì sao k cho thuộc tính là public --> để đc quản lí cho class hiện tại, và k
 	// cho các hàm khác dùng đc
-	// cung cấp getter, setterpun
+	// cung cấp getter, setter
 
 	public int getId() {
 		return id;

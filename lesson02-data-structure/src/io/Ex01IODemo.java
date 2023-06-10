@@ -11,7 +11,7 @@ public class Ex01IODemo {
 		 * + Số điện thoại
 		 * + Năm sinh
 		 * 
-		 * --> in ra thông tin họ tên, số điện thoại, tuối
+		 * --> in ra thông tin họ tên, số điện thoại, tuổi
 		 * 
 		 *  Hiện tượng trôi lệnh xảy ra khi nhập !nextLine trước nextLine
 		 *  

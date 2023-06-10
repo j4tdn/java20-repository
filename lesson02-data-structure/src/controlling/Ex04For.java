@@ -22,16 +22,17 @@ public class Ex04For {
 			System.out.println("hello");
 		}
 		System.out.println("\n==============\n");
-
+		
+		// label --> break, continue
 		ff: for (int row = 1; row <= 6; row++) {
-			for (int col = 1; col <= 4; col++) {
-				System.out.print("" + row + col + " ");
-				if (row == 5 && col == 3) {
-					break ff;
+				for (int col = 1; col <= 4; col++) {
+					System.out.print("" + row + col + " ");
+					if (row == 5 && col == 3) {
+						break ff;
+					}
 				}
+				System.out.println();
 			}
-			System.out.println();
-		}
 
 		System.out.println("\n====== Finished main=====\n");
 	}

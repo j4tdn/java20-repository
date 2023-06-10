@@ -32,6 +32,6 @@ public class Ex01CarDemo {
 		System.out.println("c6 --> " + c6);
 		System.out.println("c99 --> " + c99);
 		System.out.println("c100 --> " + c100);
-
+		System.out.println();
 	}
 }

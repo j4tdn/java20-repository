@@ -5,7 +5,7 @@ public class Ex01ObjectDemo {
 		// thực thi
 		// run --> ctrl f11 --> chạy toàn bộ quá trình và chạy xog dừng lại
 		// debug --> f11 --> dùng dể dừng lại ctr tại 1 thời điểm bki để xem kq ở đó
-		// 				 --> dùng breakpoint để dùng code tại đó
+		// 				 --> dùng breakpoint để dừng code tại đó
 		// 				 --> step over --> nhảy qua dòng code mới
 		//				 --> step into --> nhảy vào bên trong hàm
 		
