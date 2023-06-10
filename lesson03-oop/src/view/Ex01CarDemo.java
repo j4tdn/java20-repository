@@ -4,13 +4,13 @@ import bean.Car;
 
 public class Ex01CarDemo {
 	public static void main(String[] args) {
-		// Tất cả các đối tượng tạo ra từ class Car 
+		// Tất cả các đối tượng tạo ra từ class Car
 		// --> luôn có model = Honda
-		
+
 		// Đổi tên thành HondaVN
-		
+
 		Car.setModel("Honda");
-		
+
 		Car c1 = new Car(1, "C1", "Black", 480);
 		Car c2 = new Car(2, "C2", "Black", 980);
 		Car c3 = new Car(3, "C3", "White", 670);
@@ -19,10 +19,9 @@ public class Ex01CarDemo {
 		Car c6 = new Car(6, "C6", "Black", 2300);
 		Car c99 = new Car(99, "C99", "Yellow", 1500);
 		Car c100 = new Car(100, "C100", "Black", 1200);
-		
+
 		Car.setModel("HondaVN");
-		
-		
+
 		System.out.println("c1 --> " + c1);
 		System.out.println("c2 --> " + c2);
 		System.out.println("c3 --> " + c3);
