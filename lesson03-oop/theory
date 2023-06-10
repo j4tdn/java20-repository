@@ -1,0 +1,29 @@
+1.FOP : Functional oriented Progamming
+2.OOP : Objcect    oriented Progamming
+
+VD: Bài toán quản lý sinh viên ở trường A
+hàm lớn :                               QLSV
+hàm nhỏ :                  QLSV_KHOA_A    QLSV_KHOA_B   QLSV_KHOA_C
+                     SVK1            SVK2        SVK3         SVK4
+                      -------------------------------------------
+                      
+                      Sinhvien
+                      Sinhvien_khoaA: dữ liêu, chức năng
+                      Sinhvien_khoaB: dữ liêu, chức năng
+                      Sinhvien_khoaC: dữ liêu
+                      , chức năng
+                    
+
+-> Khái niệm, các thức để lập trình viên giải quết một bài toán
+
+-> Khi thiết kế ra ngơn ngữ lập trình, định hướng ngôn ngữ đó đi sau theo hướng FOP, OOP
+
++ nếu code bài toán theo kiểu FOP: chia bài toàn thành những chứ năng(hàm)
+                                 : các hàm sẽ có level khác nhau
+                                 : C1 : Truyền tham số qua hàm --> phức tap
+                                 : C2 : sử dụng chung sữ liệu( biến toàn cục) --> nguy hiểm, không quản lý được phạm vi truy cập
+
+VD: JAVA : OOP
+         : sử dụng những khái niệm của OOP
+         : Đảm bảo các tính chất của OOP
+         : Kết hợp với FOP

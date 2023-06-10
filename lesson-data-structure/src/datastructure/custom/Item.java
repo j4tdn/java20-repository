@@ -13,8 +13,8 @@ public class Item {
 	// khi tao va gan gia tri cho bien cho KDL Item --> gia tri bien do
 	//     se gom 3 thong tin id, name, salesPrice
    public int id;
-   char name;
-   double salesPrice;
+   public char name;
+   public double salesPrice;
    
    //--. hàm khởi tạo mặc định
    // không có từ khóa static, không có KDL trả về
