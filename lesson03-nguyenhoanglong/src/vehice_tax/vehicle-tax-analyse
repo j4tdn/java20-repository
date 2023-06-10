@@ -1,0 +1,32 @@
+A. Class:
+Customer: id, name, address
+Vehicle	: id, model, color, capacity, cost
+
+B1: Create list of customers
+B2: Create array of vehice
+B3: Shopping function
++ Who is buying
++ List of items
++ Amount of each item
+=> Order: customer, vehicle_detail[]
+=> VehicleDetail: vehicle, quantity
+
+=====================================
+B. Object:
+Customers:
+c1: c1	 : KH1, Nguyen Thi Loan, USA
+	c2	 : KH2, Le Minh Tinh, Japan
+	c3 	 : KH3, Nguyen Minh Triet, VietNam
+
+Vehicle:
+vh1	: F1, Future Neo, Black, 100, 35000000
+vh2	: F2, Ford Ranger, Green, 3000, 250000000
+vh3	: L1, Landscape, White, 1500, 1000000000
+
+Order:
+o1 : c1,(vh1, 1)
+o2 : c2, (vh2, 1)
+o3 : c3(vh3, 1)
+
+C. Function(Hàm): 
+tax() 
