@@ -1,4 +1,4 @@
-package view;
+/* package view;
 
 import bean.Car;
 
@@ -33,3 +33,4 @@ public class Ex01CarDemo {
 		System.out.println("c100 --> " + c100);
 	}
 }
+*/
