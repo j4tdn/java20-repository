@@ -1,0 +1,36 @@
+1.Class là gì, Object là gì?
+	Class là một khái niệm trừu tượng để chỉ tập hợp các object có chung:
+		• Tính chất: thuộc tính -- Hành vi: phương thức
+		• Mỗi đối tượng có giá trị của thuộc tính, phương thức khác nhau
+	Object là một khái niệm dùng để mô tả các thực thể tồn tại trong thế giới thực.
+		- Chứa giá trị cụ thể và có thể phân biệt được với đối tượng khác
+
+
+2.Tại sao phải khai báo phạm vi truy cập là private cho các thuộc tính của class?
+	public ,default --> thuộc tính giống như biến chung giống 
+		--->OOP quản lý thông tin của riêng nó nên sử dụng private 
+		--> nhưng cần cho truy cập vaod thuoocj tính bên trong nên dùng getter, setter.
+
+Rồi sao đó dùng hàm getter, setter để truy cập thuộc tính?
+
+3. Phân biệt constructor và setter?
+	gọi cnts --> tạo đối tượng mouws
+	setter --> đã có đối tượng và chỉ cần thay đổi giá trị
+
+4.Khi nào sẽ khai báo static cho thuộc tính, hàm
+
+5.Hàm khởi tạo --> khởi tạo đối tượng.
+Có thể/nên khai báo private constructor được không?
+Vì sao? Cho ví dụ.
+
+	+ Với 1 class bình thường thì dùng public constructor để khởi tạo đối tượng
+	+ Cũng có trường hợp dùng private constructor
+		--> Khi k muốn class đó cho phép tạo ra đối tượng nào cả
+		Vd: Utility class --> Util Class --> class chứa những util methods
+			MathUtil
+				private MathUtil(){}
+				
+				static sum(a, b)
+				static sub(a, b)
+				static abs(a)
+				static mul(a, b)
