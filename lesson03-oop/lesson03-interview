@@ -1,0 +1,6 @@
+1. Class là gì, Object là gì?
+Phân biệt
+2. Tại sao phải khai báo phạm vi truy cập là private cho các thuộc tính của class?
+	rồi sau đó dùng hàm getter, setter để truy cập các thuộc tính
+	
+3. Phân việt constructor và setter

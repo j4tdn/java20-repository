@@ -16,3 +16,19 @@
 	
 	+ KDL nguyên thuỷ: Không
 	+ KDL đối tượng: Có
+	  --> Xác định xem KDL đối tượng đó muốn lưu những thông tin(thuộc tính ) nào
+	  --> Tạo ra 1 class, class name chính là KDL
+	  --> Trong class tạo ra các thuộc tính hàm khởi tạo rỗng và hàm khởi tạo đầy đủ tham số
+	  
+	  --> khi khai báo biến có KDL đối tượng thì 
+	  		Giá trị của nó sẽ là 1 ô nhớ ở HEAP chứa đầy đủ thông tin của các thuộc tính
+	  		Dùng từ khoá new
+
+6. Muốn lưu 1 kiểu số nguyên dùng int hay Integer ?
+	int: require, mandatory
+	Integer: optional
+	
+7. Khi khai báo và khởi tạo biến KDL String
+	--> có mấy cách
+	--> nên dùng cách nào
+	
