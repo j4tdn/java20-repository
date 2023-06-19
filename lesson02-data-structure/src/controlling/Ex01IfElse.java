@@ -5,7 +5,6 @@ import java.util.Random;
 public class Ex01IfElse {
 	public static void main(String[] args) {
 		// Random a random number, số đó có phải số lẻ ?
-		
 		Random rd = new Random();
 		int n = rd.nextInt(5,18);
 		System.out.println("n --> " + n);
