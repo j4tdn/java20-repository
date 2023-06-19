@@ -23,7 +23,13 @@ public class Ex01EnumDemo {
 		System.out.println("circle pos --> " + pos.name()); //pos
 		System.out.println("circle pos --> " + pos.getValue());
 		
-		if (pos.equals(CirclePos.ONSIDE)) {
+		String hString = "234";
+		String hStringg = "234";
+		if(hString == hStringg) {
+			System.out.println("ok đấy");
+		}
+		
+		if (pos==CirclePos.ONSIDE) {
 			System.out.println("Vẽ đường kính đi qua O A");
 		} else {
 			System.out.println("Không thoải mãn bài toán");
