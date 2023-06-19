@@ -1,0 +1,35 @@
+1. Tính chất đóng gói
+English: Encapsulation
+
+Định nghĩa: Tính chất đóng gói đc thể hiện qua các access modifier
+	+ private: đóng gói trong phạm vi class
+	+ default | protected: đóng gói trong phạm vi package
+	+ public: đc sử dụng bất kì đâu trong project
+	
+2. Tính chất đa hình
+English: Polymorphism
+
+Định nghĩa: Tính chất đa hình có 2 loại
+	+ Đa hình trong phương thức
+	+ Đa hình trong đối tượng
+	Phương thức, đối tượng đc gọi là đa hình nếu cùng 1 đối tượng, phương thức
+	nhưng lúc thì có 'thể hiện' này, khác --> đa hình
+	
+	2.1 Đa hình trong phương thức
+	+Overloading
+		2/n phương thức đc gọi là overloading nếu
+		. Cùng 1 class
+		. Cùng tên
+		. Khác số lượng tham số
+		. Khác kdl truyền vào của tham số
+		VD: int sum(int, int)
+			int sum(int, int, int)
+			float sum(float, float)
+			
+	+Overriding:
+		2/nhiều phương thức đc gọi là overriding nếu
+		+ cùng phần khai báo hàm: vd void log()
+		+ thuộc 2/nhiều class có quan hệ cha con
+		+ lớp con định nghĩa/override lại phần thân hàm từ hàm 
+			vd: toString(), equals(), log()
+		
