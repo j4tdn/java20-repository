@@ -1,4 +1,4 @@
-package polymorphism.method;
+package b.polymorphism.method;
 
 public class Ex02OverridingDemo {
 	public static void main(String[] args) {

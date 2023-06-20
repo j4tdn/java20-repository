@@ -1,4 +1,4 @@
-package encapsulation.inside;
+package a.encapsulation.inside;
 
 public class CompanyA {
 	public String name;
