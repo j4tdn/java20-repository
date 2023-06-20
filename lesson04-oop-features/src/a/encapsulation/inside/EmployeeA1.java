@@ -1,4 +1,4 @@
-package encapsulation.inside;
+package a.encapsulation.inside;
 
 public class EmployeeA1 {
 	public int id;

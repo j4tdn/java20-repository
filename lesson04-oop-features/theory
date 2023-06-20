@@ -32,6 +32,24 @@
   	   	 + Thuộc 2/n class có quan hệ cha con
   	   	 + Lớp con địng nghĩa/override lại phần thân hàm từ hàm cha
   	   		vd: toString, equals, log
-  	   		 
+  
+  2.2: Đa hình trong đối tượng 
+  	   Lấy, gán giá trị của KDL cha, con cho KDL cha
+  	   Nói cách khác: lấy biến kiểu cha = kiểu cha/con
+  	   Mục đích:
+  	   			+ Giúp chuyển đổi qua về giữa các KDL cha con
+  	   			+ Tạo 1 mảng/danh sách các ptu kiểu cha, con
+  	   			+ Viết ra method chung có tham số là KDL cha để
+  	   			  nhận vào giá trị thuộc KDL cha/con
+  	   		VD: callShapeMethods(Shape shape)
+
+3. Tính chất thừa kế - inheritance
+
+Định nghĩa: khi 2/N đối tượng có chung attributes/methods, thay vì ở mỗi class 
+	phải tạo đi/lại các att/met đó (trùng lặp code, ko tổng quát hóa) thì mình sẽ tạo ra
+	1 kiểu cha chung để chứa các cái att/met chung đó
+Vd: sách giáo khoa: mã sách, tên sách, nhà xuất bản, trạng thái(cũ, mới), giảm giá(%)
+	sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%)		 	   		 
+	
   	   	 
 	

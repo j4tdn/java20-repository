@@ -1,4 +1,4 @@
-package polymorphism.object;
+package b.polymorphism.object;
 
 public class Rectangle extends Shape {
 	

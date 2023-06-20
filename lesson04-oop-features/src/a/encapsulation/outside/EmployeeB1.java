@@ -1,6 +1,6 @@
-package encapsulation.outside;
+package a.encapsulation.outside;
 
-import encapsulation.inside.CompanyA;
+import a.encapsulation.inside.CompanyA;
 
 public class EmployeeB1 {
 	public int id;
