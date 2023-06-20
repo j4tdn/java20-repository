@@ -2,7 +2,7 @@ package controlling;
 
 import java.util.Random;
 
-public class Ex04SwitchCaseWithoutBreak {
+public class SwitchCaseWithoutBreak {
 	public static void main(String[] args) {
 		int month = new Random().nextInt(1, 13);
 		System.out.print("Tháng " + month + " có ");

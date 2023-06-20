@@ -9,7 +9,7 @@ public class Ex02Random {
 		// 1. Tạo ra 1 số nguyên ngẫu nhiên
 		int intValueWithoutRestriction = rd.nextInt();
 		
-		// 2. Tạo ra 1 số nguyên ngẫu nhiên [0 < n) n = 20
+		// 2. Tạo ra 1 số nguyên ngẫu nhiên [0; n), n = 20
 		int upperBoundValue = rd.nextInt(20);
 		
 		// 3. Tạo ra 1 số nguyên ngẫu nhiên từ [a, b) --> a = 5, b = 20

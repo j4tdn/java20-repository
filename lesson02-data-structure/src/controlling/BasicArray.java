@@ -1,6 +1,6 @@
 package controlling;
 
-public class Ex07BasicArray {
+public class BasicArray {
 	public static void main(String[] args) {
 		// Tạo 1 ô nhớ ở HEAP lưu 5 giá trị mặc định kiểu int
 		int[] digits = new int[5];

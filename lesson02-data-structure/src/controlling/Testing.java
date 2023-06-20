@@ -1,6 +1,6 @@
 package controlling;
 
-public class Ex05Testing {
+public class Testing {
 	public static void main(String[] args) {
 		// Viết 1 hàm tìm max của 2 số a, b int
 		System.out.println("max: " + max(2, 4));

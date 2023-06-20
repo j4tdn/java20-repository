@@ -21,7 +21,6 @@ public class Ex01IODemo {
 		 * 		_ Khi dùng !nextLine(), dừng lại màn hình
 		 * 		_ Người dùng có nhập -> Nhấn Enter -> Lưu giá trị đó vào !nextLine (thừa ra 1 kí tự Enter)
 		 * 				     không nhập -> Nhấn Enter -> Không có chuyện gì xảy ra -> Yêu cầu user phải nhập gì đó -> Nhấn Enter -> Kết thúc việc nhập
-		 * 		_ 
 		 */
 		
 		// Mở kết nối đến bàn phím

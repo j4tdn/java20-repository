@@ -2,7 +2,7 @@ package controlling;
 
 import java.util.Scanner;
 
-public class Ex06Loop {
+public class Loop {
 	public static void main(String[] args) {
 		// for
 		//		_ Biết trước điều kiện dừng
