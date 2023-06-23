@@ -1,4 +1,4 @@
-package polymorphism.method;
+package b.polymorphism.method;
 
 public class Ex01OverloadingDemo {
 	

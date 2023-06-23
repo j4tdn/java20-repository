@@ -1,4 +1,4 @@
-package polymorphism.object;
+package b.polymorphism.object;
 
 public class Shape {
 	// generic method content, unknown body yet
