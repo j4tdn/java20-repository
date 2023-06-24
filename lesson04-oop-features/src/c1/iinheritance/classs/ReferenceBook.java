@@ -1,4 +1,4 @@
-package c.inheritance.basic;
+package c1.iinheritance.classs;
 
 public class ReferenceBook extends Book{
 	
