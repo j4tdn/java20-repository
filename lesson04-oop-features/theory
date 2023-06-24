@@ -31,4 +31,20 @@ Definition: Tính chất đa hình có 2 loại
 			+ Thuộc 2/n class có quan hệ cha con
 			+ Lớp con định nghĩa/override lại thân hàm từ hàm ở lớp cha
 			VD: toString, equals, log
-		
+	
+	2.2: Đa hình trong đối tượng
+		Lấy, gán giá trị của KDL cha/con cho KDL cha
+		Nói cách khác: Lấy biến kiểu cha = kiểu cha/con
+		Mục đích: 
+				+ Giúp chuyển đổi qua về giữa các KDL cha/con
+				+ Tạo một mảng/danh sách các phần tử kiểu cha con
+				+ Viết ra phương thức chung có tham số là KDL cha để nhận vào giá trị thuộc KDL cha/con
+				VD: callShapeMethods(Shape shape)
+				
+3. Tính chất thừa kế - Inheritance
+
+Definition: Khi 2/N đối tượng có chung thuộc tính, phương thức, thay vì ở mỗi class phải tạo nhiều lần các thuộc
+tính, phương thức đó (trùng lặp code, không tổng quát hóa) thì mình sẽ tạo ra KIỂU CHA chung để chứa tt,pt chung đó
+
+VD: Sách giáo khoa: Mã sách, tên sách, nhà xuất bản, trạng thái(ENUM) [cũ,mới], giảm giá
+	Sách tham khảo: Mã sách, tên sách, nhà xuất bản, thuế(%)
