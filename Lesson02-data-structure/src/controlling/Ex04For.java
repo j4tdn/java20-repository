@@ -1,6 +1,5 @@
 package controlling;
 
-import javax.imageio.plugins.tiff.ExifGPSTagSet;
 
 public class Ex04For {
 	public static void main(String[] args) {

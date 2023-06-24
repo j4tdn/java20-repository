@@ -17,8 +17,8 @@ public class Ex01ObjectDemoMain {
 		//								toString --> tự động được gọi khi in biến KDL Đối tượng
 		
 		// khai báo và gán giá trị cho biến KDL nguyên thủy
-		int digit = 10;
-		char letter = 'A';
+//		int digit = 10;
+//		char letter = 'A';
 		
 		// khai báo và gán giá trị cho KDL Đối Tượng
 		//new Item() --> gọi hàm khởi tạo constructure của class/KDL Item

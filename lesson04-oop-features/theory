@@ -1,0 +1,49 @@
+				CÁC TÍNH CHẤT CỦA OOP: 
+
+1. encapsulation: Đóng gói
+ * Tính chất đóng gọi được thể hiện qua các access modifier: 
+ 	+Private: đóng gói trong phạm vi của Class
+ 	+_| protected(thừa kế): đóng gói trong phạm vi của package
+ 		protected: 
+ 	+public: được sử dụng ở bất kì đâu trong dự án 
+ 	
+ 2. polymorphism: Đa hình
+ * Tính chất đa hình có 2 loại: 
+ 	+ đa hình trong phương thức 
+ 	+ đa hình trong đối tượng 
+ 	phương thức, đối tượng được gọi là đa hình nếu cùng 1 đối tượng, phương thức
+ 	nhưng lúc thì có thể hiền này lúc thì thể hiện khác --> Đa Hình 
+ 	
+ 	2.1 Đa hình trong phương thức
+ 		+ Overloading:
+ 			hai/ nhiều phương thức được gọi là overloading nếu:
+ 				+ thuộc cùng class
+ 				+ cùng tên 
+ 				+ khác số lượng tham số 
+ 				+ khác KDL truyền vào của tham số 
+ 				VD: sum(int, int), sum(int, int, int) 
+ 				  : float sum(float, float) 	
+ 		+Overriding:
+ 			hai/ hay nhiều  phương thức được gọi là overriding: 
+ 			+ Cùng phần khai báo hàm: void log()
+ 			+ thuộc hai hay nhiều class có quan hệ cha con 
+ 			+ Lớp con định nghĩa/ override lại phần thân hàm từ hàm ở lớp Cha
+ 				VD: toString, equals, log
+	2.2: Đa hình trong đối tượng
+		+ Lấy, gán giá trị của KDL cha/con cho KDL cha
+		+ Nói cách khác: Lấy biến kiểu cha = kiểu cha/ con
+		+ Mục đích: 
+				+ giúp chuyển đổi qua về giữa các KDL Cha con
+				+ Tạo một mảng/ danh sách các phần tử kiểu cha con
+				+ viết ra phương thức chung có tham số là KDL cha
+					để nhận vào giá trị thuộc KDL Cha/ con
+		VD: callShapeMethods(Shape shape)  
+		
+		
+3. Inheritance: Tính chất thừa kế
+	3.1 Định nghĩa: khi hai hoặc nhiều đối tượng có chung thuốc tính, phương thức thay vì ở mỗi class
+	phải tạo đi tạo lại các thuộc tính phương thức đó (trùng lặp code, ko tổng quát hóa) thì mình sẽ
+	tạo ra Kiểu cha để chứa các thuộc tính, phương thưc chung đó
+	
+	VD: Sách giáo khoa: mã sách, tên sách, nhà xuất bản, trạng thái(cũ, mới), giảm giá;
+		Sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%);

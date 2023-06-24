@@ -6,7 +6,7 @@ public class Ex05WhileDoWhile {
 	
 	
 	public static void main(String[] args) {
-		int n = 8;
+//		int n = 8;
 		int i = 0;
 		while(i < 8) {
 			System.out.print(i + "");

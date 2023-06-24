@@ -15,8 +15,8 @@ public class Ex02Performance {
 		// so milis tu hien tai ve epoch time
 		long start = System.currentTimeMillis();
 		for (long i = 1; i <= n; i++) {
-			Integer iA = new Integer(99);
-			Integer iB = new Integer(99);
+//			Integer iA = new Integer(99);
+//			Integer iB = new Integer(99);
 
 		}
 		long end = System.currentTimeMillis();
@@ -28,8 +28,8 @@ public class Ex02Performance {
 		// KDL doi tuong constant pool
 		start = System.currentTimeMillis();
 		for (long i = 1; i <= n; i++) {
-			Integer iA = 99;
-			Integer iB = 99;
+//			Integer iA = 99;
+//			Integer iB = 99;
 
 		}
 		end = System.currentTimeMillis();
