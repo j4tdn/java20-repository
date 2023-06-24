@@ -1,4 +1,4 @@
-package c.inheritance.basic;
+package c1.inheritance.classs;
 
 public class TextBook extends Book {
 	
@@ -41,8 +41,8 @@ public class TextBook extends Book {
 
 	@Override
 	public String toString() {
-		return "TextBook: [id " + getId() + " /name " + getName() + " /publisher " + getPublisher()
-								+ " /status " + status + " /discount " + discount + " ]";
+		return "TextBook: [id " + getId() + " ,name " + getName() + " ,publisher " + getPublisher()
+								+ " ,status " + status + " ,discount " + discount + " ]";
 	}
 	
 	

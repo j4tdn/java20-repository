@@ -1,4 +1,4 @@
-package c.inheritance.basic;
+package c1.inheritance.classs;
 
 public class ReferenceBook extends Book {
 	
@@ -22,7 +22,7 @@ public class ReferenceBook extends Book {
 
 	@Override
 	public String toString() {
-		return "ReferenceBook [id " + getId() + "name " + getName() + "publisher " + getPublisher() + "tax " + tax + "]";
+		return "ReferenceBook [id " + getId() + " ,name " + getName() + " ,publisher " + getPublisher() + " ,tax " + tax + "]";
 	}
 	
 	
