@@ -48,4 +48,23 @@
  	VD: Sách giáo khoa: mã sách, tên sách, nhà xuất bản, trạng thái(cũ, mới), giảm giá
  		Sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%)
  	
- 		 
+KDL Cha/Con: Class, Interface, Abstract Class
++ KDL Cha: Class
++ KDL Con: Class
+--> khi class KDL(s) có chung thuộc tính --> đưa những thuộc tính chung đó vào class cha
+	--> rồi lấy class con kế thừa, extends, reuse
+	
++ KDL Cha: Interface
++ KDL Con: Class
+--> khi KDL(s) con có chung phương thức --> đưa những phương thức 'chung' 
+	--> (biết phần khai báo[tên hàm, kiểu trả về]) vào KDL cha nhưng chưa biết phần thực thi
+	--> hàm chung trong KDL cha nên là ko có BODY
+	--> KDL con khi kế thừa từ KDL cha thì bắt buộc phỉa override lại hàm 'chung' đó
+	
++ KDL Cha: Abstract Class
++ KDL Con: Class
+--> Khi KDL cha vừa có hàm trừu tượng, vừa có hàm bình thường
+	. hàm trừu tượng --> abstract method
+	. hàm bình thường --> body method
+	. chứa các thuộc tính chung của KDL con
+
