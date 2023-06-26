@@ -52,5 +52,33 @@ class phải tạo đi/lại các tt, pt đó(trùng lặp code, ko tổng quát
 sẽ tạo ra KIỂU cha để chứa các tt, pt chung đó
 
 VD: Sách giáo khoa: mã sách, tên sách, nhà xuất bản, trạng thái(cũ, mới), giảm giá(%)
-    Sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%) 
+    Sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%)
+    
+KDL Cha/Con: Class, Interface, Abstract Class
++ KDL Cha: Class
++ KDL Con: Class
+--> Khi KDL(s) con có chung thuộc tính --> đưa những tt chung đó vào class cha
+--> Rồi lấy class con kế thừa, extends, reuse
+
++ KDL Cha: Interface
++ KDL Con: Class
+--> Khi KDL(s) con có chung phương thức 
+	--> đưa phương thức 'chung' (biết phần khai báo[tên hàm, KDL trả về]) vào KDL cha những chưa biết phần thực thi
+    --> hàm chung trong KDL cha nên là ko có BODY --> KDL interface
+    --> KDL con khi kế thức từ KDL cha thì bắt buộc phải override lại hàm 'chung' đó
+   
++ KDL Cha: Abstract Class
++ KDL Con: Class
+--> Khi KDL cha vừa có hàm trừu tượng, vừa có hàm bình thường
+    . hàm trừu tượng --> abstract method
+    . hàm bình thường --> body method
+    . chưa các thuộc tính chung của KDL con
+
+
+
+
+
+
+
+
   
