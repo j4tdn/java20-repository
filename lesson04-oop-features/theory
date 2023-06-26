@@ -67,7 +67,7 @@ vào KDL cha nhưng chưa biết phần thực thi
 + KDL cha : Abstract class
 + KDL con: class
 --> khi KDL (s) cha vừa có hàm trừu tượng vừa có hàm bth
-	+ hàm trừ tượng --> abstract ckass
+	+ hàm trừ tượng --> abstract class
 	+ hàm bth --> body method
 	+ chứa các tt chung của KLN con
 
