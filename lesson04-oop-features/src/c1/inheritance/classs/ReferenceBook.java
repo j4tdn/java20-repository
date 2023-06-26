@@ -1,4 +1,4 @@
-package c.inheritance.basic;
+package c1.inheritance.classs;
 
 public class ReferenceBook extends Book {
 	private float tax;

@@ -1,4 +1,4 @@
-package c.inheritance.basic;
+package c1.inheritance.classs;
 
 public class Book {
 	private String id;
