@@ -67,4 +67,25 @@
 	--> khi mà KDL Cha vừa có hàm trừu tượng vừa có hàm bình thường 
 	--> hàm bình thường --> body method
 	--> chứa các thuộc tính chung của KDL con
-	
+
+what is the difference between interface & abstract class
+		-answer
+		+Difference:
+			+ From before JDK 1.8: 
+				+interface:
+					.only have abstract methods
+					.support multiple implements
+					.attribute --> auto 'public static final'
+					.method --> auto public abstract
+				+AbstractClass
+					.can have abstract & body methods
+					.support single extends
+					.attribute --> nothing special, belong to object scope
+					.method --> depends on access modifier
+					
+			+From after JDK 1.8:
+				+interface: 
+					.can have abstract & body methods(default, static, private)
+				+abstracClass:
+					.can have abstract & body methods
+
