@@ -3,19 +3,19 @@ package bean.ex04;
 import java.time.LocalDate;
 
 public class Staff extends Employees{
-	private String nameRoom;
+	private Room nameRoom;
 	private Manager manager;
 	public Staff() {
 	}
-	public Staff(String name, LocalDate date, double salaryCoefficient, String nameRoom, Manager manager) {
+	public Staff(String name, LocalDate date, double salaryCoefficient, Room nameRoom, Manager manager) {
 		super(name, date, salaryCoefficient);
 		this.nameRoom = nameRoom;
 		this.manager = manager;
 	}
-	public String getNameRoom() {
+	public Room getNameRoom() {
 		return nameRoom;
 	}
-	public void setNameRoom(String nameRoom) {
+	public void setNameRoom(Room nameRoom) {
 		this.nameRoom = nameRoom;
 	}
 	public Manager getManager() {

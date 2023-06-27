@@ -4,12 +4,12 @@ import java.time.LocalDate;
 
 public class Manager extends Employees {
 	private double positionCoefficient;
-	private String nameRoom;
+	private Room nameRoom;
 	public Manager() {
 	}
 	
 	public Manager(String name, LocalDate date, double salaryCoefficient,
-			double positionCoefficient, String nameRoom) {
+			double positionCoefficient, Room nameRoom) {
 		super(name, date, salaryCoefficient);
 		this.positionCoefficient = positionCoefficient;
 		this.nameRoom = nameRoom;
@@ -23,11 +23,11 @@ public class Manager extends Employees {
 		this.positionCoefficient = positionCoefficient;
 	}
 
-	public String getNameRoom() {
+	public Room getNameRoom() {
 		return nameRoom;
 	}
 
-	public void setNameRoom(String nameRoom) {
+	public void setNameRoom(Room nameRoom) {
 		this.nameRoom = nameRoom;
 	}
 
