@@ -21,16 +21,16 @@ public class Arrange {
 			}else otherNumbers.add(number);
 		}
 		
-		// Output:
+		// output
 		System.out.print("Output: ");
-        for (int number : divisibleBy7) {
-            System.out.print(number + ", ");
-        }
-        for (int number : otherNumbers) {
-            System.out.print(number + ", ");
-        }
-        for (int number : divisibleBy5) {
-            System.out.print(number + ", ");
-        }
+		for (int number : divisibleBy7) {
+			System.out.print(number + ", ");
+		}
+		for (int number : otherNumbers) {
+			System.out.print(number + ", ");
+		}
+		for (int number : divisibleBy5) {
+			System.out.print(number + ", ");
+		}
 	}
 }

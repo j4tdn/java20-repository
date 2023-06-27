@@ -3,7 +3,8 @@ package ex05levelsort;
 import java.util.Arrays;
 
 public class LevelSort {
-	// tính level của một số tự nhiên bằng cách đếm số lượng ước số của nó
+	
+	// tính level của một số tự nhiên bằng cách đếm số lượng ước của nó
     public static int findLevel(int number) {
         int count = 0;
         for (int i = 1; i <= number; i++) {
