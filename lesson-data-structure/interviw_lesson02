@@ -2,6 +2,9 @@
   KDL NGUYÊN THỦY - KDL ĐỐI TƯỢNG
   
 2. GIÁ TRỊ KDL NT LƯU Ở ĐÂU, KDL ĐỐI TƯỢNG LƯU Ở ĐÂU? 
+          
+Trong Java, giá trị của KDL (Kiểu dữ liệu) nguyên thủy (primitive data type) được lưu trữ trực tiếp trên stack (ngăn xếp)
+trong khi đối tượng được lưu trữ trên heap (dải bộ nhớ).
 
 3. TRONG JAVA có những từ khóa nào đại diện cho access modifier?
  public , private, ...

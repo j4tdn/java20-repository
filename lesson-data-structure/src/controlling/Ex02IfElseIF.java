@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Random;
 
-public class Ex02IfElseIf {
+public class Ex02IfElseIF {
 	public static void main(String[] args) {
 		/*
 		 Khi giáo viên nhập điểm trung bình [0, 10]

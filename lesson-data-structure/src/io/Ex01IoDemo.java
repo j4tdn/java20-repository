@@ -4,7 +4,7 @@ import java.awt.GradientPaint;
 import java.time.YearMonth;
 import java.util.Scanner;
 
-public class Ex01IODemo {
+public class Ex01IoDemo {
 	public static void main(String[] args) {
 		/*
 		 * Viết chương trình nhập vào
