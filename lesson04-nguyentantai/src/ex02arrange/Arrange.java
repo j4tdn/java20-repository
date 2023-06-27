@@ -21,7 +21,7 @@ public class Arrange {
 			}else otherNumbers.add(number);
 		}
 		
-		// output
+		// Output
 		System.out.print("Output: ");
 		for (int number : divisibleBy7) {
 			System.out.print(number + ", ");

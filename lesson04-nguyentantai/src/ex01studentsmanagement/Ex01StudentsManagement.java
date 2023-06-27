@@ -26,7 +26,7 @@ public class Ex01StudentsManagement {
 		// Đưa danh sách 3 sinh viên sv1, sv2, sv3 vào mảng một chiều
 		Students[] danhSachSinhVien = {sv1, sv2, sv3};
 		
-		// tìm thông tin sinh viên có điểm trung bình lớn hơn 8.5
+		// Tìm thông tin sinh viên có điểm trung bình lớn hơn 8.5
 		System.out.println("\nThông tin sinh viên có điểm trung bình lớn hơn 8.5 : ");
 		for (Students sv : danhSachSinhVien) {
 	            if (sv.tinhDiemTrungBinh() > 8.5) {
@@ -34,13 +34,13 @@ public class Ex01StudentsManagement {
 	            }
 	    }
 		
-		// Tìm thông tin sinh viên có điểm lý thuyết lớn hơn điểm thực hành
-        System.out.println("\nThông tin sinh viên có điểm lý thuyết lớn hơn điểm thực hành:");
-        for (Students sv : danhSachSinhVien) {
-            if (sv.getDiemLyThuyet() > sv.getDiemThucHanh()) {
-                System.out.println(sv);
-            }
-        }
-        sc.close();
+		// Tìm thông tin sinh viên có điểm lý thuyết lơn hơn điểm thực hành 
+		System.out.println("\nThông tin sinh viên có điểm lý thuyết lớn hơn điểm thực hành: ");
+		for (Students sv : danhSachSinhVien) {
+			if (sv.getDiemLyThuyet() > sv.getDiemThucHanh()) {
+				System.out.println(sv);
+			}
+		}
+		sc.close();
 	}
 }
