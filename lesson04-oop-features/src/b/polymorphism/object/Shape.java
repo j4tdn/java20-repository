@@ -2,13 +2,13 @@ package b.polymorphism.object;
 
 public class Shape {
 					
-	//generic method content, unknown body yet
+	// generic method content, unknown body yet
 	void paint() {
-		System.out.println("Shape --> paint ...");
+		// System.out.println("Shape --> paint ...");
 	}
 	
 	void calS() {
-		System.out.println("Shape --> calS ...");
+		// System.out.println("Shape --> calS ...");
 	}
 	
 	

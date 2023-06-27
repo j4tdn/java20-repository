@@ -48,3 +48,21 @@ tính, phương thức đó (trùng lặp code, không tổng quát hóa) thì m
 
 VD: Sách giáo khoa: Mã sách, tên sách, nhà xuất bản, trạng thái(ENUM) [cũ,mới], giảm giá
 	Sách tham khảo: Mã sách, tên sách, nhà xuất bản, thuế(%)
+	
+KDL Cha/Con: Class, Interface, Abstract Class
++ KDL Cha: Class
++ KDL Con: Class
+==> Khi KDL(s) con có chung thuộc tính --> đưa những thuộc tính chung đó vào class cha rồi lấy class con kế thừa, reuse.
+
+KDL Cha: Interface
+KDL Con: Class
+==> Khi KDL(s) con có chung phương thức 
+	--> đưa phương thức 'chung' (biết phần declare[tên hàm,KDL trả về]) vào KDL cha nhưng mình chưa biết phần thực thi.
+	--> Hàm chung trong KDL cha nên là không có BODY --> KDL interface
+	--> KDL con khi kế thừa từ KDL cha thì bắt buộc phải override lại hàm 'chung' đó
+	
++ KDL Cha: Abstract Class
++ KDL Con: Class
+==> Khi KDL cha vừa có hàm trừu tượng(abstract methods) và có hàm bình thường(body method)
+	--> Nó vẫn là class -> có thể chứa thuộc tính chung của KDL con 
+	
