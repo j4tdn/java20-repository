@@ -34,3 +34,48 @@ English: Polymorphism
 			+ Thuộc 2/n class có quan hệ cha con
 			+ Lớp con định nghĩa/ override lại phần thân hàm từ hàm
 			VD: toString, equals, log
+			
+	2.2: Đa hình trong đối tượng
+		Lấy, gán giá trị của kiểu dữ liệu cha, con cho KDL cha
+		Nói cách khác: Lấy biến kiểu cha = kiểu cha/con
+		Mục đích:
+			+ Giúp chuyển đổi qua về các KDL cha con
+			+ Tạo một mảng/ danh sách của phần tử kiểu cha con
+			+ Viết ra phương thức chung có tham số là KDL cha để nhận vào giá trị thuộc KDL cha/con
+		VD: callShapeMethods(Shape shape)
+		
+		
+3.Tính chất thừa kế
+English :Inheritance
+
+Định nghĩa: Khi 2/N đối tượng có chung thuộc tính, phương thức,
+ 			thay vì ở mỗi class phải tạo đi tạo lại các tt,
+ 			pt đó(trùng lặp code, k tổng quát hóa) thì sẽ tạo ra
+ 			kiểu cha chung để chứa các thuộc tính, phương thức chung đó.
+ 			
+ VD: Sách giáo khoa: mã sách, tên sách, nhà xuất bản, trạng thái(cũ, mới), giảm giá
+ 	 Sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%)
+ 	 
+ KDL Cha/Con: Class, Interface, Abstract Class
+ +KDL cha: Class
+ +KDL con: Class
+ --> Khi mà các kiểu dữ liệu có chung thuộc tính thì đưa những thuộc tính chugn đó vòa class cha rồi 
+ lấy class con kế thừa, extends, reuse
+ 
+ 
+ +KDL cha: Interface
+ +KDL con: Class
+ -->Khi mà KDL con có chung phương thức--> đưa phương thức 'chung' (Biết phần khai báo(tên hàm, kiểu trả về))
+ vào KDL cha nhưng mình chưa biết phần thực thi
+ 	--> hàm chung trong KDL cha không có BODY -->KDL interface
+ 	--> KDL con khi kế thừa từ KDL cha thì bắt buộc phải override lại hàm 'chung' đó.
+ //khi cha và con có thuộc tính chung
+ 
+ 
+ +KDL cha: Abstract class
+ +KDL con: Class 
+ -->Khi KDL cha vừa có hàm trừu tượn, vừa có hàm bình thường
+ 		.hàm trừu tượng --> abstract method
+ 		.hàm bình thương --> body method
+ 		.chưa thuộc tính chung của KDL con
+			 
