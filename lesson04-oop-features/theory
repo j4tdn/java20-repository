@@ -66,3 +66,34 @@ KDL Con: Class
 ==> Khi KDL cha vừa có hàm trừu tượng(abstract methods) và có hàm bình thường(body method)
 	--> Nó vẫn là class -> có thể chứa thuộc tính chung của KDL con 
 	
+What is difference between interface & abtract class
+--> Answer: 
+Difference
+	+ Interface
+		- Support multiple implements
+		- attribute --> auto 'public static final'
+		- method --> auto 'public abstract'
+	+ Abstract class
+		- support single extends
+		- attributes -> nothing special, belong to object scope
+		- method --> depends on 'access modifier'
+From JDK 1.0 -> 1.7
+	+ Interface:
+		- Only have abstract methods
+		
+	+ Abstract class
+		- Can have abstract & body methods
+From JDL 1.8 -> Now
+	+ Interface:
+		- Can have abstract & body methods(default, static, private)
+		
+	+ Abstract class
+		- Can have abstract & body methods
+		
+Abstraction
+Class -> La k/n truu tuong dung de chi tap hop cac doi tuong co chung
++ tt, pt
+Car1,Car2,Car3 --> car
+Coding
+--> Tao ra cac abstract method chung cho kDL cha, sau do con se override kai
+VD: CalS, tinhS, tinhDienTich, tinhDT
