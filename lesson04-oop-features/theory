@@ -52,6 +52,7 @@ KDL cha/con: Class, Interface, Astract Class
 --> Khi class KDL(s) có chung thuộc tính--> đưa những tt chung đó vào class cha
 --> Rồi lấy class con kế thừa, extends, reuse
 
+
 +KDL cha: Interface
 +KDL con: class
 --> Khi KDL(s) con có chung phương thức
@@ -66,7 +67,6 @@ KDL cha/con: Class, Interface, Astract Class
 	.hàm trừu tượng --> abstract method
 	.hàm bình thường --> body method
 	.chứa các thuộc tính chung của KDL con
-
 	
 	
 	
