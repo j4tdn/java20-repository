@@ -3,8 +3,8 @@ package c2.inheritance.interfacee;
 // class, enum, interface --> 'type'
 public interface Shape {
 	
-	//abstract methods --> hàm trừu tượng
-	// bắt buộc phải được override trong class KDL(ko phải kiểu trừu tượng) con
+	// abstract methods --> hàm trừu tượng
+	// bắt buộc phải được override trong kiểu dữ liệu(ko phải kiểu trừu tượng) con
 	
 	// mặc định: public abstract
 	

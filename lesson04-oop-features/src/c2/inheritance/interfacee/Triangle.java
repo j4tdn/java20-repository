@@ -1,6 +1,6 @@
 package c2.inheritance.interfacee;
 
-public class Triangle implements Shape{
+public class Triangle implements Shape {
 
 	@Override
 	public void paint() {
@@ -11,5 +11,5 @@ public class Triangle implements Shape{
 	public void calS() {
 		System.out.println("Triangle --> cal s ....");
 	}
-
+	
 }
