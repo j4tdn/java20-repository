@@ -1,4 +1,4 @@
-package management.ex01student;
+package ex01studentmanagement;
 
 import java.util.Scanner;
 

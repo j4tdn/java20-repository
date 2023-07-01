@@ -1,4 +1,4 @@
-package management.ex01student;
+package ex01studentmanagement;
 
 public class Student {
 	private int id;
