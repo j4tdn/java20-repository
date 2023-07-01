@@ -67,4 +67,17 @@ KDL Cha/Con: Class, Interface, Abstract Class
 	. hàm trừu tượng --> abstract method
 	. hàm bình thường --> body method
 	. chứa các thuộc tính chung của KDL con
+	
+4. Tính chất trừu tượng - abstraction:
+
+Theory
++ Class --> là k/n trừu tượng dùng để chỉ tập hợp các đối tượng có chung
+	. tt
+	. pt
+ VD: Car1, Car2, Car3 --> Car
+
+coding
+abstract methods trong interface, abstract class
+ --> tạo ra các abstract method chung cho KDL cha, sau đó con sẽ override lại
+ --> VD: calS, tinhS, tinhDienTich, tinhDT
 
