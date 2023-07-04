@@ -10,39 +10,34 @@ public class Utils {
 	public static IntNumberArray arrangeArray(IntNumberArray a) {
 		int i, j = a.getLength()-1, k = 0;
 		Integer[] array = a.getValue();
-		for(i = 0; i < a.getLength(); i++) {
+		
+		for(i = 0; i < array.length; i++) {
 			// Lặp đến khi nào gặp lại vị trí hoán đổi của số 
 			// chia hết cho 5 thì dừng
-			if(i == j ) {
+			if(i > j) {
 				break;
 			}
 			
-			if(array[i] % 7 == 0) {
-				// Nếu số hoán đổi cho vị trí i chia hết cho 7
-				// thì giữ nguyên và nhảy lên vị trí tiếp theo
-				if(array[k] % 7 == 0) {
-					k++;
-				}
-				swap(array,i, k);
+			if(array[i] % 7 == 0 && array[i] % 5 != 0) {
+				swap(array ,i, k);
 				k++;
 			}
 			
-			else if (array[i] % 5 == 0) {
+			if (array[i] % 7 != 0 && array[i] % 5 == 0) {
 				// Nếu số hoán đổi cho vị trí i chia hết cho 5
 				// thì giữ nguyên và lui lại 
-				if(array[j]% 5 == 0) {
+				if(array[j] % 7 != 0 && array[j] % 5 == 0) {
 					j--;
 				}
 				
 				// Nếu số hoán đổi cho vị trí i chia hết cho 7
 				// thì đổi số đó trước rồi mới đổi vị trí 
-				if(array[j]% 7 == 0) {
+				if(array[j]% 7 == 0 && array[j] % 5 != 0) {
 					swap(array,j, k);
 					k++;
 				}
 				swap(array,i, j);
 				j--;
-				
 			}
 		}
 		return a;
@@ -62,4 +57,5 @@ public class Utils {
 		}
 		a.setValue(array);;
 	}
+	
 }

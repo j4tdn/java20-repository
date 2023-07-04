@@ -1,9 +1,8 @@
 package ex02numberarray;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class Ex02Demo {
+public class Ex02DemoOop {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
