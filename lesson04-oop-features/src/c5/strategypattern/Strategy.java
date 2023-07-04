@@ -11,5 +11,5 @@ public interface Strategy {
 	// important: list of parameters and return type
 	// (x,y) -> x / y;
 	int process(int x, int y);
-
+//	int process(int x, int y, int z);
 }
