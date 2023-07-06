@@ -15,7 +15,7 @@ public class Java15CheckNumber {
 		
 		String sequence = "-12"; // 156
 		System.out.println(sequence + " is number --> " + isNumber(sequence));
-		System.out.println(sequence + " is number --> " + sequence.matches("-?\\d{2,}"));
+		System.out.println(sequence + " is number --> " + sequence.matches("-?\\d+"));
 		// [0-9]: Thỏa mãn 1 ký tự bất kì là số từ 0 đến 9
 		// [0-9]  <=> \d "\\d"
 		// {1,}: 1 hoặc nhiều kí tự
