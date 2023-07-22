@@ -1,4 +1,4 @@
-package view;
+package a.validate_trycatch_throw_throws;
 
 import java.time.Year;
 import java.util.Scanner;
