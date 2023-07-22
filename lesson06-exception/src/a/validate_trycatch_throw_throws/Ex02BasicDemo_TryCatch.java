@@ -1,4 +1,4 @@
-package view;
+package a.validate_trycatch_throw_throws;
 
 import java.time.Year;
 import java.util.Scanner;
@@ -43,7 +43,7 @@ public class Ex02BasicDemo_TryCatch {
 			try {
 				yearOfBirth = Integer.parseInt(ip.nextLine());
 				break;
-			} catch(NullPointerException nfe) {
+			} catch(NumberFormatException nfe) {
 				// quăng thông tin lỗi cơ bản System.out.println("nfe --> " + nfe.getMessage());
 				nfe.printStackTrace();
 				System.out.print("Please enter a valid number = ");
