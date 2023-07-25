@@ -1,0 +1,1 @@
+package functional;public class EmailAddressException extends Exception{	/**	 * 	 */	private static final long serialVersionUID = 3387706107632948801L;	public EmailAddressException() {		super("Invalid email address !!!");	}	public EmailAddressException(String input) {		super("The email address '" + input + "' is invalid !!!");	}}

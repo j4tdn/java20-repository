@@ -1,0 +1,1 @@
+package functional;public interface PasswordConditional {	boolean check(char input);}

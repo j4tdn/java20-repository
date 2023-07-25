@@ -1,0 +1,1 @@
+package functional;public class PasswordException extends Exception{	/**	 * 	 */	private static final long serialVersionUID = 2636159245911960164L;	public PasswordException() {		this("");	}	public PasswordException(String input) {		super("Password is not valid. " + input);	}}
