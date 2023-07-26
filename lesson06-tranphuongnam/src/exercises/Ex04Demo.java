@@ -51,7 +51,7 @@ public class Ex04Demo {
     private static String convertThreeDigitsToWords(int n) {
         String result = "";
         System.out.println("THREE DIGITS: " + n);
-        // Xử lý số hàng trăm
+        // Xử lý số hàng trăm 
         int hundredsDigit = n / 100;
         result += (hundredsDigit > 0) ? hundreds[hundredsDigit] + " " : "";
 
