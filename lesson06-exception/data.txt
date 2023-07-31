@@ -1,0 +1,8 @@
+1, Le Na, 20
+2, Le Teo, 2
+3, Le Na 2, 4
+4, Le Na 3, 16
+5, Le Na 4, 16
+6, Le Na 5, 24
+7, Le Na 6, 4
+8, Le Na 7, 2
