@@ -65,6 +65,4 @@ public class UserAdv {
 		return "UserAdv [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", phone=" + phone
 				+ ", address=" + address + "]";
 	}
-
-	
 }
