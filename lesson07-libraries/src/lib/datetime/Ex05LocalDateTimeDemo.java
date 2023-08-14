@@ -41,11 +41,13 @@ public class Ex05LocalDateTimeDemo {
 		
 		Period period = Period.between(gmLocalDate, vnLocalDate);
 		Duration duration = Duration.between(gmLocalTime, vnLocalTime);
+		
 		// TODO
 		if (duration.isNegative()) {
 			duration = duration.plusDays(1);
 			period = period.minusDays(1);
 		}
+		
 		System.out.println(period + "'T'" + duration);
 	}
 }
