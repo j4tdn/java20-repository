@@ -1,0 +1,15 @@
++ locale: khu vực
+	--> tác động đến cái first day of week
+		+ sunday
+		+ monday
+
+
++ time zone: múi giờ
+	--> tác động đến thời gian mình lấy ra
+	
+	. GMT+7
+	. UTC-2
+	. ICT
+	. Uurope/Berlin
+	
+	

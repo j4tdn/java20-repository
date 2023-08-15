@@ -29,6 +29,7 @@ import bean.UserHigherAdv;
 public class BuilderPatternDemo {
 	public static void main(String[] args) {
 		
+		
 		// require: firstName, lastName, phone
 		User u1 = User.builder().withFirstName("Le")
 								.withLastName("Teo")
