@@ -86,6 +86,8 @@ what is the difference between interface & abstract class
 			+From after JDK 1.8:
 				+interface: 
 					.can have abstract & body methods(default, static, private)
+					.multiple implements 
 				+abstracClass:
-					.can have abstract & body methods
+					.can have abstract & body methods, single extends
+					
 
