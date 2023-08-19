@@ -1,0 +1,12 @@
++ Locale
+	--> tác động đến firstDayOfWeek
+		+sunday
+		+monday
+
++ TimeZone
+	--> tác động đến thời gian lấy ra
+	
+	.GMT+7
+	.UTC-2
+	.ITC, PST, HWT
+	.Euro/Berlin
