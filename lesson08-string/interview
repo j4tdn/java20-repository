@@ -1,0 +1,6 @@
+final: at STACK
+  + primitive type: không thể thay đổi giá trị
+  + object type   : không thể thay đổi địa chỉ
+
+immutable: at HEAP
+  + object type   : không thể thay đổi giá trị ở HEAP
