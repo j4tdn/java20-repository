@@ -8,8 +8,6 @@ public class Ex02ThreadDemo {
 		 * Thread: mục đích + thực hiện task(task, đoạn code, Runnable) nào đó song song
 		 * với thread main
 		 * 
-		 * 
-		 * 
 		 * Mặc định 1 ctr đơn luồng 
 		 * 	+ có 1 main thread
 		 * 
@@ -19,11 +17,12 @@ public class Ex02ThreadDemo {
 
 		System.out.println("thread 1 " + Thread.currentThread().getName());
 
+		// Tạo thread tA
 		Thread tA = new Thread(new Runnable() {
 
 			@Override
 			public void run() {
-				doTask(5);
+				doTask(1);
 				System.out.println("Thread 2 " + Thread.currentThread().getName());
 			}
 		}, "TA");
