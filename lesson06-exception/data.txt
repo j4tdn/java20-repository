@@ -1,0 +1,6 @@
+1, Le Na, 20
+2, Le Teo, 2
+3, Hoang Ban, 4
+4, Nguyen Teo, 16
+5, Pham Van, 16
+6, Le Van, 24
