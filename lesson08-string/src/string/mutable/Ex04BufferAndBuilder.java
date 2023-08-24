@@ -3,6 +3,7 @@ package string.mutable;
 public class Ex04BufferAndBuilder {
 	
 	public static void main(String[] args) {
+		
 		StringTask mutableTask = new StringTask(100000);
 		System.out.println("string length before: " + mutableTask.length());
 
@@ -25,6 +26,7 @@ public class Ex04BufferAndBuilder {
 		// single thread --> StringBuilder, String
 
 		// multiple thread --> StringBuffer, String
+		
 	}
 	
 	public static class StringTask implements Runnable {
