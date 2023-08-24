@@ -15,8 +15,8 @@ public class DecimalFormatDemo {
 		
 		// with DecimalFormat: Max integer & decimal part --> 16 chars
 		
-		System.out.println("formated --> " + df.format(v1));
-		System.out.println("formated --> " + df.format(v2));
+		System.out.println("formatted --> " + df.format(v1));
+		System.out.println("formatted --> " + df.format(v2));
 	}
 
 }

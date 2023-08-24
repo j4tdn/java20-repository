@@ -14,26 +14,51 @@ package bean;
  	public 'static' class Builder {
  	
  	}
- }
+ 
+
+ 
  
  User.builder() --> create builder instance
+ .with.with		--> setter for builder
+ .build			--> convert builder to User
  
  
-  User u1 = 
+  User u1 = User.builder();
+  				.withFirstName('..')
+  				.withLastName('..')
+  				.build();
+  				
+ u1 --> should be immutable
+ + no setter
+ + private attribute (advance --> private, using reflection to change value)
  */
 public class User {
-	private String firstName;
-	private String lastName;
-	private int age;
-	private String phone;
-	private String address;
+	private final String firstName;
+	private final String lastName;
+	private final int age;
+	private final String phone;
+	private final String address;
 	
+	// Builder will help to create immutable instance for User
 	
-	private User() {
+	public User(Builder builder) {
+		this.firstName = builder.firstName;
+		this.lastName = builder.lastName;
+		this.age = builder.age;
+		this.phone = builder.phone;
+		this.address = builder.address;
+		
+		
 		
 	}
+	
+	public static Builder builder() {
+		return new Builder();
+	}
 
-
+	// provide getters, no setters(no change - immutable)
+	//Assign/Set value will be supported by Builder
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -58,6 +83,20 @@ public class User {
 		return address;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "User [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", phone=" + phone
+				+ ", address=" + address + "]";
+	}
+
+	// 'static' --> User. directly
+	// 'non-static' --> new User(). Builder
+	//				--> new User() user object to init value for user, don't need Builder
+	//					(conflicts)
+	
+	// nested class
 	public static class Builder{
 		private String firstName;
 		private String lastName;
@@ -94,8 +133,12 @@ public class User {
 			return this;
 		}
 		
+		// after create builder object & setters
+		// assign builder to it's own class
+		// this: current builder
+		
 		public User build() {
-			
+			return new User(this);
 		}
 		
 		

@@ -8,7 +8,7 @@ public class Ex06BasicDemo_MultiException {
 	public static void main(String[] args) {
 		/**
 	
-		catch 1 lucs nhieuef exception
+		catch 1 lúc nhiều exception
 		yêu cầu
 		1. các exception ko có quan hệ cha con thì
 		2. nếu tồn các exception có quan hệ cha con thì
