@@ -1,5 +1,8 @@
--	%JAVA_HOME%  dùng để trỏ qua trỏ về phiên bản jdk(là gói java development kit là hộp nhà phát triển của java) của java khi trong công ty dự án có nhiều phiên bản của jdk khác nhau
--	jdk : chứa jre: là nơi từ source code(chứa byte code và jvm) đến byte code và jvm: từ byte code đến marchne
+-	%JAVA_HOME%  dùng để trỏ qua trỏ về phiên bản jdk(là gói java development kit
+ là hộp nhà phát triển của java) của java khi trong công ty dự án có nhiều phiên bản 
+ của jdk khác nhau
+-	jdk : chứa jre: là nơi từ source code(chứa byte code và jvm) 
+đến byte code và jvm: từ byte code đến marchne
 - quy trình thực thi đoạn mã code:
 + .java--> .class-->machine code --> result
 - cấu trúc khi tạo dự án Java

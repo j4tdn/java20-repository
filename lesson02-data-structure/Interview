@@ -10,7 +10,7 @@
   -->Phân biệt cho ví dụ
   
 4. Mục đích của từ khóa final?
-
+ - Nhằm không cho phép người khác cập nhập giá trị, không cho gắn = một gì đó nữa
 5. Có thể tạo mới kiểu dữ liệu nguyên thủy , đối tượng được không ?
  	Nếu được thì bằng cách nào?
  	+KDL Nguyên thủy : Không ;
@@ -23,9 +23,9 @@
  	 	giá trị của nó sẽ là 1 ô nhớ ở HEAP chứa đầy đủ thông tin của các thuộc tính
  	 	Dùng từ khóa new 
 6. Muốn lưu 1 kiểu số nguyên dùng int hay Integer ?
- 	int: require, madatory
- 	Integer: optional
+ 	int: luoon lôn có giá trị
+ 	Integer: có hoặc không
  	
 7. Khi khai báo và khởi tạo biến KDL String 
-	--> có mấy cách: 2 cách
+	--> có mấy cách: 2 cách, khai báo trực tiếp vì nếu trùng thì sẽ gộp vào tiết kiệm vùng nhớ
 	-->nên dùng cách nào

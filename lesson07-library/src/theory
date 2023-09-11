@@ -1,0 +1,9 @@
++locale
+  --> tác động đến first day of week
+  		+ sunday
+  		+ monday
+
+
++time zone
+	--> tác động đến thời gian mình lấy ra
+	+ Dùng GMT or UTC(theo chuẩn www)

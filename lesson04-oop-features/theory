@@ -1,0 +1,81 @@
+	+Một đối tượng chứa các phương thức và thuộc tính
+ 1.Tính chất đóng gói: Encapsulation
+ +Định nghĩa: Được thể hiện qua các 'access modifer'
+ -private: đóng gói trong phạm vi của class
+ -không khai báo | protected: đóng gói trong phạm vi package
+ -				không khai báo   :
+ -public: sử dụng ở bất kỳ đâu của dự án
+ 2.Tính đa hình: Polymorphism 
+ +Định nghĩa: Tính chất đa hình có 2 loại
+   -Đa hình trong phương thức
+   -Đa hình trong đối tượng
+   Phương thức hay đối tượng được gọi là đa hình nếu cùng 1 đối tượng, phương thức
+   nhưng lúc thể hiện này lúc thể hiện khác --> đa hình.
+ 2.1:-Đa hình trong phương thức
+ 		+OverLoading:
+ 		- Hai/Nhiều phương thức được gọi là overloading nếu
+ 			* Thuộc cùng 1 class
+ 			* Thuộc tên
+ 			* Khác số lượng tham số
+ 			* KDL truyền vào tham số
+ 			VD: int sum(int, int)
+ 				int sum(int,int,int)
+ 				float sum(float,float)
+ 		+OverRiding:
+ 		   Hai/Nhiều phương thức được gọi là OverRidding nếu
+ 		   - Cùng phần khai báo hàm. vd: void log()
+ 		   - Thuộc 2 hay nhiều class có quan hệ cha con
+ 		   - Lớp con định nghĩa/overridding lại phần thân hàm từ hàm lớp cha.
+ 		   VD: toString , equal, log.
+ 		   
+ 2.2: Đa hình trong đối tượng :
+ 	  +Lấy, gán giá trị của kiểu dữ liệu cha, con cho KDL cha
+ 	  +Nói cách khác: Lấy biến kiểu cha = kiểu cha/con
+ 	  +Mục đích :
+ 	  		- Giúp chuyển đổi qua về giữa các KDL cha con
+ 	  		- Tạo một mảng/ danh sách các phần tử kiểu cha ocn
+ 	  		- VIết ra phương thức chugn có tham số là KDL cha để nhận giá trị 
+ 	  		thuốc KDL cha/con
+ 	  		VD: callShapeMethod(Shape shape)
+3. Thừa kế: khi có chung thuộc tính và phương thức để tổng quát hơn tạo ra lớp cha để dùng chung
+ overiding lại các phương thức . Mục đích dùng để tránh làm ra 1 hàm đặt nhiều tên khác nhau.
+ 		+Multiple Inheritance(Đa thừa kế): Không hỗ trợ đa thừa kế nhưng dựa 
+ 		vào code làm được.
+ 		
+ 		English: Inheritance
+ 		
+ 		+Định nghĩa:khi tạo ra đối tượng có chung thuộc tính phương thức , thay vì
+ 		ở mỗi class phải tạo đi tạo lại các thuộc tính phuongw thức đó( trùng lặp code, tổng quát hóa)
+ 		sẽ tạo ra 1 kiểu cha chung để chứa các thuộc tính chung đó.
+ 		VD: Sách giáo khoa, mã sách, tên sách, nhà xuất bản, trạng thái, giảm giá.
+ 			Sách tham khảo, mã sách, tên sách, nhà xuất bản, thuế(%).
+ KDL:cha\con:Class, Interface, Abstract Class
+ +KDL:Cha: Class		
+ +KDL:Con: Class
+ --> Khi mà các KDL con có chung thuộc tính --> đưa những tt chung đó vào class cha
+ --> Rồi lấy class con kế thừa, extends, reuse
+ 
+ +KDL: Cha: Interface
+ +KDL:Con: Class
+ 
+ --> Khi mà KDL con có chung phương thức 
+ 	--> đưa phương thức 'chung'(biết phần khai báo[tên hàm ,KDL trả về)
+ 	--> vào KDL cha nhưng chưa biết phần thực thi 
+ 	-->Hàm chung trong KDL cha nên là không có BODY--> KDL interface
+  	-->KDL con khi kế thừa từ KDL cha thì bắt buộc phải override lại hàm 'chung' đó	
+  	--> 1 cái biến mặc định là public static final
+  	--> hàm là public
+ 
+ +KDL Cha: Abstract Class
+ +KDL Con: Class
+ --> Khi KDL cha vừa có hàm trừu tượng(abstract methodS) vừa có hàm bth
+ 	-->Hàm trừu tượng(abstract methodS)
+	-->hàm bình thường--> body methods 	
+	-->chứa các thuộc tính chung của KDL con
+	
+4. Trừu tượng: 
+ +Class: là 1 khái niệm trừu tượng dùng để chỉ 1 tập hợp các đối tượng có chung thuộc tính và pthuc
+ VD: Car1,Car2,Car3-->Car
+ +Coding: abs methods trong interface, abs class 
+ --> Tạo ra các abs mehtod chung cho KDL cha, sau đó con sẽ override
+ -->Vd: Cals, TinhS,tinhDT	

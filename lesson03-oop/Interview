@@ -1,0 +1,46 @@
+1. Class là gì , Object là gì?
+	Phân biệt
+	
+	+Class là một khái niệm trừu trượng dùng để chỉ một tập hợp các đối tượng có chung
+	thuộc tính và phương thức.
+	
+	+Object là cụ thể rõ ràng mô tả sự vật hiện tượng tồn tại trong thế giới thực
+	chính xác và cụ thể có thể phân biệt được các đối tượng khác.	
+	
+2. Tại sao phải khai báo phạm vi truy cập là 
+   private cho các thuộc tính của class?
+   
+   +Tại vì một chương trình gồm nhiều class , một class sẽ quản lý thông tin của riêng nó
+   vì vậy dùng private
+   
+   Rồi sau đó dùng làm getter, setter để truy cập thuộc tính?
+   
+	+ Class phải đc dùng ở nhiều nơi phải cho truy cập vào thuộc tính ở bên trong nên 
+	dùng getter setter, để lấy giá trị or set giá trị nào đó
+
+3.	Phân biệt constructor và setter?
+
+	+Constructor tạo 1 đối tượng mới
+	+Setter	đã có đối tượng và set lại .
+	
+4.	Khi nào sẽ khai báo static cho thuộc tính, hàm?
+
+	+Khi mà thuộc tính, hàm không phụ thuộc vào đối tượng đang gọi
+	 mà chỉ phụ thuộc vào tham số của hàm
+	 
+5.	Có thể khai báo private constructor được không ?
+	Vì sao? cho Ví dụ?
+	+Với 1 class bình thường dùng public constructor để khởi tạo đối tượng
+	
+	+Cũng có trường hợp dùng private constructor khi không muốn class 
+	-->đó cho phép tạo ra đối tượng nào cả
+	
+	 Vd: Utility class --> Util Class --> class chứa những util methods
+	 MathUtil: chỉ phụ thuộc tham số truyền vào không phụ thuộc vào đối tượng
+	    
+	    private MathUtil(){}
+	    
+	      static sum(a,b)
+	      static sub(a,b)
+	      static abs(a)
+	      static mul(a,b)

@@ -1,0 +1,9 @@
+final: at STACK
+	+primitive type : không thể thay đổi giá trị
+	+object type	: không thể thay đổi địa chỉ
+
+imutable: at HEAP
+	+object type	: không thể thay đổi giá trị ở HEAP
+
+Trong bài toán đơn luồng --> Dùng String Buider có + chuỗi, String(Bth sẽ dùng)
+				Đa Luồng --> StringBuffer có cộng chuỗi và xử lý,String(Bth)
