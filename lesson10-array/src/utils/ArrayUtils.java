@@ -1,13 +1,33 @@
 package utils;
 
+import java.util.Arrays;
+
+import bean.SortOrder;
+
 public class ArrayUtils {
 
-	public ArrayUtils() {
+	private ArrayUtils() {
 	}
 	
-	public static void swap(String[] elements, int i, int j) {
+	public static void sort (int[] elements, SortOrder order) {
+		Arrays.sort(elements);
+		if (SortOrder.DESC.equals(order)) {
+			reverse(elements);
+		}
+	}
+	
+	private static void reverse(int[] numbers) {
+		int length = numbers.length;
+		for (int i = 0; i < length / 2; i++) {
+			int tmp = numbers[i];
+			numbers[i] = numbers[length - i - 1];
+			numbers[length - i - 1] = tmp;
+		}
+	}
+	
+	public static void swap(Object[] elements, int i, int j) {
 		if (isValidIndex(i, elements) || isValidIndex(j, elements)) {
-			String tmp = elements[i]; 
+			Object tmp = elements[i]; 
 			elements[i] = elements[j];
 			elements[j] = tmp;
 		}
