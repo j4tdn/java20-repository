@@ -20,7 +20,7 @@ public class DataModel {
 				new Item(7,  "Item C1", bd(91), 102),
 				new Item(5,  "Item D2", bd(44), 103),
 				new Item(9,  "Item F7", bd(72), 104),
-				new Item(10, "Item C2", bd(37), 103)	
+				new Item(10, "Item C2", bd(37), 103),
 		};
 	}
 	

@@ -1,13 +1,13 @@
 package view.sorting.zdemo;
 
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.reverseOrder;
+
 import java.util.Arrays;
-import java.util.Comparator;
 
 import bean.Item;
 import model.DataModel;
 import utils.ArraysUtils;
-
-import static java.util.Comparator.*;
 
 public class Ex02Sort_ObjectType {
 	
