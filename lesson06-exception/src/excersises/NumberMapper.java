@@ -17,9 +17,9 @@ public enum NumberMapper {
 	NumberMapper(String NumberAsTest) {
 		this.NumberAsTest = NumberAsTest;
 	}
-	public String NumberMapper() {
-		return NumberAsTest;
-	}
+//	public String NumberMapper() {
+//		return NumberAsTest;
+//	}
 	public String getNumberAsTest() {
 		return NumberAsTest;
 	}
