@@ -23,7 +23,7 @@ public class Ex01BasicDemo {
 		// mỗi row chính là mỗi phần  tử của matrix và có m phần tử
 		
 		for (int rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
-			for (int columnIndex = 0; rowIndex < matrix[rowIndex].length; rowIndex++) {
+			for (int columnIndex = 0; columnIndex < matrix[rowIndex].length; columnIndex++) {
 				System.out.print(matrix[rowIndex][columnIndex] + "    ");
 			}
 			System.out.println();
