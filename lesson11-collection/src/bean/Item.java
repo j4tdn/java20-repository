@@ -2,7 +2,7 @@ package bean;
 
 import java.math.BigDecimal;
 
-public class Item implements Comparable<Item> {
+public class Item /*implements Comparable<Item> */{
 
 	private Integer id;
 	private String name;
@@ -69,10 +69,10 @@ public class Item implements Comparable<Item> {
 		return getId().equals(that.getId());
 	}
 	
-	@Override
-	public int compareTo(Item i) {
-		return this.getName().compareTo(i.getName());
-	}
+//	@Override
+//	public int compareTo(Item i) {
+//		return this.getName().compareTo(i.getName());
+//	}
 	
 	@Override
 	public String toString() {

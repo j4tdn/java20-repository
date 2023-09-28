@@ -12,6 +12,14 @@ public class DataModel {
 		
 	}
 	
+	public static Item[] mockArrayOfItems() {
+		return new Item[] {
+		new Item(2, "Item A2", bd(23), 102),
+		new Item(4, "Item B2", bd(39), 101),
+		new Item(5, "Item C1", bd(19), 102)
+		};
+	}
+	
 	public static List<Item> mockItems(){
 		var items = new ArrayList<Item>();
 		items.add(new Item(2, "Item A2", bd(23), 102));
