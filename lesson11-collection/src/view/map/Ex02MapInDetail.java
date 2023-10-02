@@ -11,6 +11,10 @@ public class Ex02MapInDetail {
 	
 	public static void main(String[] args) {
 		
+		// T[]     --> Arrays.sort(a, comparator)
+		// List<T> --> list.sort(l, comparator)
+		
+		
 		Map<Item, List<Item>> items = mockData();
 		
 		Item item4 = new Item(1, "A4", bd(99), 999);
