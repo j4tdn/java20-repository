@@ -1,0 +1,12 @@
+1.
+How does a Java HashMap handle different objects with the same hash code?
+A hashmap works like this (this is a little bit simplified, but it illustrates the basic mechanism):
+
+https://stackoverflow.com/questions/6493605/how-does-a-java-hashmap-handle-different-objects-with-the-same-hash-code
+
+2.What exactly is bucket in hashmap?
+	https://stackoverflow.com/questions/37959941/what-exactly-is-bucket-in-hashmap
+
+3. HashMap in General 
+https://www.baeldung.com/java-hashmap
+
