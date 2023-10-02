@@ -1,6 +1,7 @@
 package bean;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Item /* implements Comparable<Item> */ {
 	private Integer id;
@@ -65,6 +66,11 @@ public class Item /* implements Comparable<Item> */ {
 		Item that = (Item)o;	
 		
 		return getId().equals(that.getId());
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(getId());
 	}
 	
 	// comparator.compare(Item i1, Item i2) --> Comparator<T>

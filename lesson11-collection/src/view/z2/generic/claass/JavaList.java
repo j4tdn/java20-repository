@@ -44,8 +44,11 @@ public class JavaList<E> implements IList<E> {
 	}
 
 	@Override
-	public void remove(int i) {
-
+	public void remove(int pos) {
+		for (int i = pos; i < size; i++) {
+			es[i] = es[i + 1];
+		}
+		size--;
 	}
 
 	@Override
@@ -55,7 +58,11 @@ public class JavaList<E> implements IList<E> {
 
 	@Override
 	public void removeIf(Predicate<E> predicate) {
-
+		for (int i = 0; i < size; i++) {
+			if (predicate.test(es[i])) {
+				remove(i--);
+			}
+		}
 	}
 
 	@Override
