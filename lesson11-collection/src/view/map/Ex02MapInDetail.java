@@ -22,6 +22,7 @@ public class Ex02MapInDetail {
 		for (Item key: items.keySet()) {
 			System.out.println(key + " " + items.get(key).size());
 		}
+		
 	}
 	
 	// K: Item       --> original item
