@@ -1,0 +1,11 @@
+Kiểu dữ liệu nguyên thủy - primative type
+	--> Dùng những kiểu có sẵn của java 
+		VD: int, char, long,...
+	--> Không thể tạo ra kiểu mới
+
+
+Kiểu dữ liệu đối tượng - object type
+	--> Dùng những kiểu có sẵn của java 
+		VD: Integer, Long, String,...
+	--> Tự tạo ra những kiểu khác
+		VD: Item(id, name, salesPrice)

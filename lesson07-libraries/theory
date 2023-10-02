@@ -1,0 +1,12 @@
++ locale
+	--> tác động đến first day of week
+		+ sunday
+		+ monday
+		
++ time zone
+	--> tác động đến thời gian mình lấy ra
+	
+		. GTM+7
+		. UTC-2
+		. ICT
+		. Europe/Berlin

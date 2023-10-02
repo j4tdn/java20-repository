@@ -1,0 +1,6 @@
+1, Le Na, 16
+2, Le Teo, 2
+3, Hoang A, -10
+4, Nguyen B, 12
+5, Pham C, -12
+6, Le Nam, 98

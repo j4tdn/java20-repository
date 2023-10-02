@@ -1,0 +1,82 @@
+- Class: là khái niệm trừu tượng dùng để chỉ tập hợp các đối tượng có chung tt, pt
+- Abstract methods trong interface, abstract class
+		--> Tạo ra các abstract method chung cho KDL cha, sau đó con sẽ overriding
+		--> VD: calS, tinhS, tinhDienTich, tinhDT
+
+1. Tính chất đóng gói
+English: Encapsulation
+
+Định nghĩa: Tính chất đóng gói đc thể hiện qua các access modifier
+	+ private: đóng gói trong phạm vi class
+	+ default | protected: đóng gói trong phạm vi package
+	+ public: đc sử dụng bất kì đâu trong project
+	
+2. Tính chất đa hình
+English: Polymorphism
+
+Định nghĩa: Tính chất đa hình có 2 loại
+	+ Đa hình trong phương thức
+	+ Đa hình trong đối tượng
+	Phương thức, đối tượng đc gọi là đa hình nếu cùng 1 đối tượng, phương thức
+	nhưng lúc thì có 'thể hiện' này, khác --> đa hình
+	
+	2.1 Đa hình trong phương thức
+	+Overloading
+		2/n phương thức đc gọi là overloading nếu
+		. Cùng 1 class
+		. Cùng tên
+		. Khác số lượng tham số
+		. Khác kdl truyền vào của tham số
+		VD: int sum(int, int)
+			int sum(int, int, int)
+			float sum(float, float)
+			
+	+Overriding:
+		2/nhiều phương thức đc gọi là overriding nếu
+		+ cùng phần khai báo hàm: vd void log()
+		+ thuộc 2/nhiều class có quan hệ cha con
+		+ lớp con định nghĩa/override lại phần thân hàm từ hàm 
+			vd: toString(), equals(), log()
+			
+	2.2: Đa hình trong đối tượng 
+		Lấy, gán giá trị của KDL cha/con cho KDL cha
+		Nói cách khác:lấy biến kdl cha = kdl con/cha
+		Mục đích:
+			+ Giúp chuyển đổi qua về giữa các KDL cha con
+			+ Tạo 1 mảng/ danh sách các phần tử kiểu cha/con
+			+ Viết ra phương thức chung có tham số là KDL cha để nhận vào KDL cha/con
+			VD: callShapeMethods(Shape shape)
+		
+3. Tính chất thừa kế
+English: Inheritance
+
+Định nghĩa: Khi 2/nhiều đối tượng có chung thuộc tính/phương thức. 
+			Thay vì ở mỗi class phải tạo đi tạo lại các thuộc tính (trùng lặp code, ko tổng quát hóa)
+			Thì mình tạo ra 1 kiểu cha để chứa các pt, tt chung đó
+			
+VD: Sách giáo khoa: mã sách, tên sách, nhà xuất bản, trạng thái (cũ, mới), giảm giá
+	Sách tham khảo: mã sách, tên sách, nhà xuất bản, thuế(%)
+	
+	Sách: mã sách, tên sách, nhà xuất bản
+	
+KDL cha/con: Class, Interface, Abstract Class
+
+	+ KDL cha: class
+	+ KDL con: class
+	--> Khi class KDL(s) có chung thuộc tính --> đưa những tt chung đó vào class cha
+	--> Rồi lấy class con kế thừa, extends, reuse
+	
+	--> Khi KDL(s) có chung phương thức
+		-> đưa phương thức 'chung' (biết phần khai báo [tên hàm, KDL trả về]) vào KDL cha những chưa biết phần thực thi
+		-> Hàm chung trong KDL cha nên là ko có body
+		-> KDl con khi kế thừa từ KDL cha thì bắt buộc phải override lại hàm 'chung' đó
+	
+	
+	+ KDL cha: Abstract Class
+	+ KDL con: Class
+	-->Khi KDL cha vừa có hàm trừu tượng, vừa có hàm bình thường
+		.Hàm trừu tượng --> abstract method
+		.hàm bình thường --> body method
+		. chứa các thuộc tính chung của KDL con
+
+		
