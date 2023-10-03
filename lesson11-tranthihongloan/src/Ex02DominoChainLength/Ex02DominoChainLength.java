@@ -12,26 +12,22 @@ public class Ex02DominoChainLength {
 				new Domino(5, 50)
 		};
 		
-		int longest = 1;
-		int chLength = 1;
+		int longest = 0;
+		int chLength = 0;
 		for (int i = 0; i < dominos.length-1; i++) {
 			if(dominos[i].checkDistance(dominos[i+1].getPosition())) {
+				if(chLength == 0) {
+					chLength++;
+				}
 				chLength++;
 			} else {
 				if(chLength>longest) {
 					longest = chLength;
 				}
-				chLength = 1;
+				chLength = 0;
 			}
 		}
 	
-		System.out.println(longest);
-		
-	}
-	
-	public static int longestDominoChain (int length, int height, int position) {
-		length = 1;
-		
-		return length;
+		System.out.println(longest);	
 	}
 }
