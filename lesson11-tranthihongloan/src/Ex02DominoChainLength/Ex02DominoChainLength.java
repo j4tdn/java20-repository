@@ -1,28 +1,31 @@
 package Ex02DominoChainLength;
 
-import java.util.Scanner;
-
 public class Ex02DominoChainLength {
 	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Nhap so luong quan domino: ");
-		int N = sc.nextInt();
-		int[][] table = new int[2][N];
-		for (int i = 0; i < 2; i++) {
-			for (int j = 0; j < N; j++) {
-				if(i == 0) {
-					System.out.print("Nhap chieu cao quan thu " + (j + 1) + ": ");
-					table[i][j] = sc.nextInt();
+		Domino[] dominos = new Domino[] {
+				new Domino(1, 0),
+				new Domino(2, 5),
+				new Domino(3, 6),
+				new Domino(4, 8),
+				new Domino(5, 50)
+		};
+		
+		int longest = 1;
+		int chLength = 1;
+		for (int i = 0; i < dominos.length-1; i++) {
+			if(dominos[i].checkDistance(dominos[i+1].getPosition())) {
+				chLength++;
+			} else {
+				if(chLength>longest) {
+					longest = chLength;
 				}
-				if(i == 1) {
-					System.out.print("Nhap vi tri quan thu " + (j + 1) + ": ");
-					table[i][j] = sc.nextInt();
-				}
+				chLength = 1;
 			}
 		}
-		
+	
+		System.out.println(longest);
 		
 	}
 }
