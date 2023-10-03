@@ -28,4 +28,10 @@ public class Ex02DominoChainLength {
 		System.out.println(longest);
 		
 	}
+	
+	public static int longestDominoChain (int length, int height, int position) {
+		length = 1;
+		
+		return length;
+	}
 }
