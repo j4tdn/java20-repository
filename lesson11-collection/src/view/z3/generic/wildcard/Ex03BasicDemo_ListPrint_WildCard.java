@@ -21,19 +21,19 @@ public class Ex03BasicDemo_ListPrint_WildCard {
 		List<CharSequence> lOChars = List.of("a", "b", "c","d");
 		
 		
-//		System.out.println("\n--- print list using generic method ---");
+		System.out.println("\n--- print list using generic method ---");
 //	    printList_UsingGeneric(lOIntegers);
 //	    printList_UsingGeneric(lODoubles);
 //	    printList_UsingGeneric(lOStrings);
 //	    printList_UsingGeneric(lONumbers);
 //	    printList_UsingGeneric(lOChars);
-//	    
-//	    System.out.println("\n--- print list using generic wildcard ---");
-//	    printList_UsingGeneric(lOIntegers);
-//	    printList_UsingGeneric(lODoubles);
-//	    printList_UsingGeneric(lOStrings);
-//	    printList_UsingGeneric(lONumbers);
-//	    printList_UsingGeneric(lOChars);
+	    
+	    System.out.println("\n--- print list using generic wildcard ---");
+	    printList_UsingGenericWildCard(lOIntegers);
+//	    printList_UsingGenericWildCard(lODoubles);
+//	    printList_UsingGenericWildCard(lOStrings);
+	    printList_UsingGenericWildCard(lONumbers);
+//	    printList_UsingGenericWildCard(lOChars);
 	}
    
 	public static <E extends CharSequence> void printList_UsingGeneric(List<E> es) {
@@ -44,7 +44,7 @@ public class Ex03BasicDemo_ListPrint_WildCard {
 	}
 	
 	// List<?> = List<E> = List<Object>
-	public static void printList_UsingGenericWildCard(List<?> es) {
+	public static void printList_UsingGenericWildCard(List<? super Integer> es) {
 		for (Object e: es) {
 			System.out.print(e + " ");
 		}
