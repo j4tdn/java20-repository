@@ -1,0 +1,51 @@
+Stream<T>
++ Là 1 ctdl mới từ Java8, chứa nhiều hàm hỗ trợ theo kiểu strategy pattern
++ Immutable class
++ Traversable once
+
+Thường sẽ khởi tạo stream bằng cách convert
++ Array
++ Collection(List, Set, Map#entrySet)
+--> sang Stream<T>
+
+Stream sẽ:
++ lưu trữ 1 tập hợp các phần tử
++ gọi các hàm để xử lý: strateger, builder pattern
++ xử lý xong --> lưu trữ lại ở 1 csdl khác
+
+Các bước để thao tác với stream
+
+B1: Convert/Init data sang/cho Stream<T>
+    VD: Convert từ Collection<T> -> Stream<T> --> dùng hàm .stream()
+
+B2: Gọi các hàm xử lý có sẵn trong Stream
+    --> vẫn trả về KDL stream
+    --> Intermediate operations
+    VD: filter, map, sorted, limit
+    
+B3: Sau khi xử lý xong
+    --> chuyển đổi stream sang 1 KDL khác để lưu trữ
+    --> Terminal operations
+    VD: collect(Collectors.toList())
+    	collect(Collectors.toSet())
+    	collect(Collectos.toCollection(Supplier<C> supplier))
+    	collect(Collectos.collect(Collectors.toMap(keyMapper, valueMapper, mergeFunction, mapFactory))
+    	toArray(IntFunction<A[]> supplier)
+    	collect(Collectors.joining(separator)
+    	
+--> Stream chỉ cho phép duyệt 1 lần duy nhất --> nếu lặp lại --> throw exception
+		 
+Mục đích: Dùng stream để xử lý, gọi các hàm xử lý thay vì lưu trữ dữ liệu
+ 
+Lưu trữ: Array, Collection
+Xử lý: Stream
+ 
+Stream: Internal iteration
+ 
+--> Stream có 2 loại thao tác
++ Intermediate
+  Khi gọi các hàm từ stream vẫn trả về stream --> intermediate(lazy) operations --> hình thành stream pipeline
+  Hoàn toàn ko được thực thi trước khi gọi terminal operations
++ Terminal
+  Khi gọi các hàm từ stream trả về KDL khác --> terminal operations
+ 
