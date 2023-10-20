@@ -1,27 +1,23 @@
 package view.stream;
 
+import static utils.StreamUtils.generate;
+
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.Set;
-import java.util.function.IntFunction;
-import java.util.function.Predicate;import java.util.function.ToIntBiFunction;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import bean.Dish;
 import common.Category;
 import model.DataModel;
 
-import static utils.StreamUtils.*;
-
 public class Ex01BasicDemo {
 	
 	public static void main(String[] args) {
-		
 		/*
 		 	Stream<T>
 		  	+ Là 1 ctdl mới từ Java8, chứa nhiều hàm hỗ trợ theo kiểu strategy pattern
