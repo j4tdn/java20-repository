@@ -15,7 +15,7 @@ import bean.Dish;
 import common.Category;
 import model.DataModel;
 
-public class Ex01BasicDemo {
+public class Ex01BasicDemo{
 	
 	public static void main(String[] args) {
 		/*
