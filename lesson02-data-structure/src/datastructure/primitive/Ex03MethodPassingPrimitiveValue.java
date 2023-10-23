@@ -7,6 +7,7 @@ public class Ex03MethodPassingPrimitiveValue {
 		int b = 5;
 
 		modify(a);
+		System.out.println("a = " + a);
 		swap(a, b);
 		System.out.println("a --> " + a + "\nb --> " + b);
 

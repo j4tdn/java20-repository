@@ -15,7 +15,9 @@ public class Ex01PolymorphismDemo {
 		Square s1 = new Square();
 		s1.paint();
 		s1.calS();
-
+		
+		
+		
 		// temporary int, long
 		int a = 123;
 		long b = 234;
@@ -32,6 +34,11 @@ public class Ex01PolymorphismDemo {
 		shs1.calS();
 
 		shr1 = shs1;
+		System.out.println("after assigning!");
+		shr1.paint();
+		shs1.paint();
+		
+		
 		
 		System.out.println("\n==> th4 --> child new parent");
 		// runtime --> parent can be missed child's method

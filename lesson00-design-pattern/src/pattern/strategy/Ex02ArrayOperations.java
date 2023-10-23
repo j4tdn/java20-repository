@@ -19,11 +19,11 @@ public class Ex02ArrayOperations {
 	public static void main(String[] args) {
 		int[] numbers = { 2, 9, 3, 7, 17, 40, 56, 44 };
 
-		generate("câu 1", getNumbers(numbers, n -> n % 2 != 0));
+		System.out.println("câu 1" + getNumbers(numbers, n -> n % 2 != 0));
 		
-		generate("câu 2", getNumbers(numbers, n -> n % 2 == 0));
+		System.out.println("câu 2" + getNumbers(numbers, n -> n % 2 == 0));
 		
-		generate("câu 3", getNumbers(numbers, n -> isPrime(n)));
+		System.out.println("câu 3" + getNumbers(numbers, n -> isPrime(n)));
 	}
 
 	// xd các biểu thức(hàm, chiến lược) truyền vào input, output là gì

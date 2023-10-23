@@ -4,6 +4,12 @@ public class Ex04Test {
 	public static void main(String[] args) {
 		// cho 2 số nguyên a, b
 		// viết hàm hoán vị a, b
+		
+		Integer x = 5;
+		Integer y = 3;
+		swap(x, y);
+		System.out.println("x = " + x + ", y = " + y);
+		
 		Java20Int a = new Java20Int(5); // H1
 		Java20Int b = new Java20Int(7); // H2
 		
@@ -18,6 +24,12 @@ public class Ex04Test {
 		System.out.println("b --> " + b);
 	}
 
+	private static void swap(Integer a, Integer b) {
+		Integer tmp = a;
+		a = b;
+		b = tmp;
+	}
+	
 	private static void swap(Java20Int a, Java20Int b) {
 		int tmp = a.value;
 		a.value = b.value;

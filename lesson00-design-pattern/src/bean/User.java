@@ -38,7 +38,7 @@ public class User {
 
 	// Builder will help to create immutable instance for User
 	// Assign/with value will be supported by Builder
-
+	
 	
 	public User(Builder builder) {
 
@@ -74,7 +74,7 @@ public class User {
 	public String getAddress() {
 		return address;
 	}
-
+	
 	
 	@Override
 	public String toString() {

@@ -17,9 +17,9 @@ public class Ex02OverrdingDemo {
 		System.out.println("\n============\n");
 		
 		Ex02Parent pc1 = new Ex02Child();
-		System.out.println("p1 digit --> " + pc1.digit);
-		System.out.println("p1 digit --> " + pc1.text);
-		pc1.log();
+		System.out.println("pc1 digit --> " + pc1.digit);
+		System.out.println("pc1 digit --> " + pc1.text);
+		((Ex02Child)pc1).show();
 		
 	}	
 }

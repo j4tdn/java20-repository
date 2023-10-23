@@ -43,7 +43,7 @@ public class Ex01BasicDemo {
 		Integer oC = 66; // H5
 		Integer oD = 77; // H6
 		Integer oE = 66; // H5
-		oE = 999;
+		//oE = 999;
 		
 		
 		System.out.println("oB --> " + oB); // H4

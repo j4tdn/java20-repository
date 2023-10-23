@@ -9,6 +9,9 @@ public class Ex02Child extends Ex02Parent{
 		System.out.println("Ex02 child text");
 	}
 
+	void show() {
+		System.out.println("hi");
+	}
 	@Override
 	public String toString() {
 		return "Ex02Child [digit=" + digit + ", text=" + text + "]";
