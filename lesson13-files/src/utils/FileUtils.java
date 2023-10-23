@@ -35,4 +35,14 @@ public class FileUtils {
 		return file;
 	}
 	
+	public static void close(AutoCloseable ... objectsToBeClosed) {
+		for (AutoCloseable objectToBeClosed: objectsToBeClosed) {
+			try {
+				objectToBeClosed.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
 }
