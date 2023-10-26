@@ -14,6 +14,7 @@ public class InterfaceDemo {
 		// : anonymous class
 		// --> mỗi lần override sẽ có body khác nhau
 
+		
 		// anonymous class
 		Shape shape = new Shape() {
 

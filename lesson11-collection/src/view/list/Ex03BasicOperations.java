@@ -1,11 +1,10 @@
 package view.list;
 
+import static utils.CollectionUtils.generate;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
-
-import static utils.CollectionUtils.*;
 
 public class Ex03BasicOperations {
 

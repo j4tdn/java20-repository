@@ -10,7 +10,7 @@ Thường sẽ khởi tạo stream bằng cách convert
 
 Stream sẽ:
 + lưu trữ 1 tập hợp các phần tử
-+ gọi các hàm để xử lý: strateger, builder pattern
++ gọi các hàm để xử lý: strategy pattern, builder pattern
 + xử lý xong --> lưu trữ lại ở 1 csdl khác
 
 Các bước để thao tác với stream
@@ -31,7 +31,7 @@ B3: Sau khi xử lý xong
     	collect(Collectos.toCollection(Supplier<C> supplier))
     	collect(Collectos.collect(Collectors.toMap(keyMapper, valueMapper, mergeFunction, mapFactory))
     	toArray(IntFunction<A[]> supplier)
-    	collect(Collectors.joining(separator)
+    	collect(Collectors.joining(separator))
     	
 --> Stream chỉ cho phép duyệt 1 lần duy nhất --> nếu lặp lại --> throw exception
 		 

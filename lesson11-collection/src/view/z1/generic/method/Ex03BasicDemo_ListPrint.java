@@ -1,6 +1,5 @@
 package view.z1.generic.method;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Ex03BasicDemo_ListPrint {

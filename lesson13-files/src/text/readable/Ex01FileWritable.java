@@ -22,9 +22,9 @@ public class Ex01FileWritable {
 		
 		String pathFile = ROOT.concat("mock- " + System.currentTimeMillis() + ".txt");
 		
-		File file = FileUtils.createFile(ROOT);
+		File file = FileUtils.createFile(pathFile);
 		
-		
+	
 		if (file.exists()) {
 
 			var path = file.toPath();

@@ -86,7 +86,7 @@ public class Ex02SingleTypeObjectDemo {
 		// In thông tin
 		System.out.println("size --> " + sequences.size());
 		
-		System.out.println("\nList of elemenets ");
+		System.out.println("\nList of elements ");
 		
 		for (int i = 0; i < sequences.size(); i++) {
 			System.out.println("  + " + sequences.get(i));

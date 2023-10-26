@@ -17,7 +17,7 @@ public class Ex01BasicSetDemo {
 		numbers.add(2);
 		numbers.add(5000);
 		numbers.add(600);
-		numbers.add(200);
+		numbers.add(2090);
 		numbers.add(777);
 		numbers.add(101);
 		numbers.add(101); // kiểm tra hashcode và equals

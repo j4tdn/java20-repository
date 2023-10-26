@@ -5,7 +5,7 @@ package number.mapper;
  */
 public enum TensNumberMapper {
 	
-	Nx("PRESENT"),
+	Nx("PRESENT"),// new enum(String text)
 	N1("mười"),
 	N2("hai"),
 	N3("ba"),
@@ -21,7 +21,7 @@ public enum TensNumberMapper {
 	TensNumberMapper(String numberAsText) {
 		this.numberAsText = numberAsText;
 	}
-	
+//	
 	public String getNumberAsText() {
 		return numberAsText;
 	}

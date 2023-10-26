@@ -26,7 +26,7 @@ public class Ex02BubbleSort_String {
 				
 				
 		/*
-		 với DKL đối tượng so sánh dùng compareto từ interface cha Comparable<T>
+		 với DKL đối tượng so sánh dùng compareTo từ interface cha Comparable<T>
 		 giá trị các phần tử có thể bị null
 		 
 		 an toàn: null check trước khi compare

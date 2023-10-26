@@ -11,7 +11,7 @@ public class MultipleIClassesnheritancDemo {
 		// solving: when multiple super class have declaration method
 		// ---> require to override
 
-		// java doer notspurtport
+		// java doer not support
 		Child c1 = new Child();
 		c1.cooking();
 		c1.running();

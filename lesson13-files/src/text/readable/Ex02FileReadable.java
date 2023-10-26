@@ -21,7 +21,7 @@ public class Ex02FileReadable {
 			var path = file.toPath();
 			var lines = readLines(path);
 
-			// 4, 43silos0, zita002, le2sim, 231233, haha91ii222
+			// 5, 43silos0, zita002, le2sim, 231233, haha91ii222
 			// 0, 2, 4, 43, 91, 222, 231233
 			
 			if (!lines.isEmpty()) {

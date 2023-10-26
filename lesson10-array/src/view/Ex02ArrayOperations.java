@@ -9,8 +9,10 @@ import functional.Condition;
 public class Ex02ArrayOperations {
 
 	/*
-	 * cho danh sách các số nguyên dương [1, 20] yêu cầu: + tìm các ptu lẻ + tìm các
-	 * ptu chẵn + tìm các ptu là số nguyên tố + tìm các ptu là số hạnh phúc
+	 * cho danh sách các số nguyên dương [1, 20] yêu cầu: 
+	 * + tìm các ptu lẻ + tìm các ptu chẵn 
+	 * + tìm các ptu là số nguyên tố 
+	 * + tìm các ptu là số hạnh phúc
 	 * 
 	 */
 

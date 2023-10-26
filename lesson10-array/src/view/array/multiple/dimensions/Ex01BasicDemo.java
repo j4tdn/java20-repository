@@ -9,7 +9,7 @@ public class Ex01BasicDemo {
 		
 		
 		// mảng nhiều chiều: là mảng 1 chiều trong đó mỗi phần tử là 1 mảng n-1 chiều
-		// nếu > 2 chiều --> mảng đối tượng
+		// nếu > 2 chiều --> nên tạo ra mảng đối tượng
 		
 		// mảng 2 chiều
 		int[][] matrix = {

@@ -12,16 +12,17 @@ public class Ex03Test {
 		String s6 = new String("welcome");
 		String s7 = "welcome to";
 		
-		System.out.println(s1.equals(s2));
-		System.out.println(s1 == s2);
+		
+		System.out.println(s1.equals(s2));// T
+		System.out.println(s1 == s2);	  // T --> constant pool
 
-		System.out.println(s1.equals(s3));
-		System.out.println(s1 == s3);
+		System.out.println(s1.equals(s3));// T
+		System.out.println(s1 == s3);     // F
 		
-		System.out.println((s4 + s5).equals(s7));
-		System.out.println((s4 + s5) == s7);
+		System.out.println((s4 + s5).equals(s7)); // F
+		System.out.println((s4 + s5) == s7);      // F
 		
-		System.out.println(s4.equals(s6));
-		System.out.println(s4 == s6);
+		System.out.println(s4.equals(s6));		  // T
+		System.out.println(s4 == s6);			  // F	 
 	}
 }

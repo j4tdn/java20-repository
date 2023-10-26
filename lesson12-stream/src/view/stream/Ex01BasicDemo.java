@@ -3,12 +3,10 @@ package view.stream;
 import static utils.StreamUtils.generate;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.function.IntFunction;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -22,13 +20,16 @@ public class Ex01BasicDemo {
 
 		/*
 		 * Stream<T>: +là 1 ctdl mới từ java08, chứa nhiều hàm hỗ trợ theo kiểu strategy
-		 * pattern + immutable class + Traversable once
+		 * pattern 
+		 * 			  + immutable class 
+		 * 			  + Traversable once
 		 * 
 		 * Thường sẽ khởi tạo stream bằng cách convert + Array + Collections(List, Set,
 		 * Map#entrySet) --> sang Stream<T>
 		 * 
-		 * Stream sẽ: + lưu trữ 1 tập hợp các phần tử + gọi các hàm xử lí: strategy,
-		 * builder pattern + xử lí xog: lưu trữ lại ỏ 1 csdl khác
+		 * Stream sẽ: + lưu trữ 1 tập hợp các phần tử 
+		 * 			  + gọi các hàm xử lí: strategy, builder pattern 
+		 * 			  + xử lí xog: lưu trữ lại ở 1 csdl khác
 		 * 
 		 * Các bước thao tác với Stream
 		 * B1: convert/init sang Stream<T>
@@ -58,7 +59,7 @@ public class Ex01BasicDemo {
 			  .collect(Collectors.toCollection(LinkedHashSet::new));
 		generate("2.", nameOfDishes);
 		
-		// == vs equals trong Enum--> tương tự vì nó chỉ đc tạo ra 1 lần duy nhất
+		// ==(ko throw Exception) vs equals trong Enum--> tương tự vì mỗi gtri của enum chỉ đc tạo ra 1 lần duy nhất
 		
 		var veggieDishes = menu.stream()
 			.filter(d -> d.getCategory().equals(Category.VEGGIE))

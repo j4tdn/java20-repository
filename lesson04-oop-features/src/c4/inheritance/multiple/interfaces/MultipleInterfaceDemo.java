@@ -22,7 +22,7 @@ public class MultipleInterfaceDemo {
 		 *  --> answer
 		 *  Difference 
 		 *  + interface:
-		 *  	. support multile implements
+		 *  	. support multiple implements
 		 *  	. attribute --> auto public static final
 		 *  	. method --> auto public abstract
 		 *  

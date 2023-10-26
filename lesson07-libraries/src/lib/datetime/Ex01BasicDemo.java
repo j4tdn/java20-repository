@@ -32,6 +32,7 @@ public class Ex01BasicDemo {
 		// locale: language-country
 		// Locale VIETNAM = new Locale("vi", "VN");
 		// Locale.setDefault(VIETNAM);
+		
 		System.out.println("default locale --> " + Locale.getDefault());
 
 		// 1.Ngày tháng năm
@@ -41,7 +42,7 @@ public class Ex01BasicDemo {
 		int month = c.get(Calendar.MONTH) + 1;
 		int year = c.get(Calendar.YEAR);
 
-		System.out.println("đd/MM/yyyy --> " + day + "/" + month + "/" + year);
+		System.out.println("dd/MM/yyyy --> " + day + "/" + month + "/" + year);
 
 		// 1.ngày, tháng, năm --> chỉ cần in ra
 		DateFormat df = new SimpleDateFormat("dd.MM.yyyy");

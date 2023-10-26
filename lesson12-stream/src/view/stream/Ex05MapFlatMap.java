@@ -1,11 +1,11 @@
 package view.stream;
 
-import static utils.StreamUtils.generate;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static utils.StreamUtils.*;
 
 public class Ex05MapFlatMap {
 	

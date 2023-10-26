@@ -9,6 +9,7 @@ final class Ex02LocalVariable {
 	public static void main(String[] args) {
 		Runnable runnable = testLambda_LocalVar();
 		runnable.run();
+		System.out.println(test);
 	}
 
 	private static Runnable testLambda_LocalVar() {
@@ -23,7 +24,8 @@ final class Ex02LocalVariable {
 				tuple.setLeft(3);
 				test = "hello";
 				String taskName = "Task-R1";
-				System.out.println("this " + taskName + " tasks" + timeConsuming + "s");
+				
+				System.out.println("this " + taskName + " tasks" + timeConsuming + " s");
 			}
 		};
 	}

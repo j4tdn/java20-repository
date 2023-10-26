@@ -21,9 +21,10 @@ public class Ex02BasicDemo_TryCatch {
 		 * 
 		 * Lưu ý: catch đúng exception bị quăng ra, hoặc exception cha của nó
 		 * 
-		 * Quy trình khi bị exception 1. Dòng code bị exception (vd
-		 * NumberFormatException) --> java sẽ tạo 1 đối tượng (new
-		 * NumberFormatException(default message)) 2. Nếu bắt lỗi với catch --> java sẽ
+		 * Quy trình khi bị exception 
+		 * 1. Dòng code bị exception (vd NumberFormatException) 
+		 * --> java sẽ tạo 1 đối tượng (new NumberFormatException(default message)) 
+		 * 2. Nếu bắt lỗi với catch --> java sẽ
 		 * gán đối tượng ở b1 cho biến trong khối catch
 		 * 
 		 * NumberFormatException nfe = new NumberFormatException(message)
