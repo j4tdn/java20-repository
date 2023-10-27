@@ -1,8 +1,9 @@
 package bean;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
-public class Item implements Comparable<Item>{
+public class Item /* implements Comparable<Item> */{
 	
 	private Integer id;
 	private String name;
@@ -51,17 +52,37 @@ public class Item implements Comparable<Item>{
 		this.storeId = storeId;
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		
+		if (!(o instanceof Item)) {
+			return false;
+		}
+		
+		Item that = (Item)o;
+		
+		return getId().equals(that.getId());
+	}
+	
 	// comparator.compare(Item i1, Item i2) --> Comparator<T>
 	// i1.compareTo(i2)                     --> Comparable<T>
 	
 	// this --> i1
 	// o --> i2
+//	@Override
+//	public int compareTo(Item o) {
+//		Item i1 = this;
+//		Item i2 = o;
+//		// return i1.getId().compareTo(i2.getId());
+//		return i2.getName().compareTo(i1.getName());
+//	}
+	
 	@Override
-	public int compareTo(Item o) {
-		Item i1 = this;
-		Item i2 = o;
-		// return i1.getId().compareTo(i2.getId());
-		return i2.getName().compareTo(i1.getName());
+	public int hashCode() {
+		return Objects.hash(getId());
 	}
 
 	@Override
