@@ -3,7 +3,7 @@ package bean;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Item{
+public class Item implements Comparable{
 	
 	private Integer id;
 	private String name;
@@ -77,9 +77,10 @@ public class Item{
 		return true;
 	}
 
-	public int compareTo(Item o) {
+	@Override
+	public int compareTo(Object o) {
 		Item i1 = this;
-		Item i2 = o;
+		Item i2 = (Item)o;
 		return i1.getName().compareTo(i2.getName());
 	}
 	
