@@ -22,6 +22,8 @@ public class BookApp {
 		
 	BigDecimal totalOfMoney = billing(new Book[] {books[0], books[1], books[2], books[7], books[8]});
 		System.out.println("total of Money: " + totalOfMoney);
+		
+		
 	}
 	
 	

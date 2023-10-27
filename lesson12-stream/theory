@@ -1,0 +1,31 @@
+
+		1.
+		 Stream: là 1 ctdl mới từ Java8, chứa nhiều hàm hỗ trợ theo kiểu strategy pattern 
+		 + Immutable class
+		 + Traversable once 
+		 
+		 
+		 thường sẽ khởi tạo stream bằng cách convert
+		 + Array
+		 + Collection(List, Set, Map#entrySet)
+		 -> sang Stream<T>
+		 
+		 	Stream sẽ: 
+		 		+ lưu trữ tập hợp các phần tử
+		 		+ gọi các hàm để xử lý: strategy, builder pattern 
+		 		+ xử lý xong --> lưu trử lại ở 1 csdl khác 
+		 		
+		2. 		
+		  stream chỉ cho duyệt một lần duy nhất nếu lặp lại sẽ quăng exeption
+		  mục đích: dùng stream để xử lý, thay vì lưu trữ dữ liệu
+		  
+		  lưu trữ: Array, Collection
+		  xữ lý: stream
+		  
+		  stream: internal operation
+		3.
+		3.1 Intermediate: 
+			khi gọi các hàm stream trả về stream -> intermediate(lazy) operation
+			không được thực thi trước khi gọi terminal operation
+		3.2 Terminal:  
+			khi gọi các hàm trả về kiểu dữ liệu khác -> terminal operation

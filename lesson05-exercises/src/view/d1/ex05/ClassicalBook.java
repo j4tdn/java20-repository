@@ -1,6 +1,9 @@
 package view.d1.ex05;
 
 public class ClassicalBook extends Book{
+	
+	
+
 	private boolean status;
 	
 	public ClassicalBook() {
