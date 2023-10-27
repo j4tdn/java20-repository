@@ -1,0 +1,5 @@
+1, Le A, 28, 1098
+2, Le B, 29,wqqweqw;wq,elwq,leqw,lewq,lew,qle,qwle,qwle,wql,ewqle,wqle,qwl,ewql,ewql,eqwl,ewql,eqwl,elwq,elwq,elwq,elwq, 1076
+3, Le C, 21, 1043
+4, Le D, 23, 1120
+5, Le E, 25, 1020
