@@ -1,22 +1,20 @@
 package bean;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Store {
 
-	private String storeId;
-	private Store referenceStoreId;
+	private Integer storeId;
+	private String referenceStoreId;
 	private BigDecimal stockPreviousDay;
 	private BigDecimal expectedSales;
 	private boolean isSelected;
-	private BigDecimal allocationKey;
-	private BigDecimal amountAllocated;
-	private BigDecimal demand;
-	
+
 	public Store() {
 	}
 
-	public Store(String storeId, Store referenceStoreId, BigDecimal stockPreviousDay, BigDecimal expectedSales,
+	public Store(Integer storeId, String referenceStoreId, BigDecimal stockPreviousDay, BigDecimal expectedSales,
 			boolean isSelected) {
 		this.storeId = storeId;
 		this.referenceStoreId = referenceStoreId;
@@ -25,20 +23,19 @@ public class Store {
 		this.isSelected = isSelected;
 	}
 
-	
-	public String getStoreId() {
+	public Integer getStoreId() {
 		return storeId;
 	}
 
-	public void setStoreId(String storeId) {
+	public void setStoreId(Integer storeId) {
 		this.storeId = storeId;
 	}
 
-	public Store getReferenceStoreId() {
+	public String getReferenceStoreId() {
 		return referenceStoreId;
 	}
 
-	public void setReferenceStoreId(Store referenceStoreId) {
+	public void setReferenceStoreId(String referenceStoreId) {
 		this.referenceStoreId = referenceStoreId;
 	}
 
@@ -65,37 +62,30 @@ public class Store {
 	public void setSelected(boolean isSelected) {
 		this.isSelected = isSelected;
 	}
-
-	public BigDecimal getAllocationKey() {
-		return allocationKey;
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		
+		if (!(obj instanceof Store)) {
+			return false;
+		}
+		
+		Store that = (Store) (obj);
+		return this.getStoreId().equals(that.getStoreId());
 	}
-
-	public void setAllocationKey(BigDecimal allocationKey) {
-		this.allocationKey = allocationKey;
-	}
-
-	public BigDecimal getAmountAllocated() {
-		return amountAllocated;
-	}
-
-	public void setAmountAllocated(BigDecimal amountAllocated) {
-		this.amountAllocated = amountAllocated;
-	}
-
-	public BigDecimal getDemand() {
-		return demand;
-	}
-
-	public void setDemand(BigDecimal demand) {
-		this.demand = demand;
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.getStoreId());
 	}
 
 	@Override
 	public String toString() {
-		return "Store [storeId=" + storeId + ", stockPreviousDay="
-				+ stockPreviousDay + ", expectedSales=" + expectedSales + ", isSelected=" + isSelected
-				+ ", allocationKey=" + allocationKey + ", amountAllocated=" + amountAllocated + ", demand=" + demand
-				+ "]";
+		return "Store [storeId=" + storeId + ", referenceStoreId=" + referenceStoreId + ", stockPreviousDay="
+				+ stockPreviousDay + ", expectedSales=" + expectedSales + ", isSelected=" + isSelected + "]";
 	}
 
 }
