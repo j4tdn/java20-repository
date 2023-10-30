@@ -27,7 +27,6 @@ public class Ex01Test {
 	
 	public static List<Store> fillExpSales(List<Store> stores, Map<Integer, Integer> refStores) {
 		var tmp = new ArrayList<>(stores);
-		check(stores, null)
 		BigDecimal avgExpSales = calAvgExpSales(stores);
 		for (Store store : stores) {
 			if (store.getExpectedSales() == null) {
@@ -36,30 +35,15 @@ public class Ex01Test {
 					store.setExpectedSales(avgExpSales);
 				}else {
 					Store refStore = tmp.stream().filter(s -> s.getStoreId().equals(refStoreId)).toList().get(0);
-					if (refStore.getExpectedSales() == null) {
-						store.setExpectedSales(avgExpSales);
+					if (refStore.getExpectedSales() != null) {
+						store.setExpectedSales(refStore.getExpectedSales());
 					}else {
-						if (check(tmp, refStore)) {
-							store.setExpectedSales(refStore.getExpectedSales());
-						}else {
-							store.setExpectedSales(avgExpSales);
-						}
+						store.setExpectedSales(avgExpSales);
 					}
 				}
 			}
 		}
 		return stores;
-	}
-	
-	public static boolean check(List<Store> stores, Store refStore) {
-		
-		var expSales = stores.stream().filter(store -> store.equals(refStore))
-				.toList();
-				
-		if (expSales.get(0).getExpectedSales() == null) {
-			return false;
-		}
-		return true;
 	}
 	
 	
