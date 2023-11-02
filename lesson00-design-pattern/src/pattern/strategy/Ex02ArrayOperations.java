@@ -1,9 +1,6 @@
 package pattern.strategy;
 
 import java.util.Arrays;
-import java.util.concurrent.locks.Condition;
-
-import utils.ArraysUtils;
 
 public class Ex02ArrayOperations {
 	public static void main(String[] args) {
