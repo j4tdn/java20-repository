@@ -1,0 +1,66 @@
+-- ORDER, BILL, ORDER_DETAIL, ORDER_STATUS_DETAIL
+
+use java20_shopping;
+
+-- create table ORDER
+drop table if exists `ORDER`;
+create table `ORDER`
+(
+	ID int,
+    DELIVERY_FEE float not null,
+    CREATED_AT datetime not null,
+    PAYMENT_METHOD_ID int not null,
+    EMPLOYEE_ID int not null,
+    CUSTOMER_ID int not null,
+    primary key (ID),
+    constraint FK_ORDER_PAYMENT_METHOD foreign key (PAYMENT_METHOD_ID) references PAYMENT_METHOD(ID),
+    constraint FK_ORDER_EMPLOYEE foreign key (EMPLOYEE_ID) references EMPLOYEE(ID),
+    constraint FK_ORDER_CUSTOMER foreign key (CUSTOMER_ID) references CUSTOMER(ID)
+);
+
+-- create table BILL
+drop table if exists BILL;
+create table BILL
+(
+	ID int,
+    CREATED_AT datetime not null,
+    TOTAL_OF_MONEY float not null,
+    ORDER_ID int not null,
+    primary key (ID),
+    constraint FK_BILL_ORDER foreign key (ORDER_ID) references `ORDER`(ID)
+);
+
+-- create table ORDER_DETAIL
+drop table if exists ORDER_DETAIL;
+create table ORDER_DETAIL
+(
+	ID int,
+    ORDER_ID int not null,
+    ITEM_DETAIL_ID int not null,
+    AMOUNT int not null,
+    primary key (ID),
+    CONSTRAINT UNQ_ORDER_ITEM_DETAIL UNIQUE (ORDER_ID, ITEM_DETAIL_ID)
+);
+ALTER TABLE ORDER_DETAIL
+ADD CONSTRAINT FK_ORDER_DETAIL_ORDER FOREIGN KEY (ORDER_ID) REFERENCES `ORDER`(ID);
+ALTER TABLE ORDER_DETAIL
+ADD CONSTRAINT FK_ORDER_DETAIL_ITEM_DETAIL FOREIGN KEY (ITEM_DETAIL_ID) REFERENCES ITEM_DETAIL(ID);
+
+-- create table ORDER_STATUS_DETAIL
+drop table if exists ORDER_STATUS_DETAIL;
+create table ORDER_STATUS_DETAIL
+(
+	ID int,
+    ORDER_ID int not null,
+    ORDER_STATUS_ID int not null,
+    EMPLOYEE_ID int not null,
+    UPDATED_AT datetime not null,
+    primary key (ID),
+    CONSTRAINT UNQ_ORDER_ORDER_STATUS UNIQUE (ORDER_ID, ORDER_STATUS_ID)
+);
+ALTER TABLE ORDER_STATUS_DETAIL
+ADD CONSTRAINT FK_ORDER_STATUS_DETAIL_ORDER FOREIGN KEY (ORDER_ID) REFERENCES `ORDER`(ID);
+ALTER TABLE ORDER_STATUS_DETAIL
+ADD CONSTRAINT FK_ORDER_STATUS_DETAIL_ORDER_STATUS FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS(ID);
+ALTER TABLE ORDER_STATUS_DETAIL
+ADD CONSTRAINT FK_ORDER_STATUS_DETAIL_EMPLOYEE FOREIGN KEY (EMPLOYEE_ID) REFERENCES EMPLOYEE(ID);
