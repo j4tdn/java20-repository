@@ -14,7 +14,7 @@ CREATE TABLE `DEPARTMENT`
 DROP TABLE IF EXISTS `EMPLOYEE`;
 CREATE TABLE `EMPLOYEE`
 (
-	`ID`                INT, 
+    `ID`                INT, 
     `NAME`              VARCHAR(100) NOT NULL,
     `PHONE`             VARCHAR(20) NOT NULL,
     `ADDRESS`           VARCHAR(100) NOT NULL,
