@@ -4,7 +4,7 @@
 -- CREATE TABLE CUSTOMER
 CREATE TABLE CUSTOMER
 (
-	`ID`            INT,
+    `ID`            INT,
     `NAME`          VARCHAR(100) NOT NULL,
     `EMAIL`         VARCHAR(100) NOT NULL,
     `ADDRESS`       VARCHAR(100) NOT NULL,

@@ -5,7 +5,7 @@
 DROP TABLE IF EXISTS `DEPARTMENT`;
 CREATE TABLE `DEPARTMENT`
 (
-	`ID`            INT,
+    `ID`            INT,
     `NAME`          VARCHAR(100) NOT NULL,
     CONSTRAINT PRIMARY KEY(`ID`)
 );
