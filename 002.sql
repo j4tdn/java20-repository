@@ -1,0 +1,15 @@
+-- Patches to creating tables
+-- --> CUSTOMER
+USE java20_shopping;
+
+-- create table CUSTOMER
+DROP TABLE IF EXISTS CUSTOMER;
+CREATE TABLE CUSTOMER
+(
+	ID INT,
+    `NAME` VARCHAR(100) NOT NULL,
+    `EMAIL` VARCHAR(100) NOT NULL,
+    `PHONE` VARCHAR(11) NOT NULL,
+    `PASSWORD` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (ID)
+);

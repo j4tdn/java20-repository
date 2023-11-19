@@ -1,0 +1,15 @@
+
+-- 001. sql
+-- --> ITEM_GROUP, ITEM, SIZE
+
+-- 002. sql
+-- --> CUSTOMER
+
+-- 003. sql
+-- --> DEPARTMENT, EMPLOYEE
+
+-- 004. sql
+-- --> PAYMENT_METHOD, ORDER_STATUS
+
+-- 005.sql
+-- --> ORDER, BILL, ORDER_DETAIL, ORDER_STATUS_DETAIL
