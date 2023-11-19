@@ -1,0 +1,62 @@
+-- -->ITEM_GROUP, ITEM, SIZE, ITEM_DETAIL
+-- create database
+CREATE DATABASE java20_shopping CHAR SET utf8mb4;
+
+-- Để chạy câu lệnh
+-- 1.Bôi đậm đoạn code cần chạy --> nhấn nút execute
+-- 2. Để chạy 1 lệnh(từ bắt đầu đến ;) -- > đặt trỏ chuột vào dòng lệnh muốn chạy --> ctrl enter
+-- Patches to creating tables
+-- ITEM_GROUP, ITEM, SIZE, ITEM_DETAIL
+
+USE java20_shopping;
+-- create table ITEM_GROUP
+DROP TABLE IF EXISTS ITEM_GROUP;
+CREATE TABLE ITEM_GROUP (
+    ID INT ,
+    `NAME` VARCHAR(100) NOT NULL,
+    PRIMARY KEY (ID) -- Không cần thiết đặt tên cho ràng buộc primary CONSTRAINT PK_ITEM_GROUP 
+);
+
+-- create table ITEM
+DROP TABLE IF EXISTS ITEM;
+CREATE TABLE ITEM
+(
+	ID			 	INT,
+    MATERIAL	 	VARCHAR(100) NOT NULL,
+    BUY_PRICE	 	FLOAT NOT NULL,
+    COLOR 		 	VARCHAR(50) NOT NULL,
+    ITEM_GROUP_ID	INT NOT NULL,  -- khóa ngoại không bắt buộc phải not null
+    PRIMARY KEY (ID),
+    CONSTRAINT FK_ITEM_ITEM_GROUP FOREIGN KEY (ITEM_GROUP_ID) REFERENCES ITEM_GROUP(ID)
+);
+
+-- create table size 
+CREATE TABLE SIZE 
+(
+	ID INT,
+    `KEY` VARCHAR(10) NOT NULL,
+    GENDER BIT NOT NULL,
+    `DESC` TEXT NOT NULL,
+    PRIMARY KEY(ID),
+    CONSTRAINT CHECK_SIZE_KEY CHECK( `KEY` IN ('S', 'M' , 'L', 'XL', 'XXL', 'XXXL')),
+    CONSTRAINT CHECK_GENDER CHECK(`GENDER` IN (0,1))
+);
+
+-- create table 
+CREATE TABLE ITEM_DETAIL
+(
+	ID INT,
+    ITEM_ID INT NOT NULL,
+    SIZE_ID INT NOT NULL,
+    AMOUNT INT NOT NULL,
+    SALE_PRICE FLOAT NOT NULL,
+    PRIMARY KEY (ID),
+    CONSTRAINT UNQ_ITEM_SIZE UNIQUE (ITEM_ID,SIZE_ID),
+    CONSTRAINT FK_ITEM_DETAIL_ITEM FOREIGN KEY (ITEM_ID) REFERENCES ITEM(ID),
+    CONSTRAINT FK_ITEM_DETAIL_SIZE FOREIGN KEY (SIZE_ID) REFERENCES SIZE(ID)
+    
+    
+);
+
+ALTER TABLE ITEM_DETAIL
+ADD CONSTRAINT FK_ITEM_DETAIL_ITEM FOREIGN KEY (ITEM_ID) REFERENCES ITEM(ID);
