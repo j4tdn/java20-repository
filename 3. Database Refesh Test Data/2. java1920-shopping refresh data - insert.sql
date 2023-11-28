@@ -134,6 +134,78 @@ SELECT  @running := @running + 1 AS ID,
   FROM CTE_ITEM_DETAIL_DATA
 ORDER BY ITEM_ID, SIZE_ID;
 
+INSERT INTO ORDER_DETAIL(ID, ORDER_ID, ITEM_DETAIL_ID, AMOUNT)
+VALUES
+(1,1,4,2), (2,1,31,5), (3,1,49,1), (4,1,68,2), (5,2,39,2),
+(6,2,48,2), (7,2,50,12), (8,2,53,3), (9,3,21,2), (10,3,22,2),
+(11,3,39,2), (12,3,49,11), (13,4,11,2), (14,4,41,3), (15,4,46,3),
+(16,4,69,3), (17,5,5,3), (18,5,24,2), (19,5,39,8),(20,5,56,8),
+(21,6,10,2), (22,6,23,9), (23,6,29,3), (24,6,30,11), (25,7,17,2),
+(26,7,43,15), (27,7,54,10), (28,7,57,5), (29,8,8,20), (30,8,18,7),
+(31,8,59,2), (32,8,65,9), (33,9,29,10), (34,9,34,1), (35,9,38,7),
+(36,9,53,2), (37,10,22,10), (38,10,24,10), (39,10,40,2), (40,10,50,2),
+(41,11,37,2), (42,11,38,2), (43,11,48,11), (44,11,51,2), (45,12,1,12),
+(46,12,29,2), (47,12,35,1), (48,12,42,3);
+
+-- DATE_SUB(date, INTERVAL value interval)
+
+SELECT 0 INTO @running;
+INSERT INTO ORDER_STATUS_DETAIL(ID, ORDER_ID, ORDER_STATUS_ID, EMPLOYEE_ID, UPDATED_AT)
+WITH CTE_ORDER_STATUS_DETAIL_DATA AS
+(
+	-- 1. Đơn hàng từ 1 - 5 --> Giao thành công (trạng thái từ 1 - 6) --> Nhân viên 1(ngẫu nhiên)		
+	SELECT od.ID  ORDER_ID,
+		   ods.ID ORDER_STATUS_ID,
+		   FLOOR(1 + (rand() * (SELECT MAX(ID) FROM EMPLOYEE))) EMPLOYEE_ID,
+		   DATE_SUB(current_timestamp(), INTERVAL (6-ods.ID) DAY) UPDATED_AT
+	  FROM `ORDER` od, 
+			ORDER_STATUS ods
+	 WHERE od.ID BETWEEN 1 AND 5 -- [1,5] inclusive
+	   AND ods.ID BETWEEN 1 AND 6
+
+	UNION
+
+	-- 2 Đơn hàng từ 6 - 8 --> Đóng gói thành công (trạng thái từ 1 - 4) --> Nhân viên 2
+	SELECT od.ID  ORDER_ID,
+		   ods.ID ORDER_STATUS_ID,
+		   FLOOR(1 + (rand() * (SELECT MAX(ID) FROM EMPLOYEE))) EMPLOYEE_ID,
+		   DATE_SUB(current_timestamp(), INTERVAL (4-ods.ID) DAY) UPDATED_AT
+	  FROM `ORDER` od, 
+			ORDER_STATUS ods
+	 WHERE od.ID BETWEEN 6 AND 8 -- [6,8] inclusive
+	   AND ods.ID BETWEEN 1 AND 4	
+
+	UNION
+
+	-- 3. Đơn hàng từ 9 - 10 --> Đang giao hàng (trạng thái từ 1 - 5) --> Nhân viên 3
+	SELECT od.ID  ORDER_ID,
+		   ods.ID ORDER_STATUS_ID,
+		   FLOOR(1 + (rand() * (SELECT MAX(ID) FROM EMPLOYEE))) EMPLOYEE_ID,
+		   DATE_SUB(current_timestamp(), INTERVAL (5-ods.ID) DAY) UPDATED_AT
+	  FROM `ORDER` od, 
+			ORDER_STATUS ods
+	 WHERE od.ID BETWEEN 9 AND 10 -- [9,10] inclusive
+	   AND ods.ID BETWEEN 1 AND 5		
+
+	UNION
+
+	-- 4. Đơn hàng từ 11 - 12 --> Hủy đơn hàng (trạng thái 1, 7) --> Nhân viên 4		
+	SELECT od.ID  ORDER_ID,
+		   ods.ID ORDER_STATUS_ID,
+		   FLOOR(1 + (rand() * (SELECT MAX(ID) FROM EMPLOYEE))) EMPLOYEE_ID,
+		   DATE_SUB(current_timestamp(), INTERVAL (7-ods.ID) DAY) UPDATED_AT
+	  FROM `ORDER` od, 
+			ORDER_STATUS ods
+	 WHERE od.ID BETWEEN 11 AND 12 -- [11,12] inclusive
+	   AND ods.ID IN (1,7)
+)
+SELECT @running := @running + 1 AS ID,
+       cte_data.*
+  FROM CTE_ORDER_STATUS_DETAIL_DATA cte_data
+ ORDER BY ORDER_ID, ORDER_STATUS_ID;
+ 
+INSERT INTO BILL(ID, CREATED_AT, TOTAL_OF_MONEY, ORDER_ID)
+SELECT ID, current_timestamp(), 0, ID FROM `ORDER` ORDER BY ID;
 
 
 
