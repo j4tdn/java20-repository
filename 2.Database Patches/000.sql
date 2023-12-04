@@ -19,3 +19,6 @@ CREATE DATABASE java20_shopping CHAR SET utf8mb4;
 
 -- 005.sql
 -- --> ORDER, BILL, ORDER_DETAIL, ORDER_STATUS_DETAIL
+
+-- 005.sql
+-- --> rename key(Size) to size
