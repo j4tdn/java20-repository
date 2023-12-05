@@ -206,11 +206,3 @@ SELECT @running := @running + 1 AS ID,
  
 INSERT INTO BILL(ID, CREATED_AT, TOTAL_OF_MONEY, ORDER_ID)
 SELECT ID, current_timestamp(), 0, ID FROM `ORDER` ORDER BY ID;
-
-
-
-
-
-
-
-
