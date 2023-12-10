@@ -132,39 +132,142 @@ SELECT *,
 
 -- 9. Liệt kê các đơn hàng được đặt trong ngày (28/11/2019, 14/12/2019)
 
--- ======================= REFRESH DATA - DEMO MULTI TABLES AND GROUPING BY=======================
+-- ======================= REFRESH DATA - DEMO MULTI TABLES AND GROUPING BY =======================
 -- 11. Sắp xếp các mặt hàng với giá bán tăng dần
+SELECT * FROM item_detail;
+
+SELECT itd.ID ITEM_DETAIL_ID,
+	   it.ID ITEM_ID,
+       it.`NAME` ITEM_NAME,
+       itd.SIZE_ID,
+       itd.SALES_PRICE
+  FROM item_detail itd
+  JOIN item it
+    ON itd.ITEM_ID = it.ID
+  ORDER BY itd.SALES_PRICE DESC;
+  
+-- 11. Tìm kích thước có giá bạn lớn nhất trong mỗi mặt hàng
+--     Sắp xếp giá bán giảm dần
+SELECT it.ID, 
+	   it.NAME,
+       MAX(SALES_PRICE) MAX_SALES_PRICE
+  FROM item_detail itd
+  JOIN item it
+    ON it.ID = itd.ITEM_ID
+ GROUP BY it.ID, it.NAME 
+ ORDER BY MAX_SALES_PRICE DESC;
+
 -- 12. Sắp xếp các mặt hàng với giá mua giảm dần
+SELECT *
+  FROM item
+ ORDER BY BUY_PRICE DESC;
+
 -- 13. Sắp xếp các mặt hàng với giá bán tăng dần, giá mua giảm dần
+SELECT it.ID, 
+	   it.NAME,
+	   itd.SALES_PRICE,
+       it.BUY_PRICE
+  FROM item_detail itd
+  JOIN item it
+    ON it.ID = itd.ITEM_ID
+ ORDER BY itd.SALES_PRICE ASC, it.BUY_PRICE DESC;
+
 -- 14. Đếm số lượng các mặt hàng trong hệ thống
--- 15. Số lượng 'Giày da Nam' được bán trong ngày 23/11/2019
--- 16. Đếm số lượng các mặt hàng theo từng loại hàng
---     MaLoai  TenLoai SoLuong
+SELECT COUNT(*) AMOUNT_OF_ITEMS 
+  FROM item;
+
+-- 15. Đếm số lượng 'Giày da Nam' được bán trong ngày 15/02/2023
+SELECT 'giày' ITEM,
+	   SUM(odd.AMOUNT) TOTAL_AMOUNT_OF_SALES_ITEMS
+  FROM `order` od
+  JOIN `order_detail` odd
+    ON od.ID = odd.ORDER_ID
+  JOIN `item_detail` itd
+    ON itd.ID = odd.ITEM_DETAIL_ID
+  JOIN `item` it
+    ON itd.ITEM_ID = it.ID
+ WHERE cast(od.CREATED_AT AS DATE) = '2023-02-15'
+   AND it.NAME LIKE '%giày%';
+
+-- 16. Tổng số lượng các mặt hàng còn lại theo từng loại hàng
+-- MaLoai  TenLoai SoLuong
 -- 	1       Giày    20
 -- 	2       Áo      28
+SELECT itg.ID,
+	   itg.NAME,
+	   group_concat(concat(it.ID, '-', it.NAME, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') DETAIL_INFO,
+       sum(itd.AMOUNT) TOTAL_OF_ITEMS
+  FROM item_group itg
+  JOIN item it
+    ON itg.ID = it.ITEM_GROUP_ID
+  JOIN item_detail itd
+    ON itd.ITEM_ID = it.ID
+ GROUP BY itg.ID, itg.NAME;
+
 -- 17. Tìm mặt hàng có giá bán cao nhất trong loại hàng 'Giày'
+SELECT *
+  FROM item it
+  JOIN item_detail itd
+    ON it.ID = itd.ITEM_ID
+  JOIN item_group itg
+    ON itg.ID = it.ITEM_GROUP_ID
+ WHERE itg.NAME LIKE '%Giày%'
+ ORDER BY itd.SALES_PRICE DESC
+ LIMIT 1;
+
 -- 18. Tìm mặt hàng có giá bán cao nhất của mỗi loại hàng
--- 19. Hiển thị tổng số lượng mặt hàng của mỗi loại hàng trong hệ thống >> 16
+SELECT itg.Id   ITEM_GROUP_ID,
+       itg.NAME ITEM_GROUP_NAME,
+       MAX(itd.SALES_PRICE) MAX_ITEM_SALES_PRICE
+  FROM item it
+  JOIN item_detail itd
+    ON it.ID = itd.ITEM_ID
+  JOIN item_group itg
+    ON itg.ID = it.ITEM_GROUP_ID
+  GROUP BY itg.Id, itg.NAME;
+
 -- 20. Hiển thị tổng số lượng mặt hàng của mỗi loại hàng trong hệ thống
 --     Điều kiện tổng số lượng > 20 mặt hàng >> HAVING
+SELECT itg.ID,
+	   itg.NAME,
+	   group_concat(concat(it.ID, '-', it.NAME, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') DETAIL_INFO,
+       sum(itd.AMOUNT) TOTAL_OF_ITEMS
+  FROM item_group itg
+  JOIN item it
+    ON itg.ID = it.ITEM_GROUP_ID
+  JOIN item_detail itd
+    ON itd.ITEM_ID = it.ID
+ GROUP BY itg.ID, itg.NAME
+ HAVING TOTAL_OF_ITEMS > 1500;
 -- ==============================================================
 -- 21. Hiển thị mặt hàng có số lượng nhiều nhất trong mỗi loại hàng
+
 -- 22. Hiển thị giá bán trung bình của mỗi loại hàng
+
 -- 23. In ra 3 loại hàng có số lượng hàng còn lại nhiều nhất ở thời điểm hiện tại
+
 -- 24. Liệt kê những mặt hàng có MaLoai = 2 và thuộc đơn hàng 100100
+
 -- 25. Tìm những mặt hàng có Mã Loại = 2 và đã được bán trong ngày 28/11
+
 -- 26. Liệt kê những mặt hàng là 'Mũ' không bán được trong ngày 14/02/2019
+
 -- 27. Cập nhật giá bán của tất cả các mặt hàng thuộc loại hàng 'Áo' thành 199
+
 -- 28. Backup data. Tạo table LoaiHang_SaoLuu(MaLoai, TenLoai)
 --     Sao chép dữ liệu từ bảng LoaiHang sang LoaiHang_SaoLuu
 
 -- 30. Liệt kê 2 sản phẩm (có số lượng tồn kho nhiều nhất) của loại hàng 'Áo' và 'Quần'
+
 -- B1: Tìm số lượng hàng còn lại của mỗi mặt hàng thuộc loại hàng 'Áo', 'Quần'
+
 -- B2: ORDER BY SoLuongTon DESC
+
 -- B3: LIMIT 2
 
 -- 31. Tính tổng tiền cho đơn hàng 02
-    -- Với tổng tiền được tính bằng tổng các sản phẩm và số lượng của sản phẩm tương ứng
+   -- Với tổng tiền được tính bằng tổng các sản phẩm và số lượng của sản phẩm tương ứng
+
 -- 32. Xuất thông tin hóa đơn của đơn hàng 02 với thông tin như sau.
 	-- SoDH ChiTietDonHang           TongTien
     -- 02   TenMH:GiaBan:SoLuong     100
