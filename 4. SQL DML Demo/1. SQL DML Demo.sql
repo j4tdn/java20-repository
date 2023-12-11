@@ -240,7 +240,89 @@ SELECT itg.ID,
  GROUP BY itg.ID, itg.NAME
  HAVING TOTAL_OF_ITEMS > 1500;
 -- ==============================================================
--- 21. Hiển thị mặt hàng có số lượng nhiều nhất trong mỗi loại hàng
+UPDATE item_detail SET AMOUNT = 555 WHERE ID = 67; -- ig 2
+UPDATE item_detail SET AMOUNT = 888 WHERE ID = 33; -- ig 4
+UPDATE item_detail SET AMOUNT = 555 WHERE ID = 34; -- ig 4
+UPDATE item_detail SET AMOUNT = 720 WHERE ID = 26; -- ig 5
+-- 21. Hiển thị mặt hàng[kèm với size] có số lượng nhiều nhất trong mỗi loại hàng
+-- item_group, item, item_detail --> group by item_group_id --> max(amount)
+-- item_group_id --> max
+-- test
+SELECT *
+  FROM item_group itg
+  JOIN item it
+    ON itg.ID = it.ITEM_GROUP_ID
+  JOIN item_detail itd
+    ON it.ID = itd.ITEM_ID
+  WHERE itg.ID IN (2, 4, 5)
+  ORDER BY itg.ID, it.NAME; 
+
+-- process
+SELECT itg.ID        ITEM_GROUP_ID,
+           itg.NAME      ITEM_GROUP_NAME,
+           it.ID         ITEM_ID,
+           it.NAME       ITEM_NAME,
+           itd.ID        ITEM_DETAIL_ID,
+           itd.SIZE_ID   SIZE,
+           itd.AMOUNT    AMOUNT
+	  FROM item_group itg
+	  JOIN item it
+		ON itg.ID = it.ITEM_GROUP_ID
+	  JOIN item_detail itd
+		ON it.ID = itd.ITEM_ID;
+
+
+WITH CTE_ITEM_GROUP_DETAIL AS
+(
+	SELECT itg.ID        ITEM_GROUP_ID,
+           itg.NAME      ITEM_GROUP_NAME,
+           it.ID         ITEM_ID,
+           it.NAME       ITEM_NAME,
+           itd.ID        ITEM_DETAIL_ID,
+           itd.SIZE_ID   SIZE,
+           itd.AMOUNT    AMOUNT
+	  FROM item_group itg
+	  JOIN item it
+		ON itg.ID = it.ITEM_GROUP_ID
+	  JOIN item_detail itd
+		ON it.ID = itd.ITEM_ID
+)
+SELECT ITEM_GROUP_ID,
+	   ITEM_GROUP_NAME,
+	   MAX(AMOUNT) MAX_REMAINNING_ITEM_AMOUNT
+  FROM CTE_ITEM_GROUP_DETAIL
+  GROUP BY ITEM_GROUP_ID, ITEM_GROUP_NAME;
+
+
+
+WITH CTE_ITEM_GROUP_DETAIL AS
+(
+	SELECT itg.ID        ITEM_GROUP_ID,
+           itg.NAME      ITEM_GROUP_NAME,
+           it.ID         ITEM_ID,
+           it.NAME       ITEM_NAME,
+           itd.ID        ITEM_DETAIL_ID,
+           itd.SIZE_ID   SIZE,
+           itd.AMOUNT    AMOUNT
+	  FROM item_group itg
+	  JOIN item it
+		ON itg.ID = it.ITEM_GROUP_ID
+	  JOIN item_detail itd
+		ON it.ID = itd.ITEM_ID
+),
+CTE_ITEM_GROUP_MAX_AMOUNT AS 
+(
+	SELECT ITEM_GROUP_ID,
+		   ITEM_GROUP_NAME,
+		   MAX(AMOUNT) MAX_REMAINNING_ITEM_AMOUNT
+	  FROM CTE_ITEM_GROUP_DETAIL
+	  GROUP BY ITEM_GROUP_ID, ITEM_GROUP_NAME
+)
+SELECT *
+  FROM CTE_ITEM_GROUP_DETAIL itg_d
+  JOIN CTE_ITEM_GROUP_MAX_AMOUNT itg_max
+    ON itg_d.ITEM_GROUP_ID = itg_max.ITEM_GROUP_ID
+   AND itg_d.AMOUNT = itg_max.MAX_REMAINNING_ITEM_AMOUNT;
 
 -- 22. Hiển thị giá bán trung bình của mỗi loại hàng
 
@@ -249,21 +331,100 @@ SELECT itg.ID,
 -- 24. Liệt kê những mặt hàng có MaLoai = 2 và thuộc đơn hàng 100100
 
 -- 25. Tìm những mặt hàng có Mã Loại = 2 và đã được bán trong ngày 28/11
+WITH SALES_ITEM AS (
+	SELECT ITEM_ID
+	  FROM item_detail itd
+	  JOIN order_detail odd
+		ON itd.ID = odd.ITEM_DETAIL_ID
+	  JOIN `order` od
+		ON odd.ORDER_ID = od.ID
+	 WHERE cast(od.CREATED_AT AS DATE) = '2023-02-15'
+)
+SELECT *,
+       '2023-02-15' SALES_DATE
+  FROM item it
+-- WHERE ID IN (SELECT ITEM_ID FROM SALES_ITEM);
+-- WHERE EXISTS (SELECT 1 FROM SALES_ITEM WHERE it.ID = ITEM_ID);
+  JOIN SALES_ITEM sit
+    ON it.ID = sit.ITEM_ID
+  WHERE it.ITEM_GROUP_ID = 2;
 
 -- 26. Liệt kê những mặt hàng là 'Mũ' không bán được trong ngày 14/02/2019
-
+WITH SALES_ITEM AS (
+	SELECT ITEM_ID
+	  FROM item_detail itd
+	  JOIN order_detail odd
+		ON itd.ID = odd.ITEM_DETAIL_ID
+	  JOIN `order` od
+		ON odd.ORDER_ID = od.ID
+	 WHERE cast(od.CREATED_AT AS DATE) = '2023-02-15'
+)
+SELECT *,
+       '2023-02-15' SALES_DATE
+  FROM item it
+  WHERE NOT EXISTS (SELECT 1 FROM SALES_ITEM WHERE it.ID = ITEM_ID)
+    AND EXISTS (SELECT 1 FROM item_group WHERE `NAME` LIKE '%Mũ%' AND it.ITEM_GROUP_ID = ID);
 -- 27. Cập nhật giá bán của tất cả các mặt hàng thuộc loại hàng 'Áo' thành 199
 
 -- 28. Backup data. Tạo table LoaiHang_SaoLuu(MaLoai, TenLoai)
 --     Sao chép dữ liệu từ bảng LoaiHang sang LoaiHang_SaoLuu
+CREATE TABLE BACKUP_ITEM_GROUP(
+	ID INT,
+    `NAME` VARCHAR(100) 
+);
+SELECT * FROM BACKUP_ITEM_GROUP;
+
+INSERT INTO BACKUP_ITEM_GROUP(ID, NAME)
+SELECT ID, NAME FROM ITEM_GROUP;
 
 -- 30. Liệt kê 2 sản phẩm (có số lượng tồn kho nhiều nhất) của loại hàng 'Áo' và 'Quần'
-
 -- B1: Tìm số lượng hàng còn lại của mỗi mặt hàng thuộc loại hàng 'Áo', 'Quần'
-
 -- B2: ORDER BY SoLuongTon DESC
-
 -- B3: LIMIT 2
+SELECT itg.ID        ITEM_GROUP_ID,
+           itg.NAME      ITEM_GROUP_NAME,
+           it.ID         ITEM_ID,
+           it.NAME       ITEM_NAME,
+           itd.ID        ITEM_DETAIL_ID,
+           itd.SIZE_ID   SIZE,
+           itd.AMOUNT    AMOUNT
+  FROM item_group itg
+  JOIN item it
+	ON itg.ID = it.ITEM_GROUP_ID
+  JOIN item_detail itd
+	ON it.ID = itd.ITEM_ID
+  WHERE itg.NAME LIKE '%Áo%' OR itg.NAME LIKE '%Quần%'
+  ORDER BY itd.AMOUNT DESC, itd.ID DESC
+  LIMIT 2;
+  
+-- Cách 2
+WITH CTE_ITEMS AS 
+(
+SELECT itg.ID        ITEM_GROUP_ID,
+	   itg.NAME      ITEM_GROUP_NAME,
+	   it.ID         ITEM_ID,
+	   it.NAME       ITEM_NAME,
+	   itd.ID        ITEM_DETAIL_ID,
+	   itd.SIZE_ID   SIZE,
+	   itd.AMOUNT    AMOUNT
+  FROM item_group itg
+  JOIN item it
+	ON itg.ID = it.ITEM_GROUP_ID
+  JOIN item_detail itd
+	ON it.ID = itd.ITEM_ID
+  WHERE itg.NAME LIKE '%Áo%' OR itg.NAME LIKE '%Quần%'
+),
+CTE_TOP_2_SHIRTS AS 
+(
+	SELECT * FROM CTE_ITEMS WHERE ITEM_GROUP_NAME LIKE '%Áo%' ORDER BY AMOUNT DESC, ITEM_DETAIL_ID DESC LIMIT 2
+),
+CTE_TOP_2_PANTS AS
+(
+	SELECT * FROM CTE_ITEMS WHERE ITEM_GROUP_NAME LIKE '%Quần%' ORDER BY AMOUNT DESC, ITEM_DETAIL_ID DESC LIMIT 2
+)
+SELECT * FROM CTE_TOP_2_SHIRTS
+UNION
+SELECT * FROM CTE_TOP_2_PANTS;
 
 -- 31. Tính tổng tiền cho đơn hàng 02
    -- Với tổng tiền được tính bằng tổng các sản phẩm và số lượng của sản phẩm tương ứng
@@ -271,6 +432,116 @@ SELECT itg.ID,
 -- 32. Xuất thông tin hóa đơn của đơn hàng 02 với thông tin như sau.
 	-- SoDH ChiTietDonHang           TongTien
     -- 02   TenMH:GiaBan:SoLuong     100
+
+-- 1	Áo 1	1
+-- 3	Giày 1	3
+-- 5	Giày 3	5
+-- 7	Mũ 2	4
+-- 8	Dép 1	5
+
+-- DEMO EXISTS | NOT EXITS
+SELECT it.ID            ITEM_ID,
+       it.NAME          ITEM_NAME,
+       it.ITEM_GROUP_ID ITEM_GROUP_ID
+  FROM item it
+ WHERE it.ID IN (1, 3, 5, 7, 8); 
+
+-- 1	Áo
+-- 2	Quần
+-- 5	Mũ 
+SELECT itg.ID    ITEM_GROUP_ID,
+       itg.NAME  ITEM_GROUP_NAME
+  FROM item_group itg
+ WHERE itg.ID IN (1, 2, 5);
+
+-- TEMPORARY
+-- CROSS JOIN
+WITH TABLE_LEFT AS
+(
+SELECT it.ID            ITEM_ID,
+       it.NAME          ITEM_NAME,
+       it.ITEM_GROUP_ID ITEM_GROUP_ID
+  FROM item it
+ WHERE it.ID IN (1, 3, 5, 7, 8)
+),
+TABLE_RIGHT AS
+(
+SELECT itg.ID    ITEM_GROUP_ID,
+       itg.NAME  ITEM_GROUP_NAME
+  FROM item_group itg
+ WHERE itg.ID IN (1, 2, 5)
+)
+SELECT *
+  FROM TABLE_LEFT  tl
+  JOIN TABLE_RIGHT tr
+    ON tl.ITEM_GROUP_ID = tr.ITEM_GROUP_ID;
+ 
+WITH TABLE_LEFT AS
+(
+SELECT it.ID            ITEM_ID,
+       it.NAME          ITEM_NAME,
+       it.ITEM_GROUP_ID ITEM_GROUP_ID
+  FROM item it
+ WHERE it.ID IN (1, 3, 5, 7, 8)
+),
+TABLE_RIGHT AS
+(
+SELECT itg.ID    ITEM_GROUP_ID,
+       itg.NAME  ITEM_GROUP_NAME
+  FROM item_group itg
+ WHERE itg.ID IN (1, 2, 5)
+)
+SELECT *
+  FROM TABLE_LEFT tl, TABLE_RIGHT tr
+ WHERE tl.ITEM_GROUP_ID = tr.ITEM_GROUP_ID;
+ 
+-- DEMO IN 
+WITH TABLE_LEFT AS
+(
+SELECT it.ID            ITEM_ID,
+       it.NAME          ITEM_NAME,
+       it.ITEM_GROUP_ID ITEM_GROUP_ID
+  FROM item it
+ WHERE it.ID IN (1, 3, 5, 7, 8)
+),
+TABLE_RIGHT AS
+(
+SELECT itg.ID    ITEM_GROUP_ID,
+       itg.NAME  ITEM_GROUP_NAME
+  FROM item_group itg
+ WHERE itg.ID IN (1, 2, 5)
+)
+-- truy vấn con(sub query) --> IN chạy câu truy vấn con trước
+SELECT * 
+  FROM TABLE_LEFT tl
+  WHERE tl.ITEM_GROUP_ID IN (SELECT tr.ITEM_GROUP_ID FROM TABLE_RIGHT tr);
+  
+-- DEMO EXISTS
+WITH TABLE_LEFT AS
+(
+SELECT it.ID            ITEM_ID,
+       it.NAME          ITEM_NAME,
+       it.ITEM_GROUP_ID ITEM_GROUP_ID
+  FROM item it
+ WHERE it.ID IN (1, 3, 5, 7, 8)
+),
+TABLE_RIGHT AS
+(
+SELECT itg.ID    ITEM_GROUP_ID,
+       itg.NAME  ITEM_GROUP_NAME
+  FROM item_group itg
+ WHERE itg.ID IN (1, 2, 5)
+)
+-- truy vấn con(sub query) --> IN chạy câu truy vấn con trước
+-- lấy từng dòng trong main query
+--    lấy từng dòng trong sub query
+--        nếu thỏa mãn điều kiện(???) 
+--        --> lấy dòng của main query ra
+SELECT * 
+  FROM TABLE_LEFT tl
+  WHERE NOT EXISTS (SELECT 123 FROM TABLE_RIGHT tr
+		         WHERE tr.ITEM_GROUP_ID = tl.ITEM_GROUP_ID);
+
 
 
 
