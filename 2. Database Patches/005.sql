@@ -4,26 +4,28 @@ use java20_shopping;
 
 -- create table ORDER
 drop table if exists `ORDER`;
-create table `ORDER`
+create table IF NOT EXISTS `ORDER`
 (
 	ID int,
-    DELIVERY_FEE float not null,
-    CREATED_AT datetime not null,
-    PAYMENT_METHOD_ID int not null,
-    EMPLOYEE_ID int not null,
-    CUSTOMER_ID int not null,
+    DELIVERY_FEE 		FLOAT,
+    CREATED_AT 			datetime NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PAYMENT_METHOD_ID 	int not null,
+    EMPLOYEE_ID 		int not null,
+    CUSTOMER_ID 		int not null,
     primary key (ID),
     constraint FK_ORDER_PAYMENT_METHOD foreign key (PAYMENT_METHOD_ID) references PAYMENT_METHOD(ID),
     constraint FK_ORDER_EMPLOYEE foreign key (EMPLOYEE_ID) references EMPLOYEE(ID),
     constraint FK_ORDER_CUSTOMER foreign key (CUSTOMER_ID) references CUSTOMER(ID)
 );
+ALTER TABLE `order`
+ADD COLUMN DELIVERY_ADDRESS VARCHAR(300) NOT NULL;
 
 -- create table BILL
 drop table if exists BILL;
-create table BILL
+create table IF NOT EXISTS BILL
 (
 	ID int,
-    CREATED_AT datetime not null,
+    CREATED_AT datetime not null DEFAULT CURRENT_TIMESTAMP(),
     TOTAL_OF_MONEY float not null,
     ORDER_ID int not null,
     primary key (ID),
@@ -32,7 +34,7 @@ create table BILL
 
 -- create table ORDER_DETAIL
 drop table if exists ORDER_DETAIL;
-create table ORDER_DETAIL
+create table IF NOT EXISTS ORDER_DETAIL
 (
 	ID int,
     ORDER_ID int not null,
@@ -48,13 +50,13 @@ ADD CONSTRAINT FK_ORDER_DETAIL_ITEM_DETAIL FOREIGN KEY (ITEM_DETAIL_ID) REFERENC
 
 -- create table ORDER_STATUS_DETAIL
 drop table if exists ORDER_STATUS_DETAIL;
-create table ORDER_STATUS_DETAIL
+create table IF NOT EXISTS ORDER_STATUS_DETAIL
 (
 	ID int,
     ORDER_ID int not null,
     ORDER_STATUS_ID int not null,
     EMPLOYEE_ID int not null,
-    UPDATED_AT datetime not null,
+    UPDATED_AT datetime not null DEFAULT CURRENT_TIMESTAMP(),
     primary key (ID),
     CONSTRAINT UNQ_ORDER_ORDER_STATUS UNIQUE (ORDER_ID, ORDER_STATUS_ID)
 );
@@ -64,3 +66,7 @@ ALTER TABLE ORDER_STATUS_DETAIL
 ADD CONSTRAINT FK_ORDER_STATUS_DETAIL_ORDER_STATUS FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS(ID);
 ALTER TABLE ORDER_STATUS_DETAIL
 ADD CONSTRAINT FK_ORDER_STATUS_DETAIL_EMPLOYEE FOREIGN KEY (EMPLOYEE_ID) REFERENCES EMPLOYEE(ID);
+
+-- In each TABLE
+-- create index, partition (fast filtering)
+
