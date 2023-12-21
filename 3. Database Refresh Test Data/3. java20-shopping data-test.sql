@@ -70,3 +70,20 @@ SELECT * FROM DEPARTMENT;
 SELECT * FROM EMPLOYEE;
 
 DELETE FROM DEPARTMENT WHERE ID = 3;
+
+--  Error Code: 1055. Expression #1 of SELECT list is not in GROUP BY clause and 
+-- contains nonaggregated column 'java20_shopping_v2.item.ID' which is not functionally dependent on columns in GROUP BY clause; 
+-- this is incompatible with sql_mode=only_full_group_by	0.000 sec
+
+SELECT @@sql_mode;
+SET sql_mode=(SELECT replace(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''));
+SET sql_mode=(SELECT concat(@@sql_mode, ',ONLY_FULL_GROUP_BY'));
+
+-- DEMO GROUP BY
+SELECT * 
+  FROM item
+ ORDER BY ITEM_GROUP_ID;
+ 
+SELECT * 
+  FROM item
+ GROUP BY ITEM_GROUP_ID;

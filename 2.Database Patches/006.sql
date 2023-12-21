@@ -26,3 +26,5 @@ ALTER TABLE BILL
 ADD CONSTRAINT UNQ_ORDER UNIQUE(ORDER_ID);
 -- 18:56:30	ALTER TABLE SIZE RENAME COLUMN `KEY` TO `SIZE`	
 -- Error Code: 3959. Check constraint 'CHK_SIZE_KEY' uses column 'KEY', hence column cannot be dropped or renamed.	0.000 sec
+
+
