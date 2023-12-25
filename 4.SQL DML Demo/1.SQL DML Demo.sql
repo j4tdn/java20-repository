@@ -248,25 +248,30 @@ SELECT it.*,
 
 
 -- 18. Tìm mặt hàng có giá bán cao nhất của mỗi loại hàng
-SELECT ig.ID,
-	   ig.`NAME`,
-       max(itd.SALES_PRICE) MAX_ITEM_SALES_PRICE
-  FROM item_group ig
-  JOIN item it
-	ON ig.ID = it.ITEM_GROUP_ID
+SELECT *
+  FROM item it
   JOIN item_detail itd
-    ON itd.ITEM_ID = it.ID
- GROUP BY ig.ID, ig.NAME;
+    ON it.ID = itd.ITEM_ID
+ WHERE itd.SALES_PRICE IN (
+							SELECT -- ig.ID,
+							-- 	   ig.`NAME`,
+								   max(itd.SALES_PRICE) MAX_ITEM_SALES_PRICE
+							  FROM item_group ig
+							  JOIN item it
+								ON ig.ID = it.ITEM_GROUP_ID
+							  JOIN item_detail itd
+								ON itd.ITEM_ID = it.ID
+							 GROUP BY ig.ID, ig.NAME);
  
 -- 19. Hiển thị tổng số lượng mặt hàng của mỗi loại hàng trong hệ thống >> 16
 SELECT ig.ID,
 	   ig.`NAME`,
-       count(it.ID) AMOUNT
+       count(*) AMOUNT
   FROM item_group ig
   JOIN item it
     ON ig.ID = it.ITEM_GROUP_ID
  GROUP BY ig.ID
-HAVING count(it.ID) > 2;
+HAVING count(*) > 2;
 
 -- 20. Hiển thị tổng số lượng mặt hàng của mỗi loại hàng trong hệ thống
 --     Điều kiện tổng số lượng > 20 mặt hàng >> HAVING
@@ -399,7 +404,7 @@ SELECT ITEM_ID
 SELECT *,
 	   '2023-02-15' SALESS_ITEM
   FROM item it
- WHERE NOT EXISTS (	SELECT 1 FROM SALES_ITEM WHERE it.ID = ITEM_ID)
+ WHERE NOT EXISTS (SELECT 1 FROM SALES_ITEM WHERE it.ID = ITEM_ID)
    AND EXISTS (SELECT 1 FROM item_group WHERE it.ITEM_GROUP_ID = ID AND `NAME` LIKE '%Mu%');              ;
 -- 27. Cập nhật giá bán của tất cả các mặt hàng thuộc loại hàng 'Áo' thành 199
 UPDATE item_detail 
@@ -458,12 +463,12 @@ WITH CTE_ITEMS AS
            itd.ID ITEM_DETAIL_ID,
            itd.SIZE_ID SIZE,
            itd.AMOUNT AMOUNT
-  FROM item it
-  JOIN item_group itg
+	FROM item it
+	JOIN item_group itg
 	ON it.ITEM_GROUP_ID = itg.ID
-  JOIN item_detail itd
+	JOIN item_detail itd
 	ON itd.ITEM_ID = it.ID
- WHERE itg.`NAME` LIKE '%Áo%' 
+	WHERE itg.`NAME` LIKE '%Áo%' 
 	OR itg.`NAME` LIKE '%Quần%'
 ),
 CTE_TOP2_SHIRT AS 
@@ -506,4 +511,7 @@ SELECT odd.ORDER_ID,
     ON it.ID = itd.ITEM_ID
  WHERE odd.ORDER_ID = 2;
 
+-- JDBC --
+SELECT * FROM LoaiHang;
 
+SELECT * FROM mathang WHERE TenMH LIKE 'A%' OR TenMH LIKE 'T%';

@@ -33,3 +33,30 @@ SELECT * FROM v_days_of_week;
 SELECT * 
   FROM v_days_of_week 
  WHERE `day` = 'monday';
+ 
+ 
+-- DEMO PARTITION --
+
+-- 1. RANGE PARTITION
+DROP TABLE employees;
+CREATE TABLE employees (
+    id INT NOT NULL,
+    store_id INT NOT NULL
+)
+PARTITION BY RANGE (store_id)(
+	PARTITION p0 VALUES LESS THAN (6),
+    PARTITION p1 VALUES LESS THAN (11),
+    PARTITION p2 VALUES LESS THAN (16),
+    PARTITION p3 VALUES LESS THAN (21), 
+    PARTITION p4 VALUES LESS THAN MAXVALUE
+);
+INSERT INTO employees(id, store_id)
+VALUES(1, 1),
+	  (2, 2);
+
+SELECT * FROM employees;
+INSERT INTO employees(id, store_id)
+VALUES(3, 22);
+
+SELECT * FROM employees PARTITION(p4);
+-- partition by range, by list, by key, by hash
