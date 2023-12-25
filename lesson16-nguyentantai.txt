@@ -1,0 +1,167 @@
+dạ e xảy ra vấn đề khi dùng MySQL Workbench trong lúc kiểm tra e xin phép làm bằng .txt ạ.
+
+Đề bài: Xây dựng cơ sở dữ liệu quản lý công ty để theo dõi các thông tin liên quan tới nhân viên,
+phòng ban và dự án, chi tiết được mô tả như sau:
+Công ty được tổ chức thành các phòng ban chức năng. Mỗi phòng ban có một tên duy nhất, một mã
+số duy nhất, một nhân viên cụ thể quản lý phòng đó.
+Việc nhân viên quản lý phòng ban được ghi lại bằng ngày nhân viên đó bắt đầu quản lý và được gọi
+là trưởng phòng. Ta ghi nhận lại ngày nhận chức của trưởng phòng.
+Công ty sẽ có nhiều dự án, một dự án có một tên duy nhất, một mã số duy nhất, ngày bắt đầu, ngày
+kết thúc(hoàn thành dự án), số tiền thu được(đơn vị VNĐ) từ dự án đó.
+Dự án được thực hiện bởi một hoặc nhiều nhân viên, có một nhân viên duy nhất làm quản lý dự án.
+Với mỗi nhân viên chúng ta lưu giữ lại các thông tin bao gồm họ tên, mã số duy nhất, địa chỉ,
+lương, giới tính, ngày sinh, ngày vào công ty
+Một nhân viên chỉ làm việc cho một phòng ban nhưng có thể làm việc cho nhiều dự án.
+Chúng ta lưu giữ lại số giờ làm việc của mỗi nhân viên trên dự án mà nhân viên đó tham gia. Mỗi
+nhân viên có thể có một người quản lý giám sát trực tiếp, người đó cũng là một nhân viên, nhân
+viên và quản lý/giám sát của nhân viên có thể tham gia cùng/khác dự án.
+
+Phần A. Viết các lệnh để xây dựng mô hình thực thể kết hợp (ER) dựa vào mô tả trên
+
+-- Tạo bảng PhongBan
+CREATE TABLE PhongBan (
+    MaPhongBan INT PRIMARY KEY,
+    TenPhongBan VARCHAR(255) NOT NULL,
+    TruongPhong INT,
+    NgayBatDauQuanLy DATE,
+    FOREIGN KEY (TruongPhong) REFERENCES NhanVien(MaNhanVien)
+);
+
+-- Tạo bảng DuAn
+CREATE TABLE DuAn (
+    MaDuAn INT PRIMARY KEY,
+    TenDuAn VARCHAR(255) NOT NULL,
+    NgayBatDau DATE,
+    NgayKetThuc DATE,
+    SoTienThuDuoc DECIMAL(15, 2),
+    QuanLyDuAn INT,
+    FOREIGN KEY (QuanLyDuAn) REFERENCES NhanVien(MaNhanVien)
+);
+
+-- Tạo bảng NhanVien
+CREATE TABLE NhanVien (
+    MaNhanVien INT PRIMARY KEY,
+    HoTen NVARCHAR(255) NOT NULL,
+    DiaChi NVARCHAR(255),
+    Luong DECIMAL(10, 2),
+    GioiTinh VARCHAR(10),
+    NgaySinh DATE,
+    NgayVaoCongTy DATE,
+    PhongBan INT,
+    QuanLyTrucTiep INT,
+    FOREIGN KEY (PhongBan) REFERENCES PhongBan(MaPhongBan),
+    FOREIGN KEY (QuanLyTrucTiep) REFERENCES NhanVien(MaNhanVien)
+);
+
+-- Tạo bảng CongTac
+CREATE TABLE CongTac (
+    MaNhanVien INT,
+    MaDuAn INT,
+    SoGioLamViec INT,
+    PRIMARY KEY (MaNhanVien, MaDuAn),
+    FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien),
+    FOREIGN KEY (MaDuAn) REFERENCES DuAn(MaDuAn)
+);
+
+-- Tạo quan hệ giữa NhanVien và NhanVien (QuanLyTrucTiep)
+ALTER TABLE NhanVien
+ADD CONSTRAINT FK_QuanLyTrucTiep
+FOREIGN KEY (QuanLyTrucTiep) REFERENCES NhanVien(MaNhanVien);
+
+Phần B. Viết các lệnh để tạo dữ liệu kiểm thử cho dự án
+Yêu cầu: Ít nhất 5 dòng cho mỗi bảng dữ liệu
+
+-- Chèn dữ liệu cho bảng PhongBan
+INSERT INTO PhongBan (MaPhongBan, TenPhongBan, TruongPhong, NgayBatDauQuanLy)
+VALUES
+  (1, 'Phòng Marketing', 101, '2023-01-01'),
+  (2, 'Phòng Kinh Doanh', 102, '2023-02-01'),
+  (3, 'Phòng Nhân Sự', 103, '2023-04-01'),
+  (4, 'Phòng Kế Toán', 104, '2023-03-01'),
+  (5, 'Phòng IT', 105, '2023-07-01');
+
+-- Chèn dữ liệu cho bảng DuAn
+INSERT INTO DuAn (MaDuAn, TenDuAn, NgayBatDau, NgayKetThuc, SoTienThuDuoc, QuanLyDuAn)
+VALUES
+  (201, 'Dự Án A', '2023-02-01', '2023-05-30', 100000, 101),
+  (202, 'Dự Án B', '2023-03-15', '2023-07-31', 250000, 102),
+  (203, 'Dự Án C', '2023-05-01', '2023-07-15', 50000, 103),
+  (204, 'Dự Án D', '2023-07-12', '2023-11-31', 80000, 104),
+  (205, 'Dự Án E', '2023-07-20', '2023-10-30', 90000, 105);
+
+-- Chèn dữ liệu cho bảng NhanVien
+INSERT INTO NhanVien (MaNhanVien, HoTen, DiaChi, Luong, GioiTinh, NgaySinh, NgayVaoCongTy, PhongBan, QuanLyTrucTiep)
+VALUES
+  (101, 'Nguyen Van Tai', '12 tan an 1', 50000, 'Nam', '1995-05-15', '2010-01-01', 1, NULL),
+  (102, 'Tran Thi Ngoc', '8 nguyen khanh toan', 60000, 'Nữ', '1992-02-20', '2011-02-15', 2, 101),
+  (103, 'Le Van Tai', '47 van can', 70000, 'Nam', '1988-03-10', '2001-11-10', 3, 102),
+  (104, 'Nguyen Thi Ngoc', '257 huy can', 55000, 'Nữ', '1997-17-07', '2012-05-20', 4, 103),
+  (105, 'Nguyen Tan Tai', '363 nguyen huu tho', 75000, 'Nam', '2000-07-23', '2007-07-07', 5, 104);
+
+-- Chèn dữ liệu cho bảng CongTac
+INSERT INTO CongTac (MaNhanVien, MaDuAn, SoGioLamViec)
+VALUES
+  (101, 201, 120),
+  (102, 201, 100),
+  (102, 202, 150),
+  (103, 203, 90),
+  (104, 204, 140);
+
+Phần C. Thực hiện truy vấn
+1. Liệt kê các dự án diễn ra trong năm 2023 có số tiền thu được trên 10000 triệu VND
+-- 
+SELECT * 
+FROM DuAn
+WHERE YEAR(NgayBatDau) = 2023 AND SoTienThuDuoc > 10000;
+
+2. Liệt kê các nhân viên đã tham gia hơn 100 giờ trong các dự án, hiển thị chi tiết số giờ trong mỗi
+dự án mà nhân viên tham gia
+--
+SELECT NhanVien.*, CongTac.MaNhanVien, CongTac.MaDuAn, CongTac.SoGioLamViec
+FROM NhanVien
+JOIN CongTac ON NhanVien.MaNhanVien = CongTac.MaNhanVien
+WHERE CongTac.SoGioLamViec > 100;
+
+3. Liệt kê các nhân viên có mức lương >= mức lương của người giám sát/quản lý trực tiếp nhân
+viên đó
+--
+SELECT NV1.*, NV2.MaNhanVien AS MaNhanVienGiamSat
+FROM NhanVien NV1
+JOIN NhanVien NV2 ON NV1.QuanLyTrucTiep = NV2.MaNhanVien
+WHERE NV1.Luong >= NV2.Luong;
+
+4. Liệt kê các phòng ban có số lượng nhân viên lớn hơn 1
+--
+SELECT PhongBan.*, COUNT(NhanVien.MaNhanVien) AS SoLuongNhanVien
+FROM PhongBan
+JOIN NhanVien ON PhongBan.MaPhongBan = NhanVien.PhongBan
+GROUP BY PhongBan.MaPhongBan
+HAVING SoLuongNhanVien > 1;
+
+5. Liệt kê các nhân viên đã làm việc cho công ty hơn 3 năm
+-- 
+SELECT *
+FROM CongTy
+WHERE DATEDIFF(NOW(), NgayLamViec) > 3*365;
+
+6. Liệt kê các nhân viên vừa là trưởng phòng ban, và là quản lý dự án
+--
+SELECT NV.*
+FROM NhanVien NV
+JOIN PhongBan PB ON NV.MaNhanVien = PB.TruongPhong
+JOIN DuAn DA ON NV.MaNhanVien = DA.QuanLyDuAn;
+
+7. Liệt kê các nhân viên quản lý nhiều hơn 1 dự án
+--
+SELECT NhanVien.*, COUNT(DISTINCT DuAn.MaDuAn) AS SoDuAnQuanLy
+FROM NhanVien
+JOIN DuAn ON NhanVien.MaNhanVien = DuAn.QuanLyDuAn
+GROUP BY NhanVien.MaNhanVien
+HAVING SoDuAnQuanLy > 1;
+
+8. Mỗi khi nhân viên tham gia vào dự án chúng ta cần lưu lại thông tin hay còn được gọi là log để
+biết nhân viên đó tham gia vào dự án vào thời gian nào
+Mỗi khi nhân viên cập nhật số giờ tham gia dự án, ta cần lưu lại thông tin thời gian cập nhật khi
+nào, số giờ tham gia cũ, số giờ tham gia mới
+Công việc được thực hiện tự động khi dự dữ liệu được thêm, cập nhật
+--
