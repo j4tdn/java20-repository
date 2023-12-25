@@ -132,17 +132,20 @@ SELECT *
 
 
 -- 4. Liệt kê các phòng ban có số lượng nhân viên lớn hơn *?*
-SELECT *
+SELECT dp.ID ID_DEPARTMENT,
+	   count(*) AMOUNT_EMPLOYEE
   FROM department dp
   JOIN employee em
     ON em.DEPARTMENT_ID = dp.ID
  GROUP BY dp.ID
-HAVING 
+HAVING AMOUNT_EMPLOYEE > 1;
   
 
 -- --
 -- 5. Liệt kê các nhân viên đã làm việc cho công ty hơn ?*? năm
 -- --
+
+
 -- 6. Liệt kê các nhân viên vừa là trưởng phòng ban, và là quản lý dự án
 -- --
 -- 7. Liệt kê các nhân viên quản lý nhiều hơn 1 dự án
