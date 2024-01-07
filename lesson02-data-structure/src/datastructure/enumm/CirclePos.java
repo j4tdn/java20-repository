@@ -17,7 +17,7 @@ public enum CirclePos {
 
 	private String value;
 
-	CirclePos(String value) {
+	private CirclePos(String value) {
 		this.value = value;
 	}
 	

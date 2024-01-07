@@ -16,9 +16,9 @@ public class Ex01EnumDemo {
 		Point p1 = new Point(1, 1);
 		Point p2 = new Point(1, 1);
 		
-		System.out.println("a==b --> " + (a==b));
-		System.out.println("p1==p2 --> " + (p1==p2));
-		System.out.println("p1.equals(p2) --> " + (p1.equals(p2)));
+		System.out.println("a==b --> " + (a==b));// T
+		System.out.println("p1==p2 --> " + (p1==p2)); // F
+		System.out.println("p1.equals(p2) --> " + (p1.equals(p2))); // T
 		
 		System.out.println("\n=============\n");
 		

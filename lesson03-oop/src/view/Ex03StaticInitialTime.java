@@ -16,6 +16,7 @@ public class Ex03StaticInitialTime {
 		float c = 10.2f;
 		Double d = 7d; // H3
 		Car c1 = null; // chỉ tạo c1 ở stack
+		System.out.println("c1 address: " + System.identityHashCode(c1));
 		System.out.println(c1.getColor()); // NPE
 		Car c2 = new Car(); // H4
 		Car c3 = c2; 

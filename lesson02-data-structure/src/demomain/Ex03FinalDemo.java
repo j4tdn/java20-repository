@@ -21,8 +21,9 @@ public class Ex03FinalDemo {
 		final Item i1 = new Item(1, 'A', 20d);
 		final Item i2 = new Item(1, 'A', 20d);
 
-		// i1 = i2; compile error
+		// i1 = i2; //compile error
 		i1.salesPrice = 88d;
+		System.out.println(i1);
 		
 	}
 }
