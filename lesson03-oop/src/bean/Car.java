@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Car {
 	// attributes
 	// when create a new object
@@ -40,7 +42,7 @@ public class Car {
 	// getter, setter
 	// phương thức cho phép bên ngoài truy cập giá trị của các thuộc tính private
 	// vì sao k cho thuộc tính là public --> để đc quản lí cho class hiện tại, và k
-	// cho các hàm khác dùng đc
+	// cho các hàm khác dùng đc, còn nếu public là nó dùng chung (FOP)
 	// cung cấp getter, setter
 
 	public int getId() {

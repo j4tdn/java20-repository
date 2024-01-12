@@ -23,6 +23,8 @@ public class Ex03BasicDemo_Throw {
 			ae.printStackTrace();
 		}
 		
+		
+		
 		System.out.println("finished");
 	}
 	

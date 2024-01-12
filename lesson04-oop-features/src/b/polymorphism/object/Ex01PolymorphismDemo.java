@@ -43,7 +43,7 @@ public class Ex01PolymorphismDemo {
 		System.out.println("\n==> th4 --> child new parent");
 		// runtime --> parent can be missed child's method
 		// --> child's methods have no content at runtime
-//		Rectangle rsh1 = (Rectangle) new Shape();
+		Rectangle rsh1 = (Rectangle) new Shape();
 //		rsh1.paint();
 //		rsh1.calS();
 //		rsh1.setBackground();

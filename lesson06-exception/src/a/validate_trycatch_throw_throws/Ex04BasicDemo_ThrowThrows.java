@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Ex04BasicDemo_ThrowThrows {
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		
 		try {
 			File file = createFile("data.txt");
@@ -12,7 +12,7 @@ public class Ex04BasicDemo_ThrowThrows {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+//		
 		System.out.println("finished!!!");
 	}
 	

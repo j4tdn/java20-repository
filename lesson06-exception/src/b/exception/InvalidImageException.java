@@ -11,6 +11,5 @@ public class InvalidImageException extends Exception{
 	
 	public InvalidImageException(String filename) {
 		super("File '" + filename + "' --> is invalid");
-		
 	}
 }

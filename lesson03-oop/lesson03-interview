@@ -2,7 +2,6 @@
 --> phân biệt
 
 2. Tại sao phải khai báo phạm vi truy cập là private cho các attributes của class?
-
 --> rồi sau đó dùng hàm setter, getter để truy cập thuộc tính ?
 
 3. Phân biệt constructor và setter

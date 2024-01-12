@@ -8,7 +8,7 @@ public class DecimalFormatDemo {
 		
 		// big number --> format return wrong data
 		double v1 = 45634727899201022.29292d;
-		double v2 = 656722568982.72836d;
+		double v2 = 656722568982.728366d;
 		
 		System.out.println("v1 --> " + v1); // 4.5634727899201024E16
 		

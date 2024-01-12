@@ -39,12 +39,12 @@ public class Ex01TryCatchFinallyDemo {
 				
 				String line = tokens[0] + ", " + tokens[1] + ", " + salaryFactor;
 				fw.write(line + "\n");
-				
 				System.out.println("LOG info >> write content '" + line + "' to file " + file.getName());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
+			// save & close
 			if (fw != null) {
 				System.out.println("closing file " + file.getName());
 				fw.close();
