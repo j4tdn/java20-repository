@@ -4,12 +4,17 @@ import java.util.Collection;
 import java.util.List;
 
 import persistence.ItemGroup;
+import persistence.dto.ItemGroupDto;
 
 public interface ItemGroupService {
 	List<ItemGroup> getAll();
 	
-	ItemGroup get(int id);
+	List<ItemGroup> getItemGroupWithItems();
 	
+	List<ItemGroupDto> countItemsByItemGroup();
+	
+	ItemGroup get(int id);
+	ItemGroup get(String name);
 	void saveOrUpdate(ItemGroup itemGroup);
 	
 	void save(ItemGroup itemGroup);

@@ -1,11 +1,13 @@
 package persistence;
 
+import java.util.List;
 import java.util.Objects;
 
 public class ItemGroup {
 
 	private Integer id;
 	private String name;
+	private List<Item> items; // ITEM_GROUP 1 - N ITEM
 
 	public ItemGroup() {
 	}
@@ -29,6 +31,14 @@ public class ItemGroup {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Item> getItems() {
+		return items;
+	}
+	
+	public void setItems(List<Item> items) {
+		this.items = items;
 	}
 
 	@Override

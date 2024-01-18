@@ -1,0 +1,6 @@
+Injection : kĩ thuật tiêm/thêm vào KDL string để tấn công làm cho kết quả lun đúng trong sql
+
++ JDBC: chưa cập nhật cho >= JDK 1.8 
+	    rs.get DKL < 1.8 
+	    --> convert
+	    
