@@ -18,14 +18,17 @@ public class Ex02ItemGroupView {
 	}
 	
 	public static void main(String[] args) {
-		var itemGroupToBeTested = new ItemGroup(15, "Loại hàng 555");
-		itemGroupService.saveOrUpdate(itemGroupToBeTested);
+		var itemGroupToBeTested = new ItemGroup(19, "Loại hàng 2024 - Thêm mới");
+		// itemGroupService.saveOrUpdate(itemGroupToBeTested);
+		itemGroupService.merge(itemGroupToBeTested);
 		
 		// TODO: saveOrUpdate(list) with batch update
 		// var itemGroupToBeSaved1 = new ItemGroup(16, "Loại hàng 16");
 		// var itemGroupToBeSaved2 = new ItemGroup(17, "Loại hàng 17");
 		// var groupsToBeSaved = List.of(itemGroupToBeSaved1, itemGroupToBeSaved2);
 		// itemGroupService.save(groupsToBeSaved);
+		
+		// dùng batchUpdate với procedure
 		
 		generate(
 			"Câu 1A: Liệt kê tất cả các loại hàng", 

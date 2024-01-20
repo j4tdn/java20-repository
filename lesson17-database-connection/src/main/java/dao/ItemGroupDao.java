@@ -34,4 +34,6 @@ public interface ItemGroupDao {
 	 */
 	void update(ItemGroup itemGroup);
 	
+	void merge(ItemGroup itemGroup);
+	
 }

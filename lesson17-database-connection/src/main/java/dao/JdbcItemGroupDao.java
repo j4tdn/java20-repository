@@ -56,6 +56,9 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			+ "   SET NAME = ?\n"
 			+ " WHERE ID = ?";
 	
+	private static final String Q_MERGE_ITEM_GROUP = ""
+			+ "CALL P_MERGE_INTO_ITEM_GROUP(?, ?)";
+	
 	/**
 	 * Constructor
 	 */
@@ -240,5 +243,19 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 		}
 	}
 	
-	
+	@Override
+	public void merge(ItemGroup itemGroup) {
+		try {
+			pst = connection.prepareCall(Q_MERGE_ITEM_GROUP);
+			
+			pst.setInt(1, itemGroup.getId());
+			pst.setString(2, itemGroup.getName());
+			
+			pst.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
 }

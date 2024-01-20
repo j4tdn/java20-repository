@@ -110,4 +110,10 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 		itemGroupDao.update(itemGroup);
 	}
 	
+	@Override
+	public void merge(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "itemGroup should not be null");
+		itemGroupDao.merge(itemGroup);
+	}
+	
 }

@@ -32,4 +32,6 @@ public interface ItemGroupService {
 	
 	void update(ItemGroup itemGroup);
 	
+	void merge(ItemGroup itemGroup);
+	
 }

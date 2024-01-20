@@ -6,6 +6,7 @@ import java.util.List;
 import dao.ItemDao;
 import dao.JdbcItemDao;
 import persistence.Item;
+import persistence.dto.ItemDetailDto;
 
 public class ItemServiceImpl implements ItemService {
 
@@ -26,6 +27,16 @@ public class ItemServiceImpl implements ItemService {
 			return List.of();
 		}
 		return itemDao.getItemsBySalesDate(date);
+	}
+	
+	@Override
+	public List<ItemDetailDto> getItemDetails() {
+		return itemDao.getItemDetails();
+	}
+	
+	@Override
+	public void updateItemDetails() {
+		itemDao.updateItemDetails();
 	}
 	
 }
