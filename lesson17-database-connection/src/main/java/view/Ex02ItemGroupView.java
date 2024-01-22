@@ -1,15 +1,15 @@
 package view;
 
-import service.ItemGroupService;
-import service.ItemGroupServiceImpl;
-
 import static utils.CollectionUtils.generate;
 
+import java.util.List;
 //import java.util.List;
 import java.util.stream.Collectors;
 
 import persistence.Item;
 import persistence.ItemGroup;
+import service.ItemGroupService;
+import service.ItemGroupServiceImpl;
 
 public class Ex02ItemGroupView {
 
@@ -21,13 +21,15 @@ public class Ex02ItemGroupView {
 	
 	public static void main(String[] args) {
 		var itemGroupToBeSaveTested = new ItemGroup(10, "Loại hàng 10");
-		itemGroupService.saveOrUpdate(itemGroupToBeSaveTested);
+		// itemGroupService.saveOrUpdate(itemGroupToBeSaveTested);
+		itemGroupService.merge(itemGroupToBeSaveTested);
 		
-//		var itemGroupToBeSaved = List.of(
-//				new ItemGroup(11, "Loại Hàng 11"),
-//				new ItemGroup(12, "Loại Hàng 12"),
-//				new ItemGroup(13, "Loại Hàng 13"));
-//		itemGroupService.save(itemGroupToBeSaved);
+		var itemGroupToBeSaved = List.of(
+				new ItemGroup(11, "Loại Hàng 11"),
+				new ItemGroup(12, "Loại Hàng 12"),
+				new ItemGroup(13, "Loại Hàng 13"));
+		// itemGroupService.save(itemGroupToBeSaved);
+		itemGroupService.merge(itemGroupToBeSaved);
 				
 		generate("Câu 1A. Liệt kê tất cả các loại hàng", itemGroupService.getAll());
 		

@@ -33,4 +33,8 @@ public interface ItemGroupDao {
 	 * @param itemGroup the given item group
 	 */
 	void update(ItemGroup itemGroup);
+	
+	void merge(ItemGroup itemGroup);
+	
+	void merge(Collection<ItemGroup> groups);
 }

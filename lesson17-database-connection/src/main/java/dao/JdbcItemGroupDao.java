@@ -52,12 +52,15 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 	
 	private static final String Q_INSERT_ITEM_GROUP = ""
 			+ "INSERT INTO item_group(ID, NAME)\n"
-			+ "VALUE(?, ?)";
+			+ "VALUES(?, ?)";
 	
 	private static final String Q_UPDATE_ITEM_GROUP = ""
 			+ "UPDATE item_group\n"
 			+ "   SET NAME = ?\n"
 			+ " WHERE ID = ?";
+	
+	private static final String Q_MERGE_ITEM_GROUP = ""
+			+ "CALL P_MERGE_INTO_ITEM_GROUP(?, ?)";
 	
 	/**
 	 * Constructor
@@ -204,6 +207,41 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			pst.setString(1, itemGroup.getName());
 			pst.setInt(2, itemGroup.getId());
 			pst.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
+	public void merge(ItemGroup itemGroup) {
+		try {
+			pst = connection.prepareCall(Q_MERGE_ITEM_GROUP);
+			pst.setInt(1, itemGroup.getId());
+			pst.setString(2, itemGroup.getName());
+			pst.execute();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
+	public void merge(Collection<ItemGroup> groups) {
+		try {
+			int batchCount = 0;
+			pst = connection.prepareCall(Q_MERGE_ITEM_GROUP);
+			for (ItemGroup itemGroup: groups) {
+				pst.setInt(1, itemGroup.getId());
+				pst.setString(2, itemGroup.getName());
+				pst.addBatch();
+				// cứ batch chứa 50 phần tử execute bớt 1 lần
+				if (++batchCount % BATCH_SIZE == 0)
+					pst.executeBatch();
+			}
+			pst.executeBatch();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
