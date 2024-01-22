@@ -13,6 +13,10 @@ public class DbProvider {
 	public static Properties getDbConfigProps() {
 		Properties props = new Properties();
 		try {
+			// Reader
+			// InputStream
+			// --> đọc từ dự án -> file
+			// -->        classpath
 			props.load(DbProvider.class.getClassLoader().getResourceAsStream(DB_CONFIG_PATH));
 		} catch (IOException e) {
 			e.printStackTrace();
