@@ -7,7 +7,6 @@ import java.sql.SQLException;
 
 import connection.DbConnection;
 import persistence.Customer;
-import persistence.ItemGroup;
 import utils.SqlUtils;
 
 public class JdbcCustomerDao implements CustomerDao{
