@@ -3,6 +3,8 @@ package dao;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.transform.AliasToBeanResultTransformer;
 import org.hibernate.type.IntegerType;
 import org.hibernate.type.LongType;
@@ -139,6 +141,16 @@ public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroup
 					.setParameter("pName", name, StringType.INSTANCE)
 					.uniqueResult(); // null if not found
 					// .getSingleResult(); javax.persistence.NoResultException: No entity found for query
+	}
+	
+	@Override
+	public void save(ItemGroup itemGroup) {
+		executeWithTransaction(session -> session.save(itemGroup));
+	}
+	
+	@Override
+	public void saveOrUpdate(ItemGroup itemGroup) {
+		executeWithTransaction(session -> session.saveOrUpdate(itemGroup));
 	}
 	
 	private Class<ItemGroup> getEntityClass() {

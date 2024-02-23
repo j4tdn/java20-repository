@@ -15,4 +15,7 @@ public interface ItemGroupDao {
 	
 	ItemGroup get(String name);
 	
+	void save(ItemGroup itemGroup);
+	
+	void saveOrUpdate(ItemGroup itemGroup);
 }

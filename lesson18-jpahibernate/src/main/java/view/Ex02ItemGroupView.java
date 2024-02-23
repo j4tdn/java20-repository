@@ -14,8 +14,14 @@ private static ItemGroupService itemGroupService;
   		itemGroupService = new ItemGroupServiceImpl(); 
   	}
  
-	
 	public static void main(String[] args) {
+		
+		ItemGroup igNew = new ItemGroup(20, "Loại Hàng 20 - update");
+		itemGroupService.saveOrUpdate(igNew);
+		
+		System.out.println(">>> After saving...");
+		
+		
 //		selfGenerate(
 //		"Câu 1A: Liệt kê tất cả các loại hàng", 
 //			itemGroupService.getAll()
@@ -32,6 +38,8 @@ private static ItemGroupService itemGroupService;
 //			// itemGroupService.get("x' OR '1=1")
 //			itemGroupService.get("Thắt lưng")
 //		);
+		
+		
 	}
 	
 	public static void selfGenerate(String prefix, List<ItemGroup> elements) {

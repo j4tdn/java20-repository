@@ -1,6 +1,8 @@
 package persistence.entities;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -9,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -30,6 +33,9 @@ public class Item {
 	
 	@Column(name = "COLOR")
 	private String color;
+	
+	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY)
+	private List<ItemDetail> details = new ArrayList<ItemDetail>(); 
 	
 	// A -> B -> C -> D
 	// Relation: @OneToMany, @ManyToOne ...
@@ -110,6 +116,14 @@ public class Item {
 	
 	public void setGroup(ItemGroup group) {
 		this.group = group;
+	}
+	
+	public List<ItemDetail> getDetails() {
+		return details;
+	}
+	
+	public void setDetails(List<ItemDetail> details) {
+		this.details = details;
 	}
 
 	@Override
