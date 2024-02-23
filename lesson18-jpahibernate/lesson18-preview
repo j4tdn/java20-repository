@@ -1,0 +1,120 @@
+
++ JDBC: Get dữ liệu ra --> ResultSet
+  --> Duyệt từng phần tử trong resultset
+      --> Mỗi phần tử là hàng trong kết quả trả về
+	      --> trong mỗi hàng phải get từng ô dữ liệu
+  ==> focus vào ô dữ liệu, từng thuộc tính
+  ==> Hạn chế
+      + Mapping khá nhiều lần
+	  + Code dài, trùng
+  Thứ tự thực hiện
+  B1. Viết câu truy vấn
+  B2. Tạo class trong Java
+  B3. Thực thi truy vấn trả về ResultSet
+  B4: Tự duyệt, đưa dữ liệu từ ResultSet vào List<?>
+
++ ORM: Object Relational Mapping
+  + B1: Mapping Java Class(entity) với Database Table
+  + B2: Viết câu truy vấn, thực hiện truy vấn từ JPA/Hibernate vào Database
+      --> dữ liệu trả về tự động mapping vào Java Class tương
+	  
+Trong 1 dự án
+interface: EmailService
+class: StandardEmailServiceImpl, BusinessEmailServiceImpl
+
+Trong nhiều dự án
+Dự án A:
+interface: EmailService
+
+Dự án B:
+  Dependency là dự án A
+  class:  StandardEmailServiceImpl implements từ EmailService
+
+Dự án C:
+  Dependency là dự án A
+  class:  BusinessEmailServiceImpl implements từ EmailService
+  
+ORM - JPA/Hibernate
+JPA
+  --> abstract methods
+  pom.xml
+    1.0
+
+Hibernate
+  dependency
+    JPA-1.0
+  Thực thi các hàm trừu tượng từ interface của JPA
+
+EclipseLink
+
+JOOQ
+
+Dự án mình
+  Hibernate-5.8
+	pom: JPA-3.2
+
+  Hibernate-5.8
+	pom: JPA-3.2
+  JPA-3.4
+
+  Hibernate 5.2
+    + test(int a);
+  Hibernate 5.3 --> compatible với 5.2
+    @deprecated
+    + test(int a);
+	+ test(double a);
+  Hibernate 5.6 --> incompatible với 5.3
+    + test(double a);
+	
+Lý thuyết ban đầu
+JPA: abstract
+Hibernate: implementation
+
+Thực tế hiện tại
++ JPA: abstract + implementation
+  --> dùng 1 mình JPA thôi cũng sử dụng được rồi
+
++ Hibernate: implementation  
+  --> hỗ trợ nhiều hơn, nên vẫn dùng hibernate
+
+--> Dùng hibernate, tự động import jpa
+Code
++ JPA: javax.persistence... để ORM - mapping java class với database table
++ Hibernate: org.hibernate... để thực thi truy vấn CRUD
+
+Câu hỏi
+1. Dùng ORM framework có gì hay hơn so với JDBC
+--> Giảm thiểu việc getter/setter database/java object 
+
+	Libraries
+	Dependency
+	  + jar --> Java Executable Resource
+	    --> Tự chạy được
+	 	
+	  + war --> Web App Resource
+	    --> Nhờ web server để chạy nó
+		
+	  + pom
+	    --> project object model
+		--> define sub/super modules với maven
+		
+	Framework
+	  + dependencies(thư viện)
+	  + Tạo ra các design pattern, mẫu thiết kế và khi code sử dụng
+	    framework thì mình sẽ code theo idea, pattern mà framework đó thiết kế ra
+	    
+==================================
+
+maven simple projects
+
+--> src/main/java
+--> src/main/resources
+    + config.properties
+
+--> target
+      classes
+	     config.properties
+		 package#
+
+maven-archetype-quickstart
+--> src/main/java

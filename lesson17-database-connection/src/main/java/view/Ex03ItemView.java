@@ -22,6 +22,12 @@ public class Ex03ItemView {
 		
 		generate("1H. Liệt kê các mặt hàng được bán trong ngày 07.09.2023", 
 				itemService.getItemsBySalesDate(LocalDate.of(2023, 9, 7)));
+		
+		generate("3.Hiển thị mặt hàng có số lượng cao nhất", 
+				itemService.getItemDetails());
+		
+		itemService.updateItemDetails();
+		System.out.println("done");
+				
 	}
-	
 }

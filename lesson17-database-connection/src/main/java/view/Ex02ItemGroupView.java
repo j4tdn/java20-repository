@@ -19,6 +19,8 @@ public class Ex02ItemGroupView {
 	
 	public static void main(String[] args) {
 		
+		itemGroupService.merge(new ItemGroup(18, "Loai hang 18-them moi"));
+		
 		var ItemGroupToBeTested = new ItemGroup(15, "Loại hàng 555");
 		//itemGroupService.saveOrUpdate(ItemGroupToBeTested);
 		

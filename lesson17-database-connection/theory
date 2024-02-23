@@ -4,3 +4,6 @@ Injection : kĩ thuật tiêm/thêm vào KDL string để tấn công làm cho k
 	    rs.get DKL < 1.8 
 	    --> convert
 	    
+Hệ thống 100% ko biết mk của người dùng
+--> mk phải đc mã hóa 1 chiều
+--> mã hóa theo thuật toán: md4, md5, sha1, sha256, bcrypt

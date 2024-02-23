@@ -26,7 +26,8 @@ public interface ItemGroupService {
 	 */
 	void save(Collection<ItemGroup> groups);
 	
-	
 	void update(ItemGroup itemGroup);
+	
+	void merge(ItemGroup itemGroup);
 	
 }
