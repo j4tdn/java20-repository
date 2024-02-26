@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class ItemGroupDto {
 	
-	public static String PROP_IG_ID = "igId123";
-	public static String PROP_IG_NAME = "igNcdcdcame";
+	public static String PROP_IG_ID = "igId";
+	public static String PROP_IG_NAME = "igName";
 	public static String PROP_TOTAL_OF_ITEMS = "totalOfItems";
 	public static String PROP_ITEMS = "items";
 	

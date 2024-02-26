@@ -1,12 +1,15 @@
 package persistence.entities;
 
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -57,6 +60,11 @@ public class ItemGroup {
 	@Column(name = "NAME", nullable = false)
 	private String name;
 	
+	// @OneToMany: mặc định fetchType = LAZY
+	
+	@OneToMany(mappedBy = "group")
+	private List<Item> items;
+	
 	/*
 	 * Hibernate required empty constructor
 	 */
@@ -82,6 +90,14 @@ public class ItemGroup {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public List<Item> getItems() {
+		return items;
+	}
+	
+	public void setItems(List<Item> items) {
+		this.items = items;
 	}
 	
 	@Override

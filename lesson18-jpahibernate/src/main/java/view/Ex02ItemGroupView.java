@@ -2,6 +2,9 @@ package view;
 
 import static utils.CollectionUtils.generate;
 
+import java.util.List;
+
+import persistence.entities.ItemGroup;
 import service.ItemGroupService;
 import service.ItemGroupServiceImpl;
 
@@ -14,7 +17,13 @@ private static ItemGroupService itemGroupService;
 	}
 	
 	public static void main(String[] args) {
-		generate(
+		
+		ItemGroup igNew = new ItemGroup(20, "Updated Loại Hàng 20 - 23/02/2024");
+		itemGroupService.saveOrUpdate(igNew);
+		
+		System.out.println(">>> After saving ...");
+		
+		selfGenerate(
 			"Câu 1A: Liệt kê tất cả các loại hàng", 
 			itemGroupService.getAll()
 		);
@@ -29,6 +38,22 @@ private static ItemGroupService itemGroupService;
 			// itemGroupService.get("x' OR '1=1")
 			itemGroupService.get("Thắt lưng")
 		);
+		
+		generate(
+			"Câu 5: Đếm số lượng các mặt hàng theo từng loại hàng", 
+			itemGroupService.countItemsByItemGroup()
+		);
+	}
+	
+	public static void selfGenerate(String prefix, List<ItemGroup> elements) {
+		System.out.println(prefix + " --> {");
+		
+		elements.forEach(e -> {
+			System.out.println("   " + e);
+			System.out.println("   --> amount of items --> " + e.getItems().size() + "\n\n");
+		});
+		
+		System.out.println("}\n");
 	}
 	
 }

@@ -5,6 +5,7 @@ import java.util.Objects;
 
 import dao.HibernateItemGroupDao;
 import dao.ItemGroupDao;
+import persistence.dto.ItemGroupDto;
 import persistence.entities.ItemGroup;
 
 public class ItemGroupServiceImpl implements ItemGroupService {
@@ -13,6 +14,11 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 	
 	public ItemGroupServiceImpl() {
 		itemGroupDao = new HibernateItemGroupDao();
+	}
+	
+	@Override
+	public List<ItemGroupDto> countItemsByItemGroup() {
+		return itemGroupDao.countItemsByItemGroup();
 	}
 	
 	@Override
@@ -31,6 +37,16 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 		return itemGroupDao.get(name);
 	}
 	
+	@Override
+	public void save(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "item group should not be null");
+		itemGroupDao.save(itemGroup);
+	}
 	
+	@Override
+	public void saveOrUpdate(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "item group should not be null");
+		itemGroupDao.saveOrUpdate(itemGroup);
+	}
 	
 }

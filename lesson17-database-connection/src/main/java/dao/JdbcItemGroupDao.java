@@ -36,10 +36,10 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			+ "SELECT * FROM item_group WHERE ID = ?";
 	
 	private static final String Q_COUNT_ITEMS_BY_ITEM_GROUP = ""
-			+ "SELECT itg.ID,\n"
-			+ "	   itg.NAME,\n"
-			+ "       sum(itd.AMOUNT) TOTAL_OF_ITEMS,\n"
-			+ "	   group_concat(concat(it.ID, '-', it.NAME, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') ITEM_DETAILS_INFO\n"
+			+ "SELECT itg.ID " + ItemGroupDto.PROP_IG_ID + " ,\n"
+			+ "	   itg.NAME " + ItemGroupDto.PROP_IG_NAME + ",\n"
+			+ "       sum(itd.AMOUNT) " + ItemGroupDto.PROP_TOTAL_OF_ITEMS + ",\n"
+			+ "	   group_concat(concat(it.ID, '-', it.NAME, '-', itd.SIZE_ID, '-', itd.AMOUNT) SEPARATOR ', ') " + ItemGroupDto.PROP_ITEMS + "\n"
 			+ "  FROM item_group itg\n"
 			+ "  JOIN item it\n"
 			+ "    ON itg.ID = it.ITEM_GROUP_ID\n"
@@ -94,10 +94,10 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 			rs = st.executeQuery(Q_COUNT_ITEMS_BY_ITEM_GROUP);
 			while(rs.next()) {
 				ItemGroupDto ig = new ItemGroupDto();
-				ig.setIgId(rs.getInt("ID"));
-				ig.setIgName(rs.getString("NAME"));
-				ig.setTotalOfItems(rs.getLong("TOTAL_OF_ITEMS"));
-				ig.setItems(rs.getString("ITEM_DETAILS_INFO"));
+				ig.setIgId(rs.getInt(ItemGroupDto.PROP_IG_ID));
+				ig.setIgName(rs.getString(ItemGroupDto.PROP_IG_NAME));
+				ig.setTotalOfItems(rs.getLong(ItemGroupDto.PROP_TOTAL_OF_ITEMS));
+				ig.setItems(rs.getString(ItemGroupDto.PROP_ITEMS));
 				result.add(ig);
 			}
 		} catch (SQLException e) {
