@@ -18,8 +18,14 @@ private static ItemGroupService itemGroupService;
 	
 	public static void main(String[] args) {
 		
-		ItemGroup igNew = new ItemGroup(20, "Updated Loại Hàng 20 - 23/02/2024");
-		itemGroupService.saveOrUpdate(igNew);
+		var groups = List.of(
+			new ItemGroup(24, "Loại Hàng 24"),
+			new ItemGroup(25, "Loại Hàng 25")
+		);
+		itemGroupService.save(groups);
+		
+		ItemGroup igNew = new ItemGroup(21, "Cập nhật loại Hàng 21 - 26/02/2024");
+		itemGroupService.merge(igNew);
 		
 		System.out.println(">>> After saving ...");
 		

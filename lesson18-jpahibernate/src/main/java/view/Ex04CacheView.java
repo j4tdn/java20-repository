@@ -12,7 +12,9 @@ public class Ex04CacheView {
 	}
 	
 	public static void main(String[] args) {
-		cacheService.firstLevelCache();
+		// cacheService.firstLevelCache();
+		
+		cacheService.secondLevelCache();
 	}
 	
 }

@@ -1,17 +1,26 @@
 package dao;
 
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
+import org.hibernate.jdbc.Work;
 import org.hibernate.transform.Transformers;
 import org.hibernate.type.IntegerType;
 import org.hibernate.type.LongType;
+import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.StringType;
 
 import persistence.dto.ItemGroupDto;
 import persistence.entities.ItemGroup;
+import utils.SqlUtils;
 
 public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroupDao {
+	
+	private static final int BATCH_SIZE = 50;
 	
 	// native query: viết query ở ngôn ngữ mysql/oracle
 	
@@ -33,6 +42,12 @@ public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroup
 	private static final String Q_GET_ITEM_GROUP_BY_NAME = ""
 			+ "SELECT * FROM item_group WHERE NAME = :pName";
 	
+	private static final String Q_MERGE_ITEM_GROUP = ""
+			+ "CALL P_MERGE_INTO_ITEM_GROUP(:pId, :pName)";
+	
+	private static final String Q_INSERT_ITEM_GROUP = ""
+			+ "INSERT INTO item_group(ID, NAME)\n"
+			+ "VALUES(?, ?)";
 	
 //  --> native query	
 //	@Override
@@ -147,8 +162,46 @@ public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroup
 	}
 	
 	@Override
+	public void save(Collection<ItemGroup> groups) {
+		executeWithTransaction(session -> {
+			session.doWork(connection -> {
+				try(PreparedStatement pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP)) {
+					int batchCount = 0;
+					for (ItemGroup itemGroup: groups) {
+						// cân nhắc với setObject cho null value
+						// vs KDL ko phải chuỗi
+						pst.setInt(1, itemGroup.getId());
+						pst.setString(2, itemGroup.getName());
+						pst.addBatch();
+						
+						// cứ batch chứa 50 phần tử execute bớt 1 lần
+						if (batchCount % BATCH_SIZE == 0) {
+							pst.executeBatch();
+						}
+					}
+					
+					// execute all hoặc execute phần còn lại trong batch
+					pst.executeBatch();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			});
+		});
+	}
+	
+	@Override
 	public void saveOrUpdate(ItemGroup itemGroup) {
 		executeWithTransaction(session -> session.saveOrUpdate(itemGroup));
+	}
+	
+	@Override
+	public void merge(ItemGroup itemGroup) {
+		executeWithTransaction(session -> 
+			session.createNativeQuery(Q_MERGE_ITEM_GROUP)
+				.setParameter("pId", itemGroup.getId(), StandardBasicTypes.INTEGER) // IntegerType.INSTANCE
+				.setParameter("pName", itemGroup.getName(), StandardBasicTypes.STRING) // StringType.INSTANCE
+				.executeUpdate()
+		);
 	}
 	
 	private Class<ItemGroup> getEntityClass() {

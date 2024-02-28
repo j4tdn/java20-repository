@@ -2,6 +2,8 @@ package dao;
 
 import java.util.function.Consumer;
 
+import javax.persistence.Cache;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -29,6 +31,11 @@ public class BaseHibernateDao {
 	
 	Session getCurrentSession() {
 		return sessionFactory.getCurrentSession();
+	}
+	
+	void clear2ndCache() {
+		Cache cache = sessionFactory.getCache();
+		cache.evictAll();
 	}
 	
 	void executeWithTransaction(Consumer<Session> consumer) {
