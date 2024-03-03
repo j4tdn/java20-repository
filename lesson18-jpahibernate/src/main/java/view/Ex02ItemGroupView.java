@@ -16,9 +16,16 @@ private static ItemGroupService itemGroupService;
  
 	public static void main(String[] args) {
 		
-		ItemGroup igNew = new ItemGroup(20, "Loại Hàng 20 - update");
-		itemGroupService.saveOrUpdate(igNew);
+		var groups = List.of(
+				new ItemGroup(22, null),
+				new ItemGroup(23, "Loại hàng 23")
+		);
 		
+		itemGroupService.save(groups);
+		
+		ItemGroup igNew = new ItemGroup(20, "Loại Hàng 20 - update - merge");
+		//itemGroupService.saveOrUpdate(igNew);
+		itemGroupService.merge(igNew);
 		System.out.println(">>> After saving...");
 		
 		

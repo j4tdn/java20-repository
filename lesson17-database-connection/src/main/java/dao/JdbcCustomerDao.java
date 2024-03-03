@@ -28,8 +28,6 @@ public class JdbcCustomerDao implements CustomerDao{
 		connection = DbConnection.getConnection();
 	}
 	
-	
-	
 	@Override
 	public void save(Customer customer) {
 		try {

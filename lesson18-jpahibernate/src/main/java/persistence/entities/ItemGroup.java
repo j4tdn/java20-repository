@@ -11,6 +11,9 @@ import javax.persistence.NamedNativeQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 /**
  * Sử dụng ORM framework để mapping class trong Java với table trong Database
  * + Tên class, attribute bất kỳ
@@ -26,6 +29,7 @@ import javax.persistence.Table;
  */
 
 @Entity
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Table(name = "item_group")
 
 //@NamedQueries(

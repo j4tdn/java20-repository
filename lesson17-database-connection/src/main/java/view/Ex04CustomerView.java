@@ -1,10 +1,10 @@
-package utils;
+package view;
 
 import persistence.Customer;
 import service.CustomerService;
 import service.CustomerServiceImpl;
 
-public class CustomerView {
+public class Ex04CustomerView {
 	
 	private static CustomerService customerService;
 	

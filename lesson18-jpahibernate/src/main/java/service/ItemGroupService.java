@@ -1,5 +1,6 @@
 package service;
 
+import java.util.Collection;
 import java.util.List;
 
 import persistence.dto.ItemGroupDto;
@@ -17,6 +18,9 @@ public interface ItemGroupService {
 
 	void save(ItemGroup itemGroup);
 
+	void save(Collection<ItemGroup> groups);
+	
 	void saveOrUpdate(ItemGroup itemGroup);
 
+	void merge(ItemGroup itemGroup);
 }
