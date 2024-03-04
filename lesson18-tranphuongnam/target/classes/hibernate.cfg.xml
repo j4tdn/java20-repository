@@ -23,6 +23,8 @@
 		<!-- Entity Mapping -->
 		<mapping class="persistence.entities.ItemGroup"/>
 		<mapping class="persistence.entities.Item"/>
+		<mapping class="persistence.entities.Employee"/>
+		<mapping class="persistence.entities.Department"/>
 		
 	</session-factory>
 
