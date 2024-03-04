@@ -5,6 +5,7 @@ import java.util.List;
 import dao.ItemGroupDao;
 import persistence.dtos.ItemDTO;
 import persistence.dtos.ItemGroupDTO;
+import persistence.entities.Employee;
 import persistence.entities.Item;
 import service.EmployeeService;
 import service.EmployeeServiceImpl;
@@ -56,5 +57,7 @@ public class Ex01 {
 		
 		//5. Cập nhật cơ sở dữ liệu, yêu cầu nhân viên sẽ có thêm thông tin mức lương và người quản lys
 		System.out.println("\n\n =>>>>>>>> Câu 5");
+		List<Employee> employees = employeeService.getEmployeeHaveSalaryMoreThanManager();
+		employees.forEach(System.out::println);
 	}
 }
