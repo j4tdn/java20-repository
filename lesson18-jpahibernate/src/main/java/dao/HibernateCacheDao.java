@@ -47,6 +47,7 @@ public class HibernateCacheDao extends BaseHibernateDao implements CacheDao{
 		// enable: ko có sẵn
 		// disable: đc
 		// scope: single transaction - sessions của transaction
+		// session sau sẽ kế thừa data đc lưu trữ của session trước
 		
 		System.out.println("Start: Test 2nd level cache");
 		

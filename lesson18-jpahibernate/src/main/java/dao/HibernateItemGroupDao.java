@@ -158,6 +158,7 @@ public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroup
 	public void save(Collection<ItemGroup> groups) {
 		executeWithTransaction(session -> {
 			session.doWork(connection -> {
+				// child of AutoCloseable
 				try (PreparedStatement pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP)){
 					int batchCount = 0;
 					for (ItemGroup itemGroup: groups) {

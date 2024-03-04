@@ -9,8 +9,6 @@ public class HibernateItemDao extends BaseHibernateDao implements ItemDao{
 	private static final String Q_GET_ALL_ITEMS = ""
 			+ "SELECT * FROM item";
 	
-	
-	
 	@Override
 	public List<Item> getAll() {
 		return openSession()
