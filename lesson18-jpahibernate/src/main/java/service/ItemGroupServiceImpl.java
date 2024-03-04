@@ -1,5 +1,6 @@
 package service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -35,5 +36,29 @@ public class ItemGroupServiceImpl implements ItemGroupService {
 	public ItemGroup get(String name) {
 		Objects.requireNonNull(name, "itemGroup should not be null");
 		return itemGroupDao.get(name);
+	}
+	
+	@Override
+	public void save(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "item group should not be null");
+		itemGroupDao.save(itemGroup);
+	}
+	
+	@Override
+	public void save(Collection<ItemGroup> groups) {
+		Objects.requireNonNull(groups, "groups should not be null");
+		itemGroupDao.save(groups);
+	}
+	
+	@Override
+	public void saveOrUpdate(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "item group should not be null");
+		itemGroupDao.saveOrUpdate(itemGroup);
+	}
+	
+	@Override
+	public void merge(ItemGroup itemGroup) {
+		Objects.requireNonNull(itemGroup, "item group should not be null");
+		itemGroupDao.merge(itemGroup);
 	}
 }

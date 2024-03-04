@@ -17,6 +17,16 @@ public class Ex02ItemGroupView {
 	}
 	
 	public static void main(String[] args) {
+		var groups = List.of(
+				new ItemGroup(14, "Loại Hàng 24"),
+				new ItemGroup(15, "Loại Hàng 25")
+			);
+		itemGroupService.save(groups);
+		
+		ItemGroup igNew = new ItemGroup(13, "Cập nhật Loại Hàng 13 - 3.3.2024");
+		itemGroupService.merge(igNew);
+		System.out.println(">>> After saving ...");
+		
 		selfgenerate("Câu 1A. Liệt kê tất cả các loại hàng", itemGroupService.getAll());
 		
 		generate("Câu 1B. Liệt kê loại hàng có mã loại = 3", itemGroupService.get(3));

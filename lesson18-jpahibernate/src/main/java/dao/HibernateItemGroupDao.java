@@ -1,16 +1,21 @@
 package dao;
 
+import java.sql.PreparedStatement;
+import java.util.Collection;
 import java.util.List;
 
 import org.hibernate.transform.Transformers;
 import org.hibernate.type.IntegerType;
 import org.hibernate.type.LongType;
+import org.hibernate.type.StandardBasicTypes;
 import org.hibernate.type.StringType;
 
 import persistence.dto.ItemGroupDto;
 import persistence.entities.ItemGroup;
 
 public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroupDao {
+	
+	private static final int BATCH_SIZE = 50;
 
 	// native query: viết query ở ngôn ngữ sql/oracle
 	// jpql/hql    : viết query ở dạng/theo tên entities/attribules
@@ -29,6 +34,13 @@ public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroup
 	
 	private static final String Q_GET_ITEM_GROUP_BY_NAME = ""
 			+ "SELECT * FROM item_group WHERE `NAME` = :pName";
+	
+	private static final String Q_MERGE_ITEM_GROUP = ""
+			+ "CALL P_MERGE_INTO_ITEM_GROUP(:pId, :pName)";
+	
+	private static final String Q_INSERT_ITEM_GROUP = ""
+			+ "INSERT INTO item_group(ID, NAME)\n"
+			+ "VALUES(?, ?)";
 	
 	private static final String Q_COUNT_ITEMS_BY_ITEM_GROUP = ""
 			+ "SELECT itg.ID " + ItemGroupDto.PROP_IG_ID + " ,\n"
@@ -143,5 +155,53 @@ public class HibernateItemGroupDao extends BaseHibernateDao implements ItemGroup
 				.createNativeQuery(Q_GET_ITEM_GROUP_BY_NAME, ItemGroup.class)
 				.setParameter("pName", name, StringType.INSTANCE)
 				.uniqueResult(); // .getSingleResult(); -> if result null -> NoResultException
+	}
+	
+	@Override
+	public void save(ItemGroup itemGroup) {
+		executeWithTransaction(session -> session.save(itemGroup));
+	}
+	
+	@Override
+	public void save(Collection<ItemGroup> groups) {
+		executeWithTransaction(session -> {
+			session.doWork(connection -> {
+				try(PreparedStatement pst = connection.prepareStatement(Q_INSERT_ITEM_GROUP)) {
+					int batchCount = 0;
+					for (ItemGroup itemGroup: groups) {
+						// cân nhắc với setObject cho null value
+						// vs KDL ko phải chuỗi
+						pst.setInt(1, itemGroup.getId());
+						pst.setString(2, itemGroup.getName());
+						pst.addBatch();
+						
+						// cứ batch chứa 50 phần tử execute bớt 1 lần
+						if (++batchCount % BATCH_SIZE == 0) {
+							pst.executeBatch();
+						}
+					}
+					
+					// execute all hoặc execute phần còn lại trong batch
+					pst.executeBatch();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			});
+		});
+	}
+	
+	@Override
+	public void saveOrUpdate(ItemGroup itemGroup) {
+		executeWithTransaction(session -> session.saveOrUpdate(itemGroup));
+	}
+	
+	@Override
+	public void merge(ItemGroup itemGroup) {
+		executeWithTransaction(session -> 
+		session.createNativeQuery(Q_MERGE_ITEM_GROUP)
+			.setParameter("pId", itemGroup.getId(), StandardBasicTypes.INTEGER) // IntegerType.INSTANCE
+			.setParameter("pName", itemGroup.getName(), StandardBasicTypes.STRING) // StringType.INSTANCE
+			.executeUpdate()
+	);
 	}
 }
