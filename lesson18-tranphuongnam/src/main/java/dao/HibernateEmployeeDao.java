@@ -14,7 +14,7 @@ public class HibernateEmployeeDao extends BaseHibernateDao implements EmployeeDa
 			+ "  WHERE ID in (SELECT MANAGER_ID FROM employee)\n"
 			+ ") SELECT * \n"
 			+ "    FROM employee e\n"
-			+ "   WHERE e.SALARY > MANAGER_SALARY;";
+			+ "   WHERE e.SALARY > CTE_MANAGER_SALARY.MANAGER_SALARY;";
 	
 	@Override
 	public List<Employee> getEmployeeHaveSalaryMoreThanManager() {
