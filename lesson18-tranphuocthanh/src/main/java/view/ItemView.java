@@ -18,9 +18,9 @@ public class ItemView {
 		LocalDate ldate = LocalDate.of(2023, Month.AUGUST, 07);
 		 itemService.getItemDtoWithDate(ldate).forEach(System.out::println);;
 		
-		itemService.getItemDtoInventory().forEach(System.out::println);;
-		
-		itemService.getItemsWithMaxSalesPrice().forEach(System.out::println);
+//		itemService.getItemDtoInventory().forEach(System.out::println);;
+//		
+//		itemService.getItemsWithMaxSalesPrice().forEach(System.out::println);
 	}
 	
 

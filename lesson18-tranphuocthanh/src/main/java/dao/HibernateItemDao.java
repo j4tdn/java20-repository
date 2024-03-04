@@ -77,7 +77,7 @@ public class HibernateItemDao extends BaseHibernateDao implements ItemDao {
 	
 	@Override
 	public List<ItemDto3> getItemsWithMaxSalesPrice() {
-		openSession().createNativeQuery(GET_TOP3_SALES_PRICE)
+		return openSession().createNativeQuery(GET_TOP3_SALES_PRICE)
 		.addScalar(ItemDto3.PROP_ID, IntegerType.INSTANCE)
 		.addScalar(ItemDto3.PROP_NAME, StringType.INSTANCE)
 		.addScalar(ItemDto3.PROP_AMOUNT, IntegerType.INSTANCE)
