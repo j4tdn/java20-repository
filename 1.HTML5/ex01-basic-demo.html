@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Chứa nội dung của web page header-->
+	<link rel="icon"  href="images/header.png">
+	<title>HTML - Ex01 Basic Demo</title>
+	<meta charset="utf-8">
+	<style>
+		h2 {
+			color: blue;
+		}
+		
+		table thead{
+			background-color: lightblue;
+		}
+
+		
+		table tbody tr:nth-child( n+3):nth-child(-n+7) {
+			background-color: grey;
+		}
+/*ctrl shift /  */
+/* 
+		table tbody có nhiều tr
+		yêu cầu 0: tô maud xám cho tất cả các dòng;
+		yêu cầu 1: dòng đầu tiên tô màu xám;
+		table tbody tr:first-child{
+			background-color: grey;
+		}
+
+		table tbody tr:first-of-type{
+			background-color: grey;
+		}
+		yêu cầu 2: dòng cuối cùng tô màu xám;
+		table tbody tr:last-child{
+			background-color: grey;
+		}
+		yêu cầu 3: dòng thứ 4 tô màu xám;
+		index based: 1;
+		table tbody tr:nth-child(5){
+			background-color: grey;
+		}
+
+		
+		nth-child(an+b)
+		-> a: chu kỳ, life cycle;
+			số dương: tihs từ b và đi lên
+			số âm: tính từ b và đi xuống;
+		-> b: dòng nắt đầu tính css này;
+		vd: 3n+2 --> tính từ dòng thứ 2 , sau 3 dòng lại ăn css(kể cả dòng thứ 2);
+
+
+		nth-last-child(an+b)
+		-> a: chu kỳ, life cycle;
+			số dương: tihs từ b và đi xuống
+			số âm: tính từ b và đi lên;
+		-> b: dòng nắt đầu tính css này;
+		yêu cầu 4: 3 dòng đầu tiên tô màu xám;
+		yêu cầu 5: 2 dòng cuối cùng tô màu xám;
+		yêu cầu 6: cứ 2 dòng 1 lần tô màu xám;
+	*/
+	/*
+	Thay vì click block nhảy xuống ngay lập tức -> Hoàn thành sau 1 khoản thời gian
+	*/
+	html{
+		scroll-behavior: smooth;
+	}
+	</style>
+
+	<!--
+
+	css(cascade style sheet) external : định dạng, tùy chỉnh bố cục, giao diện cho trang html 
+	css line: css cho từng thẻ
+	css internal: css cho tất cả các thẻ trong 1 html page
+	css external: external css file, css cho bất kỳ html page nào chỉ cần import css file vào
+
+	-->
+
+</head>
+<body>
+	<table border="1" cellspacing="0" cellpadding="4"> 
+		<thead>
+			<tr>
+				<th colspan="2">Table of Contents</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td><a href="#block-image-tag">Image Part</a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><a href="#block-a-tag">Anchor Part</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<!--Chứa nội dung của web page content-->
+
+		<!-- Từ khóa: semantic tags thẻ ngữ nghĩa 
+			1 thẻ có ngữ nghĩa, chức năng của n, dùng đúng ngữ cảnh-->
+
+			Hello - No HTML Tags
+			<!-- Chưa được wrap vào bất kỳ HTML tag nào, hiểu là 1 text bình thường -->
+
+			<!--Heading tag--  1em =16px -- >
+				<h1>This is h1 tags - content</h1>
+				<h2>This is h2 tags - content</h2>
+				<h3>This is h3 tags - content</h3>
+				<h4>This is h4 tags - content</h4>
+				<h5>This is h5 tags - content</h5>
+				<h6>This is h5 tags - content</h6>
+
+				<!--Plugin Emmet-->
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Temporibus incidunt cupiditate explicabo animi consequatur quisquam hic nam rerum minus inventore blanditiis, similique nostrum quo corporis assumenda magni a fugit exercitationem modi ratione! Iusto facilis dicta repellendus nihil exercitationem, cupiditate accusantium eius,consequatur labore illo sit, a dolore voluptatum ipsum possimus nemo impedit quasi pariatur. <strong>Illo eius iste consectetur quo, facere quibusdam sequi blanditiis suscipit vitae reprehenderit corrupti pariatur provident ratione soluta quidem nemo tempora similique minus placeat ut.  </strong>Nihil cumque, saepe amet perspiciatis vitae voluptate nostrum omnis magni consequuntur possimus ea tempore, odio excepturi voluptatem eaque neque iste <em>accusantium</em> .</p>
+
+				<hr>
+				<b>Text Bold</b>
+				<i>Text Italic</i>
+
+				<!--List tags-->
+				<!-- order List - List Item-->
+				<ol>
+					<li>Item 1</li>
+					<li>Item 2</li>
+					<li>Item 3</li>
+				</ol>
+
+				<!-- unorder List - List Item-->
+
+				<ul>
+					<li>Cake1</li>
+					<li>Cake2</li>
+					<li>Cake3</li>
+				</ul>
+
+
+				<hr>
+				<p>Lorem 50 -- ipsum dolor sit amet consectetur, adipisicing, elit. Similique fugit cumque quibusdam maiores suscipit odit, voluptatibus architecto libero aut inventore enim animi deserunt reiciendis, numquam quas amet sed iure eos repudiandae dicta soluta labore consequuntur, eius. Iste accusamus quia similique in, quaerat fugiat nostrum obcaecati pariatur velit enim recusandae odit?	</p>
+
+				<!-- Format code ctrl+shift+f-->
+
+
+				<!--Paragraph-->
+				<p>Lorem 100 -          ipsum dolor sit amet consectetur adipisicing, elit. Temporibus incidunt cupiditate explicabo animi consequatur quisquam hic nam rerum minus inventore blanditiis, similique nostrum quo corporis assumenda magni a fugit exercitationem modi ratione! Iusto facilis dicta repellendus nihil exercitationem, cupiditate accusantium eius, consequatur labore illo sit, a dolore voluptatum ipsum possimus nemo impedit quasi pariatur. Illo eius iste consectetur quo, facere quibusdam sequi blanditiis suscipit vitae reprehenderit corrupti pariatur provident ratione soluta quidem nemo tempora similique minus placeat ut. Nihil cumque, saepe amet perspiciatis vitae voluptate nostrumomnis magni consequuntur possimus ea tempore, odio excepturi voluptatem eaque neque iste ab accusantium.</p>
+
+				<pre>Lorem 100 -            ipsum dolor sit amet consectetur adipisicing, elit. Temporibus incidunt cupiditate explicabo animi consequatur quisquam hic nam rerum minus inventore blanditiis, similique nostrum quo corporis assumenda magni a fugit exercitationem modi ratione! Iusto facilis dicta repellendus nihil exercitationem, cupiditate accusantium eius, consequatur labore illo sit, a dolore voluptatum ipsum possimus nemo impedit quasi pariatur. Illo eius iste consectetur quo, facere quibusdam sequi blanditiis suscipit vitae reprehenderit corrupti pariatur provident ratione soluta quidem nemo tempora similique minus placeat ut. Nihil cumque, saepe amet perspiciatis vitae voluptate nostrumomnis magni consequuntur possimus ea tempore, odio excepturi voluptatem eaque neque iste ab accusantium.</pre>
+
+
+
+				<hr>
+				<!-- width height : mặc định px neeuss không có đơn vị
+								: theo đơn vị mặc định khi truyền vào -->
+				<h4 id="block-image-tag"> Image - Offline Source</h4>
+				<img src="images/lemmon.png" alt="lemmon" width="140px" height="200px">
+
+				<h4> Image - Online Source</h4>
+				<img src="https://hanoispiritofplace.com/wp-content/uploads/2018/01/hinh-anh-hoa-tulip-17.jpg" alt="Flower" width="180px" height="200px">
+
+
+				<hr>
+
+<!--
+			Border: đường viền cho từng ô, table
+			cellspacing: khoảng cách giữa các ô
+			cellpading: khoảng cách từng viền của ô với nội dung ô đó
+-->
+
+				<h4>Table Demo</h4>
+				<table border="1" cellspacing="0" cellpadding="12">
+					<thead>
+						<tr >
+						<th rowspan="2">Name</th>
+						<th rowspan="2">Age</th>
+						<th rowspan="2">Eye color</th>
+						<th colspan="2">Phone</th>
+					</tr>
+					<tr>
+						<th>Fax1</th>
+						<th>Fax2</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+						<td>Peter</td>
+						<td>18</td>
+						<td>Blue</td>
+						<td>123</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Kate</td>
+						<td>25</td>
+						<td>Green</td>
+						<td>456</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Oliver</td>
+						<td>35</td>
+						<td>Brown</td>
+						<td>857</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Oliver</td>
+						<td>35</td>
+						<td>Brown</td>
+						<td>857</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Oliver</td>
+						<td>35</td>
+						<td>Brown</td>
+						<td>857</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Oliver</td>
+						<td>35</td>
+						<td>Brown</td>
+						<td>857</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Oliver</td>
+						<td>35</td>
+						<td>Brown</td>
+						<td>857</td>
+						<td>123</td>
+					</tr>
+					<tr>
+						<td>Oliver</td>
+						<td>35</td>
+						<td>Brown</td>
+						<td>857</td>
+						<td>123</td>
+					</tr>
+					</tbody>
+				</table>
+
+
+				<h4 id="block-a-tag">
+					Anchor Tag -Link
+				</h4>
+
+				<a href="https://www.google.com/" target="_blank">Link to Google Page</a>
+				<a href="https://www.lemonade.vn/" target="_blank">
+					<img src="images/lemmon.png" alt="lemonade wiki" width="120" height="200" title="Link to lemonade page">
+				</a>
+
+
+			</body>
+			</html>
+
+
+<!--
+		Có hai loại thẻ theo cấu trúc, chức năng cuả thẻ
+		1.Thẻ đơn - VD: meta,br
+		2.Thẻ đôi - VD: head, body
+		1 rem =16px
+		1em = số px default cha cua nó
+
+	-->
