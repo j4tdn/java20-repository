@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD- Student</title>
+	<link rel="stylesheet" href="fontawesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<style>
+		body{
+			display: flex;
+			justify-content: center;
+
+		}
+		.wrapper-body>*{
+			margin-bottom: 10px;
+		}
+		.center {
+			text-align: center;
+		}
+
+		.pagination {
+			display: inline-block;
+		}
+
+		.pagination a{
+			color: black;
+			float: left;
+			padding: 10px 15px;
+			text-decoration: none;
+			transition: background-color .3s;
+			border: 1px solid #ddd;
+			border-radius: 50%;
+			margin: 0 4px;
+		}
+
+		.pagination a.active {
+			background-color: #4CAF50;
+			color: white;
+			border: 1px solid #4CAF50;
+		}
+		.pagination a nth-child(3){
+			background-color: #ddd;
+		}
+		.list_student tr:first-child{
+			background-color: #BBBBBB;
+		}
+		.list_student tr:nth-child(2n+2){
+			background-color: #EEEEEE;
+		}
+		hr{
+			width: 50%;
+			align-items: left;
+		}
+		.Title h4{
+			text-align: center;
+		}
+
+		.pagination a:hover:not(.active) {background-color: #ddd;}
+		.search-container{
+			position: relative;
+		}
+		.search-icon {
+			position: absolute;
+			top: 10%;
+			left: 5px;
+		}
+		.search-input{
+			padding-left: 25px;
+			border-radius: 20px;
+			border: 1px solid #ccc;
+
+		}
+		.button_container{
+			position: relative;
+		}
+		.add-icon{
+			position: absolute;
+			top: 10%;
+			left: 5px;
+		}		
+		.button_add{
+			padding-left: 20px;
+			
+		}
+		table{
+			width: 500px;
+		}
+		table tr td{
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper-body">
+		<div class="Title">
+			<h4>Student Web App- Spring MVC</h4>
+			<hr>
+		</div>
+		<div class="search-container">
+			<div class="search-icon">
+				<i class="fas fa-search"></i>
+			</div>
+			<input type="text" class="search-input" placeholder="Search" />
+		</div>
+		<div class="button_container">
+			<a href="form.html">
+				<div class="add-icon">
+				<i class="fa-solid fa-circle-plus"></i>
+			</div>
+			<button class="button_add">Add New Student</button>
+			</a>
+		</div>
+		<table class="list_student" border="1" cellpadding="30" cellspacing="0">
+			<tr>
+				<th><i class="fa-regular fa-square"></i></th>
+				<th>Name</th>
+				<th>Class</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td><i class="fa-regular fa-square-check"></i></td>
+				<td>Join Smith</td>
+				<td>12T8</td>
+				<td>
+					<i class="fa-regular fa-pen-to-square"></i>
+					<i class="fa-solid fa-xmark"></i>
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa-regular fa-square"></i></td>
+				<td>Mina Tan</td>
+				<td>10X3</td>
+				<td>
+					<i class="fa-regular fa-pen-to-square"></i>
+					<i class="fa-solid fa-xmark"></i>
+				</td>
+			</tr>
+			<tr>
+				<td><i class="fa-regular fa-square-check"></i></td>
+				<td>Lee Ha</td>
+				<td>14T2</td>
+				<td>
+					<i class="fa-regular fa-pen-to-square"></i>
+					<i class="fa-solid fa-xmark"></i>
+				</td>
+			</tr>
+
+		</table>
+		<div class="pagination">
+			<a href="#">&laquo;</a>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">&raquo;</a>
+		</div>
+	</div>
+</body>
+</html>
