@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex02 Basic Form Demo</title>
+	<link rel="icon" href="images/world.png">
+</head>
+<body>
+	
+	<h3>HTML - Form Tags Demo</h3>
+
+	<hr>
+
+	<form action="">
+		<table cellspacing="8px">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" placeholder="Enter your first name"></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td>
+					Male <input type="radio" name ="gender-group" checked="">
+					Female <input type="radio" name ="gender-group">
+				</td>
+			</tr>
+			<tr>
+				<td>Age:</td>
+				<td><input type="number" min="16" max="40" width="40" value="18"></td>
+			</tr>
+			<tr>
+				<td>College:</td>
+				<td>
+					<select style="width: 64px;">
+						<option value="11">TR1</option>
+						<option value="22">TR2</option>
+						<option value="33">TR3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Date Of Birth:</td>
+				<td><input type="date"  value="2024-03-18"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="Email"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="Password"></td>
+			</tr>
+			<tr>
+				<td>
+
+					<!-- dungf button -> ko reload page
+						submit -> cos reload page
+
+						submit -> clear form, reload page
+						button -> no
+					 -->
+					<input type="submit" value="Register">
+					&nbsp;
+					<input type="reset" value="Clear">
+				</td>
+			</tr>
+
+			
+		</table>
+	</form>
+
+</body>
+</html>

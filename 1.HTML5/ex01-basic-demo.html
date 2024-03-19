@@ -4,6 +4,7 @@
 <head>
 	<!--Chứa nội dung của web page header-->
 	<link rel="icon"  href="images/header.png">
+	<link rel="stylesheet" href="css/all.min.css">
 	<title>HTML - Ex01 Basic Demo</title>
 	<meta charset="utf-8">
 	<style>
@@ -19,7 +20,7 @@
 		table tbody tr:nth-child( n+3):nth-child(-n+7) {
 			background-color: grey;
 		}
-/*ctrl shift /  */
+		/*ctrl shift /  */
 /* 
 		table tbody có nhiều tr
 		yêu cầu 0: tô maud xám cho tất cả các dòng;
@@ -58,14 +59,18 @@
 		yêu cầu 4: 3 dòng đầu tiên tô màu xám;
 		yêu cầu 5: 2 dòng cuối cùng tô màu xám;
 		yêu cầu 6: cứ 2 dòng 1 lần tô màu xám;
-	*/
+		*/
 	/*
 	Thay vì click block nhảy xuống ngay lập tức -> Hoàn thành sau 1 khoản thời gian
 	*/
 	html{
 		scroll-behavior: smooth;
 	}
-	</style>
+	p span{
+		font-size: 32px;
+		color: red;
+	}
+</style>
 
 	<!--
 
@@ -74,7 +79,7 @@
 	css internal: css cho tất cả các thẻ trong 1 html page
 	css external: external css file, css cho bất kỳ html page nào chỉ cần import css file vào
 
-	-->
+-->
 
 </head>
 <body>
@@ -82,19 +87,37 @@
 		<thead>
 			<tr>
 				<th colspan="2">Table of Contents</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td>1</td>
 				<td><a href="#block-image-tag">Image Part</a></td>
+				<td>
+					<a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+				</td>
 			</tr>
 			<tr>
 				<td>2</td>
 				<td><a href="#block-a-tag">Anchor Part</a></td>
+				<td>
+					<a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
+
+	<hr>
+	<!-- Multi Media -->
+	<hr>
+	<video src="video/video.mp4" loop autoplay muted="" width="220" height="140" controls poster="images/cake.jpg"></video>
+	<audio src="audio/audio.mp3" controls ></audio>
+	<iframe src="https://embed.coggle.it/diagram/XcGUOYumpE_Kg8Fn/cc054918e3e1a27fb209b447a0a55e6f6270ffc9259fffea267b90f874605005" frameborder="0"></iframe>
+
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/9O24MDSSxt8?si=gxHyTxmEtUHuyBGn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 	<!--Chứa nội dung của web page content-->
 
 		<!-- Từ khóa: semantic tags thẻ ngữ nghĩa 
@@ -136,7 +159,7 @@
 
 
 				<hr>
-				<p>Lorem 50 -- ipsum dolor sit amet consectetur, adipisicing, elit. Similique fugit cumque quibusdam maiores suscipit odit, voluptatibus architecto libero aut inventore enim animi deserunt reiciendis, numquam quas amet sed iure eos repudiandae dicta soluta labore consequuntur, eius. Iste accusamus quia similique in, quaerat fugiat nostrum obcaecati pariatur velit enim recusandae odit?	</p>
+				<p>Lorem 50 -- ipsum dolor sit amet consectetur, adipisicing, elit. Similique fugit <span>cumque</span> quibusdam maiores suscipit odit, voluptatibus architecto libero aut inventore enim animi deserunt reiciendis, numquam quas amet sed iure eos repudiandae dicta soluta labore consequuntur, eius. Iste accusamus quia similique in, quaerat fugiat nostrum obcaecati pariatur velit enim recusandae odit?	</p>
 
 				<!-- Format code ctrl+shift+f-->
 
@@ -150,109 +173,111 @@
 
 				<hr>
 				<!-- width height : mặc định px neeuss không có đơn vị
-								: theo đơn vị mặc định khi truyền vào -->
-				<h4 id="block-image-tag"> Image - Offline Source</h4>
-				<img src="images/lemmon.png" alt="lemmon" width="140px" height="200px">
+					: theo đơn vị mặc định khi truyền vào -->
+					<h4 id="block-image-tag"> Image - Offline Source</h4>
+					<img src="images/lemmon.png" alt="lemmon" width="140px" height="200px">
 
-				<h4> Image - Online Source</h4>
-				<img src="https://hanoispiritofplace.com/wp-content/uploads/2018/01/hinh-anh-hoa-tulip-17.jpg" alt="Flower" width="180px" height="200px">
+					<h4> Image - Online Source</h4>
+					<img src="https://hanoispiritofplace.com/wp-content/uploads/2018/01/hinh-anh-hoa-tulip-17.jpg" alt="Flower" width="180px" height="200px">
 
 
-				<hr>
+					<hr>
 
 <!--
 			Border: đường viền cho từng ô, table
 			cellspacing: khoảng cách giữa các ô
 			cellpading: khoảng cách từng viền của ô với nội dung ô đó
--->
+		-->
 
-				<h4>Table Demo</h4>
-				<table border="1" cellspacing="0" cellpadding="12">
-					<thead>
-						<tr >
-						<th rowspan="2">Name</th>
-						<th rowspan="2">Age</th>
-						<th rowspan="2">Eye color</th>
-						<th colspan="2">Phone</th>
-					</tr>
-					<tr>
-						<th>Fax1</th>
-						<th>Fax2</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-						<td>Peter</td>
-						<td>18</td>
-						<td>Blue</td>
-						<td>123</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Kate</td>
-						<td>25</td>
-						<td>Green</td>
-						<td>456</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Oliver</td>
-						<td>35</td>
-						<td>Brown</td>
-						<td>857</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Oliver</td>
-						<td>35</td>
-						<td>Brown</td>
-						<td>857</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Oliver</td>
-						<td>35</td>
-						<td>Brown</td>
-						<td>857</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Oliver</td>
-						<td>35</td>
-						<td>Brown</td>
-						<td>857</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Oliver</td>
-						<td>35</td>
-						<td>Brown</td>
-						<td>857</td>
-						<td>123</td>
-					</tr>
-					<tr>
-						<td>Oliver</td>
-						<td>35</td>
-						<td>Brown</td>
-						<td>857</td>
-						<td>123</td>
-					</tr>
-					</tbody>
-				</table>
-
-
-				<h4 id="block-a-tag">
-					Anchor Tag -Link
-				</h4>
-
-				<a href="https://www.google.com/" target="_blank">Link to Google Page</a>
-				<a href="https://www.lemonade.vn/" target="_blank">
-					<img src="images/lemmon.png" alt="lemonade wiki" width="120" height="200" title="Link to lemonade page">
-				</a>
+		<h4>Table Demo</h4>
+		<table border="1" cellspacing="0" cellpadding="12">
+			<thead>
+				<tr >
+					<th rowspan="2">Name</th>
+					<th rowspan="2">Age</th>
+					<th rowspan="2">Eye color</th>
+					<th colspan="2">Phone</th>
+				</tr>
+				<tr>
+					<th>Fax1</th>
+					<th>Fax2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Peter</td>
+					<td>18</td>
+					<td>Blue</td>
+					<td>123</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Kate</td>
+					<td>25</td>
+					<td>Green</td>
+					<td>456</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>857</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>857</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>857</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>857</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>857</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td>Oliver</td>
+					<td>35</td>
+					<td>Brown</td>
+					<td>857</td>
+					<td>123</td>
+				</tr>
+			</tbody>
+		</table>
 
 
-			</body>
-			</html>
+		<h4 id="block-a-tag">
+			Anchor Tag -Link
+		</h4>
+
+		<a href="https://www.google.com/" target="_blank">Link to Google Page</a>
+		<a href="https://www.lemonade.vn/" target="_blank">
+			<img src="images/lemmon.png" alt="lemonade wiki" width="120" height="200" title="Link to lemonade page">
+		</a>
+
+		<footer>
+			<p>@copy; CopyRight </p>
+		</footer>
+	</body>
+	</html>
 
 
 <!--
