@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex02 - Basic Form Demo</title>
+	<link rel="icon" href="images/world.png">
+</head>
+<body>
+	
+	<h3>HTML - Form Tags Demo</h3>
+	<hr>
+
+	<form>
+		<table cellspacing="8">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" placeholder="Enter your first name"></td>
+			</tr>
+
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text"></td>
+			</tr>
+
+			<tr>
+				<td>Gender:</td>
+				<td>
+					Male   <input type="radio" name="gender-group" checked>
+					Female <input type="radio" name="gender-group">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Age:</td>
+				<td><input type="number" width="40" min="16" max="50" value="18"></td>
+			</tr>
+
+			<tr>
+				<td>College:</td>
+				<td>
+					<select style="width:66px">
+						<!-- giá trị thực là value -->
+						<option value="11">TR1</option>
+						<option value="22">TR2</option>
+						<option value="33">TR3</option>
+					</select>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Languages:</td>
+				<td>
+					Java<input type="checkbox">
+					PHP<input type="checkbox">
+					NodeJS<input type="checkbox">
+				</td>
+			</tr>
+
+			<tr>
+				<td>DateOfBirth:</td>
+				<td>
+					<input type="date" value="2013-01-08">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Email:</td>
+				<td>
+					<input type="email">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Password:</td>
+				<td>
+					<input type="password">
+				</td>
+			</tr>
+
+		</table>	
+		<div>
+			<!-- submit -> clear form, reload page
+				 button -> no
+			-->
+			<input type="submit" value="Register">
+			&nbsp;
+			<input type="reset" value="Clear">
+		</div>
+	</form>
+
+
+</body>
+</html>
