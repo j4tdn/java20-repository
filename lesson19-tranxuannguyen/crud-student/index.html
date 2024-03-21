@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Web Page</title>
+    <link rel="stylesheet" href="css/fa.all.min.css">
+    <style>
+        
+        .title {
+            border-bottom: 1px solid;
+            font-size: 30px;
+            left: 0;
+            width: 30%;
+        }
+
+        input {
+            border: 2px solid;
+            border-radius: 10px;
+        }
+
+        
+
+        a {
+            border: 1px solid;
+            padding: 5px;
+            margin: 5px;
+            text-decoration: none;
+        }
+
+        table {
+            margin-left: 4px;
+            
+        }
+        
+        table thead tr{
+            background: gray;
+            color: white;
+        }
+
+        table tbody tr:nth-child(2n+1){
+            background:#D6D6D6 ;
+        }
+
+
+        p {
+            font-size: 40x;
+            font-weight: 500px;
+        }
+
+        .block-page a{
+            border-radius: 50%;
+            color: black;
+            font-size: 20px;
+        }
+
+        
+        
+    </style>
+
+</head>
+<body>
+
+
+    <p class="title">Student Web App - Spring MVC</p>
+
+    <form>
+        <input type="seach" placeholder="&#128269;Seach">
+    </form>
+
+    <br><br>
+
+    <a href="form.html" target="_blank">&#10753; Add new student</a>
+    
+    <br><br>
+    
+    <table border="1px" cellspacing="0px" cellpadding="10px">
+        <thead>
+            <tr>
+                <th>&#9744;</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>&#128505;</td>
+                <td>John Smith</td>
+                <td>12T8</td>
+                <td>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </td>
+            </tr>
+
+            <tr>
+                <td>&#9744;</td>
+                <td>Mina Tan</td>
+                <td>10X3</td>
+                <td>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </td>
+            </tr>
+
+            <tr>
+                <td>&#128505;</td>
+                <td>Lee Ha</td>
+                <td>14T2</td>
+                <td>
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="block-page">
+        <a href="#">&#171;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&#187;</a>
+    </div>
+
+
+</body>
+</html>
