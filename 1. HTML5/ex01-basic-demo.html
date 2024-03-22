@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Chứa nội dung của web page header -->
+	<link rel="icon"  href="images/header.png">
+	<link rel="stylesheet" href="css/fa.all.min.css">
+
+	<title>HTML - Ex01 Basic Demo</title>
+	<meta charset="utf-8">
+
+	<!-- 
+		css(cascade style sheet): định dạng, tùy chỉnh bố cục, giao diện cho trang html 
+		+ css inline: css cho từng thẻ
+        + css internal: css cho tất cả các thẻ trong 1 html page
+        + css external: external css file, css cho bất kỳ html page nào chỉ cần import css file vào
+    -->
+
+    <style>
+
+    	h2 {
+    		color: blue;
+    	}
+
+    	table thead {
+    		background-color: pink;
+    	}
+
+    	/*
+			table tbody có nhiều tr
+			yêu cầu 0: tô màu xám cho tất cả các dòng;
+			table tbody {
+				background-color: grey;
+			}
+
+			yêu cầu 1: dòng đầu tiên tô màu xám;
+			table tbody tr:first-child {
+	    		background-color: grey;
+	    	}
+			
+			yêu cầu 2: dòng cuối cùng tô màu xám;
+			table tbody tr:last-child {
+	    		background-color: grey;
+	    	}
+
+			yêu cầu 3: dòng thứ i(VD=5) tô màu xám;
+			index-base: 1;
+			table tbody tr:nth-child(5) {
+	    		background-color: grey;
+	    	}
+
+			yêu cầu 4: 3 dòng đầu tiên tô màu xám;
+			table tbody tr:nth-child(-n + 3) {
+				background-color: grey;
+			}
+
+			yêu cầu 5: 2 dòng cuối cùng tô màu xám;
+			nth-last-child(-n + 2) {
+	
+			}
+			
+			yêu cầu 6: cứ 2 dòng 1 lần tô màu xám, tính từ dòng đầu tiên --> 1 3 5 7 ...
+		
+			nth-child(an + b)
+			-> a: chu kỳ, life cycle
+			    : số dương: tính từ b và đi xuống;
+			    : số âm   : tính từ b và đi lên;
+			-> b: dòng bắt đầu tính(trên) css này
+			VD: 3n + 2 --> Tính từ dòng thứ 2, sau 3 dòng là lại ăn
+			css này 1 lần
+
+			-> a: chu kỳ
+			    : số dương: tính từ b đi từ dưới lên
+			    : số âm: tính từ b đi từ trên xuống;
+			-> b: dòng bắt đầu tính(dưới) css này
+			table tbody tr:nth-last-child(2n + 1) {
+	    		background-color: grey;
+	    	}
+			
+			yêu cầu 7: cứ 3 dòng 1 lần tô màu xám, tính từ dòng thứ 2;
+			table tbody tr:nth-child(3n + 2) {
+	    		background-color: grey;
+	    	}
+
+	    	yêu cầu 8: từ dòng 3 đến dòng 7;
+	    	*/
+	    	table tbody tr:nth-child(n+3):nth-child(-n+7) {
+	    		background-color: grey;
+	    	}
+
+	    	html {
+			/*
+				Thay vì click block nhảy xuống ngay lập tức
+				--> Hoàn thanh sau 1 khoảng thời gian
+				*/
+				scroll-behavior: smooth;
+			}
+
+			p span {
+				font-size: 32px;
+				color: red;
+			}
+
+		</style>
+
+	</head>
+	<body>
+		<table border="1" cellspacing="0" cellpadding="4">
+			<thead>
+				<tr>
+					<th colspan="2">Table Of Contents</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td><a href="#block-image-tag">Image Part</a></td>
+					<td>
+						<a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><a href="#block-a-tag">Anchor Part</a></td>
+					<td>
+						<a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Multi Media -->
+		<hr>
+
+		<video src="video/video.mp4" loop autoplay muted width="220" height="140" controls poster="images/cake.jpg"></video>
+
+		<audio src="audio/audio.mp3" controls></audio>
+
+		<hr>
+
+		<!-- Chứa nội dung của web page content -->
+
+		<!-- Từ khóa: semantic tags thẻ ngữ nghĩa -->
+
+		<!-- HEAD tags -->
+		<h1>This is H1 tag - content</h1>
+		<h2>This is H2 tag - content</h2>
+		<h3>This is H3 tag - content</h3>
+		<h4>This is H4 tag - content</h4>
+		<h5>This is H5 tag - content</h5>
+		<h6>This is H6 tag - content</h6>
+
+		<!-- Plugin Emmet -->
+
+		<!-- Paragraph tag -->
+		<p>Lorem 100 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit.
+			<br> <br>
+			<strong>Error</strong> necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam <span>laborum</span> excepturi saepe illum quia dolores, est omnis! Debitis molestiae itaque voluptatibus doloribus et totam sint officia dignissimos, architecto temporibus, consequatur, tenetur cupiditate a dolores! Debitis, reprehenderit dolores iusto numquam totam optio, tenetur eligendi ex enim mollitia velit, placeat quae saepe ducimus quidem <em>repudiandae</em>.</p>
+
+			<hr>
+
+			<b style="border: 1px solid red">Text Inline Bold More Extra Text</b>
+			<i>Text Inline Italic</i>
+			<h3 style="border: 1px solid blue">Text Block Heading</h3>
+
+			<hr>
+
+			<p>Lorem 50 - ipsum dolor sit amet consectetur adipisicing elit. Accusamus reprehenderit, ipsa placeat reiciendis animi eaque, pariatur facere esse dolor iste mollitia quas? Illo tempora veritatis laudantium nulla facilis architecto animi ut corrupti non doloremque consequatur, dolor officia perferendis quia est nobis aperiam minus temporibus quam itaque blanditiis tenetur. Tenetur, id.</p>
+
+			<!-- List tags -->
+
+			<!-- Order List - List Item -->
+			<ol>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ol>
+
+			<hr>
+
+			<!-- Unorder List - List Item -->
+			<ul>
+				<li>Cake 1</li>
+				<li>Cake 2</li>
+				<li>Cake 3</li>
+			</ul>
+
+			<hr>
+
+	<!-- width height: mặc định px nếu ko có đơn vị
+		: theo đơn vị khi truyền vào -->
+
+		<h4 id="block-image-tag">Image - Offline Source</h4>
+		<img src="images/lemon.png" alt="lemmon" width="140" height="200">
+
+		<h4>Image - Online Source</h4>
+		<img src="https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg" alt="flower" width="140" height="200">
+
+		<hr>
+
+	<!-- 
+		border: đường viền cho từng ô, table
+		cellspacing: khoảng cách giữa các ô
+		cellpadding: khoảng cách từ viền của từng ô với nội dung trong ô đó
+	-->
+
+	<h4>Table Demo</h4>
+	<table border="1" cellspacing="0" cellpadding="12" >
+		<!-- Dòng tiêu đề -->
+		<thead>
+			<tr>
+				<th rowspan="2">Name</th>
+				<th rowspan="2">Age</th>
+				<th rowspan="2">Eye Color</th>
+				<th colspan="2">Phone</th>
+			</tr>
+			<tr>
+				<th>Fax 1</th>
+				<th>Fax 2</th>
+			</tr>
+		</thead>
+		<!-- Dòng nội dung -->
+		<tbody>
+			<tr>
+				<td>Peter</td>
+				<td>18</td>
+				<td>blue</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Kate</td>
+				<td>25</td>
+				<td>green</td>
+				<td align="center" colspan="2">234567</td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>35</td>
+				<td>brown</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>35</td>
+				<td>brown</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>35</td>
+				<td>brown</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>35</td>
+				<td>brown</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>35</td>
+				<td>brown</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+			<tr>
+				<td>Oliver</td>
+				<td>35</td>
+				<td>brown</td>
+				<td>123</td>
+				<td>456</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr>
+
+	<h4 id="block-a-tag">Anchor Tag - Link</h4>
+
+	<a href="https://www.google.com/" target="_blank">Link to Google Page</a>
+	<br>
+	<a href="https://en.wikipedia.org/wiki/Lemonade" target="_blank">
+		<img src="images/lemon.png" width="120" height="200" alt="lemonade wiki" title="Move to lemonade page">
+	</a>
+
+	<br>
+	<a href="sub-page/page1.html">Move To Page 1</a>
+	<br>
+	<a href="sub-page/page2.html">Move To Page 2</a>
+
+	<hr>
+
+	<div>
+		<iframe width="100%" height='400' src='https://embed.coggle.it/diagram/XcGUOYumpE_Kg8Fn/cc054918e3e1a27fb209b447a0a55e6f6270ffc9259fffea267b90f874605005' frameborder='0' allowfullscreen></iframe>
+
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/fZ0-75EMofE?si=Y4ckSb4gA5naqIpR&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+
+	<footer>
+		<p>&copy; CopyRight By JAVA 19 20 &#128525; - 03/2024</p>
+	</footer>
+
+</body>
+</html>
+
+<!-- 
+	
+	Có 2 loại thẻ: theo cấu trúc, chức năng của thẻ
+	1. Thẻ đơn - VD: meta, br
+	2. Thẻ đôi - VD: head, body
+
+	Có 2 loại thẻ
+	1. inline
+	   -> chiếm kích thước bằng nội dung của text bên trong thẻ đó
+
+	2. block
+	   -> luôn chiếm hết width của màn hình
+	   -> tự động xuống hàng khi bắt đầu và kết thúc thẻ
+	
+-->
