@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex02 Basic Form Demo</title>
+	<link rel="icon" href="images/world.png">
+</head>
+<body>
+
+	<h3>HTML FORM TAGS DEMO</h3>
+
+	<hr>
+
+	<form>
+		<table cellspacing="15">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" placeholder="Enter your first name"></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text"></td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td>
+					Male <input type="radio" name="gender-group" checked>
+					Female <input type="radio" name="gender-group">
+				</td>
+			</tr>
+			<tr>
+				<td>Age:</td>
+				<td><input type="number" min="16" max="25" value="20" width="45"></td>
+			</tr>
+			<tr>
+				<td>College:</td>
+				<td>
+					<select style="width: 65px;">
+						<option value="1">TH1</option>
+						<option value="2">TH2</option>
+						<option value="3">TH3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Languages:</td>
+				<td>
+					JAVA <input type="checkbox">
+					HTML <input type="checkbox">
+					CSS <input type="checkbox">
+				</td>
+			</tr>
+			<tr>
+				<td>Date of Birth:</td>
+				<td><input type="date" value="2024-03-20"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="email"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Register">
+					<input type="reset" value="Clear">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

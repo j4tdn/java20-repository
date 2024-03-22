@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- chứa nội dung của web page header -->
+    <link rel="icon" href="images/header.png">
+    <link rel="stylesheet" href="css/fa.all.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML - Ex01 Basic Demo</title>
+
+    <style>
+        h2 {
+            color: blue;
+        }
+
+        table tbody tr:nth-child(3n+2){
+            background-color: grey;
+        }
+
+
+        html {
+            /*
+                thay vì click block nhảy xuống ngay lập tức
+                -> tạo hiệu ứng trễ khi nhảy xuống
+            */
+            scroll-behavior: smooth;
+        }
+
+        p span {
+            font-size: 20px;
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="12">
+        <thead>
+            <tr>
+                <th colspan="2">Table Of Contents</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="#block-image-tag">Image Part</a></td>
+                <td>
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="#block-a-tag">Anchor Part</a></td>
+                <td>
+                    <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Multi media -->
+    <video src="video/video.mp4" loop autoplay muted width="270" height="160" controls poster="images/cake.jpg"></video>
+
+    <audio src="audio/audio.mp3" controls muted></audio>
+
+    <div>
+        <iframe width='60%' height='380' src='https://embed.coggle.it/diagram/XcGUOYumpE_Kg8Fn/cc054918e3e1a27fb209b447a0a55e6f6270ffc9259fffea267b90f874605005' frameborder='0' allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9zxnreZimUI?si=ugnmiMfIU0ergBIy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- chứa nội dụng của web page content -->
+
+    <!-- HEAD tags -->
+    <h1>This is H1 tag - content</h1>
+    <h2>This is H2 tag - content</h2>
+    <h3>This is H3 tag - content</h3>
+    <h4>This is H4 tag - content</h4>
+    <h5>This is H5 tag - content</h5>
+    <h6>This is H6 tag - content</h6>
+
+    <!-- Paragraph tags -->
+    <p>Lorem 100 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit.<strong>Error</strong> necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque.<span>Praesentium</span> , exercitationem atque molestiae non blanditiis distinctio alias ullam laborum excepturi saepe illum quia dolores, est omnis! Debitis molestiae itaque voluptatibus doloribus et totam sint officia dignissimos, architecto temporibus, consequatur, tenetur cupiditate a dolores! Debitis, reprehenderit dolores iusto numquam totam optio, tenetur eligendi ex enim mollitia velit, placeat quae saepe ducimus quidem <em>repudiandae</em>.</p>
+
+    <hr>
+
+    <b style="border: 1px solid red">Text Inline Bold More Extra Text</b>
+    <i>Text Inline Italic</i>
+    <h3 style="border: 1px solid blue">Text Block Heading</h3>
+
+    <hr>
+
+    <p>Lorem 50 - ipsum dolor sit amet consectetur adipisicing elit. Accusamus reprehenderit, ipsa placeat reiciendis animi eaque, pariatur facere esse dolor iste mollitia quas? Illo tempora veritatis laudantium nulla facilis architecto animi ut corrupti non doloremque consequatur, dolor officia perferendis quia est nobis aperiam minus temporibus quam itaque blanditiis tenetur. Tenetur, id.</p>
+
+    <!-- List tags -->
+
+    <!-- Order List - List Item -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <hr>
+
+    <!-- Unorder List - List Item -->
+    <ul>
+        <li>Cake 1</li>
+        <li>Cake 2</li>
+        <li>Cake 3</li>
+    </ul>
+
+    <hr>
+
+    <!-- widgt - height: mặc định px -->
+
+    <h4 id="block-image-tag">Image - Offline Source</h4>
+    <img src="images/lemon.png" alt="lemon" width="200" height="300">
+
+    <h4>Image - Online Source</h4>
+    <img src="https://www.thesprucepets.com/thmb/hxWjs7evF2hP1Fb1c1HAvRi_Rw0=/2765x0/filters:no_upscale():strip_icc()/chinese-dog-breeds-4797219-hero-2a1e9c5ed2c54d00aef75b05c5db399c.jpg" alt="dog"  width="400" height="300">
+
+    <hr>
+    <h4>Table Demo</h4>
+    <table border="1" cellspacing="0" cellpadding="12">
+        <!-- Dòng tiêu đề -->
+        <thead>
+            <tr>
+                <th rowspan="2">Name</th>
+                <th rowspan="2">Age</th>
+                <th rowspan="2">Eye Color</th>
+                <th colspan="2">Phone</th>
+            </tr>
+            <tr>
+                <th>Fax 1</th>
+                <th>Fax 2</th>
+            </tr>
+        </thead>
+        <!-- Dòng nội dung -->
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>12</td>
+                <td>red</td>
+                <td>123</td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>14</td>
+                <td>yellow</td>
+                <td>123</td>
+                <td>456</td>
+            </tr>
+                <td>D</td>
+                <td>13</td>
+                <td>black</td>
+                <td align="center" colspan="2">123</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>12</td>
+                <td>red</td>
+                <td>123</td>
+                <td>456</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>14</td>
+                <td>yellow</td>
+                <td>123</td>
+                <td>456</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 id="block-a-tag">Anchor Tag - Link</h4>
+
+    <a href="https://www.google.com.vn" target="_blank">Link to Google Page</a>
+    <br>
+    <a href="https://en.wikipedia.org/wiki/Lemonade" target="_blank">
+        <img src="images/lemon.png" alt="lemon" width="200" height="300" title="Lemonade Page">
+    </a>
+    <br>
+    <a href="sub-page/page1.html">Page1</a>
+    <br>
+    <a href="sub-page/page2.html">Page2</a>
+
+    <footer>
+        <p>&copy; CopyRight By Java 20 - &#128525;</p>
+    </footer>
+
+</body>
+</html>
