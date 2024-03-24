@@ -1,0 +1,61 @@
+/*
+=============
+STYLE.CSS
+-> chứa css chung cho dự án
+=============
+CSS Selector: Tập các cách để gọi các element, tag của html để thêm css
+			: Gọi thông qua tên thẻ, thuộc tính thẻ ...
+VD1: p {} --> css cho elements có tên thẻ là p
+VD2: ul li {} --> css cho elements là thẻ li con thẻ ul
+VD3: table tr:first-child{} -> css cho thẻ tr đầu tiên trong table
+
+Nếu như css selector dựa vào TÊN THẺ -> có nhiều hạn chế, vì 1 trang có thể dùng rất nhiều thẻ trùng,
+các thẻ đó muốn có css khác nhau
+-> thêm thuộc tính, giá trị thuộc tính cho thẻ để phân biệt vs các thẻ khác
+=============
+!important
+
+selector:nth-child(an + b) 
+p:nth-child(2)
+-> tìm p nào là thẻ con thứ 2 trong 1 thẻ cha nào đó, ăn css
+-> ko tính cha là body, html
+
+selector:nth-of-type(an + b)
+-> tương tự nth-child, ko quan tâm đến các thẻ khác làm thẻ con
+chỉ quan tâm thẻ selector(ví dụ là p) 
+
+Có thể thêm bất kỳ thuộc tính với tên giá trị nào
+VD: div[tt='x2']
+
+Thường html, css, js dùng 2 thuộc tính đặc biệt là clas và id để phân biệt các element khác
+
+class: các elements có thể có gía trị trùng nhau cho thuộc tính class
+id   : mỗi element sẽ có id là duy nhất, k trùng nhau
+
+VD: <div class="text-bold">
+	<div class="text-bold">
+
+	<p id="footer">
+	<p id="header">
+
+=============
+*/
+
+
+h4::after {
+	content: "\2705" ;
+}
+
+.block-md-2-blue {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+}
+
+.bg-green {
+	background: green;
+}
+
+p:nth-of-type(2) {
+	background: green;
+}

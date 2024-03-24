@@ -1,0 +1,8 @@
+div[tt="x2"] {
+	border: red solid 2px;
+}
+
+/*div[id='div01'] {*/
+#div01 {
+	border: blue solid 2px;
+}
