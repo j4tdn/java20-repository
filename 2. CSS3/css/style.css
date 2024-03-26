@@ -1,0 +1,111 @@
+/*
+STYLE.CSS
+-> chứa css chung cho dự án
+
+selector:nth-child(an+b)
+p:nth-child(2)
+-> tìm thẻ p nào mà là thẻ con thứ 2 bên trong thẻ cha nào đó(k tính thẻ body, html) -> ăn css
+p:nth-of-type(2): tương tự như nth-child nhưng k quan tâm các thẻ con khác cùng nằm trong thẻ cha
+
+có thể thể bất kỳ thuộc tính với giá trị nào vd div[t="x"]
+
+thường html, css, js dùng 2 thuộc tính class, id để phân biệt các element
+class: các element có thể có giá trị trùng nhau cho thuộc tính class
+id: các element có id là duy nhất, k trùng nhau
+*/
+
+/* khai báo các global variable, sau đó dùng hàm var(ten_bien) để gọi */
+:root {
+	--todo-green: #44D2A3;
+}
+
+/*Default Times New Roman*/
+		/*Import external fonts*/
+@font-face {
+	font-family: Chantelli;
+	src: url('webfonts/Chantelli_Antiqua-webfont.woff') format(woff);
+}
+
+h4::after {
+	content: " \2663" !important;
+}
+
+p:nth-child(2) {
+	border: 2px solid blue;
+}
+
+.block-md-200 {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+}
+
+.block-md-2-blue {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+}
+
+.block-33-bg-orange {
+	width: 300px;
+	height: 300px;
+	background-color: orange;
+}
+
+.block-62-bg-blue {
+	width: 600px;
+	height: 200px;
+	background-color: blue;
+}
+
+.block-1 {
+	width: 100px;
+	height: 100px;
+}
+
+.bg-green {
+	background-color: var(--todo-green);
+}
+
+.bg-red {
+	background-color: red;
+}
+
+.bg-yellow {
+	background-color: yellow;
+}
+
+.bg-pink {
+	background-color: pink;
+}
+
+.bg-blue {
+	background-color: blue;
+}
+
+.title {
+	color: var(--todo-green);
+	text-transform: capitalize;
+}
+
+.text-green {
+	color: var(--todo-green);
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-deco-line-through {
+	text-decoration: line-through;
+}
+
+

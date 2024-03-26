@@ -77,6 +77,10 @@
 		table tbody tr:nth-child(2n+1){
 			background-color: grey;
 		}
+		yêu cầu 8: từ dòng 3 đến dòng 7
+		table tbody tr:nth-child(n+3):nth-child(-n+7){
+			background-color: grey;
+		}
 		*/
 		table tbody tr:nth-child(3n+2){
 			background-color: grey;
@@ -161,7 +165,7 @@
 	<!-- List tags -->
 
 	<!-- Order List - List Item -->
-	<ol>
+	<ol style="list-style-type: upper-roman;">
 		<li>Item 1</li>
 		<li>Item 2</li>
 		<li>Item 3</li>
@@ -170,7 +174,7 @@
 	<hr>
 
 	<!-- Unorder List - List Item -->
-	<ul>
+	<ul style="list-style-image: url('images/world.png');">
 		<li>Cake 1</li>
 		<li>Cake 2</li>
 		<li>Cake 3</li>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex04 - Css Float Clear Properties Test 01</title>
+
+	<style>
+		.lorem01 {
+			font-family: Corbel;
+			font-size: 13px;
+			line-height: 1.125;
+		}
+
+		.lorem02 {
+			font-family: Chantelli;
+		}
+
+		/* Demo Css Float Clear */
+		.fl-image {
+			float: right;
+			margin-left: 10px;
+		}
+
+		.fl-left {
+			float: left;
+		}
+
+		.fl-right {
+			float: right;
+		}
+
+		.clear {
+			clear: right;
+		}
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page Ex04 - Css Float Clear Properties Test 01</h2>
+	<hr>
+
+	<p class="lorem01">Lorem 01 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam laborum.Lorem 01 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam laborum.</p>
+
+	<img class="fl-image" src="images/cake.jpg" width="250" height="250" alt="cake">
+
+	<p class="lorem02 text-justify">Lorem 02 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam <span class="text-bold text-deco-line-through">laborum</span>.Lorem 02 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam laborum.</p>
+
+	<hr>
+
+	<!-- 
+		nếu clear từ 1 thẻ thì thẻ đó và các element bên dưới sẽ k bị đẩy lên phía trên (tức là các element từ thẻ clear sẽ nằm bắt đầu từ thẻ clear)
+		nhưng nếu thẻ clear hoặc thẻ bên dưới thực hiện float thì các thẻ phía dưới hơn sẽ bị đẩy lên trên 
+	-->
+
+	<div class="clear">
+		<div class="block-33-bg-orange fl-left"></div>
+
+		<div class="block-62-bg-blue"></div>
+
+		<p class="lorem02 text-justify">Lorem 03 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam <span class="text-bold text-deco-line-through">laborum</span>.Lorem 03 - ipsum dolor sit amet, consectetur adipisicing elit. Libero quidem labore incidunt iure nam ex reiciendis alias esse, ducimus repellendus quod cum magni aliquam cumque minus, impedit possimus omnis delectus velit necessitatibus officia debitis. Impedit mollitia fugiat vitae nobis corrupti cupiditate omnis aut odit perspiciatis eaque. Praesentium, exercitationem atque molestiae non blanditiis distinctio alias ullam laborum.</p>
+	</div>
+
+</body>
+</html>
