@@ -90,6 +90,10 @@ h4::after {
 	text-transform: capitalize;
 }
 
+.text-red {
+	color: red;
+} 
+
 .text-green {
 	color: var(--todo-green);
 } 
@@ -124,4 +128,16 @@ h4::after {
 
 .bg-orange {
 	background: orange;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-both {
+	clear: both;
 }
