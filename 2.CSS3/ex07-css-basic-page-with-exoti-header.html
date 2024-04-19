@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/ex03style.css">
+	<title>Ex07- CSS Basic - Padding Margin</title>
+
+
+	<style>
+		
+		*{
+			box-sizing: border-box;
+		}
+		.block{
+			width: 180px;
+			height: 80px;
+			border: 2px soild gray;
+			border-radius: 8px;
+			float: left;
+		}
+		/*
+			margin: right và left --> cộng dồn
+				  : top và bottom --> chọn space lớn hơn
+
+
+			box-sizing: content-box(mặc định) hoặc boder-box
+			+ content-box: width, height --> nó chỉ là nội dung bên trong element
+										 -->chưa tính border-width, padding
+			+ border-box : width,height --> tính luôn cả border-width,
+
+
+			*/
+			#block1{
+				margin-right:40px;
+				background-color: #ABE200;
+				padding-top: 16px;
+				box-sizing: border-box;
+			}
+			#block2{
+				margin-left: 40px;
+				background-color: #F8A400;
+			}
+			h3{
+				margin-bottom: 30px;
+			}
+			.pblock{
+				margin: 30px 0;
+			}
+			#header{
+				background-color: #2b2b2b;
+				height: 66px;
+
+			}
+			.logo{
+				float: left;
+			}
+			a{
+				text-decoration: none;
+				color: white;
+
+			}
+			.head{
+				width: 70%;
+				align-content: center;
+			}
+			.navigation{
+				float: right;
+
+			}
+			.navigation a{
+				padding-left: 30px;
+				text-align: center;
+			}
+
+		</style>
+
+
+
+	</head>
+	<body>
+		<div id="header">
+			
+			<div class="head">
+				<div class="logo">
+				<img src="images/logo.png" alt="logo">
+			</div>
+			<div class="navigation">
+				
+				<a href="">HOME</a>
+			
+				<a href="">ABOUT</a>
+			
+				<a href="">SERVICES</a>
+			
+				<a href="">INVENSTORS</a>
+			
+				<a href="">CONTACT</a>
+
+			</div>
+			</div>
+			
+			
+			
+		</div>
+		<h2 class="text-center title">Page - Ex06 CSS Border Padding Margin Properties</h2>
+		<hr>
+
+		<h3 class="text-red text-bold">This is the first line of CSS Basic Properties</h3>
+
+		<div class="pblock">
+			<div class="block" id="block1">
+				<a href="#" title="props">PROPS</a>
+			</div>
+			<div class="block" id="block2">
+				<p>Testing Border, Margin, Padding</p>
+			</div>
+			<!-- vấn đề: div chứa 2 div(chứa float) bên trong thì div cha không bao quanh-->
+			<!-- clear để block1 và block2 nằm trên cùng 1 mặt phẳng trong cha chứa nó -->
+
+			<!-- cách 2 -- thêm thuộc tính overflow: auto cho element cha  -->
+			<div class="clear-both"></div>
+		</div>
+
+		<p class="clear-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni optio officiis repudiandae, reiciendis ut exercitationem ratione id laudantium labore eos quo placeat commodi velit unde provident. Ipsa dignissimos exercitationem recusandae?
+			Iusto dolore assumenda quo iure repudiandae nesciunt corrupti cum perferendis dignissimos qui a nam magnam accusamus eligendi exercitationem ipsa dolorem consequatur optio porro, facere corporis temporibus quisquam voluptas fugiat amet.
+			Dolorem sunt, placeat ea eveniet eos ipsum, ipsam quod, labore vitae dolor assumenda accusantium magnam ipsa? Cupiditate, molestiae! Sint, odio? Officiis, facere atque ipsa tempora aperiam deleniti, sapiente alias nulla?
+			Minima dolorem atque sint voluptatum blanditiis error temporibus molestiae consequuntur asperiores eum, quaerat itaque iusto quod expedita debitis! Impedit iste necessitatibus magnam odit, ipsam, nisi! Rerum, vero excepturi quo eaque.
+		</p>
+
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni optio officiis repudiandae, reiciendis ut exercitationem ratione id laudantium labore eos quo placeat commodi velit unde provident. Ipsa dignissimos exercitationem recusandae?
+			Iusto dolore assumenda quo iure repudiandae nesciunt corrupti cum perferendis dignissimos qui a nam magnam accusamus eligendi exercitationem ipsa dolorem consequatur optio porro, facere corporis temporibus quisquam voluptas fugiat amet.
+			Dolorem sunt, placeat ea eveniet eos ipsum, ipsam quod, labore vitae dolor assumenda accusantium magnam ipsa? Cupiditate, molestiae! Sint, odio? Officiis, facere atque ipsa tempora aperiam deleniti, sapiente alias nulla?
+			Minima dolorem atque sint voluptatum blanditiis error temporibus molestiae consequuntur asperiores eum, quaerat itaque iusto quod expedita debitis! Impedit iste necessitatibus magnam odit, ipsam, nisi! Rerum, vero excepturi quo eaque.
+		</p>
+
+		
+	</body>
+
+	</html>
