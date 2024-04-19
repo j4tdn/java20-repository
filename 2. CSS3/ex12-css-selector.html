@@ -54,6 +54,23 @@
 			border: 2px dashed blue;
 		}
 
+		.divblock h3:not(:first-of-type){
+			border: 2px dashed red;
+		}
+
+		/*pseudo element*/
+
+		/*content tương tự nội dung trong thẻ span*/
+
+		.sudo::before {
+			content: '\1F604';
+			display: block;
+		}
+
+		.sudo::after {
+			content: '...>';
+		}
+
 	</style>
 </head>
 <body>
@@ -61,6 +78,10 @@
 	<h2 class="text-center title">Page - Ex12 - CSS Selector</h2>
 
 	<hr>
+
+	<p class="sudo">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Amet nesciunt voluptates fugiat voluptatibus pariatur aut, rem dignissimos natus a, possimus nemo vero voluptas consequatur sequi eaque necessitatibus qui? Tempora, id?</p>
+
+	<p class="sudo">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Amet nesciunt voluptates fugiat voluptatibus pariatur aut, rem dignissimos natus a, possimus nemo vero voluptas consequatur sequi eaque necessitatibus qui? Tempora, id?</p>
 
 	<h1>Coffee &amp; Cake</h1>
 	<p>P-We have been banking and brewing</p>
@@ -75,9 +96,12 @@
 	</ol>
 	<div class="divblock">
 		<p>P0-Read what customer say <a href="">about us</a></p>
+		<h3>H3 - test 01</h3>
 		<p>P1 hello p1</p>
+		<h3>H3 - test 02</h3>
 		<p>P2 hello p2</p>
 		<p>P3 hello p3</p>
+		<h3>H3 - test 03</h3>
 	</div>
 	<p>P-We hope to see you soon</p>
 	

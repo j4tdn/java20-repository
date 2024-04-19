@@ -103,7 +103,16 @@
 			line-height: 66px;
 		}
 
-		.page-links li a:active {
+		.page-links li a:hover:after {
+			content: '';
+			display: block;
+			width: 100%; /*100% theo width của thẻ a*/
+			height: 2px;
+			margin-top: -20px;
+			background-color: #8B008B;
+		}
+
+		.page-links li a {
 			text-transform: uppercase;
 			color: #fff;
 		}
