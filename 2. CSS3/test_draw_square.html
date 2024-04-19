@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body div {
+			width: 300px;
+		}
+		.bg-1-red {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.bg-1-blue {
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+		.bg-1-green {
+			width: 100px;
+			height: 100px;
+			background: green;
+		}
+		.bg-1-grey {
+			width: 100px;
+			height: 100px;
+			background: grey;
+		}
+		.bg-1-yellow {
+			width: 100px;
+			height: 100px;
+			background: yellow;
+		}
+		.bg-1-orange {
+			width: 100px;
+			height: 100px;
+			background: orange;
+		}
+		.bg-1-pink {
+			width: 100px;
+			height: 100px;
+			background: pink;
+		}
+
+		.container1 div:nth-child(n + 1){
+			float: left;
+		}
+		.container2 {
+			clear: left;
+		}
+		.container2 div:nth-child(1){
+			float: left;
+
+		}
+		.container2 div:nth-child(2){
+			float: right;
+
+		}
+		.container3 {
+			clear: left;
+		}
+		.container3 div:nth-child(n + 1){
+			float: left;
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		#header {
+			height: 66px;
+			width: 100%;
+			background-color: #2b2b2b;
+		}
+
+		.wrapper {
+			width: 86%;
+			height: 100%;
+			margin: 0 auto;
+		}
+
+		.page-logo {
+			float: left;
+			/*line-height: 66px;*/
+			margin-top: 23.5px;
+		}
+
+		.page-links {
+			float: right;
+		}
+
+		.page-links li {
+			list-style-type: none;
+			display: inline-block;
+			margin-left: 44px;
+			line-height: 66px;
+		}
+
+		.page-links li a {
+			font-size: 32px;
+			font-family: corbel;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: white;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+
+	<div id="header">
+		<div class="wrapper">
+			<div class="page-logo">
+				<a href="#">
+					<img src="images/logo.png">
+				</a>
+			</div>
+
+			<ul class="page-links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Investors</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="container1">
+		<div class="bg-1-red"></div>
+		<div class="bg-1-blue"></div>
+		<div class="bg-1-green"></div>
+	</div>
+
+	<div class="container2">
+		<div class="bg-1-grey"></div>
+		<div class="bg-1-yellow"></div>
+	</div>
+
+	<div class="container3">
+		<div class="bg-1-red"></div>
+		<div class="bg-1-orange"></div>
+		<div class="bg-1-pink"></div>
+	</div>
+
+
+	
+	
+</body>
+</html>

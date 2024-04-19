@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex06 - CSS Border-Padding-Margin</title>
+
+	<style>
+
+		/* *-> ăn cho tất cả element  */
+		* {
+			box-sizing: border-box;
+		}
+		.block {
+			width: 180px;
+			height: 80px;
+
+			border: 2px solid lightgray;
+			border-radius: 8px;
+
+			float: left;
+			
+		}
+
+		/*
+			margin: right, left   -> cộng dồn
+			margin: top  , bottom -> chọn space lớn hơn
+
+			box-sizing: content-box(default), border-box
+			+ content-box: width, height -> nó chỉ là nội dung bên trog element 
+										 -> chưa tính border-width, padding
+			+ border-box : width, height -> tính luôn cả border-width, padding và nội dung
+										 -> luôn dùng border-box
+		*/
+
+		#block-1 {
+			margin-right: 40px;
+			background-color: #ABE200;
+			padding: 20px 0 0 20px;
+/*			box-sizing: border-box;*/
+		}
+
+		#block-2 {
+			margin-left: 40px;
+			background-color: #F8A400;
+		}
+
+
+		.pblock {
+			margin: 30px 0 ;
+			overflow: auto;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page - Ex06 - CSS Border-Padding-Margin</h2>
+
+	<hr>
+
+	<h3 class="text-red text-bold">This is the first text line of css basic properties</h2>
+			
+	<div class="pblock">
+		<div class="block" id="block-1">
+			<a href="#" title="props">PROPS</a>
+		</div>
+		<div class="block" id="block-2">
+			<p>Testing Border, Margin, Padding</p>
+		</div>
+		<!-- clear để block-1 và block-2 cùng thuộc 1 mặt phẳng của pblock -->
+		<!-- <div class="clear-both"></div> -->
+
+		<!-- cách 2 -> thêm thuộc tính overflow: auto cho element cha -->
+	</div>	
+
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus corrupti iusto, soluta harum optio esse beatae animi nesciunt distinctio corporis exercitationem quasi tempora, alias odit dolor velit impedit doloremque quas veritatis aliquid fugiat. Doloremque repellat, voluptatem optio a repellendus modi aliquam, exercitationem nobis culpa porro, sed enim suscipit! Iste nostrum, dicta, magnam architecto nesciunt eum beatae voluptatum id quisquam sit voluptatibus ullam temporibus laudantium. Optio dolorum voluptatum reprehenderit iure reiciendis ad odit explicabo, voluptatem quis sunt dolore quibusdam veritatis molestiae eveniet necessitatibus omnis perspiciatis amet suscipit unde obcaecati quas deleniti tenetur nobis maxime. A, veniam ad dolores, reiciendis cumque Lorem ipsum dolor sit amet consectetur adipisicing, elit. Nobis ab alias adipisci ducimus a eaque. Facilis odio, consequatur eum hic ducimus cupiditate enim facere nobis, quis quaerat molestiae, saepe fugit magni, doloribus sit temporibus quidem. Ipsum, id recusandae mollitia quibusdam nam qui eum atque labore reiciendis praesentium expedita harum incidunt laborum hic, error dolorem in natus odio eius nostrum. Pariatur, iusto quas ipsam vitae voluptatum magni vero, cupiditate? Cum atque, enim. Cupiditate, non. Facilis temporibus, deserunt optio labore laudantium excepturi cum quia facere, esse ipsa. Facilis nisi sunt nesciunt deleniti neque cupiditate, odio esse, delectus blanditiis consequuntur fugit? Numquam, modi!</p>
+
+</body>
+</html>

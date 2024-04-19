@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex09 - CSS Position - Property</title>
+
+	<style>
+		
+		.w2h2 {
+			width: 200px;
+			height: 200px;
+		}
+
+		.circle {
+			border-radius: 50%;
+		}
+
+		.orange {
+			background-color: orange;
+		}
+
+		.green {
+			background-color: green;
+
+			/*position: relative;
+			left: ;*/
+			z-index: 2;
+			position: absolute;
+			
+		}
+
+		.blue {
+			background-color: blue;
+			height: 300px;
+			position: relative;
+			left: 100px;
+			z-index: 1;
+		}
+
+		#parent {
+			width: 800px;
+			height: 600px;
+			margin: 0 auto;
+			border: 2px solid red;
+			position: relative;/*absolute always work*/
+		}
+
+		/*Thuộc tính position
+			mặc định: static --> theo workflow của web browser inline, block
+			
+			relative:
+			-> khi gán position: relative cho 1 element(mặc định static) -> có thể di chuyển nó sang left, top, right, bottom so với vị trí ban đầu của nó
+			
+			absolute:
+			-> khi gán position:absolute cho 1 -> có thể di chuyển sang vị trí mới so với vị trí của element cha
+			+ cha position: relative -> ăn theo vị trí ban đầu của cha
+			+ cha position: no relative  -> ăn theo root element(html top left corner 0:0)
+			+ break quy tắc của page -> nằm ở layer khác
+		*/
+
+		.score-counter {
+			width: 200px;
+			height: 42px;
+			background-color: grey;
+			border-radius: 5px;
+			border: 2px dashed;
+			text-align: center;
+			line-height: 42px;
+			/*position: absolute;*/
+			position: fixed;
+			bottom: 0;
+			left: calc(50% - 100px);
+		}
+
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page - Ex09 - CSS Position - Property</h2>
+
+	<!-- <hr> -->
+
+	<!-- <div class="w2h2 orange"></div>
+
+	<div class="w2h2 green"></div>
+
+	<div class="w2h2 blue"></div> -->
+
+	<hr>
+
+	<div id="parent">
+		<div class="w2h2 orange"></div>
+
+		<div class="w2h2 green"></div>
+
+		<div class="w2h2 blue"></div>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis odit dignissimos voluptates ab impedit aspernatur minus! Quas placeat nihil molestiae dolorem, quasi dolorum modi quos quo et inventore ut vero vel magni illo atque numquam quisquam totam. Accusantium dolorem, in eum, quidem rem veniam fugit animi, hic aperiam aut, accusamus blanditiis dignissimos neque fugiat. Sit, consequuntur, atque? Maiores, reprehenderit. Dicta excepturi amet, cupiditate mollitia, voluptas sunt ipsam. Consequatur ipsum expedita, repudiandae magni pariatur qui saepe error ullam. Repudiandae inventore impedit, eos eligendi consequuntur earum libero, quo dolorum itaque, id eius fugiat veritatis, architecto incidunt non. Dolore culpa numquam vero harum placeat inventore consectetur veritatis obcaecati architecto provident? Quo, nemo, porro voluptatem tempora odio nesciunt est, quasi reiciendis maxime repellendus dolores esse vel repudiandae error in inventore eos cumque explicabo obcaecati, iusto. Accusamus deleniti distinctio, commodi odit aut ratione odio assumenda esse dolor repudiandae illo dolorum, illum et at eos iusto quibusdam officiis recusandae ab voluptates quo, beatae. Tenetur ullam accusantium optio id distinctio velit nesciunt eveniet aspernatur aliquam praesentium temporibus aperiam corporis, vero modi, quis molestias nobis deleniti dolores accusamus in quae fugiat non quisquam ex dignissimos. Quam, accusantium corporis necessitatibus distinctio qui placeat asperiores eum tempore inventore mollitia quod atque minus eligendi, velit obcaecati sunt culpa hic sint itaque! Temporibus, eaque incidunt repudiandae odio sapiente ullam ipsa ab odit deleniti consequatur possimus, consectetur ipsum accusantium maiores corrupti molestias dolorem laudantium. Animi, nemo cupiditate. Impedit veritatis similique laboriosam quae, blanditiis. Quibusdam harum qui impedit eveniet aliquid unde quaerat fuga aspernatur, in et quo iste nostrum voluptatem atque ipsum quae ipsam omnis consectetur vero libero? Consequuntur optio voluptatibus ipsa odio, voluptatum nulla reprehenderit illum ut nam aliquid. Illum doloremque aliquid et consequuntur cum ad sint aspernatur delectus raesentium expedita et molestiae saepe exercitationem autem sapiente iste dignissimos pariatur omnis unde rerum ut itaque doloribus architecto, a voluptatibus sunt quis, laboriosam eos ipsum cum alias. Saepe porro repellendus cupiditate provident culpa ad modi in deserunt esse, itaque voluptatibus ducimus voluptas nihil dolores fuga quia, iure! Magni voluptatum laboriosam exercitationem minus provident totam ipsum sit possimus quas, corrupti dolores odio! Earum debitis labore natus dignissimos vero iure repellat dolore dicta, fugit repudiandae eveniet cumque quis laborum qui tenetur alias error unde deleniti soluta maiores asperiores voluptates nemo magni omnis. Consequatur ducimus eveniet architecto quaerat ad, enim consequuntur nulla alias omnis ratione fugit quod reiciendis maxime quos maiores. Maxime aspernatur architecto aliquid voluptatem fugit doloremque, error facere praesentium ratione odit nihil rem aliquam quae sequi libero asperiores? Cum, nostrum?</p>
+
+	<div class="score-counter">-- Your point is 99 --</div>
+
+</body>
+</html>

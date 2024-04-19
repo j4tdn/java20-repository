@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex12 - CSS Selector</title>
+
+	<style>
+		
+		/*
+		
+			X  : tag name
+			.X : class name
+			#X : id name
+			X Y : tìm các y con x ko qtr level
+			X>Y: tìm các y con kề X bậc 1
+			X+Y: tìm các y ngag x 
+			X~Y: tìm các y ngag x
+			X,Y: tìm các x hoặc y
+
+
+		*/
+
+		ul a {
+			color: red;
+		}
+
+		ul > li > a {
+			color: orange;
+		}
+
+		h1+p {
+			text-transform: uppercase;
+		}
+
+		h1~p {
+			color: green;
+		}
+
+		ul li, ol li {
+			list-style-type: none;
+		}
+
+		a[href^='https']{
+			text-decoration: none;
+		}
+
+		a[href*='choco']:hover {
+			text-decoration: underline;
+		}
+
+		.divblock p:first-child{
+			border: 2px dashed blue;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<h2 class="text-center title">Page - Ex12 - CSS Selector</h2>
+
+	<hr>
+
+	<h1>Coffee &amp; Cake</h1>
+	<p>P-We have been banking and brewing</p>
+	<h2>Our menu:</h2>
+	<ul>
+		<li><a href="https://choco.com">Chocolate cupcake</a></li>
+		<li><a href="https://Vanilla.com">Vanilla cupcake</a></li>
+	</ul>
+	<ol>
+		<li><a href="">Americano</a></li>
+		<li><a href="">Espresso</a></li>
+	</ol>
+	<div class="divblock">
+		<p>P0-Read what customer say <a href="">about us</a></p>
+		<p>P1 hello p1</p>
+		<p>P2 hello p2</p>
+		<p>P3 hello p3</p>
+	</div>
+	<p>P-We hope to see you soon</p>
+	
+</body>
+</html>

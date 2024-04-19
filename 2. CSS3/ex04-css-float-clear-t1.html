@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex04 - CSS Float - Clear - Properities</title>
+
+	<style>
+		.lorem01 {
+			font-family: Corbel, Helvetica, sans-serif;
+			font-size: 18px;
+			line-height: 1.25;
+		}
+
+		.lorem02 {
+			font-family: Chantelli;
+		}
+
+		/*Demo css float - clear*/
+		.fl-image {
+			float: right;
+			margin-left: 10px;
+		}
+
+		.fl-right {
+			float: right;
+		}
+
+		.fl-left {
+			float: left;
+		}
+
+		.clear {
+			clear: right;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page - Ex04 - CSS Float - Clear - Properities</h2>
+
+	<hr>
+
+	<p class="lorem01">Lorem 01 ipsum dolor, sit amet consectetur, adipisicing elit. Explicabo vitae asperiores quisquam ratione, necessitatibus, minus officiis facere blanditiis? Repellendus odio in culpa sequi quas perspiciatis blanditiis, laudantium ducimus quo laboriosam omnis fuga unde molestias porro eum corrupti dignissimos nisi voluptas. Voluptate nostrum, iure nihil tempore repellendus id molestias, hic necessitatibus doloribus quia modi nam deserunt quo facere quas minus exercitationem, quod ipsum cum. Perferendis commodi quae neque, iure rerum, nostrum eius animi molestias excepturi architecto hic alias deserunt quo, quibusdam ratione enim voluptatum? Reiciendis aperiam molestiae accusantium dolores. Nostrum, modi maxime porro velit molestias repellat! At, repellendus ea nesciunt accusantium.
+	Lorem 01 ipsum dolor, sit amet consectetur, adipisicing elit. Explicabo vitae asperiores quisquam ratione, necessitatibus, minus officiis facere blanditiis? Repellendus odio in culpa sequi quas perspiciatis blanditiis, laudantium ducimus quo laboriosam omnis fuga unde molestias porro eum corrupti dignissimos nisi voluptas. Voluptate nostrum, iure nihil tempore repellendus id molestias, hic necessitatibus doloribus quia modi nam deserunt quo facere quas minus exercitationem, quod ipsum cum. Perferendis commodi quae neque, iure rerum, nostrum eius animi molestias excepturi architecto hic alias deserunt quo, quibusdam ratione enim voluptatum? Reiciendis aperiam molestiae accusantium dolores. Nostrum, modi maxime porro velit molestias repellat! At, repellendus ea nesciunt accusantium.
+	</p>
+
+	<img class="fl-image" src="images/cake.jpg" width="300" height="300" alt="cake">
+
+	<p class="lorem02 text-justify">Lorem 02 ipsum dolor, sit amet consectetur, adipisicing elit. Explicabo vitae asperiores quisquam ratione, necessitatibus, minus officiis facere blanditiis? Repellendus odio in culpa sequi quas perspiciatis blanditiis, laudantium ducimus quo laboriosam omnis fuga unde molestias porro eum corrupti dignissimos nisi voluptas. Voluptate nostrum, iure nihil tempore repellendus id molestias, hic necessitatibus doloribus quia modi nam deserunt quo facere quas minus exercitationem, quod ipsum cum. Perferendis commodi quae neque, iure rerum, nostrum eius animi molestias excepturi architecto hic alias deserunt quo, quibusdam ratione enim voluptatum? Reiciendis aperiam molestiae accusantium dolores. Nostrum, modi maxime porro velit molestias repellat! At, repellendus ea nesciunt 
+	<span class="text-bold text-deco-line-through">accusantium.</span>
+	Lorem 02 ipsum dolor, sit amet consectetur, adipisicing elit. Explicabo vitae asperiores quisquam ratione, necessitatibus, minus officiis facere blanditiis? Repellendus odio in culpa sequi quas perspiciatis blanditiis, laudantium ducimus quo laboriosam omnis fuga unde molestias porro eum corrupti dignissimos nisi voluptas. Voluptate nostrum, iure nihil tempore repellendus id molestias, hic necessitatibus doloribus quia modi nam deserunt quo facere quas minus exercitationem, quod ipsum cum. Perferendis commodi quae neque, iure rerum, nostrum eius animi molestias excepturi architecto hic alias deserunt quo, quibusdam ratione enim voluptatum? Reiciendis aperiam molestiae accusantium dolores. Nostrum, modi maxime porro velit molestias repellat! At, repellendus ea nesciunt accusantium.</p>
+
+	<hr>
+
+	<!--
+	 clear float từ thẻ nó muốn clear và clear luôn cho các elements bên dưới ko bị float lên trên float-element nhưng nếu bên dưới clear-element mình làm float lại thì các elements dưới có thể bị chèn lên trên
+			
+	 -->
+	 <div class="clear">
+	 	<div class="block-33-bg-orange fl-left"></div>
+
+	 	<div class="block-62-bg-blue fl-left"></div>
+
+	 	<p class="lorem00 text-justify">Lorem 03 ipsum dolor, sit amet consectetur, adipisicing elit. Explicabo vitae asperiores quisquam ratione, necessitatibus, minus officiis facere blanditiis? Repellendus odio in culpa sequi quas perspiciatis blanditiis, laudantium ducimus quo laboriosam omnis fuga unde molestias porro eum corrupti dignissimos nisi voluptas. Voluptate nostrum, iure nihil tempore repellendus id molestias, hic necessitatibus doloribus quia modi nam deserunt quo facere quas minus exercitationem, quod ipsum cum. Perferendis commodi quae neque, iure rerum, nostrum eius animi molestias excepturi architecto hic alias deserunt quo, quibusdam ratione enim voluptatum? Reiciendis aperiam molestiae accusantium dolores. Nostrum, modi maxime porro velit molestias repellat! At, repellendus ea nesciunt 
+	 		<span class="text-bold text-deco-line-through">accusantium.</span>
+	 	Lorem 02 ipsum dolor, sit amet consectetur, adipisicing elit. Explicabo vitae asperiores quisquam ratione, necessitatibus, minus officiis facere blanditiis? Repellendus odio in culpa sequi quas perspiciatis blanditiis, laudantium ducimus quo laboriosam omnis fuga unde molestias porro eum corrupti dignissimos nisi voluptas. Voluptate nostrum, iure nihil tempore repellendus id molestias, hic necessitatibus doloribus quia modi nam deserunt quo facere quas minus exercitationem, quod ipsum cum. Perferendis commodi quae neque, iure rerum, nostrum eius animi molestias excepturi architecto hic alias deserunt quo, quibusdam ratione enim voluptatum? Reiciendis aperiam molestiae accusantium dolores. Nostrum, modi maxime porro velit molestias repellat! At, repellendus ea nesciunt accusantium.</p>
+	 </div>
+
+</body>
+</html>

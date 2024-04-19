@@ -41,10 +41,27 @@ VD: <div class="text-bold">
 =============
 */
 
+/*Trong block :root(root element) khai báo các global variable sau đó dùng hàm var(tên biến)
+để gọi nó	*/
+:root {
+	--todo-green: #20B2AA;
+}
+
+@font-face {
+			font-family: Chantelli;
+			src: url('webfonts/Chantelli_Antiqua.woff')format('woff');
+}
+
 
 h4::after {
 	content: "\2705" ;
 }
+
+.block-1 {
+	width: 100px;
+	height: 100px;
+}
+
 
 .block-md-2-blue {
 	width: 200px;
@@ -52,10 +69,76 @@ h4::after {
 	border: 2px solid blue;
 }
 
-.bg-green {
-	background: green;
+.block-33-bg-orange {
+	width: 300px;
+	height: 300px;
+	background-color: orange;
 }
 
-p:nth-of-type(2) {
-	background: green;
+.block-62-bg-blue {
+	width: 600px;
+	height: 200px;
+	background-color: blue;
 }
+
+.bg-green {
+	background: var(--todo-green);
+}
+
+.title {
+	color: var(--todo-green);
+	text-transform: capitalize;
+}
+
+.text-red {
+	color: red;
+}
+
+.text-green {
+	color: var(--todo-green);
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-deco-line-through {
+	text-decoration: line-through;
+}
+
+.bg-red {
+	background: red;
+}
+
+.bg-blue {
+	background: blue;
+}
+
+.bg-pink {
+	background: pink;
+}
+
+.bg-orange {
+	background: orange;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-both {
+	clear: both;
+}
+
