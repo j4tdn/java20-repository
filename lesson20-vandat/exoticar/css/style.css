@@ -1,0 +1,179 @@
+* {
+	box-sizing: border-box;
+}
+
+#header {
+	width: 100%;
+	height: 612px;
+	background-image: url(../images/banner.png);
+}
+
+.wrapper {
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+	background-color: #2b2b2b;
+	opacity: 0.85;
+}
+
+.page-logo {
+	float: left;
+	margin-top: 20px;
+	position: relative;
+	left: 120px;
+}
+
+.page-links {
+	float: right;
+	position: relative;
+	right: 120px;
+}
+
+.page-links li {
+	float: left;
+	list-style: none;
+	margin-left: 90px;
+	line-height: 60px;
+}
+
+.page-links li a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.page-links li a:hover:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: red;
+	margin-top: -18px;
+}
+
+.banner {
+	width: 100%;
+	position: relative;
+	top: 160px;
+	color: #fff;
+	text-align: center;
+}
+
+.banner h2 {
+	text-transform: uppercase;
+	font-size: 60px;
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+
+.banner p {
+	font-size: 22px;
+	margin-bottom: 40px;
+}
+
+.banner a {
+	padding: 15px 25px;
+	background-color: red;
+	color: #fff;
+	text-decoration: none;
+}
+
+.banner a:hover {
+	background-color: darkred;
+	color: #ccc;
+}
+
+.info {
+	height: 550px;
+	background-image: linear-gradient(97deg, #fff 50%, #222 50%);
+}
+
+.info div {
+	width: 50%;
+	float: left;
+	padding: 50px 100px;
+}
+
+.info-right {
+	color: #fff;
+}
+
+.info h1 {
+	font-size: 45px;
+}
+
+.info h1::after {
+	content: '';
+	display: block;
+	background-color: red;
+	width: 50px;
+	height: 3px;
+	margin-top: 20px;
+}
+
+.info h2 {
+	font-size: 25px;
+	margin: 20px 0;
+}
+
+.info h3 {
+	font-size: 18px;
+}
+
+.footer {
+	width: 100%;
+	height: 200px;
+	background-color: #181818;
+	color: #fff;
+	padding: 30px 100px;
+}
+
+.footer .end {
+	width: 25%;
+	float: left;
+}
+
+.end h3 {
+	text-transform: uppercase;
+}
+
+.end h3::after {
+	content: '';
+	display: block;
+	width: 75%;
+	height: 1px;
+	background-color: #ddd;
+	margin: 10px 0;
+}
+
+.end ul li {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.end ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.end ul li a:hover {
+	color: #aaa;
+}
+
+.end ol li {
+	display: inline-block;
+	margin: 10px;
+}
+
+.end ol li a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+}
+
+.end ol li a:hover {
+	background-color: #aaa;
+}
