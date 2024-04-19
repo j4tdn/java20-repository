@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex10 - Css Display & Visibility Property</title>
+
+	<style>
+		.block {
+			width: 100px;
+			height: 100px;
+
+			display: inline-block;
+		}
+
+		.d-none {
+			display: none; /*xóa luôn space mà element đó đang chiếm*/
+		}
+
+		.v-hidden {
+			visibility: hidden; /*chỉ ẩn element và space vẫn còn*/
+		}
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page Ex10 - Css Display & Visibility Property</h2>
+	<hr>
+
+	<div class="block bg-yellow">1</div>
+
+	<div class="block bg-pink v-hidden">2</div>
+
+	<div class="block bg-blue">3</div>
+
+	<div class="block bg-red d-none">4</div>
+
+</body>
+</html>

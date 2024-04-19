@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex08 - Css Background Property</title>
+
+	<style>
+		body {
+			background-color: #C0A196;
+		}
+
+		.m-center {
+			margin: 50px auto;
+		}
+
+		.w4h2 {
+			width: 400px;
+			height:200px;
+		}
+
+		.whx {
+			width: 626px;
+			height: 730px;
+		}
+
+		#bg-elm-1 {
+			background-color: purple;
+			background-image: url(images/cupcake.png); /*w313h365*/
+			background-repeat: no-repeat;
+			background-size: 100px 100px;
+			background-position: center center;
+		}
+
+		#bg-elm-2 {
+			background-color: orange;
+			background-image: url(images/cupcake.png);
+			/*Yêu cầu khi cover: w/h của bg-image phải tỉ lệ với w/h của element chứa nó*/
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page Ex08 - Css Background Property</h2>
+	<hr>
+
+	<div class="m-center w4h2" id="bg-elm-1"></div>
+
+	<div class="m-center whx" id="bg-elm-2"></div>
+
+</body>
+</html>

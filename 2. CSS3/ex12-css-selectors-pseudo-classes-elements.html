@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex12 - Css Selectors, Pseudo Classes, Pseudo Elements</title>
+
+	<style>
+		/*
+		+ Selectors:
+			(X, Y -> tag name)
+			X Y: -> tìm element Y nào mà là con của X (bậc 1 hoặc N)
+			X>Y: -> tìm element Y nào mà là con bậc 1 của X
+			X+Y: -> tìm Y(chỉ lấy Y nằm ngay sau X) mà có cùng level với X
+			X~Y: -> tìm mọi Y mà có cùng level với X
+			X,Y: -> tìm X hoặc Y
+			*  : -> tất cả các element
+
+		+ Pseudo Classes:
+		- Position:
+			X Y:first-child -> tìm element Y đầu tiên thỏa mãn Y là thẻ con đầu tiên của X
+				vd: <X>
+						<Y> => OK
+						<Y> => NO
+					</X>
+					<X>
+						<A>
+						<Y> => NO
+						<Y> => NO
+					</X>
+			X Y:first-of-type -> tìm element Y đầu tiên thỏa mãn Y là con của X
+				vd: <X>
+						<Y> => OK
+						<Y> => NO
+					</X>
+					<X>
+						<A>
+						<Y> => OK
+						<Y> => NO
+					</X>
+		*/
+
+		ul a {
+			color: red;
+		}
+
+		ol > li > a {
+			color: green;
+		}
+
+		h1 ~ p {
+			color: orange;
+		}
+
+		h1 + p {
+			text-transform: uppercase;
+		}
+
+		ul li, ol li {
+			list-style-type: none;
+		}
+
+		a[href^='https'] {
+			/* 
+				^= begins with
+				$= ends with
+				*= has value anywhere
+			 */
+			text-decoration: none;
+		}
+
+		a[href*='espresso']:hover {
+			text-decoration: underline;
+			/* hover: khi rê chuột vào */
+		}
+
+		.dblock p:first-child {
+			border: 2px dashed blue;
+		}
+
+		.dblock h3:first-of-type {
+			border: 3px dashed green;
+		}
+
+		.sudo::before {
+			content: '\1F604';
+			display: block;
+		}
+
+		.sudo::after {
+			content: '@@@@@';
+		}
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Page Ex12 - Css Selectors, Pseudo Classes, Pseudo Elements</h2>
+	<hr>
+
+	<p class="sudo">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Nam, adipisci id eligendi corporis libero nisi quia itaque dolores totam, sunt ipsa tempore culpa ullam non reprehenderit sit? Non laboriosam voluptates quod dolores dignissimos, provident, temporibus saepe illo mollitia dolorum molestiae ab atque neque debitis accusamus voluptatibus sed doloribus optio animi.</p>
+
+	<h1>Coffee &amp; Cake</h1>
+	<p>We have been banking and brewing</p>
+	<h2>Our menu</h2>
+	<ul>
+		<li><a href="">Chocolate cupcake</a></li>
+		<li><a href="">Vanilla cupcake</a></li>
+	</ul>
+	<ol>
+		<li><a href="https://americano.com">Americano</a></li>
+		<li><a href="https://espresso.com">Espresso</a></li>
+	</ol>
+	<div class="dblock">
+		<p>P1 Read what customer say <a href="">about us</a></p>	<!-- => border blue -->
+		<p>P2 Hello 1</p>	<!-- => border of style.css -->
+		<h3>Bye 1</h3>	<!-- => border green -->
+		<h3>Bye 2</h3>
+		<p>P3 Hello 2</p>
+		<p>P4 Hello 3</p>
+	</div>
+	<p>We hope to see you soon</p>
+
+</body>
+</html>

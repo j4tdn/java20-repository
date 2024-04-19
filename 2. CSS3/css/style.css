@@ -108,4 +108,10 @@ p:nth-child(2) {
 	text-decoration: line-through;
 }
 
+.clear-left {
+	clear: left;
+}
 
+.clear-both {
+	clear: both;
+}
