@@ -1,0 +1,124 @@
+* {
+	box-sizing: border-box;
+}
+
+#header {
+	height: 66px;
+	background-color: #2b2b2b;
+}
+
+.wrapper {
+	width: 86%;
+	height: 100%; /*100% so với height của parent element*/
+	/*background: lightpink;*/
+	margin: 0 auto;
+}
+
+.page-logo {
+	float: left;
+	/*trick*/
+	/*line-height: 66px;*/
+	/*33px(header/2) - 9px(image/2)*/
+	margin-top: 24px;
+
+}
+
+.page-links {
+	float: right;
+}
+
+.page-links li {
+	float: left;
+	margin-left: 44px;
+	line-height: 66px;
+}
+
+.page-links li a:hover:after {
+	content: '';
+	display: block;
+	width: 100%; /*100% theo width của thẻ a*/
+	height: 2px;
+	background-color: #8b008b;
+	margin-top: -18px;
+}
+
+.page-links li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+
+.whx {
+	width: 1520px;
+	height: 680px;
+	align-content: center;
+	text-align: center;
+}
+
+#bg-img {
+	background-image: url('../images/banner.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.title-banner {
+	font-family: Arial;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.decs-banner {
+	color: white;
+	font-family: Arial;
+	margin: 15px auto;
+}
+
+.red-button {
+	width: 200px;
+	height: 60px;
+	text-transform: uppercase;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+	background-color: red;
+	margin-left: 660px; 
+	margin-top: 10px;
+}
+
+.div-body {
+	width: 50%;
+	height: 500px;
+	text-align: justify;
+	font-family: Tahoma;
+	padding: 0 100px;
+}
+
+.white {
+	color: white;
+	background-color: black;
+}
+
+.black {
+	color: black;
+	background-color: white;
+}
+
+.title-body {
+	margin: 20px 0;
+	font-size: 30px;
+}
+
+.intro {
+	font-style: italic;
+	margin: 20px 0;
+} 
+
+.fl-left {
+	float: left;
+}
+
+.clear {
+	clear: left;
+}
