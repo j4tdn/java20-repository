@@ -1,0 +1,107 @@
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	width: 100%;
+	height: fit-content;
+}
+
+#header{
+	background-color: #2b2b2b;
+}
+.wrapper{
+	width: 90%;
+	height: 66px;
+	margin: auto;
+}
+.page-logo{
+	float: left;
+	margin-top: 24px;
+}
+.page-links{
+	float: right;
+}
+.page-links li{
+	float: left;
+	margin-left: 44px;
+	line-height: 66px;
+}
+.page-links li a{
+	text-align: center;
+	font-size: 13px;
+	font-family: Arial;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.page-links li a:hover{
+	text-decoration: underline;
+}
+
+.main{
+	clear: both;
+	width: 100%;
+	height: fit-content;
+}
+
+.main-head{
+	padding: 100px 50px;
+	width: 100%;
+	height: fit-content;
+	background-image: url('../images/banner.png');
+	background-repeat: no-repeat;
+	color: white;
+	text-align: center;
+}
+.main-head h1{
+	font-size: 50px;
+	font-family: sans-serif;
+}
+.main-head p{
+	font-family: inherit;
+}
+.main-head button{
+	margin: 20px 0px;
+	padding: 10px 30px;
+	background-color: darkred;
+	border: none;
+	color: white;
+}
+
+.content{
+	width: 100%;
+	scroll-padding-block-end: 10px;
+}
+.content h3{
+	font-size: 30px;
+	margin-bottom: 20px;
+	font-family: inherit;
+}
+
+.content-l, .content-r{
+	padding: 50px;
+	width: 50%;
+	float: left;
+}
+
+.content-l span{
+
+	font-style: italic;
+}
+
+.content-r span{
+	font-style: italic;
+}
+.content h3 span{
+	font-style: normal;
+	border-bottom: 3px solid red;
+}
+.content-l{
+	background-color: white;
+}
+.content-r{
+	background-color: #2b2b2b;
+	color: white;
+}
