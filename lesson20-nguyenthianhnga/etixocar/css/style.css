@@ -1,0 +1,139 @@
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding:0;
+		}
+		body{
+			background-color: #FFDBD9;
+		}
+		.container{
+			width: 86%;
+			margin:0 auto;
+			font-family: corbel;
+		}
+		.navigation-banner__bar{
+			background-color: black;
+			height: 66px;
+			padding: 0 30px;
+			width: 100%;
+			opacity: 0.8;
+
+		}
+
+		
+		.navigation-banner__bar--logo{
+			float: left;
+			margin-top: 24px;
+		}
+
+		.navigation-banner__bar--nav{
+			float: right;
+		}
+		.navigation-banner__bar--nav li{
+			float: left;
+			margin-left: 44px;
+			line-height: 66px;
+		}
+		.navigation-banner__bar--nav li a{
+			text-transform: uppercase;
+			color: #fff;
+			text-decoration: none;
+		}
+		.navigation-banner__image{
+			width: 100%;
+			position: relative;
+		}
+		.navigation-banner__image img{
+			width: 100%;
+			height: 100%; 
+			object-fit: cover;
+		}
+		.navigation-banner__image--content{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: #fff;
+			text-align: center;
+
+
+		}
+		.navigation-banner__bar{
+			position: absolute;
+			top:0;
+		}
+		.navigation-banner__image--content h1{
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			font-weight: 500;
+			font-size: 30px;
+		}
+		.navigation-banner__image--content p{
+			margin-bottom: 10px;
+		}
+		.navigation-banner__image--content button{
+			text-transform: uppercase;
+			padding: 10px 15px;
+			background-color: red;
+			border: none;
+			cursor: pointer;
+			color: #fff;
+		}
+		.introduction{
+			display: flex;
+			background: linear-gradient(100deg, white 50%, #6F6F6F 50%);
+		}
+
+		.introduction__left--title:after,
+		.introduction__right--title:after{
+			display: block;
+			content: " ";
+			width: 35px;
+			height: 3px;
+			background-color: red;
+			margin: 15px 0;
+
+		}
+
+		.introduction__right{
+			margin-left: 150px;
+			color: #fff;
+			line-height: 20px;
+
+		}
+		.introduction__left{
+			
+			line-height: 20px;
+		}
+		.introduction{
+			padding: 50px;
+
+		}
+		footer{
+			height: 180px;
+		}
+		.footer{
+			background-color: black;
+			padding: 10px 50px;
+			color: #fff;
+			display: flex;
+		}
+		.footer div {
+		    flex: 1;
+		    padding: 0 10px; 
+		}
+		h4{
+			text-transform: uppercase;
+		}
+		h4:after{
+			display: block;
+			content: " ";
+			width: 80px;
+			height: 2px;
+			background-color: #fff;
+			margin: 10px 0;
+		}
+		.footer li{
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
