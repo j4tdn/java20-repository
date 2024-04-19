@@ -89,7 +89,7 @@ a:hover {
 }
 
 .newspaper::after {
-	content: ".";
+	content: "";
 	display: block;
 	clear: both;
 }
@@ -124,12 +124,13 @@ a:hover {
 
 /* FOOTER */
 #page-footer {
-	background-color: #000;
+	
 	padding: 25px 0;
+	clear: left;
 	
 }
 
-#page-footer .col{
+#page-footer .footer-col{
 	width: 25%;
 	float: left;
 }
@@ -137,6 +138,49 @@ a:hover {
 #page-footer .footer-col .title{
 	text-transform: uppercase;
 	font-size: 16px;
+}
+
+#page-footer .footer-col .title::after {
+	content: '.';
+	font-size: 0;
+	display: block;
+	width: 75%;
+	height: 1px;
+	background-color: #fff;
+	margin: 15px 0;
+}
+
+#page-footer .footer-col ul>li {
+	opacity: 0.7;
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+#page-footer .social ul>li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#page-footer .social ul>li>a {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: #000;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 44px;
+}
+
+#page-footer .social ul>li>a:hover {
+	color: #f10;
+	background-color: #fff;
+	opacity: 1;
+}
+
+#page-footer .social .reversed {
+	margin-top: 20px;
+	opacity: 0.8;
+	font-size: 15px; 
 }
 
 
