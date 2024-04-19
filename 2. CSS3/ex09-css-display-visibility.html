@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex09 - CSS Position Properties</title>
+
+	<style>
+		
+		.w2h2 {
+			width: 200px;
+			height: 200px;
+		}
+
+		.cicle {
+			border-radius: 50%;
+		}
+
+		.orange {
+			background-color: orange;
+		}
+
+		.green {
+			background-color: green;
+			/* position: relative; */
+			position: absolute;
+			left: 100px;
+			top: 50px;
+			
+		}
+
+		.blue {
+			background-color: blue;
+		}
+
+		/* 
+			Thuộc tính position
+			Mặc định static --> theo workflow của web browser inline, block
+
+			relative
+			--> khi gán position: relative cho 1 element(mặc định static), có thể di chuyển element sang 1 vị trí khác
+			(left, right, bottom, top) so với vị trí ban đầu (static)
+			
+			absolute
+			--> khi gán position: absolute cho 1 element(mặc định static), có thể di chuyển element đó sang 1 vị trí khác
+			--> break quy tắc của page
+			nếu element cha có position là relative: thằng con sẽ có thể dịch chuyển so với vị trí của cha
+			nếu element cha có position không là relative: thằng con sẽ dịch chuyển so với root element (html left, right corner)
+		*/
+
+		#parent {
+			width: 800px;
+			height: 600px;
+			margin: 0 auto;
+			border: 2px red solid;
+			position: relative;
+		}
+
+		.score {
+			width: 200px;
+			height: 40px;
+			border-radius: 10px;
+			text-align: center;
+			line-height: 40px;
+			bottom: 0;
+			text-align: center;
+			border: 2px red solid;
+			left: calc(50% - 100px);
+			position: absolute;
+			background-color: aquamarine;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h2 class="text-center title">Ex08 - CSS Position Properties</h2>
+	<hr>
+
+	<!-- <div class="w2h2 orange"></div>
+
+	<div class="w2h2 green"></div>
+
+	<div class="w2h2 blue"></div> -->
+
+	<hr>
+
+	<div id="parent">
+		<div class="w2h2 orange"></div>
+
+		<div class="w2h2 green"></div>
+
+		<div class="w2h2 blue"></div>
+	</div>
+
+	<div class="score">YOUR POINT IS 100</div>
+</body>
+</html>	
