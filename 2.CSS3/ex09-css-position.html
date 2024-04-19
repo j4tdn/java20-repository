@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/ex03style.css">
+	<title>Ex09 - CSS Position Property</title>
+
+	<style>
+
+			.w2h2{
+				width: 200px;
+				height: 200px;
+			}
+			.orange{
+				background-color: orange;
+			}
+
+			.green{
+				background-color: green;
+				position: relative;
+			}
+
+			.blue{
+				background-color: blue;
+			}
+
+		/*Thuộc tính position
+		  Mặc định: static --> theo workflow của web browser inline, block 
+
+		  relative
+		  --> khi gán position: relative cho 1 element( mặc định static), có thể di chuyển element sang 1 vị trí khác(left,right,bottom) so với vị trí ban đầu (static);
+
+		  absolute
+		  --> Khi gán position: absolute cho 1 element(mặc định static) có thể di chuyển element đó sang 1 vị trí khác(left, right,bottom, top) so với vị trí của element cha;
+
+		*/
+	</style>
+
+
+
+</head>
+<body>
+		<h2 class="text-center title">Page - Ex09 CSS Position Property</h2>
+		<hr>		
+
+		<div class="w2h2 orange"></div>
+
+		<div class="w2h2 green"></div>
+		
+		<div class="w2h2 blue"></div>	
+</body>
+</html>

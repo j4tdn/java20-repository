@@ -1,0 +1,132 @@
+/*
+=======================
+STYLE.CSS
+-> chứa css chung cho dự án
+=======================
+
+CSS Selector: Tập các cách để gọi các element, tag của html để thêm css vào
+			: Gọi thông qua tên thẻ, thuộc tính thẻ...
+
+Vd1: p{} --> css cho elements có tên thẻ là p
+Vd2: ul li {} --> css cho các elements là thẻ li con thẻ ul
+Vd3: table tr:first-child{} --> css cho thẻ tr đầu tiên trong table
+
+Nếu như css selector dựa vào TÊN THẺ --> có nhiều hạn chế, vì 1 trang có thể dùng rất nhiều thẻ trùng nhau, các thẻ đó là muốn có css khác nhau
+-->Thêm thuộc tính, giá trị thuộc itnhs cho thẻ để phăn biệt với các thẻ khác
+
+=======================
+
+selector:nth-child(an+b)
+
+p:nth-child(2)
+
+->Tìm thẻ p nào mà là con thứ 2 bên trong thẻ cha nào đó, ăn css
+-> Không tính cha là body, html
+
+selector:nth-of-type(an+b)
+-> Tương tư nth-child, không quan tâm đến các thẻ khác làm thẻ con chỉ quan tâm thẻ selector(ví dụ là p)
+
+Có thể thêm bất kỳ thuộc tính với tên giá trị nào
+VD: div[tt='x2'];
+
+Thường html, css, js dùng 2 thuộc tính đặc biệt là class và id để phân biệt các element khác nhau
+
+class: các elements có thể có các giá trị trùng nhau cho thuộc tính class
+id	 : mỗi element sẽ có id là duy nhất, không trùng nhau
+
+
+VD: <div class="text-bold">
+	<div class="text-bold">
+
+	<p id="footer">
+	<p id="header">
+
+2 css cùng level thì cho important
+*/
+/*
+	Trong block: root(root element) khai báo các global variable
+					sau đó khai báo hàm var(tenbien) để gọi nó
+*/
+:root{
+	--todo-green: #20B2AA;
+
+}
+
+@font-face{
+			font-family: chantelli;
+			src:url('webfonts/Chantelli_Antiqua.woff') format('woff');
+		}
+
+h4::after{
+	content: ' \2698' !important;
+}
+
+div:{
+	border: 2px solid blue;
+}
+
+p:nth-of-type(2){
+
+}
+div[tt='x2']{
+	border: red solid 2px;
+}
+
+.block-33-bg-pink{
+
+	width: 300px;
+	height: 300px;
+	background-color: pink;
+
+}
+.block-62-bg-blue{
+
+	width: 600px;
+	height: 200px;
+	background-color: blue: 
+}
+.block-md-2-blue{
+
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+
+}
+
+
+.bg-green(){
+	background-color: var(--todo-green);
+}
+.title{
+	color: var(--todo-green);
+	text-transform: capitalize;
+}
+.text-green{
+	color: var(--todo-green);
+}
+
+.text-bold{
+	font-weight: 700;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-justify{
+	text-align: justify;
+}
+
+.text-deco-line-through{
+	text-decoration: line-through;
+}
+.text-red(){
+	background-color: red;
+}
+.clear-left{
+	clear: left;
+
+}
+.clear-right{
+	clear: right;
+}
