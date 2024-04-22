@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     list-style-type: none;
+    text-decoration: none;
 }
 
 
 p,li{
-    font-family: sans-serif;
+    font-family: "Montserrat";
 }
 
 a{
@@ -17,7 +20,14 @@ nav {
     background-color: black;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    overflow: auto; /* Add this to contain the floated children */
+    /* overflow: auto */ /*First way to wrap the floats*/
+}
+
+/*clear-fix for nav*/ /*Second way to wrap the floats*/
+nav::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 nav img{
@@ -48,7 +58,7 @@ nav ul li a{
     color: white;
 }
 
-section {
+.welcome {
     padding: 280px 0;
     text-align: center;
     background-image: url(../images/banner.png);
@@ -56,7 +66,7 @@ section {
     background-size: cover;
 }
 
-section p{
+.welcome p{
     color: white;
     margin-top: 10px;
 }
@@ -77,4 +87,105 @@ section p{
 }
 .banner button:hover{
     cursor: pointer;
+}
+
+/* Start of the main content part */
+.main-content{
+    padding: 100px;
+    width: 100%;
+    overflow: auto;
+    background-image: linear-gradient(96deg, whitesmoke 50%, #1b1b1b 50%);
+}
+
+.article-container{
+    overflow: auto;
+    width: 95%;
+    margin: 0 auto;
+}
+
+article {
+    display: inline-block;
+    width: 40%;
+}
+
+article p{
+    margin-top: 25px;
+    line-height: 2rem;
+}
+
+.sports-car-article{
+    float:left;
+}
+
+
+.seating-article{
+    float: right;
+    color: white;
+}
+
+.title {
+    font-size: 2.5em;
+}    
+
+.title::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #cb0502;
+    margin-top: 20px;    
+}    
+
+.description{
+    font-size: 1.4rem;
+    font-style: oblique;
+}
+/* End of the main content part */
+
+/* Start of the footer part */
+footer {
+    background-color: black;
+    padding: 25px 30px;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-container{
+    width: 85%;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.footer-container div{
+    display: inline-block;
+    margin-right: 5%;
+    float: left;
+}
+
+.footer-container ul li:first-child:after{
+    content: "";
+    display: block;
+    width: 250px;
+    background-color: #413e3e;
+    height: 1px;
+    margin-top: 10px;
+}
+
+.footer-container ul li:not(:first-child){
+    margin-top: 10px;
+    color:#868383;
+
+    a {
+        color: #868383;
+    }
+}
+
+li i {
+    size: 30px 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    display: inline;
 }
