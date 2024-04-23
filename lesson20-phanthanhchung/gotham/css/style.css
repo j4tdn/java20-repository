@@ -1,0 +1,321 @@
+:root {
+    --orangeweb: #f6c61c;
+    --disabled: #d7d7d7;
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(../fonts/ProximaNova-Reg.otf);
+}
+
+@font-face {
+    font-family: ProximaNova_Light;
+    src: url(../fonts/ProximaNova-LightIt.otf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto_Thin;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ProximaNova";
+    text-decoration: none;
+    color: #000;
+}
+
+
+nav {
+    padding: 15px 10px;
+    background-color: var(--orangeweb);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.navlink-group {
+    display: flex;
+    width: 35%;
+    justify-content: space-evenly;
+}
+
+/* Start of the main part */
+section {
+    width: 75%;
+    padding: 40px 35px 10px 80px;
+    float: left;
+    border-right: #8584844f solid 1px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+section .card {
+    margin-bottom: 50px;
+    display: flex;
+    position: relative;
+
+    h2 {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 1.65rem;
+        margin-bottom: 15px;
+    }
+
+    .content {
+        margin-left: 30px;
+        position: relative;
+    }
+}
+
+.card .content p {
+    margin-bottom: 15px;
+}
+
+.card .content p:first-of-type {
+    font-size: 0.9rem;
+    color: #858484;
+}
+
+.card .content p:last-of-type {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+.card .content span {
+    color: var(--orangeweb);
+}
+
+/* More article button */
+section button{
+    display: block;
+    background: white;
+    border: 1px var(--orangeweb) solid;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-family: "Roboto";
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+section button:hover{
+    cursor: pointer;
+    background-color: var(--orangeweb);
+    color: aliceblue;
+    box-shadow: 1px 1px black;
+}
+
+/* section .card img{
+    display: inline-block;
+}
+
+section .card .content{
+    display: inline-block;
+    width: 70%;
+} */
+/* Start of the right portion */
+
+aside {
+    width: 25%;
+    float: right;
+}
+
+aside .search-container {
+    position: relative;
+    width: 60%;
+    margin-top: 80px;
+    margin-left: 35px;
+    margin-bottom: 30px;
+    padding: 15px;
+    padding-left: 30px;
+    border: #85848462 solid 1px;
+    border-radius: 15px;
+    box-shadow: -1px -2px 39px -8px rgba(93, 207, 109, 0.75);
+    -webkit-box-shadow: -1px -2px 39px -8px rgba(93, 207, 109, 0.75);
+    -moz-box-shadow: -1px -2px 39px -8px rgba(93, 207, 109, 0.75);
+
+    span {
+        color: #858484ea;
+    }
+}
+
+aside .search-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+aside .search-container .search-input {
+    position: absolute;
+    transform: translateY(-50%);
+    padding: 5px;
+    width: 80%;
+    border: none;
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px aqua;
+    }
+}
+
+/* Start of calendar */
+aside table {
+    margin-left: 35px;
+    text-align: center;
+    width: 60%;
+    border: 1px solid rgba(136, 136, 136, 0.2);
+    border-radius: 10px; /* Round the corners */
+    border-spacing: 0; /* Important, to make the outer border wraps around the table. */
+}
+
+aside table td,
+table th {
+    border-collapse: collapse;
+    border: 1px solid rgba(136, 136, 136, 0.2);
+    padding: 7px 5px;
+}
+
+aside table tr:first-child td{
+    border: none;
+}
+
+aside table tr:last-child td:first-child{
+    border-bottom-left-radius: 9px;
+}
+
+aside table tr:last-child td:last-child{
+    border-bottom-right-radius: 9px;
+}
+
+aside table tr:nth-child(2){
+    th{
+        padding: 3px 3px;
+        background-color: #e7e7e7;
+        color: #7f7f7f;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        border-bottom: none;
+    }
+
+    th:first-child{
+        border-left: none;
+    }
+
+    th:last-child{
+        border-right: none;
+    }
+}
+
+aside table tr:nth-child(3) td{
+    border-top: none;
+}
+
+aside table .disabled{
+    color: var(--disabled);
+}
+
+aside table .today{
+    background-color: var(--orangeweb);
+    color: whitesmoke;
+}
+/* End of calendar */
+
+/* Start of popular news part */
+aside .news{
+    width: 80%;
+    margin-top: 3em;
+    margin-left: 35px;
+}
+
+aside .news h3{
+    margin-bottom: 1.35em;
+}
+
+aside .news h3::after{
+    content: "";
+    width: 40%;
+    display: inline-block;
+    background-color: var(--disabled);
+    height: 1px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+aside .news .quick-link{
+    margin-bottom: 1.75em;
+}
+
+aside .news .quick-link a{
+    font-family: "ProximaNova";
+    font-size: 1.2rem;
+}
+
+aside .news .quick-link p:first-child{
+    font-size: 0.75em;
+    color: #7f7f7f;
+}
+
+main{
+    overflow: auto;
+    margin-bottom: 70px;
+}
+/* End of popular news part */
+
+/* Start of footer */
+footer .footer{
+    background-color: var(--orangeweb);
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .footer ul{
+    display: flex;
+}
+
+footer .footer .contact-list li{
+    list-style-type: none;
+    margin: 0 30px;
+    align-items: center;
+}
+
+footer .footer .contact-list{
+    justify-content: space-evenly;
+}
+
+footer .footer .contact-media li{
+    list-style-type: none;
+    margin: 0 15px;
+}
+
+footer .footer .contact-media i{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 13px;
+    background-color: white;
+    border-radius: 50%;
+    color: #f69f1c;
+}
