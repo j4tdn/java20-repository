@@ -1,0 +1,226 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: ProximaNovaReg;
+	src: url('../webfonts/ProximaNova-Reg.otf');
+}
+
+@font-face {
+	font-family: RobotoLight;
+	src: url('../webfonts/Roboto-Light.ttf');
+}
+
+#header {
+	height: 66px;
+	background-color: #f7c61d;
+}
+
+.wrapper {
+	width: 86%;
+	height: 100%; /*100% so với height của parent element*/
+	/*background: lightpink;*/
+	margin: 0 auto;
+}
+
+.page-logo {
+	float: left;
+	position: relative;
+	/*trick*/
+	/*line-height: 66px;*/
+	/*33px(header/2) - 9px(image/2)*/
+	top: 20px;
+	left: 25%;
+}
+
+.page-links-1 {
+	float: left;
+}
+
+.page-links-2 {
+	float: right;
+}
+
+.page-links li {
+	float: left;
+	margin-left: 44px;
+	line-height: 66px;
+	font-family: ProximaNovaReg;
+	font-weight: bold;
+}
+
+.page-links li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+}
+
+.left-content {
+	margin-left: 20px;
+	width: 65%;
+	border-right: 2px solid lightgray;
+	float: left;
+}
+
+h3 {
+	font-family: ProximaNovaReg;
+	font-weight: bold;
+	margin: 20px 30px 10px;
+}
+
+.article {
+	width: 100%;
+	height: 200px;
+	clear: left;
+	font-family: RobotoLight;
+}
+
+.article > div {
+	margin: 6px 30px;
+}
+
+
+.article-img {
+	width: 30%;
+	float: left;
+}
+
+.article-img img {
+	border-radius: 5px;
+}
+
+.content {
+	width: 57%;
+	float: right;
+	overflow: auto;
+}
+
+.title-article {
+	font-size: 24px;
+	font-family: ProximaNovaReg;
+	margin: 0 0 20px;
+}
+
+.content-article {
+	margin: 20px 0;
+}
+
+.content-article::after {
+	content: '>';
+	font-family: RobotoLight;
+	color: #f7c61d;
+}
+
+.author, .view-comment {
+	color: #a1a1a1;
+	font-size: 13px;
+	font-weight: 4px;
+}
+
+.author span, .view-comment span {
+	color: #f7c61d;
+	font-weight: bold;
+}
+
+.bt-more {
+	margin: 30px 43%;
+	width: 160px;
+	height: 40px;
+	font-family: ProximaNovaReg;
+	font-weight: bold;
+	font-size: 13px;
+	text-transform: uppercase;
+	background-color: #fff;
+	border: 2px solid #f7c61d;
+	border-radius: 5px;
+}
+
+.right-content {
+	width: 32%;
+	height: 100%;
+	float: right;
+	overflow: auto;
+}
+
+.right-content h3 {
+	font-family: ProximaNovaReg;
+	font-weight: bold;
+	margin: 20px 0 10px;
+}
+
+.right-content div {
+	font-family: ProximaNovaReg;
+	width: 80%;
+	font-size: 16px;
+	margin: 20px 0;
+} 
+
+.right-content div a {
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+}
+
+#footer {
+	clear: both;
+	width: 100%;
+	height: 66px;
+	background-color: #f7c61d;
+}
+
+.gotham {
+	margin-left: 50px;
+	float: left;
+	height: 100%;
+	line-height: 66px;
+	color: gray;
+	font-family: ProximaNovaReg;
+	font-size: 14px;
+	font-weight: 4px;
+}
+
+.footer-links {
+	margin-left: 35%;
+}
+
+.social-links {
+	margin-left: 80%;
+}
+
+.footer-links li {
+	float: left;
+	margin-left: 44px;
+	line-height: 66px;
+	font-family: ProximaNovaReg;
+	font-weight: bold;
+}
+
+.social-links li {
+	float: left;
+	margin-left: 24px;
+	margin-top: 13px;
+	line-height: 40px;
+	width: 40px;
+	height: 40px;
+	font-family: ProximaNovaReg;
+	font-weight: bold;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.footer-links li a {
+	font-size: 14px;
+	text-decoration: none;
+	color: #000;
+}
+
+.social-links li a {
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.social-links li a i {
+	color: #f7c61d;
+}
