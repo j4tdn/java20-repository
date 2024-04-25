@@ -1,0 +1,214 @@
+.header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: rgb(246, 206, 44);
+}
+.header li{
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
+.header li a{
+    line-height: 28px;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: fit-content;
+}
+.cl-7{
+    width: 65%;
+    padding: 40px 50px;
+    border-right: 1px solid lightgray;
+    float: left;
+}
+h1{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: sans-serif;
+}
+h2{
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.article{
+    width: 100%;
+    height: fit-content;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+.article img{
+    width: 28%;
+    float: left;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.article .article-info{
+    width: 68%;
+    float: left;
+}
+
+.infos{
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0;
+}
+.infos li{
+    float:left;
+    padding: 0 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: gray;
+    border-left: 1.5px solid gray;
+}
+.infos li:first-child{
+    border-left: none;
+    padding-left: 0;
+}
+.acticle-content{
+    clear: both;
+}
+.if-2 i, p{
+    float:left;
+}
+.article span{
+    color: rgb(246, 206, 44);
+}
+
+.acticle-content{
+    font-size: 15px;
+    font-weight: 200;
+    font-family: sans-serif;
+    color: gray;
+}
+.more-articles{
+    display: flex;
+    justify-content: center;
+}
+.more-articles a{
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px rgb(246, 206, 44) solid;
+    border-radius: 5px;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.cl-3{
+    width: 20%;
+    height: fit-content;
+    padding: 80px 30px;
+    float: left;
+}
+.find{
+    border: 1px solid lightgray;
+    border-radius: 5px;;
+    display: flex;
+    padding: 0 5px;
+    color: gray;
+}
+.find span i{
+    width: 10%;
+    line-height: 25.33px;
+}
+.find input{
+    width: 90%;
+    border: none;
+}
+.news li{
+    margin-bottom: 20px;
+}
+.if-font{
+    width: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: gray;
+
+}
+.popular-news h3{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 0;
+}
+.news h4{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+footer{
+    width: 100%;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(246, 206, 44);
+    padding: 20px 0;
+}
+
+.ft-left, .ft-right, .ft-center{
+    width: 30%;
+    text-align: center;
+}
+
+.ft-center, .ft-right{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.ft-center li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.ft-right li{
+    color: rgb(246, 206, 44);
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid rgb(246, 206, 44);
+    background-color: aliceblue;
+}
+.calendar{
+    width: 100%;
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.calendar table{
+    width: 100%;
+    text-align: center;
+    border: 1px gray solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.calendar table tr th{
+    background-color: lightgray;
+    color: gray;
+}
+.calendar table tr th, td{
+    border: 1px lightgray solid;
+    padding: 7px 0;
+}
+.calendar table tr:nth-child(3) td:nth-child(1), tr:nth-child(3) td:nth-child(2), tr:last-child td:nth-child(6), tr:last-child td:nth-child(7){
+    color: gray;
+}
