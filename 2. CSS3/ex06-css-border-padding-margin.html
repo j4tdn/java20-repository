@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex06 - CSS Border Padding Margin</title>
+
+	<style>
+
+		.block {
+			width: 180px;
+			height: 80px;
+
+			border: 2px solid lightgray;
+			border-radius: 8px;
+
+			float: left;
+		}
+		/*
+			margin: right va left --> cong don
+					top va bottom --> lay lon hon
+		*/
+
+		#block1 {
+			margin-right: 40px;
+			background-color: #ABE200 ;
+			padding: 20px 0 0 20px;
+			box-sizing: border-box;
+		}
+
+		#block2 {
+			margin-left: 40px;
+			background-color: #F8A400 ;
+		}
+
+		h3 {
+			margin-bottom: 30px;
+		}
+
+		.pblock {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			overflow: auto;
+		}
+	</style>
+
+</head>
+<body>
+
+	<h2 class="text-center title">Ex06 - CSS Border Padding Margin</h2>
+
+	<hr>
+
+	<h3 class="text-red text-bold">This is the first text line of CSS Basic  Properties page</h3>
+
+	<div class="pblock">
+
+		<div class="block" id="block1">
+			<a href="#" title="props">PROPS</a>
+		</div>
+
+		<div class="block" id="block2">
+			<p>Testing Border, Margin, Padding</p>
+		</div>
+
+		<!-- clear để block1 và block2 cùng thuộc 1 mặt phẳng của pblock -->
+		<!-- <div class="clear-both"></div> -->
+
+		<!-- cách 2 -- thêm thuộc tính overflow:auto cho element cha -->
+
+	</div>
+
+	<p class="clear-left">Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Sed nesciunt ad voluptas, distinctio aliquid delectus, dolores dignissimos cupiditate atque esse blanditiis iusto, maiores suscipit quas facilis? Nihil, laudantium in cumque. Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Sed nesciunt ad voluptas, distinctio aliquid delectus, dolores dignissimos cupiditate atque esse blanditiis iusto, maiores suscipit quas facilis? Nihil, laudantium in cumque.</p>
+
+</body>
+</html>

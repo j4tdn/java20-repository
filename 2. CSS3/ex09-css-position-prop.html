@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex09 - CSS Position Property</title>
+
+	<style>
+
+		.w2h2 {
+			width: 200px;
+			height: 200px;
+		}
+
+		.circle {
+			border-radius: 50%;
+		}
+
+		.orange {
+			background-color: orange;
+		}
+
+		.green {
+			background-color: green;
+
+			/*position: relative;
+			left: 100px;
+			top: 0px;*/
+
+			position: absolute;
+/*			left: 20px;
+			top: 20px;*/
+			z-index: 2;
+		}
+
+		.blue {
+			background-color: blue;
+			height: 300px;
+			left: 100px;
+			bottom:  50px;
+			z-index: 1;
+			position: relative;
+		}
+
+		#parent {
+			width: 800px;
+			height: 660px;
+			margin: 0 auto;
+			border:  2px solid red;
+			position: relative;
+		}
+
+		/*
+			Thuộc tính position
+			Mặc định: static --> theo workflow của web browser inline, block
+
+			Relative --> khi gán position: relative cho 1 element(mặc định static), có thể di chuyển element sang một vị trí khác(left, right, bottom, top) so với vị trí ban đầu(static)
+
+			Absolute --> khi gán position: absolute cho 1 element(mặc định static), có thể di chuyển element đó sang một vị trí khác(left, right, bottom, top) so với vị trí của element cha
+			--> break quy tắt của page, k còn thuộc layer mặc định 
+			nếu element cha có position là relative thằng con sẽ dịch chuyển so với vị trí của cha
+			nếu element cha có position không phải là relative: thằng con sẽ dịch chuyển so với root element(html top-left corner 0:0)
+		*/
+
+		.score-counter {
+			width: 200px;
+			height: 42px;
+			background-color: lightslategray;
+			text-align: center;
+			line-height: 42px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+/*			position: absolute;*/
+			position: fixed;
+			bottom: 2px;
+			left: calc(50% - 100px);
+			border: 1px dashed;
+		}
+	</style>
+
+</head>
+<body>
+
+	<h2 class="text-center title">Page - Ex09 CSS Position Property</h2>
+
+	<!--<hr>
+
+	<div class="w2h2 orange"></div>
+
+	<div class="w2h2 green"></div>
+
+	<div class="w2h2 blue"></div> -->
+
+	<hr>
+
+	<div id="parent">
+		<div class="w2h2 orange"></div>
+
+		<div class="w2h2 green"></div>
+
+		<div class="w2h2 blue"></div>
+	</div>
+
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Maxime voluptate iste assumenda, ipsam repudiandae. Eum explicabo, cum cupiditate repellendus. Magnam dignissimos, doloribus amet repellat et alias? Maxime vero tenetur necessitatibus quisquam, repellat debitis, odit dolore amet incidunt fugiat harum. Rem earum dolor perspiciatis, perferendis facere ipsa recusandae neque at possimus error ut sequi voluptatibus iure rerum voluptatem nemo quae illo adipisci vero nesciunt consequuntur sit illum dolorem voluptates. Doloremque quidem ex nemo iste pariatur praesentium alias autem voluptatem quis tempora sint vel sapiente tenetur, aspernatur commodi earum laboriosam porro itaque quasi eius dignissimos assumenda ullam expedita culpa ea. Qui, earum odio nesciunt, mollitia iusto unde, nam, nobis dolore atque eligendi repudiandae quae. Consequuntur voluptatem voluptatibus cupiditate, eum asperiores, reprehenderit quis voluptates cum accusamus ex dolor quod nulla omnis, dicta, ratione cumque dolorum quidem facilis minima aperiam odio incidunt repellat ab eveniet! Corrupti consequatur fugit vel quo dolores. Asperiores culpa nulla, natus cumque velit sed odio numquam reiciendis suscipit similique, soluta laborum provident sit fugiat distinctio officiis vitae laudantium reprehenderit? Possimus odio dicta pariatur, sunt vero sed velit odit recusandae, qui cupiditate necessitatibus doloribus quod harum. Praesentium, et quisquam! Qui eum molestias quas facere accusamus saepe, consectetur fugit, officia eaque doloribus voluptas, odio nostrum illo sed incidunt tempore maxime adipisci beatae. Quia ea recusandae necessitatibus, eaque nesciunt nobis facilis fuga nemo ab ducimus reiciendis quasi itaque iusto fugiat minus doloremque ex quisquam rem hic deserunt quos vel soluta magni laboriosam quis. Temporibus id quae, accusantium perferendis unde ullam ipsum pariatur provident voluptas aliquam, maiores, consequatur voluptatem obcaecati at dignissimos, fugiat ad beatae mollitia sequi earum odit repellendus! Ducimus reiciendis, aut corporis nisi, earum provident molestias adipisci temporibus quod? Cum eius exercitationem, beatae pariatur itaque sunt quae sequi odio corrupti tenetur commodi ratione ipsum libero repudiandae accusamus illum ex dolores minus aliquam eveniet? Natus blanditiis vel sequi, assumenda iusto accusantium, beatae, nemo recusandae iste enim saepe cum a placeat totam voluptatum nostrum ullam aliquam reiciendis ipsam, eius quo laboriosam tempore soluta debitis! Facilis, commodi, tempora saepe amet aperiam inventore rerum ut culpa voluptatem. Quam dicta vero consequatur est. Sint fuga neque earum tempora, officiis deleniti amet enim necessitatibus temporibus numquam incidunt adipisci sequi id, suscipit blanditiis modi dignissimos explicabo, similique odio, eligendi. Mollitia reprehenderit quibusdam nulla blanditiis sint aspernatur ad ipsum illo quos quod dicta dolor nam, accusamus alias voluptatibus debitis fugit nemo aut dolore commodi tempore tenetur doloremque quaerat. Minus rerum veritatis id ipsam saepe vero doloribus dolor iste, laborum ex, consectetur maxime nesciunt, veniam dicta excepturi explicabo aliquid, repellendus? Placeat deserunt sapiente numquam id laudantium sunt voluptatum sint fugit dolorem suscipit ullam quis ipsam corporis nam tempora delectus eius ad consequatur itaque quisquam reiciendis est, hic. Maxime quaerat reiciendis error cumque libero reprehenderit ratione. Quam iure vero dignissimos nesciunt neque eum unde excepturi, modi doloremque cumque placeat doloribus nemo incidunt omnis quos quo mollitia molestias, facilis ullam minus, quidem ducimus sapiente? Tenetur, explicabo magni, iusto debitis laboriosam eius, consequuntur dolorem placeat ullam quo nemo eligendi a soluta quod unde dignissimos!</p>
+
+	<div id="parent"></div>
+
+	<div class="score-counter">-- Your Point is 88 --</div>
+
+</body>
+</html>

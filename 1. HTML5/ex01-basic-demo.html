@@ -84,6 +84,11 @@
 			scroll-behavior: smooth;
 		}
 
+		p span {
+			font-size: 32px;
+			color: red;
+		}
+
 	</style>
 
 </head>
@@ -106,6 +111,17 @@
 			</tr>
 		</tbody>
 	</table>
+
+	<!-- multi media -->\
+
+	<hr>
+
+	<video src="video/video.mp4" loop autoplay muted width="220" height="140" controls poster="images/cake.jpg"></video>
+
+	<audio src="audio/audio.mp3" controls > </audio>
+
+	<hr>
+
 	<!-- Chứa nội dung của web page content -->
 
 	<!-- Từ khóa: semantic tags thẻ ngữ nghĩa -->
@@ -122,7 +138,7 @@
 	<!-- Paragraph tag -->
 	<p>Lorem 100 - ipsum dolor sit amet consectetur adipisicing, elit. Voluptate, adipisci vel, laboriosam ratione omnis assumenda accusamus est harum et, ab esse. Odit itaque eveniet vero? Dolorem nihil cupiditate, culpa.
 	<br>
-	<strong>xNuyn</strong> Ratione pariatur cupiditate numquam sapiente ex vero tempora odit hic minus explicabo ipsa et voluptates voluptate officia magni itaque alias, id sunt asperiores reiciendis, dolores. Et molestiae ipsa pariatur perspiciatis quia adipisci at nesciunt doloribus, ex. Sed, placeat sapiente cumque. Qui, dolorum, molestias. Aut sit itaque minus libero iusto harum optio sunt enim perspiciatis debitis, accusantium expedita, quae inventore. Vel repudiandae pariatur itaque maiores mollitia consequuntur <em> dsfdfsfsd</em> aliquid laborum repellat nam sint!</p>
+	<strong>xNuyn</strong> Ratione pariatur cupiditate numquam sapiente ex vero tempora odit hic minus explicabo ipsa et voluptates voluptate officia magni itaque alias, id sunt asperiores reiciendis, dolores. Et <span>molestiae</span> ipsa pariatur perspiciatis quia adipisci at nesciunt doloribus, ex. Sed, placeat sapiente cumque. Qui, dolorum, molestias. Aut sit itaque minus libero iusto harum optio sunt enim perspiciatis debitis, accusantium expedita, quae inventore. Vel repudiandae pariatur itaque maiores mollitia consequuntur <em> dsfdfsfsd</em> aliquid laborum repellat nam sint!</p>
 
 	<hr>
 
@@ -136,7 +152,7 @@
 
 	<!-- List tags -->
 	<!-- Order List - List Item -->
-	<ol>
+	<ol style="list-style-type: upper-roman;">
 		<li>Item 1</li>
 		<li>Item 2</li>
 		<li>Item 3</li>
@@ -145,7 +161,7 @@
 	<hr>
 
 	<!-- Unorder List - List Item -->
-	<ul>
+	<ul style="list-style-image: url('images/world.png');">
 		<li>Cake 1</li>
 		<li>Cake 2</li>
 		<li>Cake 3</li>
@@ -257,6 +273,15 @@
 	<a href="sub-page/page1.html">Move to Page 1</a>
 	<br>
 	<a href="sub-page/page2.html">Move to Page 2</a>
+
+	<iframe src=""></iframe>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/xRL2BspFnOs?si=VFs6CzMmPRDE6qCl&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	<footer>
+		<p>&copy; CopyRight By JAVA 20 &#128525; -03/2024 </p>
+	</footer>
+
 
 </body>
 </html>
