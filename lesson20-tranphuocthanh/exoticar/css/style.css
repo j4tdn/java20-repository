@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header {
 	width: 100%;
 	height: 60px;
@@ -30,137 +31,181 @@ nav {
 
 .nav-links li a {
 	text-decoration: none;
+=======
+body {
+>>>>>>> 0d5f210 (lesson20-tranphuocthanh 25.04.2024)
 	color: #fff;
+	font-size: 16px;
+	line-height: 1.4;
+	font-family: 'Arial', sans-serif;
 }
 
-.bg-img {
+.page-header {
 	width: 100%;
-	height: 680px;
-	margin: 0 auto;
-	background-image: url(../images/banner.png);
-	background-size: cover;
+	height: 66px;
+	background-color: #181713;
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .wrapper {
-	position: relative;
-	top: 250px;
-	text-align: center;
-	color: #fff;
+	width: 1120px;
+	height: 100%;
+	margin: 0 auto;
+	overflow: auto;
 }
 
-.wrapper p a {
+.logo {
+	float: left;
+	margin-top: 24px;
+}
+
+.main-nav {
+	float: right;
+	line-height: 66px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin-left: 92px;
+}
+
+
+.main-nav li a {
+	text-transform: uppercase;
 	text-decoration: none;
-	color: #fff;
+	color: inherit;
 }
 
-.wrapper p:first-child {
-	font-size: 70px;
+/*MAIN*/
+
+.banner {
+	background-image: url(../images/banner.png);
+	height: 620px;
+	background-size: cover;
+	padding-top: 240px;
+	box-sizing: border-box;
 }
 
+.banner .banner-block {
+	text-align: center;
+}
 
-.wrapper p:nth-child(2) {
-	font-size: 20px;
-	opacity: 0.8;
-	margin-top: 20px;
+.title {
+	font-size: 60px;
+}
+
+.subtitle {
+	margin: 10px 0 20px;
 }
 
 .learn-more {
-	width: 200px;
-	height: 50px;
-	line-height: 50px;
-	background-color: red;
-	margin: 20px auto;
+	padding: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: inherit;
+	background-color: #ca0500;
 }
 
-.main-content {
-	width: 100%;
-	height: 650px;
-	margin: 0 auto;
-	background-image:   linear-gradient(100deg, 
+/*ARTICLE*/
+.articles {
+	background-image: linear-gradient(100deg, 
 		rgba(255,255,255,1) 0%,
-		rgba(241,241,241,1) 50%,
-		rgba(56,56,56,1) 50%,
-		rgba(56,56,56,1) 100%);
+		rgba(255,255,255,1) 49%,
+		rgba(0,0,0,1) 49%,
+		rgba(0,0,0,1) 100%);;
+
+	padding-top: 64px;
 }
 
-.main-wrapper {
-	width: 86%;
-	height: 80%;
-	margin: 0 auto;
-	position: relative;
+article:first-of-type{
+	color: #000;
+	padding-right: 112px;
+	box-sizing: border-box;
 }
 
-.left-content {
-	position: absolute;
-	left: 0;
-	width: 43%;
-	margin: 60px auto;
+article:last-of-type{
+	padding-left: 112px;
+	box-sizing: border-box;
 }
 
-.main-title~p {
+
+.articles article{
+	float: left;
+	width: 50%;
+}
+
+article .title {
+	font-size: 38px;
+}
+
+article .title::after {
+	content: '';
+	display: block;
+	width: 40px;
+	height: 2px;
+	background-color: #ca0401;
 	margin: 30px 0;
-	font-size: 20px;
 }
 
-.right-content {
-	position: absolute;
-	right: 0;
-	width: 43%;
-	margin: 60px auto;
+article .quote {
+	font-size: 24px;
+}
+
+article .text {
+	margin: 28px 0 66px;
+}
+
+/*FOOTER*/
+
+.page-footer {
+	width: 100%;
+	height: 177px;
+	background-color: #111;
+	padding-top: 30px;
+	color: #878787;
+}
+
+.footer-col {
+	width: 25%;
+	float: left;
+}
+
+.footer-col h3::after{
+	content: '';
+	display: block;
+	width: 80%;
+	height: 1px;
+	opacity: 0.9;
+	margin: 15px 0;
+	background-color: #3c3c3c;
+}
+
+.footer-col h3{
+	font-size: 22px;
+	text-transform: uppercase;
 	color: #fff;
 }
 
-.main-title {
-	font-size: 25px;
-	font-weight: 300;
-}
-
-.main-title:after {
-	content: "";
-	width: 30px;
-	height: 2px;
-	background-color: red;
-	display: block;
-	margin: 20px 0;
-	font-weight: normal;
-}
-
-.footer {
-	width: 100%; 
-	height: 200px;
-	margin: 0 auto;
-}
-
-
-.subnav-section-top{
-	margin: 30px 0;
-}
-
-.subnav-section-top:after {
-	content: "";
-	display: block;
-	width: 200px;
-	height: 1px;
-	margin-top: 20px;
-	background-color: grey;
-}
-
-.subnav-subsection {
-	margin-top: 4px;
+.footer-col ul li a {
 	text-decoration: none;
+	color: #878787;
 }
 
-.icon-ref {
+.social ul li {
 	display: inline-block;
-	margin-right: 40px;
-
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #000;
+	margin-right: 5px;
 }
 
-.mgt40 {
-	margin-top: 40px;
-}
-
-.subnav-subsection a {
-	text-decoration: none;
-
+.social p {
+	margin-top: 35px;
 }

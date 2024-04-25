@@ -1,0 +1,120 @@
+body {
+	background-color: #ffffe5;
+}
+
+#todo {
+	width: 400px;
+	margin: 50px auto;
+	border-radius: 30px;
+	border: 1px solid #ececec;
+	box-shadow: 0 0 10px #ccc;
+}
+
+.todo-header {
+	background-color: #3f94d6;
+	color: #fff;
+	height: 80px;
+	border-radius: 30px 30px 0 0;
+}
+
+.todo-header h2 {
+	text-align: center;
+	line-height: 80px;
+	font-family: 'Arial';
+	font-size: 32px;
+	margin: 0 ;
+}
+
+.add-block {
+	height: 50px;
+	border-top: 1px solid ececec;
+	border-bottom: 1px solid ececec;
+}
+
+.add-text {
+	width: 80%;
+	height: 100%;
+	float: left;
+ 	
+ 	outline: none;
+ 	border: 0;
+	padding: 0 15px;
+	box-sizing: border-box;
+
+	font-size: 16px;
+}
+
+.add-button {
+	width: 20%;
+	height: 100%;
+	outline: none;
+	border: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 32px;
+	color: #3f94d6;
+	cursor: pointer;
+	background-color: #bbdefb;
+}
+
+.tasks {
+	margin: 0;
+	padding: 0;
+}
+
+.task {
+	list-style-type: none;
+	height: 50px;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+}
+
+.task>* {
+	float: left;
+}
+
+.task:last-child {
+	border-radius: 0 0 30px 30px;
+}
+
+.task:last-child .col1{
+	border-radius: 0 0 0 30px;
+}
+
+.task:last-child .col3{
+	border-radius: 0 0 30px 0;
+}
+
+.task .col1 {
+	width: 10%;
+	height: 100%;
+	background-color: #bbdefb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.task .col2 {
+	width: 70%;
+	font-family: "Arial";
+	height: 100%;
+	background-color: #fff;
+	padding-left: 10px;
+	box-sizing: border-box;
+	line-height: 50px;
+}
+
+.task .col3 {
+	width: 20%;
+	height: 100%;
+	background-image: url(images/trash.svg);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: center;
+	background-color:  #bbdefb;
+	cursor: pointer;
+}
+
+.checked {
+	text-decoration: line-through;
+}
