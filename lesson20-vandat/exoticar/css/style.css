@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
 }
 
 #header {
@@ -31,13 +33,11 @@
 
 .page-links li {
 	float: left;
-	list-style: none;
 	margin-left: 90px;
 	line-height: 60px;
 }
 
 .page-links li a {
-	text-decoration: none;
 	color: #FFFFFF;
 }
 
@@ -169,6 +169,7 @@
 	width: 40px;
 	height: 40px;
 	background-color: #000;
+	color: #fff;
 	border-radius: 50%;
 	text-align: center;
 	line-height: 40px;
@@ -176,4 +177,5 @@
 
 .end ol li a:hover {
 	background-color: #aaa;
+	color: #111;
 }
