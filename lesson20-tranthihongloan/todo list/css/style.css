@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    margin-bottom: 10px;
+    color: red;
+}
+
+#task-manage {
+    width: 450px;
+    height: 300px;
+    background-color: #5095d8;
+    border-radius: 15px;
+}
+
+#task-manage h1 {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+tbody tr,
+thead th {
+    height: 45px;
+}
+
+td:nth-child(even) {
+    background-color: white;
+}
+
+td:nth-child(odd) {
+    background-color: #bfdefb;
+}
+
+th:nth-child(odd) {
+    background-color: white;
+}
+
+th:nth-child(even) {
+    background-color: #bfdefb;
+}
+
+#name-task {
+    width: 90%;
+    height: auto;
+    padding: 13px 0px;
+    border: none;
+}
+
+#add-task-btn {
+    background-color: #bfdefb;
+    color: #5095d8;
+    font-weight: bold;
+    font-size: x-large;
+    border: none;
+}
+
+.checkbox-btn {
+    text-align: center;
+}
+
+.delete-btn {
+    background-image: url(../images/trash.svg);
+    background-repeat: no-repeat;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.clearfix {
+    clear: both;
+}
