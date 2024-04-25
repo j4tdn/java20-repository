@@ -1,0 +1,119 @@
+
+/*
+
+CSS Selector: Tập các cách để gọi các element, tag của html để thêm css vào
+	Vd1: p {} --> css cho elements có tên thẻ là p
+	Vd2: ul li {} --> css cho elements là thẻ li con thẻ ul
+	Vd3: table tr:first-child() --> tìm thẻ tr đầu tiên trong thẻ table để thêm css
+
+selector:nth-child(an + b)
+	Vd: p:nth-child(2)
+		Tìm thẻ p thứ 2 bên trong 1 thẻ cha nào đó (không tính body và html) (Tính cả thẻ khác)
+		Nếu chỉ tính riêng thẻ p thì dùng selector:nth-of-type(an + b)
+
+*/
+
+:root {
+	--todo-green: #20B2AA;
+}
+
+/* Import external fonts */
+@font-face {
+	font-family: Chantelli;
+	src: url("webfonts/Chantelli_Antiqua.woff") format("woff");
+}
+
+h4::after {
+	content: '\2705';
+}
+
+.block-1 {
+	width: 100px;
+	height: 100px;
+}
+
+/*div:nth-child(2) {
+	border: 2px solid blue;
+}*/
+
+.block-md-2-blue {
+	width: 200px;
+	height: 200px;
+	border: 2px solid blue;
+}
+
+.block-33-bg-orange {
+	width: 300px;
+	height: 300px;
+	background-color: orange;
+}
+
+.block-62-bg-blue {
+	width: 600px;
+	height: 200px;
+	background-color: blue;
+}
+
+
+.bg-green {
+	background: var(--todo-green);
+}
+
+.title {
+	color: var(--todo-green);
+	text-transform: capitalize;
+}
+
+.text-green {
+	color: var(--todo-green);
+}
+
+.text-red {
+	color: red;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-deco-line-through {
+	text-decoration: line-through;
+}
+
+.bg-red {
+	background: red;
+}
+
+.bg-blue {
+	background: blue;
+}
+
+.bg-orange {
+	background: orange;
+}
+
+.bg-pink {
+	background: pink;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.clear-both {
+	clear: both;
+}
+
+

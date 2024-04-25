@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex09 - CSS Position Property</title>
+
+	<style>
+
+		.w2h2 {
+			width: 200px;
+			height: 200px;
+		}
+
+		.circle {
+			border-radius: 50%;
+		}
+
+		.orange {
+			background-color: orange;
+		}
+
+		.green {
+			background-color: green;
+			position: absolute;
+			z-index: 2;
+			/*top: px;
+			left: px;*/
+		}
+
+		.blue {
+			background-color: blue;
+			height: 300px;
+			left: 100px;
+			bottom: 50px;
+			position: relative;
+			z-index: 1;
+		}
+
+		#parent {
+			width: 800px;
+			height: 660px;
+			margin: 0 auto;
+			border: 2px solid red;
+			position: relative;
+		}
+
+		.score-counter {
+			width: 200px; 
+			height: 42px;
+			background-color: lightslategray;
+			text-align: center;
+			line-height: 42px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			/*position: absolute;*/
+			position: fixed;
+			bottom: 2px;
+			left: calc(50% - 100px);
+			border: 1px dashed;
+		}
+
+	</style>
+</head>
+
+<body>
+	
+	<h2 class="text-center title">Page - Ex09 CSS Position Property</h2>		
+
+	<!-- <hr>
+
+	<div class="w2h2 orange"></div>
+
+	<div class="w2h2 green"></div>
+
+	<div class="w2h2 blue"></div> -->
+
+	<hr>
+
+	<div id="parent">
+
+		<div class="w2h2 orange"></div>
+
+		<div class="w2h2 green"></div>
+
+		<div class="w2h2 blue"></div>
+
+	</div>
+
+	<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Voluptates deserunt quisquam adipisci, laborum, porro autem tempora voluptatum? Illum quia sed reiciendis ut totam, pariatur maxime maiores. Dolor facere ea, ab itaque pariatur cum nihil quia necessitatibus omnis et ipsum veritatis quaerat placeat corrupti facilis excepturi quasi deserunt consequuntur harum architecto nesciunt, accusamus animi rem voluptates! Doloremque, quaerat magnam veniam totam debitis. Beatae fuga sint debitis, explicabo architecto eligendi quas iure laborum obcaecati nihil animi rerum. Similique aut molestias modi vel, quibusdam tempora voluptatem eius aspernatur, odit eum maiores, ullam consequuntur veniam! Quibusdam quae distinctio, autem dolorum fuga et consequuntur at odio rem corrupti illo, modi assumenda, culpa eaque blanditiis consectetur commodi porro earum nulla eum dignissimos aliquam ipsa animi? Tempora illo veniam, vitae ab veritatis cumque earum at, quae modi quidem, hic ducimus officiis dolores vero perspiciatis molestiae alias temporibus et enim! Dignissimos quae modi sint ipsam. Ex voluptatem dolor eum illum, facere accusamus neque dignissimos voluptas veniam itaque porro, earum modi quam quis nostrum magnam quidem hic labore impedit tenetur atque aut natus quaerat! Quia ratione doloribus mollitia unde aperiam, nobis fugiat. Assumenda ab, similique suscipit accusamus dolorem ad inventore eos iure, repellendus quisquam qui! Recusandae porro, quas eligendi quia corrupti rem est illum. Commodi consequatur, veniam saepe labore deserunt fugit vitae harum eveniet dicta repellendus incidunt dolores nostrum praesentium aut non repellat unde porro in debitis earum. Libero eius suscipit voluptates, sed eos sunt. Error assumenda perferendis sit sequi quis eaque eos, sed eligendi laboriosam quasi dignissimos fugiat aperiam optio doloremque tempore delectus animi. Inventore facere quasi, magni ab architecto nam id accusantium autem iste exercitationem accusamus omnis aspernatur minus non ipsam, natus officia, sit odio, fuga quos. Aperiam eos rem quo quia quaerat unde quod corrupti eligendi sed cumque placeat non molestias, facere aut distinctio nulla perspiciatis dolorum culpa cupiditate obcaecati alias quidem adipisci veniam autem. Reprehenderit dolores provident labore, aperiam quae. Atque reiciendis quam provident placeat sed ea inventore eius dignissimos odio excepturi, vel non ex blanditiis. Repellendus officia amet, aliquam minima sapiente aperiam quas et quibusdam eligendi voluptas, id fuga iure labore facere nihil? Corporis est odio mollitia dicta optio explicabo magnam, facilis ad magni odit recusandae id neque voluptatum quod eum cupiditate totam, quos similique soluta nisi autem! Expedita corrupti eos illum inventore maiores amet porro impedit repellendus magnam quis dolorum quibusdam cupiditate voluptas totam tempora blanditiis dolor hic commodi adipisci soluta, facilis! Aliquid libero quisquam, dicta architecto natus expedita cupiditate fugiat iste aperiam consectetur maxime culpa eligendi et sed vitae ea numquam quibusdam repellat repellendus. Repellendus magni at natus veniam doloremque, eligendi porro. Porro, laboriosam, id. Cum hic blanditiis quos. Ea incidunt suscipit culpa, laboriosam nihil repellat et sequi illo expedita accusamus porro. Quasi magni, consequuntur consequatur incidunt doloremque. Hic maxime doloremque ratione possimus blanditiis quasi vel sit nostrum rem nesciunt alias consequuntur odio pariatur, dolor, autem praesentium animi recusandae architecto mollitia. Unde aliquam officiis enim magni incidunt, recusandae vel, iusto porro expedita iure asperiores provident error modi, nisi praesentium quis molestias architecto.</p>
+
+	<div id="parent"></div>
+
+	<div class="score-counter">--- Your point is 88 ---</div>
+
+</body>
+</html>

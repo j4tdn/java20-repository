@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex04 - CSS Float Clear Properties Test 01</title>
+
+	<style>
+
+		.lorem01 {
+			font-family: Corbel, Helvetica, sans-serif;
+
+			font-size: 18px;
+			line-height: 1.25;
+		}
+
+		.lorem02 {
+			font-family: Chantelli;
+		}
+
+		.fl-image {
+			float: left;
+		}
+
+		.fl-right {
+			float: right;
+		}
+
+		.fl-left {
+			float: left;
+		}
+
+		.clear {
+			clear: left;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<h2 class="text-center title">Page - Ex04 CSS Float Clear Properties</h2>		
+
+	<hr>
+
+	<p class="lorem01">Lorem 01 ipsum dolor sit amet consectetur adipisicing elit. Dignissimos expedita, delectus dolores nostrum tempore exercitationem cum facilis sed quia inventore porro illum magnam est iusto reprehenderit illo alias voluptatibus aliquid? Lorem 01 ipsum dolor sit amet consectetur adipisicing elit. Dignissimos expedita, delectus dolores nostrum tempore exercitationem cum facilis sed quia inventore porro illum magnam est iusto reprehenderit illo alias voluptatibus aliquid?</p>
+
+	<img class="fl-image" src="images/cake.jpg" width="300" height="300" alt="cake">
+
+	<p class="lorem02 text-justify">Lorem 02 ipsum dolor sit amet consectetur adipisicing elit. Accusamus minima molestias voluptates animi aliquid debitis architecto in fuga ea rem maiores cum expedita eos, similique sequi? Nobis necessitatibus quidem, <span class="text-bold text-deco-line-through">debitis!</span> Lorem 01 ipsum dolor sit amet consectetur adipisicing elit. Dignissimos expedita, delectus dolores nostrum tempore exercitationem cum facilis sed quia inventore porro illum magnam est iusto reprehenderit illo alias voluptatibus aliquid?</p>
+
+	<hr>
+
+	<div class="block-33-bg-orange clear fl-left"></div>
+
+	<div class="block-62-bg-blue"></div>
+
+	<p class="lorem03 text-justify">Lorem 03 ipsum dolor sit amet consectetur adipisicing elit. Accusamus minima molestias voluptates animi aliquid debitis architecto in fuga ea rem maiores cum expedita eos, similique sequi? Nobis necessitatibus quidem, <span class="text-bold text-deco-line-through">debitis!</span> Lorem 03 ipsum dolor sit amet consectetur adipisicing elit. Dignissimos expedita, delectus dolores nostrum tempore exercitationem cum facilis sed quia inventore porro illum magnam est iusto reprehenderit illo alias voluptatibus aliquid?</p>
+
+</body>
+</html>
