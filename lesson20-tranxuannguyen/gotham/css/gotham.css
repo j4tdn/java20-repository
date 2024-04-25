@@ -1,0 +1,295 @@
+ul {list-style-type: none;}
+a {text-decoration: none;}
+span {color: orange;}
+
+header {
+	width: 95vw;
+	height: 50px;
+	background-color: orange;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 85vw;
+	margin: 0 auto;
+}
+
+.header-block {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-header {
+	width: 40%;
+	display: flex;
+	padding: 0;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.left-header li {
+	list-style: none;
+}
+
+.left-header li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+}
+
+.logo {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right-header {
+	width: 40%;
+	display: flex;
+	padding: 0;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.right-header li {
+	list-style: none;
+}
+
+.right-header li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-content {
+	width: 70%;
+	border-right: 1px solid gray;
+	padding-right: 40px;
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30px ;
+}
+
+.div-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-button {
+	border: 1px solid orange;
+	color: black;
+	padding: 10px 22px;
+	background-color: white;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.right-card {
+	margin-left: 20px;
+}
+
+.cite {
+	opacity: 0.75;
+}
+
+.right-content {
+	width: 30%;
+	margin-left: 30px;
+	margin-top: 60px;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+
+.input-group-btn button {
+	border-radius: 15px 0 0 15px;
+	background-color: white;
+	border: 1px solid black;
+	border-right: none;
+}
+
+.form-control {
+	border-radius: 0 15px 15px 0;
+	background-color: white;
+	border: 1px solid black;
+	border-left: none;
+}
+
+
+/* Month header */
+.month {
+	background: white;
+	border: 1px solid gray;
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+}
+
+/* Month list */
+.month ul {
+	margin: 0;
+	padding: 0;
+}
+
+.month ul li {
+	color: black;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+	float: left;
+	padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+	float: right;
+	padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+	margin: 0;
+	padding: 10px 0;
+	border-right: 1px solid gray;
+	border-left: 1px solid gray;
+	background-color:#ddd;
+}
+
+.weekdays li {
+	margin: 0;
+	display: inline-block;
+	width: 12%;
+	color: #666;
+	text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+	padding: 10px 0;
+	border: 1px solid gray;
+	border-radius: 0 0 10px 10px;
+	background: white;
+	margin: 0;
+}
+
+.days li {
+	list-style-type: none;
+	display: inline-block;
+	width: 12%;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size:12px;
+	color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+	padding: 5px;
+	background: orange;
+	color: white;
+}
+
+.div-list {
+	margin-top: 20px ;
+}
+
+h4 {
+	display: inline-block;
+	width: 100px;
+	margin: 0;
+}
+
+.hr {
+	height: 2px;
+	border-width: 0;
+	margin: 4px 0;
+	width: calc(100% - 100px - 4px);
+	color: gray ;
+	background-color: gray ;
+	display: inline-block;
+}
+
+.new-list {
+	padding: 0;
+}
+
+.news {
+	margin-bottom: 20px;
+}
+
+.date {
+	opacity: 0.5;
+	margin-bottom: 2px;
+}
+
+.title {
+	margin-top: 2px;
+}
+
+footer {
+	width: 95vw;
+	height: 50px;
+	background-color: orange;
+	margin: 0 auto;
+}
+
+.footer-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.footer-title {
+	width: 30%;
+	opacity: 0.5;
+}
+
+.footer-list {
+	width: 40%;
+	display: flex;
+	padding: 0;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.icon-block {
+	width: 100px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.icon-social {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: white;
+	color: orange;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.fa-eye {
+	opacity: 0.5;
+}
+
+.fa-comment {
+	opacity: 0.5;
+}
