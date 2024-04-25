@@ -1,4 +1,3 @@
-
 /* HEADER */
 .wrapper {
 	width: 84%;
@@ -84,8 +83,21 @@ a:hover {
 	background: linear-gradient(
 		100deg, 
 		#fff 50%,
-		#000 50%
+		#1c1c1c 50%
 	);
+}
+
+.newspaper-title {
+	font-size: 40px;
+}
+
+.newspaper-title::after {
+	content: '';
+	display: block;
+	height: 2px;
+	background-color: red;
+	width: 10%;
+	margin: 20px 0;
 }
 
 .newspaper::after {
@@ -114,7 +126,7 @@ a:hover {
 }
 
 .newspaper .wrapper div .question {
-	font-size: 20px;
+	font-size: 30px;
 	font-style: italic;
 }
 
@@ -124,24 +136,34 @@ a:hover {
 
 /* FOOTER */
 #page-footer {
-	
-	padding: 25px 0;
-	clear: left;
-	
+	padding: 25px 0 0 0;
+	overflow: auto;
+	background-color: #111111;
 }
+
+/* #page-footer .wrapper {
+	display: flex;
+	justify-content: space-around;	
+} */
+
+#page-footer .wrapper {
+
+} 
 
 #page-footer .footer-col{
 	width: 25%;
 	float: left;
 }
 
+
 #page-footer .footer-col .title{
+	color: white;
 	text-transform: uppercase;
 	font-size: 16px;
 }
 
 #page-footer .footer-col .title::after {
-	content: '.';
+	content: '';
 	font-size: 0;
 	display: block;
 	width: 75%;
@@ -150,7 +172,8 @@ a:hover {
 	margin: 15px 0;
 }
 
-#page-footer .footer-col ul>li {
+#page-footer .footer-col ul>li>a {
+	color: white;
 	opacity: 0.7;
 	font-size: 15px;
 	line-height: 1.6;
@@ -159,6 +182,7 @@ a:hover {
 #page-footer .social ul>li {
 	display: inline-block;
 	margin-right: 20px;
+	color: white;
 }
 
 #page-footer .social ul>li>a {
@@ -169,6 +193,10 @@ a:hover {
 	border-radius: 50%;
 	text-align: center;
 	line-height: 44px;
+}
+
+#page-footer .social p {
+	color: white;
 }
 
 #page-footer .social ul>li>a:hover {

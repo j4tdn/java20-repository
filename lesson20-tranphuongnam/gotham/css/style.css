@@ -1,0 +1,293 @@
+/* SETTING */
+
+body {
+	font-size: 16px;
+	font-family: "Arial", Aria, sans-serif;
+	
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	font-style: italic;
+	color: red;
+}
+
+a:hover::after {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: red;
+	
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+/* COMMON */
+.wrapper {
+	width: 72%;
+	height: 100%;
+
+	margin: 0 auto;
+}
+
+.clear-fix {
+	clear: both;
+}
+
+/* HEADER */
+#page-header, #page-footer  {
+	height: 67px;
+	background-color: #f7c61d;
+}
+
+#page-header .wrapper,
+#page-footer .wrapper {
+	align-items: center;
+}
+
+#page-footer .wrapper {
+	display: flex;
+}
+
+#page-header .wrapper {
+	position: relative;
+}
+
+#page-header .wrapper ul li {
+	margin: 0 35px;
+	display: inline-block;
+	line-height: 67px;
+}
+
+.nav-left {
+	float: left;
+	vertical-align: middle;
+}
+
+.nav-right {
+	float: right;
+	vertical-align: middle;	
+	align-items: center;
+
+}
+
+.page-logo {
+	position: absolute;
+	top: 30%;
+	left: 45%;
+}
+
+#page-header .wrapper a {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* PAGE MAIN */
+#page-main,
+#page-main a {
+	color: #555;
+}
+
+#page-main .wrapper .recent-articles {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+#page-main .wrapper main {
+	width: 70%;
+	float: left;
+}
+
+#page-main .wrapper main .articles article {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 80px; 
+}
+
+#page-main .wrapper main .articles article:last-child {
+	margin-bottom: 60px;
+}
+
+#page-main .wrapper main .articles article .article-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#page-main .wrapper aside {
+	width: 26%;
+	float: right;
+	padding-left: 40px;
+	box-sizing: border-box;
+}
+
+.category, 
+.article-end,
+.comments {
+	color: #f7c61d;
+}
+
+.article-right .title {
+	font-size: 26px;
+}
+
+.more-articles {
+	text-align: center;
+	margin-bottom: 60px; 
+}
+
+.more-articles a {
+	display: inline-block;
+	padding: 12px 22px;
+	border: 1px solid #f7c61d;
+	border-radius: 4px; 
+}
+
+.more-articles a:hover {
+	background-color: #f7c61d;
+}
+
+#right-side-bar>* {
+	margin-bottom: 60px;
+}
+
+.search-box {
+	position: relative;
+}
+
+.search-icon {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+.search-text {
+	border: 1px solid grey;
+	border-radius: 6px;
+	box-sizing: border-box;
+	padding: 5px 10px 5px 25px;
+	width: 100%;
+	height: 32px;
+}
+
+.calendar {
+	width: 100%;
+}
+
+.calendar .calendar-top {
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;
+	border: 1px solid grey;
+	box-sizing: border-box;
+}
+
+.calendar .calendar-body table {
+	width: 100%;	
+}
+
+.calendar .calendar-body table th {
+	background-color: #e7e7e7;
+	height: 26px;
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid white;
+	width: 10%;
+}
+
+.calendar .calendar-body table td {
+	height: 32px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e5e5e5;
+	width: 14%;
+}
+
+.current-date {
+	background-color: #f7c61d;
+	font-weight: bold;
+}
+.not-current-month {
+	color: #e5e5e5;
+}
+
+.popular-news>* {
+	margin: 15px 0; 
+}
+
+.popular-news .title {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.popular-news .title::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #e5e5e5;
+}
+
+.popular-news .meta {
+	color: #888;
+	margin: 8px 0;
+}
+
+
+
+/*===== FOOTER STYLE =====*/
+#page-footer>.wrapper>* {
+	width: 33.33%;
+}
+
+#page-footer {
+	margin-top: 80px;
+}
+
+#page-footer .copy-right {
+	width: 100%;
+	color: grey;
+	font-size: 13px;
+}
+
+#page-footer .footer-nav {
+	width: 100%;
+}
+
+#page-footer .footer-nav ul {
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 25px;
+}
+
+#page-footer .footer-nav ul li a{
+	padding: 0 25px;
+}
+
+#page-footer .socials {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#page-footer .socials a {
+	width: 50px;
+	background: #fff;
+	border-radius: 50%;
+	font-size: 24px;
+	color: #f7c61d;
+	text-align: center;
+	line-height: 45px;
+	margin: 0 10px;
+}
