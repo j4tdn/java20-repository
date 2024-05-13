@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex19 - CSS Flex - Wrap</title>
+
+	<style>
+		.container {
+			border: 2px dotted limegreen;
+			min-height: 800px;
+
+			display: flex;
+			flex-direction: row;
+
+			/*Tổng con = 1000px*/
+			width: 800px;
+			flex-wrap: wrap;
+			align-content: flex-start;
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+			height: 150px;
+		}
+
+		.item1 {
+			width: 200px;
+			order: 3;
+		}
+
+		.item2 {
+			width: 340px;
+		}
+
+		.item3 {
+			width: 200px;
+			order: -1;
+		}
+
+		.item4 {
+			width: 260px;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Wrap</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+		<div class="item item4">Element 4</div>
+	</div>
+
+	
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex22 - CSS Flex - Shrink</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.container {
+			border: 2px dotted limegreen;
+			height: 200px;
+			width: 600px;
+
+			display: flex;
+			background-color: #76b5c5;
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+			height: 60px;
+
+			/*free space: 400px*/
+		}
+
+		.item1 {
+			width: 100px;
+			flex-shrink: 1;
+			/*new width = [(flex shrink * width)/total of width] * negative missing space*/
+		}
+
+		.item2 {
+			width: 400px;
+			flex-shrink: 3;
+		}
+
+		.item3 {
+			width: 400px;
+			flex-shrink: 1;
+		}
+
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Grow</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+	</div>
+
+	
+
+	
+</body>
+</html>

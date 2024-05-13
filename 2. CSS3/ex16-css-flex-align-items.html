@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex16 - CSS Flex - Align Items</title>
+
+	<style>
+		.container {
+			border: 2px dotted limegreen;
+			min-height: 800px;
+
+			display: flex;
+			flex-direction: row;
+
+			align-items: baseline; /*stretch --> remove flex-item's height*/
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+			height: 150px;
+		}
+
+		.item1 {
+			width: 200px;
+			height: 100px;
+			line-height: 100px;
+		}
+
+		.item2 {
+			width: 340px;
+			height: 300px;
+			line-height: 300px;
+		}
+
+		.item3 {
+			width: 150px;
+			height: 200px;
+			line-height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Align Items</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+	</div>
+
+	
+</body>
+</html>
