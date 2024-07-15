@@ -1,0 +1,28 @@
+.ul-c {
+	.nav-item {
+		text-align: center;
+	}
+}
+
+@media (max-width: 576px){
+	.welcome {
+		color: green;
+	}
+}
+
+@media (min-width: 992px){
+	.welcome {
+		color: red;
+	}
+}
+
+
+@media (max-width: 992px){
+	.h-search {
+		width: 50vw;
+	}
+}
+
+.h-25 {
+	height: 10vh;
+}
