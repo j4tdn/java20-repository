@@ -1,0 +1,33 @@
+.row {
+	*[class ^= col] {
+		height: 120px;
+	}
+}
+
+.ul-c {
+	.nav-item {
+		text-align: center;
+	}
+}
+
+
+/*max: exclusive*/
+@media (max-width: 576px) {
+	.welcome {
+    	color: green;
+    }
+}
+
+@media (max-width: 992px) {
+    .h-search {
+    	width: 25%;
+    }
+}
+
+
+/*min: inclusive*/
+@media (min-width: 992px) {
+    .welcome {
+    	color: red;
+    }
+}
