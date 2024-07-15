@@ -1,0 +1,19 @@
+.container-nav{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.nav-left{
+	display: flex;
+	width: 70%;
+
+}
+ .card-text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 2; /* Số dòng bạn muốn hiển thị */
+            height: calc(1em * 3); /* Điều chỉnh chiều cao tương ứng với số dòng */
+        }
