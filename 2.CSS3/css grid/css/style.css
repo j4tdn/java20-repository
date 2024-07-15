@@ -1,0 +1,57 @@
+body{
+	font-size:sans-serif;
+	font-size: 2rem;
+}
+
+/*common propreties*/
+
+
+
+/*own properties*/
+
+.container{
+
+	display: grid;
+	grid-template: "HEADER HEADER HEADER"
+				   "SIDEBAR CENTER CENTER"
+				   "FOOTER FOOTER FOOTER";
+
+
+
+
+
+
+	/*display: inline-grid;
+	grid-gap: 10px;
+	grid-auto-columns: 200px 100px auto 300px;
+	grid-auto-rows:80px 120px 80px ;
+/*	grid-template:80px 120px 20px /200px 100px auto 300px  ;*/
+	
+/*	grid-template-columns:200px repeat(4, 1fr) ;*/
+}
+div[class ^='box']{
+	background-color: orange;
+
+}
+
+.box-1{
+	grid-area: HEADER;
+	}
+.box-2{
+	grid-area: SIDEBAR;
+}
+
+.box-3{
+	grid-area: CENTER;
+
+}
+	
+
+
+.box-4{
+	grid-area: FOOTER;
+	
+}
+.box-5{
+	grid-area: B5;
+}

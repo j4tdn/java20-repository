@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Welcome to Bootstrap V5.3.3[width = <span class="current-window-width text-danger"></span>px]</h1>
+
+  <h1>Grid System Design As </h1>
+  <ul>
+    <li>Column: 12</li>
+    <li>Tier/ Breakpoint: 6[xs,sm, md, lg,xxl] </li>
+    <li>Wrapper: Container[breakpoint][fluid]</li>
+  </ul>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="bg-info col-md-6 col-lg-12 col-xl-3"></div>
+      <div class="bg-danger col-md-6 col-lg-4 col-xl-3"></div>
+      <div class="bg-secondary col-md-6 col-lg-4 col-xl-3"></div>
+      <div class="bg-warning col-md-6 col-lg-4 col-xl-3"></div>
+
+
+    </div>
+  </div>
+
+  <div class="container-fluid py-2">
+    <div class="row">
+      <div class="col-12 bg-dark"></div>
+      <div class="col-3 bg-danger"></div>
+      <div class="col-3 bg-secondary"></div>
+      <div class="col-3 bg-warning"></div>
+      <div class="col-3 bg-info"></div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary">Primary</button>
+ 
+  <div class="container-fluid"><div class="row">
+    <div class="col-4"></div>
+  </div></div>
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rolloutModal"  data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+  <div class="modal fade" id="rolloutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
