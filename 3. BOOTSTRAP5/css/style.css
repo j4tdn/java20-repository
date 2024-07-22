@@ -1,4 +1,4 @@
-.row {
+.tbg-color .row {
 	*[class ^= col] {
 		height: 120px;
 	}
