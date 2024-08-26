@@ -7,14 +7,27 @@ let tasks = document.querySelector('.tasks');
 // disable button add default
 toggleButton(false);
 
+/*======================= EVENT HANDLER =======================*/
+
+// keyup cho tf, nhấn click button được --> tfText có giá trị
+btnAdd.addEventListener('click', () => {
+	let newText = tfText.value.trim();
+	if (newText) {
+		tasks.appendChild(createNewTask(newText));
+		tfText.value = '';
+	} else {
+		toggleMessage(true);
+	}
+	toggleButton(false);
+})
+
 tfText.addEventListener('keyup', (e) => {
 	let newText = tfText.value.trim();
 	firedTfTextEvents(newText);
 	if (newText && e.which === 13) {
-		tasks.appendChild(createNewTask(newText));
-		tfText.value = '';
+		btnAdd.click();
 	}
-});
+})
 
 /* fire event when click 'X' */
 tfText.addEventListener('search', () => {
@@ -22,6 +35,26 @@ tfText.addEventListener('search', () => {
 	firedTfTextEvents(newText);
 });
 
+tasks.addEventListener('click', (e) => {
+	let currentTag = e.target;
+	let parent = currentTag.parentElement;
+	let classList = currentTag.classList;
+	let task;
+	
+	if (classList.contains('cbx')) {
+		task = parent.nextElementSibling;
+		task.classList.toggle('task-done');
+	} else if (classList.contains('btn-remove')) {
+		task = currentTag.previousElementSibling;
+		let confirmed = confirm(`Are You sure to delete '${task.textContent}' ?`);
+		if (confirmed) {
+			parent.remove();	
+		}
+	}
+})
+
+
+/*======================= UTIL METHODS =======================*/
 
 function firedTfTextEvents(newText) {
 	if (newText) {

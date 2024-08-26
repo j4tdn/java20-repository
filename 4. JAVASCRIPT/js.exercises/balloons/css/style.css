@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+}
+
+
+/*====================== BALLOON ======================*/
+.balloon {
+	width: 100px;
+	height: 200px;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	position: absolute;
+	top: calc(100vh - 20px);
+}
+
+.balloon-blue {
+	background-image: url(../images/balloon-blue.png);
+}
+
+.balloon-green {
+	background-image: url(../images/balloon-green.png);
+}
+
+.balloon-red {
+	background-image: url(../images/balloon-red.png);
+}
+
+.balloon-violet {
+	background-image: url(../images/balloon-violet.png);
+}
+
+.balloon-yellow {
+	background-image: url(../images/balloon-yellow.png);
+}
+
+
+/*====================== SCORE BLOCK ======================*/
+.score-block {
+	z-index: 1000;
+	font-size: 1.25rem;
+	text-align: center;
+
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+	width: 380px;
+	padding: 18px;
+	background-color: #efefef;
+
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 190px);
+
+	.popped::after {
+		content: '';
+		display: block;
+		margin: 12px auto;
+		width: 10rem;
+		height: 2px;
+		background-color: red;
+	}
+
+	.current-score {
+		color: orange;
+		font-weight: bold;
+	}
+
+	.total-score {
+		color: green;
+		font-weight: bold;
+	}
+}
+
+
+

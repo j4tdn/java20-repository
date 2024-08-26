@@ -12,6 +12,10 @@
 	visibility: hidden;
 }
 
+.task-done {
+	text-decoration: line-through;
+}
+
 
 /* === MESSAGE === */
 .message {
@@ -20,8 +24,6 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
-
 
 /* === TODO BLOCK ===*/
 .todo-block {
