@@ -1,0 +1,118 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+li{
+	list-style:none;
+}
+
+:root{
+	--blue:#4F95D8;
+	--blue-light :#BFDEFC;
+	--white:#FFF;
+	--dsize:1.125rem;
+	--grey:#CDD6DA;
+	--grey-light:#FAFAFA;
+}
+
+/* === UTILS === */
+.invisible{
+	visibility: hidden;
+}
+
+/* === MESSAGE === */
+.message{
+	color:red;
+	text-align:center;
+	margin-top:20px ;
+	max-resolution: 20px;
+
+}
+
+/* === TODO BLOCK === */
+.todo-block{
+	width: 25%;
+	margin: 20px auto;
+	border: 2px solid var(--blue);
+
+	.todo-header{
+		background-color:var(--blue) ;
+		padding: 1.5rem 0;
+		.title{
+			color: var(--white);
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+	}
+
+	.todo-body{
+		.todo-form, .tasks > .task{
+			height: 3.25rem;
+			width: 100%;
+			display: flex;
+			border-bottom: 1px solid var(--grey);
+		}
+
+		.todo-form{
+			.todo-text{
+				width: 80%;
+				border: none;
+				outline: none;
+				font-size: var(--dsize);
+				padding-left: 0.5rem;
+
+			}
+			.btn-add{
+				width: 20%;
+				border: none;
+				color: var(--blue);
+				font-size: 2rem;
+				cursor: pointer;
+			}
+			.btn-add:disabled{
+				background-color: var(--grey-light);
+				color: var(--grey);
+				cursor: auto;
+			}
+		}
+		.tasks{
+			.task{
+				.cbx-block{
+					width: 10%;
+					background-color: var(--blue-light);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.btn-remove{
+					width: 20%;
+					background-color: var(--blue-light);					
+					border: none;
+					cursor: pointer;
+
+					/*ICON*/
+					background-image: url(../images/trash.svg);
+					background-repeat: no-repeat;
+					background-size: 2rem;
+					background-position: center;
+				}
+				.task-content{
+					width: 70%;
+					padding-left: 0.5rem;
+					line-height: 3.25rem;
+				}
+			}
+			.task:last-child{
+				border-bottom: none;
+			}
+
+		}
+
+	}
+}
+.complete{
+	text-decoration: line-through;
+}

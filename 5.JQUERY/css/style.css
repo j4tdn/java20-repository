@@ -1,0 +1,60 @@
+.toggler{
+	background:orange ;
+	cursor: pointer;
+	border: 1px solid;
+	margin: 10px 0;
+	box-sizing: border-box;
+.toggler:hover{
+	color: white;
+	
+}
+.block{
+	width: 220px;
+	height: 140px;
+
+}
+
+.block-green{
+	background: green;
+}
+.invisible{
+	visibility: visible;
+}
+
+.def-avatar{
+	width: 120px;
+	height: 120px;
+}
+
+form{
+	width: 204px;
+	
+
+	input[type='text']{
+		width: 100px;
+	}
+	input[type='number']{
+		width: 20px;
+	}
+
+	label{
+		white-space: nowrap;
+	}
+
+	
+
+}
+
+.form-upload{
+	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px 10px;
+}
+.d-none{
+	display: none;
+}
+.upload{
+	width: 60px;
+	
+}
