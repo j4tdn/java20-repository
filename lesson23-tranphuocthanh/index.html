@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>budget</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div class="budget-top">
+		<p>Available Budget in <span class="date"></span>:</p>
+		<div class="total-budget-block">
+			<span class="outlay">+</span>
+			<span class="total-budget">620</span>.00
+		</div>
+		<div class="income-block">
+			<span class="income-title">Income</span>
+			<div>+ <span class="total-income">69,500</span>.00</div>
+		</div>
+		<div class="expenses-block">
+			<span class="expenses-title">Expenses</span>
+			<div>
+				- <span class="total-expenses">69,500</span>.00
+				<span class="percent none">10</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="budget-bottom">
+		<div class="add-block">
+			<div class="select-opt">
+				<select>
+					<option>+</option>
+					<option>-</option>
+				</select>	
+			</div>
+			<div class="add-title">
+				<input type="text" class="desc-field" placeholder="add description">
+			</div>
+			<div class="add-value">
+				<input type="number" class="val-field">					
+			</div>
+			<div class="submit">
+				<i class="fa-solid fa-check"></i>
+			</div>
+		</div>
+		<div class="income-expenses-wrapper">
+			<div class="block income-block">
+				<h3 class="title">INCOME</h3>
+				<ul class="lists">
+					<li>
+						<span>Book app</span>
+						<div>
+							+<span class="income-value">100</span>.00
+							<span class="remove"><i class="fa-solid fa-x"></i></span>
+						</div>
+					</li>
+					<li>
+						<span>Book app</span>
+						<div>
+							+<span class="income-value">100</span>.00
+							<span class="remove"><i class="fa-solid fa-x"></i></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="block expenses-block">
+				<h3 class="title">EXPENSES</h3>
+				<ul class="lists expenses">
+					<li>
+						<span>Book app</span>
+						<div>
+							-<span class="expenses-value">100</span>.00
+							<span class="percent">10%</span>
+							<span class="remove"><i class="fa-solid fa-x"></i></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
