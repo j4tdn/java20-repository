@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LESSON 22 - TODO APP</title>
+	<link rel="icon" href="images/todolist.jfif">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<p class="message invisible">
+		Task content cannot be empty !!! Please text something
+	</p>
+
+	<div class="todo-block">
+		<!-- TODO HEADER -->
+		<div class="todo-header">
+			<h1 class="title">TODO APP</h1>
+		</div>
+
+		<!-- TODO BODY -->
+		<div class="todo-body">
+			<form class="todo-form" action="javascript:void(0)">
+				<input class="todo-text" type="search" placeholder="A task you want to complete">
+				<input class="btn-add" type="button" value="+">
+			</form>
+			<ul class="tasks">
+				<!-- START -->
+				<li class="task">
+					<div class="cbx-block">
+						<input class="cbx" type="checkbox">
+					</div>
+					<p class="task-content">Task 1</p>
+					<button class="btn-remove"></button>
+				</li>
+				<!-- END -->
+				<li class="task">
+					<div class="cbx-block">
+						<input class="cbx" type="checkbox">
+					</div>
+					<p class="task-content">Task 2</p>
+					<button class="btn-remove"></button>
+				</li>
+				<li class="task">
+					<div class="cbx-block">
+						<input class="cbx" type="checkbox">
+					</div>
+					<p class="task-content">Task 3</p>
+					<button class="btn-remove"></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.7.1.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>

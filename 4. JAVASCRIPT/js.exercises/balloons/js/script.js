@@ -3,18 +3,28 @@ let popAudio = new Audio('sounds/pop.mp3');
 // số ball cần đạt được ở mỗi level
 let totalScoreLeve1 = 10;
 let totalScoreLeve2 = 15;
-let totalScoreLeve2 = 20;
+let totalScoreLeve3 = 20;
 
 // sau bao lâu thì ball sẽ được tạo ra
 let creatingTimeLevel1 = 500;
 let creatingTimeLevel2 = 300;
-let creatingTimeLevel2 = 200;
+let creatingTimeLevel3 = 200;
 
 // sau bao lâu thì ball nó sẽ dịch chuyển 1px
 let runningTimeLevel1 = 10;
 let runningTimeLevel2 = 8;
 let runningTimeLevel3 = 6;
 
+function BallProp(totalScore, creatingTime, runningTime) {
+	this.totalScore = totalScore;
+	this.creatingTime = creatingTime;
+	this.runningTime = runningTime;
+}
+
+let levelProperties = new Map();
+levelProperties.set(1, new BallProp(4, 500, 10));
+levelProperties.set(2, new BallProp(6, 300, 8));
+// levelProperties.set(3, new BallProp(20, 300, 10));
 
 let widowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
@@ -30,11 +40,17 @@ let winBlock = document.querySelector('.win');
 let looseBlock = document.querySelector('.loose');
 let playAgainYesButton = document.querySelector('.play-again-yes');
 let playAgainNoButton = document.querySelector('.play-again-no');
+let playNextLevelButton = document.querySelector('.play-next-level');
+
+let nextLevelElement = document.querySelector('.next-level');
+let nthLevel = document.querySelector('.nth-level');
+let cpElement = document.querySelector('.champion');
 
 let colors = ['blue', 'green', 'red', 'violet', 'yellow'];
 
 let balloonId = 0;
 let currentScore = 0;
+let currentLevel = 1;
 let gameover =  false; // loose
 let endgame = false; // win
 
@@ -43,11 +59,16 @@ const wlEnum = Object.freeze({
     LOOSE: 0
 });
 
-startGame();
+startGame(currentLevel);
 
-function startGame() {
+function startGame(level) {
+	let ballProp = levelProperties.get(level);
+
+	// gán level hiện tại vào score block
+	nthLevel.textContent = level;
+
 	// gán điểm cần thắng theo level
-	totalScoreElement.textContent = totalScoreLeve1;
+	totalScoreElement.textContent = ballProp.totalScore;
 
 	hideWlContainer();
 
@@ -57,12 +78,12 @@ function startGame() {
 			let wlOption = gameover ? wlEnum.LOOSE : wlEnum.WIN;
 			showWlContainer(wlOption);
 		} else {
-			createBall();
+			createBall(ballProp.runningTime, ballProp.totalScore);
 		}
-	}, creatingTimeLevel1);
+	}, ballProp.creatingTime);
 }
 
-function createBall() {
+function createBall(runningTime, totalScore) {
 	let balloon = document.createElement('div');
 	balloon.id = balloonId++;
 
@@ -77,21 +98,22 @@ function createBall() {
 		if (!finishedGame()) {
 			popAudio.play();
 			balloon.remove();
-			updateCurrentScore();
+			updateCurrentScore(++currentScore);
 
 			// --- xử lý thắng ---
-			if (currentScore === totalScoreLeve1) {
+			if (currentScore === totalScore) {
 				endgame = true;
+				nextLevelElement.textContent = ++currentLevel;
 			}
 		}
 	})
 
 	body.appendChild(balloon);
 
-	running(balloon);
+	running(balloon, runningTime);
 }
 
-function running(balloon) {
+function running(balloon, runningTime) {
 	// số px mà balloon đã dịch chuyển từ dưới -> trên
 	// sau mỗi khoảng thời gian dịch chuyển 1px
 	let moved = 0;
@@ -107,14 +129,13 @@ function running(balloon) {
 			balloon.style.top = (windowHeight - moved) + 'px';
 			moved++;	
 		}
-	}, runningTimeLevel3);
+	}, runningTime);
 
 }
 
-function updateCurrentScore() {
-	++currentScore;
+function updateCurrentScore(score) {
 	currentScoreElements.forEach((element) => {
-		element.textContent = currentScore;
+		element.textContent = score;
 	})
 }
 
@@ -138,6 +159,17 @@ function showWlContainer(wlOption) {
 	if (wlOption === wlEnum.WIN) {
 		winBlock.style.display = 'block';
 		looseBlock.style.display = 'none';
+
+		let levelProp = levelProperties.get(currentLevel);
+		let hasNextLevel = !!levelProp;
+		console.log('hasNextLevel --> ' + hasNextLevel);
+		if (!hasNextLevel) {
+			playNextLevelButton.style.display = 'none';
+			cpElement.style.display = 'block';
+		} else {
+			cpElement.style.display = 'none';
+		}
+
 	} else if (wlOption === wlEnum.LOOSE) {
 		looseBlock.style.display = 'block';
 		winBlock.style.display = 'none';
@@ -148,10 +180,19 @@ function showWlContainer(wlOption) {
 function resetForNewGame() {
 	currentScore = 0;
 	gameover = false;
+	endgame = false;
 }
 
 function finishedGame() {
 	return gameover || endgame;
+}
+
+function gaming() {
+	hideWlContainer();
+	removeDisabledBalloonsForNewGame();
+	resetForNewGame();
+	updateCurrentScore(0);
+	startGame(currentLevel);
 }
 
 /*===================== EVENTS =====================*/
@@ -160,12 +201,12 @@ playAgainNoButton.addEventListener('click', () => {
 });
 
 playAgainYesButton.addEventListener('click', () => {
-	hideWlContainer();
-	removeDisabledBalloonsForNewGame();
-	resetForNewGame();
-	startGame();
+	gaming();
 });
 
+playNextLevelButton.addEventListener('click', () => {
+	gaming();
+});
 
 /*===================== UTIL METHODS =====================*/
 function random(bound) {
