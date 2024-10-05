@@ -1,0 +1,79 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #0051ba;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.search-bar {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  width: 320px;
+}
+
+.nav {
+  margin: 0 auto;
+  background-color: #0051ba;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffdb00;
+}
+
+.nav a:hover::after {
+  width: 100%;
+  left: 0;
+}

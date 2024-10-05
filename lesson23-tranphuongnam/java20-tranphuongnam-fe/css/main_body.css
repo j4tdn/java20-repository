@@ -1,0 +1,213 @@
+.banner {
+  position: relative;
+  height: 400px;
+  background-image: url("/img/image_slider2.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.category {
+  width: 30%;
+  text-align: center;
+}
+
+.category a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.category p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin: 0;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 24px;
+}
+
+.collection {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.collection-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-item a {
+  display: block;
+  height: 100%;
+}
+
+.collection-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.collection-item-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.product {
+  width: 22%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.product-tag {
+  display: inline-block;
+  background-color: #e4002b;
+  color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.product-name {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+.kitchen-banner {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kitchen-banner img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.service {
+  text-align: center;
+  width: 30%;
+  transition: all 0.3s ease;
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.news {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 48%;
+  transition: all 0.3s ease;
+}
+
+.news-sub-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.testimonial {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonial-content {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+}

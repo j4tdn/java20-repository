@@ -1,0 +1,48 @@
+.banner:hover {
+  filter: brightness(70%);
+}
+
+.category a:hover img {
+  transform: scale(1.1);
+}
+
+.category a:hover p {
+  transform: translateY(0);
+}
+
+.collection-item:hover img {
+  transform: scale(1.1);
+}
+
+.collection-item:first-child {
+  grid-row: span 2;
+}
+
+.collection-item:hover .collection-item-text {
+  background-color: rgba(0, 81, 186, 0.9);
+}
+
+.product a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product a:hover img {
+  transform: scale(1.05);
+}
+
+.kitchen-banner img:hover {
+  transform: scale(1.05);
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.news-item:hover {
+  transform: scale(0.98);
+}
+
+.news-item:hover img {
+  filter: brightness(70%);
+}

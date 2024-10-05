@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 5px;
+    font-size: 16px;
+    border: 3px solid #c0c0c0;
+    border-radius: 4px;
+}
+
+nav {
+    background-color: #004b8d;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        li {
+            padding: 10px;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            a:hover {
+                color: #ddd;
+            }
+            
+        }
+    }
+}
+
+.main-banner {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.category-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f4f4f4;
+
+    .category-item{
+       width: 33%;
+        img {
+        width: 100%;
+        height: auto;
+        }
+    }
+}
+
+.collection-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .collections {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: repeat(2, 200px);
+        gap: 20px;
+
+        .collection {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            .overlay-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 10px 20px;
+            }
+        }
+        .collection:hover img {
+            transform: scale(1.1);
+        }
+        .collection.collection-1 {
+            grid-row: span 2;
+        }
+        
+        .collection.collection-2, .collection.collection-3 {
+            grid-column: span 1;
+        }
+        .collection.collection-4 {
+            grid-column: span 2;
+        }
+    }
+}
+
+.product-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+}
+
+
+
