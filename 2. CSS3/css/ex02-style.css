@@ -1,8 +1,19 @@
+<<<<<<< HEAD
 div[tt="x2"] {
+=======
+div[tt='x2'] {
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 	border: red solid 2px;
 }
 
 /*div[id='div01'] {*/
+<<<<<<< HEAD
 #div01 {
 	border: blue solid 2px;
 }
+=======
+
+#div01 {
+	border: blue solid 2px;
+}
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)

@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
 =============
 STYLE.CSS
 -> chứa css chung cho dự án
@@ -23,10 +24,40 @@ p:nth-child(2)
 selector:nth-of-type(an + b)
 -> tương tự nth-child, ko quan tâm đến các thẻ khác làm thẻ con
 chỉ quan tâm thẻ selector(ví dụ là p) 
+=======
+===============
+STYLE.CSS
+-> chứa css chung cho dự án
+===============
+
+CSS Selector: Tập các cách để gọi các element, tag của html để thêm css vào
+            : Gọi thông qua tên thẻ, thuộc tính thẻ ...
+
+VD1: p {} --> css cho elements có tên thẻ là p
+VD2: ul li {} --> css cho các elements là thẻ li con thẻ ul
+VD3: table tr:first-child {} -> css cho thẻ tr đầu tiên trong table
+
+Nếu như css selector dựa vào TÊN THẺ -> có nhiều hạn chế, vì 1 trang
+có thể dùng rất nhiều thẻ trùng nhau, các thẻ đó là muốn có css khác nhau
+-> thêm thuộc tính, giá trị thuộc tính cho thẻ để phân biệt vs các thẻ khác
+
+===============
+
+selector:nth-child(an+b)
+p:nth-child(2)
+
+-> Tìm p nào mà là thẻ con thứ 2 bên trong thẻ cha nào đó, ăn css
+-> Ko tính cha là body, html
+
+selector:nth-of-type(an+b)
+-> Tương tự nth-child, không quan tâm đến các thẻ khác làm thẻ con
+chỉ quan tâm thẻ selector(ví dụ là p)
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 
 Có thể thêm bất kỳ thuộc tính với tên giá trị nào
 VD: div[tt='x2']
 
+<<<<<<< HEAD
 Thường html, css, js dùng 2 thuộc tính đặc biệt là clas và id để phân biệt các element khác
 
 class: các elements có thể có gía trị trùng nhau cho thuộc tính class
@@ -43,11 +74,29 @@ VD: <div class="text-bold">
 
 /*Trong block :root(root element) khai báo các global variable sau đó dùng hàm var(tên biến)
 để gọi nó	*/
+=======
+Thường html, css, js dùng 2 thuộc tính đặc biệt là class và id để phân biệt các element khác nhau
+
+class: các elements có thể có giá trị trùng nhau cho thuộc tính class
+id   : mỗi element sẽ có id là duy nhất, k trùng nhau
+
+VD: <div class="text-bold">
+    <div class="text-bold">
+
+    <p id="footer">
+	<p id="header">
+
+*/
+
+/* Trong block :root(root element) khai báo các global variable
+sau đó dùng hàm var(tenbien) để gọi nó */
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 :root {
 	--todo-green: #20B2AA;
 }
 
 @font-face {
+<<<<<<< HEAD
 			font-family: Chantelli;
 			src: url('webfonts/Chantelli_Antiqua.woff')format('woff');
 }
@@ -55,6 +104,14 @@ VD: <div class="text-bold">
 
 h4::after {
 	content: "\2705" ;
+=======
+	font-family: Chantelli;
+	src: url('webfonts/Chantelli_Antiqua.woff') format('woff');
+}
+
+h4::after {
+	content: '\2705' !important;
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 }
 
 .block-1 {
@@ -62,7 +119,10 @@ h4::after {
 	height: 100px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 .block-md-2-blue {
 	width: 200px;
 	height: 200px;
@@ -90,6 +150,7 @@ h4::after {
 	text-transform: capitalize;
 }
 
+<<<<<<< HEAD
 .text-red {
 	color: red;
 }
@@ -97,6 +158,11 @@ h4::after {
 .text-green {
 	color: var(--todo-green);
 }
+=======
+.text-green {
+	color: var(--todo-green);
+} 
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 
 .text-bold {
 	font-weight: 700;
@@ -128,6 +194,7 @@ h4::after {
 
 .bg-orange {
 	background: orange;
+<<<<<<< HEAD
 }
 
 .clear-left {
@@ -142,3 +209,6 @@ h4::after {
 	clear: both;
 }
 
+=======
+}
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)

@@ -1,4 +1,5 @@
 /*
+<<<<<<< HEAD
 ==================
 Style cho file ex01-css-test-connection.html
 ==================
@@ -6,4 +7,13 @@ Style cho file ex01-css-test-connection.html
 
 h4::after {
 	content: "\274C";
+=======
+==============
+Style cho file ex01-css-test-connection.html
+==============
+*/
+
+h4::after {
+	content: '\274C';
+>>>>>>> 5b7ff13 (CSS3 - Day12 - 25.03.2024)
 }
