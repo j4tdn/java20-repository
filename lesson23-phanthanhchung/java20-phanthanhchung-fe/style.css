@@ -1,0 +1,174 @@
+﻿* {
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+header {
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    img {
+      /* min-width: 100px; */
+      width: 30%;
+    }
+    input {
+      height: 20px;
+      width: 30ch;
+      padding-inline: 1rem;
+      transform: translateX(50%);
+    }
+  }
+
+  .nav-categories {
+    background-color: #0051ba;
+    padding-block: 0.5rem;
+    
+    ul {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    
+      li {
+        margin-inline: 0.5em;
+        font-family: Helvetica, sans-serif;
+      }
+    }
+
+    ul li a {
+      color: white;
+    }
+  }
+}
+
+main {
+  .hero {
+    .main-hero {
+      img {
+        width: 100%;
+      }
+    }
+  
+    .supporting-hero {
+      width: 100%;
+      display: flex;
+
+      img {
+        width: 33.3%;
+      }
+    }
+  }
+
+  .title-decoration {
+    width: fit-content;
+    margin: auto;
+    margin-top: 2em;
+  }
+
+  .section-title {
+    margin: auto;
+    display: flex;
+    width: max-content;
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      font-family: Helvetica, sans-serif;
+      font-weight: 400;
+    }
+    
+    img {
+      height: fit-content;
+      margin: 2rem;
+    }
+  }
+
+  .collections {
+
+    .collection-grid {
+      display: grid;
+      margin: auto;
+      margin-top: 2em;
+      width: 80%;
+      row-gap: 1em;
+      column-gap: 1em;
+
+      div {
+        width: fit-content;
+      }
+
+      .collection-1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .collection-2 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+
+      .collection-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
+      .collection-4 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+    }
+  }
+
+  .products {
+    font-family: Helvetica;
+    .front-page-products {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      margin-inline: 1em;
+      padding: 0.3rem;
+      padding-inline: 1rem;
+      border: 2px solid #f0f0f0;
+      &:hover {
+        background-color: #ffd740;
+        a {
+          color: white;
+        }
+      }
+    }
+
+    .products-listing {
+      display: flex;
+      justify-content: center;
+
+      div.product {
+        margin-inline: 0.5em;
+        
+        .product-description {
+          width: 70%;   
+        }
+
+        hr {
+          width: 10ch;
+          margin-block: 0.5rem;
+        }
+
+        p.product-price {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+}
+
+
+
