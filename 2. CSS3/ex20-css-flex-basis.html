@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex20 - CSS Flex - Basis</title>
+
+	<style>
+		.container {
+			border: 2px dotted limegreen;
+			min-height: 800px;
+			width: 100%;
+
+			display: flex;
+			background-color: #76b5c5;
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+			height: 200px;
+			width: 180px;
+		}
+
+		.item1 {
+			flex-basis: 220px;
+			max-width: 150px; /*flex-basis still obey max-width --> flex-direction: row*/
+		}
+
+		.item2 {
+			flex-basis: 400px;
+		}
+
+		.item3 {
+			flex-basis: 220px;
+			min-width: 318px;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Basis</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+	</div>
+
+	
+</body>
+</html>

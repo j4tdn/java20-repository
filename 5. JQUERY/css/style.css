@@ -1,0 +1,61 @@
+.toggler {
+	background: orange;
+	cursor: pointer;
+	border: 1px solid;
+	margin: 10px 0;
+	box-sizing: border-box;
+}
+
+.toggler:hover {
+	color: white;
+}
+
+.block {
+	width: 220px;
+	height: 140px;
+}
+
+.block-green {
+	background: green;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.avatar {
+	width: 120px;
+	height: 120px;
+}
+
+form {
+	width: 240px;
+
+	input[type='text'] {
+		width: 112px;
+	}
+
+	input[type='number'] {
+		width: 30px;
+	}
+
+	lable {
+		white-space: nowrap;
+	}
+
+}
+
+.form-upload {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px 10px;
+}
+
+.d-none {
+	display: none;
+}
+
+.upload {
+	width: 60px;
+	height: 28px;
+}

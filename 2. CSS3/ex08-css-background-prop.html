@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<link rel="icon" href="images/header.png">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Ex08 - CSS Background Property</title>
@@ -11,7 +11,7 @@
 		body {
 			background-color: #C6E0B4;
 		}
-		
+
 		.w8h4 {
 			width: 800px;
 			height: 400px;
@@ -28,7 +28,7 @@
 
 		#bg-elm-1 {
 			background-color: purple;
-			background-image: url(images/cupcake.png);
+			background-image: url(images/cupcake.png); /*w315h365*/
 			background-repeat: no-repeat;
 			background-size: 200px 200px;
 			background-position: center center;
@@ -36,19 +36,18 @@
 
 		#bg-elm-2 {
 			background-color: orange;
-			background-image: url(images/cupcake.png);
-			/*yêu cầu: w/h của element phải tỉ lệ với w/h của background-image*/
+			background-image: url(images/cupcake.png); /*w315h365*/
+
+			/*Yêu cầu: w/h của element phải tỉ lệ với w/h của background-image*/
 			background-size: cover;
 
 			background-repeat: no-repeat;
-
 		}
 
-	</style>
 
+	</style>
 </head>
 <body>
-
 	<h2 class="text-center title">Page - Ex08 CSS Background Property</h2>
 
 	<hr>

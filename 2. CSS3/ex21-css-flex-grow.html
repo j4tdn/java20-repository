@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex21 - CSS Flex - Grow</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.container {
+			border: 2px dotted limegreen;
+			min-height: 200px;
+			width: 700px;
+
+			display: flex;
+			background-color: #76b5c5;
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+			height: 60px;
+			width: 100px;
+
+			/*free space: 400px*/
+		}
+
+		.item1 {
+			flex-grow: 1;
+			/*new width = (flex grow/total flex grow * free space) + width*/
+		}
+
+		.item2 {
+		}
+
+		.item3 {
+			flex-grow: 3;
+		}
+
+		.itemx {
+			background-color: #1e81b0;
+			border: 1px solid orange;
+			height: 60px;
+
+			flex-grow: 1;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Grow</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+	</div>
+
+	<div class="container">
+		<div class="itemx item4">Element 4</div>
+		<div class="itemx item5">Element 5</div>
+		<div class="itemx item6">Element 6</div>
+	</div>
+
+	
+</body>
+</html>

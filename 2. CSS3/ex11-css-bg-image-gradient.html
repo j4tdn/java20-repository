@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<link rel="icon" href="images/header.png">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Ex11 - CSS Background Image - Gradient</title>
@@ -28,29 +28,36 @@
 		}
 
 		.block-2 {
-			background-image: linear-gradient(45deg,yellow, blue, red);
+			background-image: linear-gradient(45deg, yellow, blue, red, orange);
 		}
 
 		.block-3 {
-			background-image: linear-gradient(135deg,yellow, blue, red);
+			background-image: linear-gradient(135deg, yellow, blue, red, orange);
 		}
 
 		.block-5 {
-			background-image: linear-gradient(100deg, white 0%, white 50%,
-				black 50%, black 100%);
+			background-image: linear-gradient(180deg, 
+				yellow 0% , yellow 10%,
+				blue 11%  , blue 90%,
+				red 91%   , red 100%);
+
+			opacity: 0.6;
 		}
+
+		/*TODO: inset*/
 
 		.block-6 {
-			background-image: linear-gradient(180deg, yellow 0% , blue 20% , red 100%);
+			background-image: linear-gradient(180deg, 
+				yellow 0% , blue 20%, red 100%);
+			background-color: red;
 			box-shadow: 20px 20px 12px yellowgreen;
+			/*box-shadow: 20px 20px 5px 10px yellowgreen inset;*/
 		}
-
 
 		.container {
 			width: 400px;
+			overflow: auto; /*container thuộc cùng layer với con là float*/
 			margin: 0 auto;
-			overflow: auto;
-			opacity: 0.5; /*làm mờ*/
 		}
 
 		.container .block {
@@ -75,34 +82,31 @@
 		}
 
 		.block-4 {
-			background-image: radial-gradient(circle, #fa2173, #ccda83, #112255);
+			background-image: radial-gradient(circle, #fa2172, #ccda83, #112255);
 			clear: left;
 			border-radius: 50%;
 		}
-
+		
 	</style>
-
 </head>
 <body>
-
-	<h2 class="text-center title">Page - Ex11 CSS Background Image - Gradient</h2>
+	<h2 class="text-center title">Page - CSS Background Image - Gradient</h2>
 
 	<hr>
 
-	<div class="block block-1 mgv-20">Block-1</div>
-	<div class="block block-2 mgv-20">Block-2</div>
-	<div class="block block-3 mgv-20">Block-3</div>
-	<div class="block block-5 mgv-20">Block-5</div>
-	<div class="block block-6 mgv-20">Block-6</div>
+	<div class="block block-1 mgv-20">BLOCK 1</div>
+	<div class="block block-2 mgv-20">BLOCK 2</div>
+	<div class="block block-3 mgv-20">BLOCK 3</div>
+	<div class="block block-5 mgv-20">BLOCK 5</div>
+	<div class="block block-6 mgv-20">BLOCK 6</div>
 
 	<div class="container mgv-20">
-		<div class="block block-1a">Block-1</div>
-		<div class="block block-2a">Block-2</div>
-		<div class="block block-3a">Block-3</div>
-		<div class="block block-4a">Block-4</div>
+		<div class="block block-1a">BLOCK 1A</div>
+		<div class="block block-2a">BLOCK 2A</div>
+		<div class="block block-3a">BLOCK 3A</div>
+		<div class="block block-4a">BLOCK 4A</div>
 	</div>
 
-	<div class="block block-4 mgv-20">Block-4</div>
-
+	<div class="block block-4 mgv-20">BLOCK 4</div>
 </body>
 </html>

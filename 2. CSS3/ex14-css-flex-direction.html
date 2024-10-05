@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex14 - CSS Flex - Direction</title>
+
+	<style>
+		.container {
+			border: 2px dotted limegreen;
+
+			display: flex;
+			flex-direction: row;
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+			height: 150px;
+		}
+
+		.item1 {
+			width: 200px;
+			/*flex: 0 0 auto;*/ /*flex: flex-grow flex-shrink flex-basis, mặc định flex: 0 1 auto*/
+			flex-shrink: 0;
+		}
+
+		.item2 {
+			width: 340px;
+		}
+
+		.item3 {
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Direction</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+		<div class="item item1">Element 4</div>
+		<div class="item item2">Element 5</div>
+		<div class="item item3">Element 6</div>
+	</div>
+
+	
+</body>
+</html>

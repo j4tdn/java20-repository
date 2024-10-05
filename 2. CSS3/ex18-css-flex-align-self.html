@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex18 - CSS Flex - Align Self</title>
+
+	<style>
+		.container {
+			border: 2px dotted limegreen;
+			min-height: 800px;
+
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.item {
+			background-color: orange;
+			border: 1px solid darkblue;
+		}
+
+		.item1 {
+			width: 200px;
+			height: 150px;
+		}
+
+		.item2 {
+			width: 340px;
+			align-self: stretch;
+		}
+
+		.item3 {
+			height: 150px;
+			width: 200px;
+			align-self: flex-end;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="text-center title">Page - CSS Flex - Align Self</h2>
+
+	<hr>
+
+	<div class="container">
+		<div class="item item1">Element 1</div>
+		<div class="item item2">Element 2</div>
+		<div class="item item3">Element 3</div>
+	</div>
+
+	
+</body>
+</html>

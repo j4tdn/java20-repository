@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
 	<link rel="icon" href="images/header.png">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/ex03-style.css">
-	<title>Ex04 - CSS FLoat Clear Properties Test 01</title>
+	<title>Ex04 - CSS Float Clear Properties Test 01</title>
 
 	<style>
-		/*import font*/
-		
 		.lorem01 {
+			font-family: Corbel, Helvetica, sans-serif;
+
 			font-size: 18px;
 			line-height: 1.25;
-			font-family: Corbel, Helvetica, sans-serif;
 		}
 
 		.lorem02 {
 			font-family: Chantelli;
 		}
 
-		/*Demo Css FLoat - Clear*/
+		/*Demo CSS Float - Clear*/
 
-		.fl-image {
+		/*.fl-image {
 			float: right;
 			margin-left: 10px;
 		}
-		.fl-right{
-			float:right;
+
+		.fl-right {
+			float: right;
 		}
+
 		.fl-left {
 			float: left;
 		}
+
 		.clear {
 			clear: right;
-		}
-	</style>
+		}*/
 
+	</style>
 </head>
 <body>
 
-	<h2 class="text-center title">Ex04 - CSS FLoat Clear Properties Test 01 </h2>
+	<h2 class="text-center title">Page - Ex04 CSS Float Clear Properties Test 01</h2>
 
 	<hr>
 
@@ -50,56 +50,50 @@
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.orem 01 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.orem 01 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem 01 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-
-
 	<img class="fl-image" src="images/cake.jpg" width="300" height="300" alt="cake">
 
-	<!-- <div class="block-md-2-bg-blue"></div> -->
-
-	
 	<p class="lorem02 text-justify">Lorem 02 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est. Lorem 02 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	proident, sunt in culpa qui officia deserunt mollit anim id est <span class="text-bold text-deco-line-through">laborum</span>. Lorem 02 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est<span class="text-bold text-deco-line-through">laborum</span>.</p>
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 	<hr>
+
+	<!-- 
+		clear float từ thẻ nó muốn clear và clear luôn cho các elements bên dưới k bị float lên trên float-element
+		nhưng nếu bên dưới clear-element mình làm float lại thì các element bên dưới nữa có thể chèn lên trên nữa  
+	-->
 
 	<div class="clear">
 		<div class="block-33-bg-orange fl-left"></div>
 
 		<div class="block-62-bg-blue fl-left"></div>
 
-		<p class="lorem0 text-justify">Lorem 02 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		<p class="lorem03 text-justify">Lorem 03 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est <span class="text-bold text-deco-line-through">laborum</span>. Lorem 03 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est. Lorem 02 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est<span class="text-bold text-deco-line-through">laborum</span>.</p>
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 
 </body>
-</html>
+</html>	

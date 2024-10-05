@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="images/header.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Ex07 - CSS Basic Page With Exoti Header</title>
+
+	<style>
+
+		/* * -> ăn cho tất cả các element */
+
+		* {
+			box-sizing: border-box;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul li {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		.block {
+			width: 180px;
+			height: 80px;
+
+			border: 2px solid lightgray;
+			border-radius: 8px;
+
+			float: left;
+		}
+
+		/*
+			margin: right và left --> cộng dồn
+			      : top và bottom --> chọn space lớn hơn
+
+
+			box-sizing: content-box(mặc định) hoặc border-box
+			+ content-box: width, height -> nó chỉ là nội dung bên trong element
+			                             -> chưa tính border-width, padding
+			
+			+ border-box: width, height  -> tính luôn cả border-width, padding và nội dung
+                                         -> luôn dùng border-box
+		*/
+
+		#block1 {
+			margin-right: 40px;
+			background-color: #ABE200;
+			padding: 20px 0 0 20px;
+			/*box-sizing: border-box;*/
+		}
+
+		#block2 {
+			margin-left: 40px;
+			background-color: #F8A400;
+		}
+
+		.pblock {
+			margin-top: 30px;
+			margin-bottom: 30px;
+			overflow: auto;
+		}
+
+		#header {
+			height: 66px;
+			background-color: #2b2b2b;
+		}
+
+		.wrapper {
+			width: 86%;
+			height: 100%; /*100% so với height của parent element*/
+			/*background: lightpink;*/
+
+			margin: 0 auto;
+		}
+
+		.page-logo {
+			float: left;
+
+			/*trick*/
+			/*line-height: 66px;*/
+
+			/*33px(header/2) - 9px(image/2)*/
+			margin-top: 24px;
+
+		}
+
+		.page-links {
+			float: right;
+		}
+
+		.page-links li {
+			float: left;
+			margin-left: 44px;
+			line-height: 66px;
+		}
+
+		.page-links li a:hover:after {
+			content: '';
+			display: block;
+			width: 100%; /*100% theo width của thẻ a*/
+			height: 2px;
+			background-color: #8b008b;
+			margin-top: -18px;
+		}
+
+		.page-links li a {
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="header">
+		<div class="wrapper">
+			<div class="page-logo">
+				<a href="#">
+					<img src="images/logo.png" alt="exoti">
+				</a>
+			</div>
+
+			<ul class="page-links">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Investors</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<h2 class="text-center title">Page - Ex07 CSS Basic Page With Exoti Header</h2>
+
+	<hr>
+
+	<h3 class="text-red text-bold">This is the first text line of CSS Basic Properties</h3>
+
+	<div class="pblock">
+		<div class="block" id="block1">
+			<a href="#" title="props">PROPS</a>
+		</div>
+		<div class="block" id="block2">
+			<p>Testing Border, Margin, Padding</p>
+		</div>
+		<!-- clear để block1 và block2 cùng thuộc 1 mặt phẳng của pblock -->
+		<!-- <div class="clear-both"></div> -->
+
+		<!-- cách 2 -- thêm thuộc tính overlow: auto cho element cha -->
+	</div>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+</body>
+</html>	
