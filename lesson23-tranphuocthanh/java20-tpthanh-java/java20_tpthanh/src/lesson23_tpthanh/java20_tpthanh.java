@@ -17,8 +17,9 @@ public class Test {
             var path = file.toPath();
             var lines = readFile(path);
 
+            // ngắn gọn tốt
             if (!lines.isEmpty()) {
-                lines.remove(0); 
+                lines.remove(0); // replace by subList(1, n)
                 var numbers = lines.stream() 
                         .flatMap(line -> Arrays.stream(line.split("[^0-9]+")))
                         .filter(nbTxt -> !nbTxt.isEmpty())

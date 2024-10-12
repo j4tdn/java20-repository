@@ -23,13 +23,15 @@ public class Test {
             return;
         }
 
+        // em nên lấy subList(1, n) thay vì remove
         lines.remove(0);
 
+        // tốt
         List<Integer> numbers = lines.stream()
                 .flatMap(line -> Arrays.stream(line.split("[^\\d]+")))
                 .filter(nbTxt -> !nbTxt.isEmpty())
                 .map(Integer::parseInt)
-                .distinct()
+                .distinct() // thừa hàm
                 .sorted()
                 .collect(Collectors.toList());
         
@@ -59,6 +61,7 @@ public class Test {
         }
     }
 
+    // Tốt nhưng em có thể cho sẵn file để đỡ mất time
     private static File createFile(String filepath) {
         File file = new File(filepath);
         if (file.exists()) {

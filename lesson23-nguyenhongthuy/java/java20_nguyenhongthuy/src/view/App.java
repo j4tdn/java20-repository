@@ -20,6 +20,10 @@ public class App {
             sc = new Scanner(fileInputStream);
 
             while (sc.hasNextLine()) {
+                // code có thể chạy được nhưng cách làm chưa ổn lắm
+                // e chơi theo kiểu đọc đến đâu xử lý đến đó cũng ok
+                // nhưng chỗ tại static list bên ngoài ko dc, khi code app, web này kia logic một nơi view 1 nơi
+                // nên nên viết hàm và return data sẽ hay hơn dùng void + biến toàn cục
                 String line = sc.nextLine();
                 getNumberAddList(line + " ");
             }

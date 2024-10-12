@@ -7,6 +7,7 @@ CREATE TABLE `khachhang`(
     DiaChi TEXT,
     SoDT VARCHAR(15),
     MaSoThue VARCHAR(20)
+    -- Hầu hết em bị thiếu ràng buộc not null
 );
 
 CREATE TABLE `muctiengio` (
@@ -45,9 +46,12 @@ ADD CONSTRAINT FOREIGN KEY(`MaKH`) REFERENCES `khachhang`(MaKH);
 ALTER TABLE `hoadon`
 ADD CONSTRAINT FOREIGN KEY(`MaPhong`) REFERENCES `phong`(MaPhong);
 
-
 ALTER TABLE `hoadon`
 ADD CONSTRAINT FOREIGN KEY(`MaTienGio`) REFERENCES `muctiengio`(MaTienGio);
+
+-- code vẫn chạy tốt nhưng nếu table mới thì e nên để các làm tạo ràng buộc vào lúc CREATE TABLE, code sạch hơn
+-- Thiếu ràng buộc UNIQUE cho(MaKH, MaPhong, MaTienGio)
+
 
 CREATE TABLE `chitiet_sudungdv` (
 	MaHD CHAR(5),

@@ -25,6 +25,7 @@ public class Ex01 {
             strings.add(reader.readLine());
         }
         reader.close();
+        // Sao em ko dùng Files.readLines(..) với 1 dòng code
 
         // Trích xuất và sắp xếp các số từ xâu
         List<Integer> numbers = result(strings);
@@ -41,6 +42,7 @@ public class Ex01 {
     }
 }
  private static List<Integer> result(List<String> strings) {
+        // thay vì 2 vòng for trùng nhau e có thể suy nghĩ sử dụng stream và flatmap để code gọn hơn
         List<Integer> numbers = new ArrayList<>();
         for (String str : strings) {
             String[] numberAsStr = str.split("[^0-9]+");

@@ -10,7 +10,9 @@ public class Exam {
         
         try (BufferedReader reader = new BufferedReader(new FileReader("input.txt"))) {
             int n = Integer.parseInt(reader.readLine().trim());
-            
+
+            // Làm được nhưng chưa vận được được các method trong stream khá nhanh
+            // Em mày mò stream flatMap code sẽ gọn hơn nhé
             for (int i = 0; i < n; i++) {
                 String line = reader.readLine().trim();
                 numbers.addAll(extractNumbers(line));

@@ -1,0 +1,19 @@
+Phần 1: Database(30)
++ Câu 1: 6
++ Câu 2: 6
++ Câu 3: 4
++ Câu 4: 3
++ Câu 5: 6
+-->
+
+Phần 2: Java(20)
+--> 18
+
+Phần 3: FrontEnd(50đ)
++ Header:
++ Slider:
++ Bộ sưu tập:
++ Sản phẩm:
++ Tin tức:
++ Footer:
+--> Tầm 60% từ phần sản phẩm, tin tức chưa done được css

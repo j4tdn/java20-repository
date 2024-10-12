@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS HOADON
     CONSTRAINT FK_HOADON_KHACHHANG FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH),
     CONSTRAINT FK_HOADON_PHONG FOREIGN KEY (MaPHong) REFERENCES PHONG(MaPhong),
     CONSTRAINT FK_HOADON_MUCTIENGIO FOREIGN KEY (MaTienGio) REFERENCES MUCTIENGIO(MaTienGio)
-
+    -- Thếu UNIQUE CONSTRAINT cho (MaKH, MaPhong, MaTienGio)
 );
 
 -- CHITIET_SUDUNGDV
@@ -125,7 +125,7 @@ GROUP BY p.MaPhong
 ORDER BY TongThoiGianSuDung DESC;
 
 -- Câu 4: Liệt kê 2 dịch vụ được sử dụng nhiều nhất trong mỗi tháng từ 10.2015 đến 10.2016
-SELECT 	dv.*,
+SELECT 	dv.*, -- chưa được
 		sec_to_time(sum(time_to_sec(timediff(hd.ThoiGianKetThucSD, hd.ThoiGianBatDauSD)))) TongThoiGianSuDung
 FROM DICHVU AS dv
 	JOIN CHITIET_SUDUNGDV AS ctsd
@@ -133,7 +133,8 @@ FROM DICHVU AS dv
 	JOIN HOADON AS hd 
 		ON hd.MaHD = ctsd.MaHD
 WHERE hd.ThoiGianBatDauSD >= '2015-10-1 0:0' AND hd.ThoiGianKetThucSD <= '2016-10-1 0:0'
-GROUP BY dv.MaDV
+GROUP BY dv.MaDV -- theo đúng cú pháp và mode cho tất cả các HQT CSDL thì nếu câu lệnh có group by thì chỗ select chỉ select được
+-- các column group by và hàm xử lý
 ORDER BY TongThoiGianSuDung DESC
 LIMIT 2;
 

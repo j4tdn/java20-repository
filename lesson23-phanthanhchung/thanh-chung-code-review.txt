@@ -1,0 +1,20 @@
+Phần 1: Database(30)
++ Câu 1: 5
++ Câu 2: 6
++ Câu 3: 4
++ Câu 4:
++ Câu 5:
+--> 15đ
+
+Phần 2: Java(20)
+--> chưa làm
+
+Phần 3: FrontEnd(50đ)
++ Header:
++ Slider:
++ Bộ sưu tập:
++ Sản phẩm: chưa hoàn thành
++ Tin tức: chưa làm
++ Footer: chưa làm
+--> Tầm 50% chưa tính các lỗi, cần luyện thêm cho xong ở nhà e nhé
+--> 30đ

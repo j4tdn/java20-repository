@@ -3,7 +3,7 @@ USE java20_test_sql;
 -- cau 1
 CREATE TABLE KhachHang (
 	MaKH VARCHAR(255) PRIMARY KEY,
-    TenKH VARCHAR(200) ,
+    TenKH VARCHAR(200) , -- ok nhưng nếu có ràng buộc not null sẽ đúng hơn em nhé
     DiaChi VARCHAR(200),
     SoDT VARCHAR(200),
     MaSoThue VARCHAR(200)
@@ -18,7 +18,7 @@ CREATE TABLE DichVu (
 	MaDV VARCHAR(255) PRIMARY KEY,
     TenDV VARCHAR(255),
     DonViTinh VARCHAR(255),
-    DonGia BIGINT
+    DonGia BIGINT -- e nên dùng float, double hoặc decimal sẽ hợp lý hơn
 );
 CREATE TABLE Phong (
 	MaPhong VARCHAR(100) PRIMARY KEY,
@@ -37,6 +37,7 @@ CREATE TABLE HoaDon (
     CONSTRAINT FK_KH FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH),
 	CONSTRAINT FK_PHong FOREIGN KEY (MaPhong) REFERENCES Phong(MaPhong),
 	CONSTRAINT FK_MATIENGIO FOREIGN KEY (MaTienGio) REFERENCES MucTienGio(MaTienGio)
+    -- Thếu UNIQUE CONSTRAINT cho (MaKH, MaPhong, MaTienGio)
 );
 
 CREATE TABLE CHITIET_SUDUNGDV (
@@ -95,6 +96,7 @@ VALUES
 ("HD002", "DV03", 2);
 
 -- cau 3
+-- tạm ôổn nhưng em nên sử dụng CTE với mệnh đề WITH để code gọn hơn ko trùng lặp
 SELECT p.*, mp.ThgianSD AS thoigianSD
 FROM Phong AS p
 JOIN (SELECT MaPhong, sum(timediff(cast(ThoiGianKetThucSD AS DATETIME), cast(ThoiGianBatDauSD AS DATETIME))) AS ThgianSD
@@ -109,7 +111,8 @@ JOIN (SELECT MaPhong, sum(timediff(cast(ThoiGianKetThucSD AS DATETIME), cast(Tho
 					   LIMIT 1)) AS mp
 ON p.MaPhong = mp.MaPhong;
 
--- cau4 
+-- cau4
+-- tốt
 WITH ThgianSDMoiThang AS (
     SELECT  dv.MaDV, dv.TenDV,
 			MONTH(CAST(hd.ThoiGianBatDauSD AS DATE)) AS thang, YEAR(CAST(hd.ThoiGianBatDauSD AS DATE)) AS nam,

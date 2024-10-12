@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS HOADON
 		FOREIGN KEY (MAPHONG) REFERENCES PHONG(MAPHONG),
         CONSTRAINT FK_HOADON_MUCTIENGIO
 		FOREIGN KEY (MATIENGIO) REFERENCES MUCTIENGIO(MATIENGIO)
+    -- Thếu UNIQUE CONSTRAINT cho (MaKH, MaPhong, MaTienGio)
 );
 
 DROP TABLE IF EXISTS CHITIET_SUDUNGDV;
@@ -106,7 +107,11 @@ INSERT INTO CHITIET_SUDUNGDV (MAHD, MADV, SOLUONG) VALUES
 										------------------ --------------
 
 /* --- Liệt kê các phòng karaoke được sử dụng nhiều nhất từ 02.2014 đến 02.2015 */
-
+-- Cách làm của em là tìm số lần sử dụng nhiều nhất, chưa chắc đã có thời gian sử dụng nhiều
+-- Ví dụ ngày 18.02.2024
+-- Phòng A: Dùng 2 lần 1 lần 30p
+-- Phòng B: Dùng 1 lần 6 tiếng
+-- Kết quả của e sẽ ra Phòng A, chưa đúng yêu cầu 100% nhưng chấp nhận: 4đ
 SELECT p.MAPHONG, 
 	   p.MOTA, 
        COUNT(h.MAHD) AS SO_LUONG_SU_DUNG
@@ -118,7 +123,7 @@ SELECT p.MAPHONG,
   ORDER BY SO_LUONG_SU_DUNG DESC;
   
   /* Liệt kê 2 dịch vụ được sử dụng nhiều nhất trong mỗi tháng từ 01.2014 đến 12.2014 */
-  
+-- chưa ra được kết quả cuối cùng là 2 dịch vụ
 SELECT MONTH(h.THOIGIANBATDAUSD) AS THANG,
        dv.MADV, 
        dv.TENDICHVU, 

@@ -18,7 +18,8 @@ public class FindNumberInString {
                 
                 for (int j = 0; j < line.length(); j++) {
                     char ch = line.charAt(j);
-                    
+
+                    // hmm, code cách làm dài quá mất thời gian, chưa ổn
                     if (Character.isDigit(ch)) {
                         // nếu là số -> thêm vào chuỗi current
                         currentNumber += ch;
